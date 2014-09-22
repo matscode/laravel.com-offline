@@ -27,8 +27,8 @@
         <ul class="primary-nav-ul">
             <li><a href="/">Welcome</a></li>
             <li class="current-item"><a href="/docs" title="Documentation">Documentation</a></li>
-            <li><a href="https://forge.laravel.com">Forge</a></li>
             <li><a href="http://laracasts.com">Laracasts</a></li>
+            <li><a href="https://forge.laravel.com">Forge</a></li>
             <li><a href="{{ url('api') }}/{{ $currentVersion }}" title="Laravel Framework API">API</a></li>
             <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
             <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
@@ -74,8 +74,8 @@
             <ul>
                 <li><a href="/">Welcome</a></li>
             <li class="current-item"><a href="/docs" title="Documentation">Documentation</a></li>
-            <li><a href="https://forge.laravel.com">Forge</a></li>
             <li><a href="http://laracasts.com">Laracasts</a></li>
+            <li><a href="https://forge.laravel.com">Forge</a></li>
             <li><a href="{{ url('api') }}/{{ $currentVersion }}" title="Laravel Framework API">API</a></li>
             <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
             <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
