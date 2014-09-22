@@ -2,8 +2,6 @@
 
 use App\Documentation;
 use Illuminate\Routing\Controller;
-use Illuminate\Contracts\Cache\Cache;
-use Illuminate\Contracts\Filesystem\Filesystem;
 
 class DocsController extends Controller {
 
