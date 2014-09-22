@@ -29,7 +29,6 @@
         </div>
         <ul class="primary-nav-ul">
             <li class="current-item"><a href="#">Welcome</a></li>
-            <li><a href="https://forge.laravel.com">Hosting</a></li>
             <li class="current-item"><a href="/docs" title="Documentation">Documentation</a></li>
             <li><a href="https://forge.laravel.com">Forge</a></li>
             <li><a href="http://laracasts.com">Laracasts</a></li>
@@ -115,7 +114,7 @@
 	           <a href="//laravel.com"><img src="assets/img/logo-foot.png" alt="Laravel"></a>
 	        </div>
             <ul>
-                <li class="current-item"><a href="#">Welcome</a></li>
+            <li class="current-item"><a href="#">Welcome</a></li>
             <li class="current-item"><a href="/docs" title="Documentation">Documentation</a></li>
             <li><a href="https://forge.laravel.com">Forge</a></li>
             <li><a href="http://laracasts.com">Laracasts</a></li>
