@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use Redirect;
 use App\Documentation;
 use Illuminate\Routing\Controller;
 
@@ -41,7 +42,7 @@ class DocsController extends Controller {
 	public function show($version, $page = null)
 	{
 		if ( ! $this->isVersion($version)) {
-			return redirect(url('docs/'.DEFAULT_VERSION.'/'.$version));
+			return Redirect::to(url('docs/'.DEFAULT_VERSION.'/'.$version), 301);
 		}
 
 		return view('layouts.docs', [
