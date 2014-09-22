@@ -29,7 +29,7 @@
         </div>
         <ul class="primary-nav-ul">
             <li class="current-item"><a href="#">Welcome</a></li>
-            <li class="current-item"><a href="/docs" title="Documentation">Documentation</a></li>
+            <li><a href="/docs" title="Documentation">Documentation</a></li>
             <li><a href="http://laracasts.com">Laracasts</a></li>
             <li><a href="https://forge.laravel.com">Forge</a></li>
             <li><a href="{{ url('api') }}/{{ DEFAULT_VERSION }}" title="Laravel Framework API">API</a></li>
@@ -115,7 +115,7 @@
 	        </div>
             <ul>
             <li class="current-item"><a href="#">Welcome</a></li>
-            <li class="current-item"><a href="/docs" title="Documentation">Documentation</a></li>
+            <li><a href="/docs" title="Documentation">Documentation</a></li>
             <li><a href="http://laracasts.com">Laracasts</a></li>
             <li><a href="https://forge.laravel.com">Forge</a></li>
             <li><a href="{{ url('api') }}/{{ DEFAULT_VERSION }}" title="Laravel Framework API">API</a></li>
