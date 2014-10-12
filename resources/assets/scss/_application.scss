@@ -540,13 +540,27 @@ nav#primary
         display: block;
     }
 
+
     li {
         float: left;
         width: 100%;
+        position: relative;
+
+        // Hide the community link for mobile.
+        &.community {
+            display: none;
+        }
 
         @media only screen and (min-width: 750px) {
             padding: 25px 0;
             width: auto;
+            // Show the community and dropdown on full screen
+            &.community {
+                display: block;
+            }
+            &:hover > ul {
+                display:list-item;
+            }
         }
 
         a {
@@ -584,6 +598,27 @@ nav#primary
         #secondary &.current-item a,
         a:hover {
             color: #f4645f;
+        }
+    }
+}
+
+.primary-nav-ul ul {
+    display: none;
+    position: absolute;
+    top: 48px;
+    left: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+    li {
+        text-align: center;
+        width:100px;
+        padding: 0;
+        display: block;
+        float:none;
+        position: relative;
+        border-bottom:none;
+        a {
+            padding: 0.5em;
         }
     }
 }
