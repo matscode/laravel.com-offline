@@ -30,15 +30,16 @@
         <ul class="primary-nav-ul">
             <li class="current-item"><a href="#">Welcome</a></li>
             <li><a href="/docs" title="Documentation">Documentation</a></li>
+            <li><a href="http://laracasts.com" title="Documentation">Laracasts</a></li>
             <li><a href="https://forge.laravel.com">Forge</a></li>
             <li><a href="{{ url('api') }}/{{ DEFAULT_VERSION }}" title="Laravel Framework API">API</a></li>
-            <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
-            <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
             <li class="community">
               <a href="#" title="Laravel Community Resources">Community</a>
               <ul>
-                <li><a href="https://laracasts.com/discuss">Laracasts</a></li>
-                <li><a href="http://laravel.io/forum">Laravel.io</a></li>
+                <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                <li><a href="https://laracasts.com/discuss">Laracasts Forums</a></li>
+                <li><a href="http://laravel.io/forum">Laravel.io Forums</a></li>
                 <li><a href="http://larajobs.com?partner=5">LaraJobs</a></li>
               </ul>
             </li>
@@ -121,13 +122,21 @@
 	           <a href="//laravel.com"><img src="assets/img/logo-foot.png" alt="Laravel"></a>
 	        </div>
             <ul>
-            <li class="current-item"><a href="#">Welcome</a></li>
-            <li><a href="/docs" title="Documentation">Documentation</a></li>
-            <li><a href="http://laracasts.com">Laracasts</a></li>
-            <li><a href="https://forge.laravel.com">Forge</a></li>
-            <li><a href="{{ url('api') }}/{{ DEFAULT_VERSION }}" title="Laravel Framework API">API</a></li>
-            <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
-            <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+              <li class="current-item"><a href="#">Welcome</a></li>
+              <li><a href="/docs" title="Documentation">Documentation</a></li>
+              <li><a href="http://laracasts.com" title="Documentation">Laracasts</a></li>
+              <li><a href="https://forge.laravel.com">Forge</a></li>
+              <li><a href="{{ url('api') }}/{{ DEFAULT_VERSION }}" title="Laravel Framework API">API</a></li>
+              <li class="community">
+                <a href="#" title="Laravel Community Resources">Community</a>
+                <ul>
+                  <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                  <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                  <li><a href="https://laracasts.com/discuss">Laracasts Forums</a></li>
+                  <li><a href="http://laravel.io/forum">Laravel.io Forums</a></li>
+                  <li><a href="http://larajobs.com?partner=5">LaraJobs</a></li>
+                </ul>
+              </li>
             </ul>
         </nav>
 
