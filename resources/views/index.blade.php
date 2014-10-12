@@ -35,6 +35,14 @@
             <li><a href="{{ url('api') }}/{{ DEFAULT_VERSION }}" title="Laravel Framework API">API</a></li>
             <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
             <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+            <li class="community">
+              <a href="#" title="Laravel Community Resources">Community</a>
+              <ul>
+                <li><a href="http://laravel.io/forum">Laravel.io</a></li>
+                <li><a href="http://laracasts.com">Laracasts</a></li>
+                <li><a href="http://larajobs.com?partner=5">LaraJobs</a></li>
+              </ul>
+            </li>
         </ul>
         <a href="#" class="show-primary-nav">Menu</a>
     </div>
