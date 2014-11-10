@@ -30,9 +30,10 @@
         <ul class="primary-nav-ul">
             <li class="current-item"><a href="#">Welcome</a></li>
             <li><a href="/docs" title="Documentation">Documentation</a></li>
+            <li><a href="{{ url('api') }}/{{ DEFAULT_VERSION }}" title="Laravel Framework API">API</a></li>
             <li><a href="http://laracasts.com" title="Documentation">Laracasts</a></li>
             <li><a href="https://forge.laravel.com">Forge</a></li>
-            <li><a href="{{ url('api') }}/{{ DEFAULT_VERSION }}" title="Laravel Framework API">API</a></li>
+            <li><a href="http://blog.laravel.com">Blog</a></li>
             <li class="community">
               <a href="#" title="Laravel Community Resources">Community</a>
               <ul>
@@ -124,9 +125,10 @@
             <ul>
               <li class="current-item"><a href="#">Welcome</a></li>
               <li><a href="/docs" title="Documentation">Documentation</a></li>
+              <li><a href="{{ url('api') }}/{{ DEFAULT_VERSION }}" title="Laravel Framework API">API</a></li>
               <li><a href="http://laracasts.com" title="Documentation">Laracasts</a></li>
               <li><a href="https://forge.laravel.com">Forge</a></li>
-              <li><a href="{{ url('api') }}/{{ DEFAULT_VERSION }}" title="Laravel Framework API">API</a></li>
+              <li><a href="http://blog.laravel.com">Blog</a></li>
             </ul>
         </nav>
 
