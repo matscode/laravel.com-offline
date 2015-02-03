@@ -45,13 +45,14 @@ return [
 
 		'local' => [
 			'driver' => 'local',
-			'root'   => base_path(),
+			'root'   => storage_path().'/app',
 		],
 
 		's3' => [
 			'driver' => 's3',
 			'key'    => 'your-key',
 			'secret' => 'your-secret',
+			'region' => 'your-region',
 			'bucket' => 'your-bucket',
 		],
 

@@ -1,8 +1,6 @@
 <?php namespace App\Http\Controllers;
 
-use Redirect;
 use App\Documentation;
-use Illuminate\Routing\Controller;
 
 class DocsController extends Controller {
 
@@ -31,7 +29,7 @@ class DocsController extends Controller {
 	 */
 	public function showRootPage()
 	{
-		return redirect(url('docs/'.DEFAULT_VERSION));
+		return redirect('docs/'.DEFAULT_VERSION);
 	}
 
 	/**
@@ -42,12 +40,18 @@ class DocsController extends Controller {
 	public function show($version, $page = null)
 	{
 		if ( ! $this->isVersion($version)) {
-			return Redirect::to(url('docs/'.DEFAULT_VERSION.'/'.$version), 301);
+			return redirect('docs/'.DEFAULT_VERSION.'/'.$version, 301);
 		}
 
-		return view('layouts.docs', [
+		$content = $this->docs->get($version, $page ?: 'introduction');
+
+		if (is_null($content)) {
+			abort(404);
+		}
+
+		return view('docs', [
 			'index' => $this->docs->getIndex($version),
-			'content' => $this->docs->get($version, $page ?: 'introduction'),
+			'content' => $content,
 			'currentVersion' => $version,
 			'versions' => $this->getDocVersions(),
 		]);
@@ -72,7 +76,7 @@ class DocsController extends Controller {
 	protected function getDocVersions()
 	{
 		return [
-			'master' => 'Dev',
+			'master' => 'Master',
 			'4.2' => '4.2',
 			'4.1' => '4.1',
 			'4.0' => '4.0',

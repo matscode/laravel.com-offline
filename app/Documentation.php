@@ -1,7 +1,7 @@
 <?php namespace App;
 
-use Illuminate\Contracts\Cache\Cache;
-use Illuminate\Contracts\Filesystem\Filesystem;
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Contracts\Cache\Repository as Cache;
 
 class Documentation {
 
@@ -41,7 +41,11 @@ class Documentation {
 	public function getIndex($version)
 	{
 		return $this->cache->remember('docs.'.$version.'.index', 5, function() use ($version) {
-			return markdown($this->files->get('resources/docs/'.$version.'/documentation.md'));
+			$path = base_path('resources/docs/'.$version.'/documentation.md');
+			if ($this->files->exists($path)) {
+				return markdown($this->files->get($path));
+			}
+			return null;
 		});
 	}
 
@@ -55,7 +59,11 @@ class Documentation {
 	public function get($version, $page)
 	{
 		return $this->cache->remember('docs.'.$version.'.'.$page, 5, function() use ($version, $page) {
-			return markdown($this->files->get('resources/docs/'.$version.'/'.$page.'.md'));
+			$path = base_path('resources/docs/'.$version.'/'.$page.'.md');
+			if ($this->files->exists($path)) {
+				return markdown($this->files->get($path));
+			}
+			return null;
 		});
 	}
 
