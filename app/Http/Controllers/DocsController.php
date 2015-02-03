@@ -47,7 +47,7 @@ class DocsController extends Controller {
 
 		return view('layouts.docs', [
 			'index' => $this->docs->getIndex($version),
-			'content' => $this->docs->get($version, $page ?: 'introduction'),
+			'content' => $this->docs->get($version, $page ?: 'installation'),
 			'currentVersion' => $version,
 			'versions' => $this->getDocVersions(),
 		]);
