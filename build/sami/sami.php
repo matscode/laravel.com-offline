@@ -16,7 +16,8 @@ $versions = GitVersionCollection::create($dir)
 	->add('4.0', 'Laravel 4.0')
 	->add('4.1', 'Laravel 4.1')
 	->add('4.2', 'Laravel 4.2')
-	->add('master', 'Laravel dev');
+	->add('5.0', 'Laravel 5.0')
+	->add('master', 'Laravel Dev');
 
 return new Sami($iterator, array(
 	'title' => 'Laravel API',
