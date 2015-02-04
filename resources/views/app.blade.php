@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Laravel 5</title>
+	<title>Laravel - The Framework For Web Artisans</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="author" content="Taylor Otwell">
 	<meta name="description" content="Laravel - The PHP framework for web artisans.">
@@ -24,7 +24,7 @@
 				<img src="/assets/img/laravel-logo.png" height="30">
 				Laravel
 			</a>
-			
+
 			<div class="responsive-sidebar-nav">
 				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
 			</div>
