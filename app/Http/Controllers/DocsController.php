@@ -77,6 +77,7 @@ class DocsController extends Controller {
 	{
 		return [
 			'master' => 'Master',
+			'5.0' => '5.0',
 			'4.2' => '4.2',
 			'4.1' => '4.1',
 			'4.0' => '4.0',
