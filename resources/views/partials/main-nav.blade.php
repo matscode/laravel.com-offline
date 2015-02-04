@@ -13,6 +13,6 @@
 		<li><a href="http://laravel.io/forum">Laravel.io Forums</a></li>
 		<li><a href="https://laravel-news.com/">Laravel News</a></li>
 		<li class="divider"></li>
-		<li><a href="https://larajobs.com/?partner=5#/">Larajobs</a></li>
+		<li><a href="https://larajobs.com/?partner=5#/">LaraJobs</a></li>
 	</ul>
 </li>
