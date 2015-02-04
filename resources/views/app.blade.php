@@ -49,5 +49,7 @@
 		<p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
 	</footer>
 	<script src="/assets/js/laravel.js"></script>
+	<script src="/assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
 </body>
 </html>
