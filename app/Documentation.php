@@ -67,4 +67,17 @@ class Documentation {
 		});
 	}
 
+	/**
+	 * Check if the given section exists.
+	 *
+	 * @param  string  $version
+	 * @param  string  $page
+	 * @return boolean
+	 */
+	public function sectionExists($version, $page)
+	{
+		$path = base_path('resources/docs/'.$version.'/'.$page.'.md');
+		return $this->files->exists($path);
+	}
+
 }

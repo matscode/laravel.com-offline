@@ -45,6 +45,11 @@ class DocsController extends Controller {
 
 		$content = $this->docs->get($version, $page ?: 'installation');
 
+		$section = '';
+		if ( $this->docs->sectionExists($version, $page)) {
+			$section .= '/' . $page;
+		}
+
 		if (is_null($content)) {
 			abort(404);
 		}
@@ -54,6 +59,7 @@ class DocsController extends Controller {
 			'content' => $content,
 			'currentVersion' => $version,
 			'versions' => $this->getDocVersions(),
+			'currentSection' => $section,
 		]);
 	}
 
