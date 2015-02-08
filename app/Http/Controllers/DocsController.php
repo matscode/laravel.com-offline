@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Documentation;
+use Symfony\Component\DomCrawler\Crawler;
 
 class DocsController extends Controller {
 
@@ -45,11 +46,14 @@ class DocsController extends Controller {
 
 		$content = $this->docs->get($version, $page ?: 'installation');
 
+		$title = (new Crawler($content))->filterXPath('//h1');
+
 		if (is_null($content)) {
 			abort(404);
 		}
 
 		return view('docs', [
+			'title' => count($title) ? $title->text() : null,
 			'index' => $this->docs->getIndex($version),
 			'content' => $content,
 			'currentVersion' => $version,
