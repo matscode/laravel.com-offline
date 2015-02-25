@@ -48,6 +48,14 @@ class DocsController extends Controller {
 
 		$title = (new Crawler($content))->filterXPath('//h1');
 
+		$section = '';
+
+		if ($this->docs->sectionExists($version, $page)) {
+			$section .= '/'.$page;
+		} elseif ( ! is_null($page)) {
+			return redirect('/docs/'.$version);
+		}
+
 		if (is_null($content)) {
 			abort(404);
 		}
@@ -58,6 +66,7 @@ class DocsController extends Controller {
 			'content' => $content,
 			'currentVersion' => $version,
 			'versions' => $this->getDocVersions(),
+			'currentSection' => $section,
 		]);
 	}
 
