@@ -57,7 +57,8 @@
 
 	&.features {
 		padding: 125px 0;
-		> h1, > p {
+		> h1,
+		> p {
 			margin: 0 0 20px 0;
 			text-align: center;
 		}
@@ -117,10 +118,12 @@
 			}
 		}
 	}
+
 	&.ecosystem {
 		padding: 150px 0 75px;
 		background: url('/assets/img/laravel-tucked.png') center top no-repeat;
-		> h1, > p {
+		> h1,
+		> p {
 			margin: 0 0 20px 0;
 			text-align: center;
 		}
@@ -192,11 +195,12 @@
 		}
 	}
 
-	.browser-window, .terminal-window {
+	.browser-window,
+	.terminal-window {
 		overflow: hidden;
 		pre[class*="language-"], .window-content {
-			overflow: hidden !important;
-		}
+     	overflow: hidden;
+   	}
 	}
 
 }
@@ -245,14 +249,10 @@
 			}
 		}
 	}
-	.panel.features {
-		.blocks .block {
-			.text {
-				padding: 15px;
-				p {
-					margin-bottom: 0;
-				}
-			}
+	.panel.features .blocks .block .text {
+		padding: 15px;
+		p {
+			margin-bottom: 0;
 		}
 	}
 }
@@ -264,25 +264,23 @@
 }
 
 @media (max-width: 580px) {
-	.panel.features {
-		.blocks .block {
-			height: 410px;
-			.text {
-				width: 100%;
+	.panel.features .blocks .block {
+		height: 410px;
+		.text {
+			width: 100%;
+			float: none !important;
+			display: block;
+			padding: 5%;
+		}
+		.media {
+			float: none !important;
+			display: block;
+			width: 100%;
+			.terminal-window,
+			.browser-window {
+				width: 90% !important;
+				margin: 0 5% !important;
 				float: none !important;
-				display: block;
-				padding: 5%;
-			}
-			.media {
-				float: none !important;
-				display: block;
-				width: 100%;
-				.terminal-window,
-				.browser-window {
-					width: 90% !important;
-					margin: 0 5% !important;
-					float: none !important;
-				}
 			}
 		}
 	}
