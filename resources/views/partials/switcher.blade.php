@@ -1,7 +1,6 @@
 <div class="switcher">
 	<div class="dropdown">
 		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-			<!--<span class="faint">v</span> -->
 			{{ ucfirst($currentVersion) }}
 			<span class="caret"></span>
 		</button>
