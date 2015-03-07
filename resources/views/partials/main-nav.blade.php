@@ -12,7 +12,7 @@
 <li class="dropdown community-dropdown">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
 	<ul class="dropdown-menu" role="menu">
-		<li><a href="https://github.com/laravel/laravel">Github</a></li>
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
 		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
 		<li class="divider"></li>
 		<li><a href="https://laracasts.com/discuss">Laracasts Forums</a></li>
