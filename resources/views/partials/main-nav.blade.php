@@ -20,6 +20,7 @@
 		<li><a href="http://laravel.io/forum">Laravel.io Forums</a></li>
 		<li><a href="http://larachat.co">LaraChat Slack Channel</a></li>
 		<li><a href="https://laravel-news.com/">Laravel News</a></li>
+		<li class="divider"></li>
 		<li><a href="http://laravelcollective.com">Laravel Collective</a></li>
 		<li class="divider"></li>
 		<li><a href="https://larajobs.com/?partner=5#/">LaraJobs</a></li>
