@@ -1,7 +1,7 @@
 $(function() {
 
   // Smooth scroll to anchor
-  $('a[href*=#]:not([href=#])').click(function() {
+  $('body.home a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -14,9 +14,6 @@ $(function() {
     }
   });
 
-  // Sliding sidebar menu
-  // $('.menu-link').bigSlide();
-
   var scotchPanel = $('#slide-menu').scotchPanel({
     containerSelector: 'body',
     direction: 'left',
@@ -26,7 +23,7 @@ $(function() {
     forceMinHeight: true,
     minHeight: '2500px',
     enableEscapeKey: true
-  });
+  }).show(); // show to avoid flash of content
 
   $('.toggle-slide').click(function() {
     scotchPanel.css('overflow', 'scroll');
