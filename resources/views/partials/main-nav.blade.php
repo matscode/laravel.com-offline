@@ -1,5 +1,6 @@
 <li class="nav-docs"><a href="/docs">Documentation</a></li>
 <li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
 <li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
 <li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
 <li class="nav-api"><a href="/api/5.0">API</a></li>
