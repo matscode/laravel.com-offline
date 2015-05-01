@@ -44,7 +44,7 @@ class Documentation {
 			$path = base_path('resources/docs/'.$version.'/documentation.md');
 
 			if ($this->files->exists($path)) {
-				return markdown($this->files->get($path));
+				return $this->replaceLinks($version, markdown($this->files->get($path)));
 			}
 
 			return null;
@@ -64,11 +64,23 @@ class Documentation {
 			$path = base_path('resources/docs/'.$version.'/'.$page.'.md');
 
 			if ($this->files->exists($path)) {
-				return markdown($this->files->get($path));
+				return $this->replaceLinks($version, markdown($this->files->get($path)));
 			}
 
 			return null;
 		});
+	}
+
+	/**
+	 * Replace the version place-holder in links.
+	 *
+	 * @param  string  $version
+	 * @param  string  $content
+	 * @return string
+	 */
+	protected function replaceLinks($version, $content)
+	{
+		return str_replace('{{version}}', $version, $content);
 	}
 
 	/**
