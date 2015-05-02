@@ -966,3 +966,5 @@ $(function() {
     })
 
 });
+
+//# sourceMappingURL=laravel.js.map
