@@ -3,7 +3,7 @@
 <li class="nav-lumen"><a href="http://lumen.laravel.com">Lumen</a></li>
 <li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
 <li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
-<li class="nav-api"><a href="/api/5.0">API</a></li>
+<li class="nav-api"><a href="/api/{{ isset($currentVersion) ? $currentVersion : DEFAULT_VERSION }}">API</a></li>
 <li class="dropdown community-dropdown">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
 	<ul class="dropdown-menu" role="menu">
