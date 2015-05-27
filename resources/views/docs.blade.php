@@ -27,6 +27,13 @@
 		{!! $index !!}
 	</section>
 
+	<div id="search">
+		<div id="search-wrapper">
+			<input placeholder="Search for pages, sections, ..." type="text" id="search-input" />
+			<i id="cross" class="icon"></i>
+		</div>
+	</div>
+
 	<article>
 		{!! $content !!}
 	</article>

@@ -13,7 +13,7 @@ return [
 	|
 	*/
 
-	'debug' => env('APP_DEBUG'),
+	'debug' => true,//env('APP_DEBUG'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -144,6 +144,8 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
+
+		'Vinkla\Algolia\AlgoliaServiceProvider',
 
 	],
 
