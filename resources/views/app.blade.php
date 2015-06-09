@@ -11,7 +11,7 @@
 	<!--[if lte IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<link rel="stylesheet" href="/assets/css/laravel.css">
+	<link rel="stylesheet" href="{{ elixir('assets/css/laravel.css') }}">
 </head>
 <body class="@yield('body-class', 'docs') language-php">
 
@@ -58,7 +58,7 @@
 		@include('partials.algolia_template')
 	@endif
 
-	<script src="/assets/js/laravel.js"></script>
+	<script src="{{ elixir('assets/js/laravel.js') }}"></script>
 	<script src="/assets/js/viewport-units-buggyfill.js"></script>
 	<script>window.viewportUnitsBuggyfill.init();</script>
 	<script>

@@ -16,4 +16,5 @@ elixir(function(mix) {
     mix.scripts(['jquery.js', 'plugins/prism.js', 'plugins/bootstrap.js', 'plugins/scotchPanels.js', 'plugins/algoliasearch.js', 'plugins/typeahead.js', 'plugins/hogan.js', 'laravel.js'],
       'public/assets/js/laravel.js',
     	'resources/assets/js/');
+    mix.version(['assets/css/laravel.css', 'assets/js/laravel.js']);
 });
