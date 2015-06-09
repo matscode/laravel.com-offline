@@ -65,7 +65,7 @@ class DocsController extends Controller {
 			'index' => $this->docs->getIndex($version),
 			'content' => $content,
 			'currentVersion' => $version,
-			'versions' => $this->getDocVersions(),
+			'versions' => Documentation::getDocVersions(),
 			'currentSection' => $section,
 		]);
 	}
@@ -78,23 +78,6 @@ class DocsController extends Controller {
 	 */
 	protected function isVersion($version)
 	{
-		return in_array($version, array_keys($this->getDocVersions()));
+		return in_array($version, array_keys(Documentation::getDocVersions()));
 	}
-
-	/**
-	 * Get the available documentation versions.
-	 *
-	 * @return array
-	 */
-	protected function getDocVersions()
-	{
-		return [
-			'master' => 'Master',
-			'5.0' => '5.0',
-			'4.2' => '4.2',
-			'4.1' => '4.1',
-			'4.0' => '4.0',
-		];
-	}
-
 }

@@ -2,7 +2,7 @@
 
 @section('content')
 <nav id="slide-menu" class="slide-menu" role="navigation">
-	
+
 	<div class="brand">
 		<a href="/">
 			<img src="/assets/img/laravel-logo-white.png" height="50">
@@ -26,6 +26,13 @@
 	<section class="sidebar">
 		{!! $index !!}
 	</section>
+
+	<div id="search">
+		<div id="search-wrapper">
+			<input placeholder="" type="text" id="search-input" />
+			<i id="cross" class="icon"></i>
+		</div>
+	</div>
 
 	<article>
 		{!! $content !!}

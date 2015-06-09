@@ -78,7 +78,7 @@ class Documentation {
 	 * @param  string  $content
 	 * @return string
 	 */
-	protected function replaceLinks($version, $content)
+	public static function replaceLinks($version, $content)
 	{
 		return str_replace('{{version}}', $version, $content);
 	}
@@ -97,4 +97,17 @@ class Documentation {
 		);
 	}
 
+	/**
+	 * Get the publicly available versions of the documentation
+	 *
+	 * @return array
+	 */
+	public static function getDocVersions()
+	{
+		return [
+			'master' => 'Master',
+			'5.0' => '5.0',
+			'4.2' => '4.2',
+		];
+	}
 }
