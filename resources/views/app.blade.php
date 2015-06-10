@@ -12,6 +12,7 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<link rel="stylesheet" href="{{ elixir('assets/css/laravel.css') }}">
+	<link rel="apple-touch-icon" href="/favicon.png">
 </head>
 <body class="@yield('body-class', 'docs') language-php">
 
