@@ -84,7 +84,7 @@ class Idea extends Eloquent {
 						</div>
 						<div class='window-content'>
 							<pre class="line-numbers"><code class="language-php">
-class Purchase implements ShouldBeQueued {
+class Purchase implements ShouldQueue {
 
 	/**
 	 * Purchase a new podcast.
