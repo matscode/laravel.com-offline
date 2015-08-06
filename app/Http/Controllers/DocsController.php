@@ -45,6 +45,10 @@ class DocsController extends Controller {
 		}
 
 		$content = $this->docs->get($version, $page ?: 'installation');
+		
+		if (is_null($content)) {
+			abort(404);
+		}
 
 		$title = (new Crawler($content))->filterXPath('//h1');
 
@@ -54,10 +58,6 @@ class DocsController extends Controller {
 			$section .= '/'.$page;
 		} elseif ( ! is_null($page)) {
 			return redirect('/docs/'.$version);
-		}
-
-		if (is_null($content)) {
-			abort(404);
 		}
 
 		return view('docs', [
