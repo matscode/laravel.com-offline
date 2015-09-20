@@ -105,7 +105,7 @@ class Purchase implements ShouldQueue {
 			<div class="block even">
 				<div class="text">
 					<h2>Tailored for your team.</h2>
-					<p>Whether you're a solo developer or a 20 person team, Laravel is a breath of fresh air. Keep everyone in sync using Laravel's database agnostic <a href="/docs/migrations">migrations</a> and <a href="/docs/schema">schema builder</a>.</p>
+					<p>Whether you're a solo developer or a 20 person team, Laravel is a breath of fresh air. Keep everyone in sync using Laravel's database agnostic <a href="/docs/migrations">migrations</a> and <a href="/docs/migrations">schema builder</a>.</p>
 				</div>
 				<div class="media">
 					<div class="terminal-window">
