@@ -112,7 +112,7 @@ $(function() {
     });
 
     $('#cross').click(function() {
-      typeahead.val('').keyup();
+      typeahead.typeahead('val', '').keyup();
       $article.css('opacity', '1');
     });
   }
