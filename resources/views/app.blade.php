@@ -13,6 +13,16 @@
 	<![endif]-->
 	<link rel="stylesheet" href="{{ elixir('assets/css/laravel.css') }}">
 	<link rel="apple-touch-icon" href="/favicon.png">
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+	<script>
+		Mousetrap.bind('/', function () {
+			window.scrollTo(0, 0);
+			var input = $('#search-input');
+			input.val('');
+			input.focus();
+		});
+	</script>
 </head>
 <body class="@yield('body-class', 'docs') language-php">
 
