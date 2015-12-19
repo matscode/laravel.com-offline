@@ -18,10 +18,10 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
 	<script>
 		Mousetrap.bind('/', function () {
-			window.scrollTo(0, 0);
-			var input = $('#search-input');
-			input.val('');
-			input.focus();
+			// window.scrollTo(0, 0);
+			// var input = $('#search-input');
+			// input.val('');
+			// input.focus();
 		});
 	</script>
 </head>
