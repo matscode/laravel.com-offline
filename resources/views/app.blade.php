@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="{{ elixir('assets/css/laravel.css') }}">
 	<link rel="apple-touch-icon" href="/favicon.png">
 
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
 	<script>
 		Mousetrap.bind('/', function () {
