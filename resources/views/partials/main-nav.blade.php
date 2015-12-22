@@ -23,12 +23,11 @@
 	<ul class="dropdown-menu" role="menu">
 		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
 		<li class="divider"></li>
-		<li><a href="http://blog.laravel.com">Laravel Development Blog</a></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
 		<li class="divider"></li>
 		<li><a href="https://laracasts.com/discuss">Forums</a></li>
 		<li><a href="http://larachat.co">Slack</a></li>
 		<li class="divider"></li>
-		<li><a href="http://laravel.io">Laravel.io</a></li>
 		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
 		<li><a href="https://laravel-news.com/">Newsletter</a></li>
 		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
