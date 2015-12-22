@@ -148,9 +148,9 @@ Route::resource('photos', 'PhotoController');
 /**
  * Retrieve A User...
  */
-Route::get('/user/{id}', function($id)
+Route::get('/user/{user}', function(App\User $user)
 {
-	return User::with('posts')->firstOrFail($id);
+	return $user;
 })
 </code></pre>
 					</div>
