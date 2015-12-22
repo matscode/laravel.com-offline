@@ -23,6 +23,8 @@
 	<ul class="dropdown-menu" role="menu">
 		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
 		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Development Blog</a></li>
+		<li class="divider"></li>
 		<li><a href="https://laracasts.com/discuss">Forums</a></li>
 		<li><a href="http://larachat.co">Slack</a></li>
 		<li class="divider"></li>
