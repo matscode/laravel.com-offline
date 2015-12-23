@@ -23,8 +23,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('docs:index')
-                ->sendOutputTo(storage_path('app/index.output'))
-                ->hourly();
+        // $schedule->command('docs:index')
+        //         ->sendOutputTo(storage_path('app/index.output'))
+        //         ->hourly();
     }
 }
