@@ -14,6 +14,7 @@ $iterator = Finder::create()
 	->in($dir = __DIR__.'/laravel/src');
 
 $versions = GitVersionCollection::create($dir)
+	->add('4.2', 'Laravel 4.2')
 	->add('5.0', 'Laravel 5.0')
 	->add('5.1', 'Laravel 5.1')
 	->add('5.2', 'Laravel 5.2')
