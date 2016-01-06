@@ -63,6 +63,13 @@ class Idea extends Eloquent {
 	</a>
 </section>
 
+<section class="panel laracon standout" id="laracon">
+    <object type="image/svg+xml" data="/assets/img/laracon-16.svg" width="350"></object>
+    <h2>This year Laracon goes <strong>bigger than ever</strong>. Early Bird tickets available for a limited time.</h2>
+    <a href="http://laracon.us" class="btn"><em>Laracon US</em>Louisville, Kentucky</a>
+    <a href="http://laracon.eu" class="btn"><em>Laracon EU</em>Amsterdam, Netherlands</a>
+</section>
+
 <section class="panel features dark" id="features">
 	<h1>Did someone say rapid?</h1>
 	<p>Elegant applications delivered at warp speed.</p>
