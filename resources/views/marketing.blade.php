@@ -195,7 +195,7 @@ Route::get('/user/{user}', function(App\User $user)
 			</div>
 			<div class="tile">
 				<h2>Power Packed</h2>
-				<p>Laravel is amazing out of the box, but there's more to explore! Let <a href="/docs/billing">Cashier</a> make subscription billing painless, or use <a href="/docs/authentication#social-authentication">Socialite</a> to authenticate with Facebook, Twitter, and more.</p>
+				<p>Laravel is amazing out of the box, but there's more to explore! Let <a href="/docs/billing">Cashier</a> make subscription billing painless, or use <a href="https://github.com/laravel/socialite">Socialite</a> to authenticate with Facebook, Twitter, and more.</p>
 			</div>
 		</div>
 	</section>
