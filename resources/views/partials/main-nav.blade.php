@@ -1,6 +1,6 @@
 <li class="nav-docs"><a href="/docs">Documentation</a></li>
 <li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
-<li class="nav-lumen"><a href="http://lumen.laravel.com">Lumen</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
 
 <li class="dropdown community-dropdown">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
