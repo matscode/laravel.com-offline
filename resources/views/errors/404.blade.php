@@ -5,7 +5,11 @@ the-404
 @endsection
 
 @section('content')
-	
+
+    <div class="container">
+        @include('partials.search')
+    </div>
+
 	<div class="contain">
 		<div class="media">
 			<img src="/assets/img/lamp-post.jpg">
