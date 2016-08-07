@@ -11,8 +11,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        'App\Console\Commands\Inspire',
-        'App\Console\Commands\IndexDocumentation',
+        Commands\ClearPageCache::class,
+        Commands\IndexDocumentation::class,
     ];
 
     /**
