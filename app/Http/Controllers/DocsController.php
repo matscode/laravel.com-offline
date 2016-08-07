@@ -44,8 +44,12 @@ class DocsController extends Controller {
 			return redirect('docs/'.DEFAULT_VERSION.'/'.$version, 301);
 		}
 
+		if (! defined('CURRENT_VERSION')) {
+			define('CURRENT_VERSION', $version);
+		}
+
 		$content = $this->docs->get($version, $page ?: 'installation');
-		
+
 		if (is_null($content)) {
 			abort(404);
 		}

@@ -8,6 +8,11 @@
 	<meta name="description" content="Laravel - The PHP framework for web artisans.">
 	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	@if (defined('CURRENT_VERSION') && in_array(CURRENT_VERSION, ['master', '5.1', '5.0', '4.2']))
+	<meta name="robots" content="noindex">
+	@endif
+
 	<!--[if lte IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
