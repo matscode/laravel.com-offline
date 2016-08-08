@@ -66,6 +66,7 @@ class DocsController extends Controller {
 		}
 
 		$canonical = null;
+
 		if ($this->docs->sectionExists(DEFAULT_VERSION, $sectionPage)) {
 			$canonical = 'docs/'.DEFAULT_VERSION.'/'.$sectionPage;
 		}
