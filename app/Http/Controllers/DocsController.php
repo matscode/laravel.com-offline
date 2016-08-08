@@ -48,7 +48,8 @@ class DocsController extends Controller {
 			define('CURRENT_VERSION', $version);
 		}
 
-		$content = $this->docs->get($version, $page ?: 'installation');
+		$sectionPage = $page ?: 'installation';
+		$content = $this->docs->get($version, $sectionPage);
 
 		if (is_null($content)) {
 			abort(404);
@@ -65,8 +66,8 @@ class DocsController extends Controller {
 		}
 
 		$canonical = null;
-		if ($this->docs->sectionExists(DEFAULT_VERSION, $page ?: 'installation')) {
-			$canonical = 'docs/'.DEFAULT_VERSION.'/'.($page ?: 'installation');
+		if ($this->docs->sectionExists(DEFAULT_VERSION, $sectionPage)) {
+			$canonical = 'docs/'.DEFAULT_VERSION.'/'.$sectionPage;
 		}
 
 		return view('docs', [
