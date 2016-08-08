@@ -1,23 +1,19 @@
-## Laravel PHP Framework
+## Laravel.com website
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+This is the source of the official Laravel.com website.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+The site has 2 main features:
+- The frontpage (can be found in resources/view/marketing.blade.php)
+- The documentation (content is loaded from https://github.com/laravel/docs)
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Documentation
 
-## Official Documentation
+To get the documentation part working locally, checkout this project and load the documentation content in the resources/docs directory.
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+The docs are split up per version. So resources/docs/5.2 contains the 5.2 version of the docs, resources/docs/5.3 the 5.3 version.
+
+Content can be found in the https://github.com/laravel/docs project. The different versions are split up in branches. So the 5.2 branch needs to be checked out in the resources/docs/5.2 directory.
 
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
