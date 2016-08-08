@@ -64,6 +64,11 @@ class DocsController extends Controller {
 			return redirect('/docs/'.$version);
 		}
 
+		$canonical = null;
+		if ($this->docs->sectionExists(DEFAULT_VERSION, $page ?: 'installation')) {
+			$canonical = 'docs/'.DEFAULT_VERSION.'/'.$page;
+		}
+
 		return view('docs', [
 			'title' => count($title) ? $title->text() : null,
 			'index' => $this->docs->getIndex($version),
@@ -71,6 +76,7 @@ class DocsController extends Controller {
 			'currentVersion' => $version,
 			'versions' => Documentation::getDocVersions(),
 			'currentSection' => $section,
+			'canonical' => $canonical,
 		]);
 	}
 

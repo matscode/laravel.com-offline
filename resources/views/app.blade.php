@@ -9,8 +9,10 @@
 	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	@if (defined('CURRENT_VERSION') && in_array(CURRENT_VERSION, ['master', '5.1', '5.0', '4.2']))
-
+	@if (isset($canonical) && $canonical)
+	<link rel="canonical" href="{{ url($canonical) }}" />
+	@elseif (defined('CURRENT_VERSION') && in_array(CURRENT_VERSION, ['master', '5.1', '5.0', '4.2']))
+	<meta name="robots" content="noindex">
 	@endif
 
 	<!--[if lte IE 9]>
