@@ -19,12 +19,13 @@ define('DEFAULT_VERSION', '5.2');
 /**
  * Convert some text to Markdown...
  */
-function markdown($text) {
-	return (new ParsedownExtra)->text($text);
+function markdown($text)
+{
+    return (new ParsedownExtra)->text($text);
 }
 
-get('/', function() {
-	return view('marketing');
+get('/', function () {
+    return view('marketing');
 });
 
 get('docs', 'DocsController@showRootPage');
