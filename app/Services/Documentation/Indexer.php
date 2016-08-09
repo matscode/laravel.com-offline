@@ -17,14 +17,14 @@ class Indexer
 
     /**
      * The Algolia Index instance.
-    *
+     *
      * @var \AlgoliaSearch\Index
      */
     protected $index;
 
     /**
      * The Algolia client instance.
-    *
+     *
      * @var \AlgoliaSearch\Client
      */
     protected $client;
@@ -65,9 +65,10 @@ class Indexer
         'h2' => 1,
         'h3' => 2,
         'h4' => 3,
-        'p'  => 4,
-        'td' => 4,
-        'li' => 4
+        'h5' => 4,
+        'p'  => 5,
+        'td' => 5,
+        'li' => 5
     ];
 
     /**
@@ -136,9 +137,14 @@ class Indexer
         $markup = [];
 
         $current_link = $slug;
-        $current_h1 = null;
-        $current_h2 = null;
-        $current_h3 = null;
+
+        $current = [
+            'h1' => null,
+            'h2' => null,
+            'h3' => null,
+            'h4' => null,
+            'h5' => null,
+        ];
 
         $excludedBlocTypes = ['Code', 'Quote', 'Markup', 'FencedCode'];
 
@@ -150,7 +156,7 @@ class Indexer
 
             if (isset($bloc['type']) && $bloc['type'] == 'Table') {
                 foreach ($bloc['element']['text'][1]['text'] as $tr) {
-                    $markup[] = $this->getObject($tr['text'][1], $version, $current_h1, $current_h2, $current_h3, $current_h4, $current_link);
+                    $markup[] = $this->getObject($tr['text'][1], $version, $current, $current_link);
                 }
 
                 continue;
@@ -160,7 +166,7 @@ class Indexer
                 foreach ($bloc['element']['text'] as $li) {
                     $li['text'] = $li['text'][0];
 
-                    $markup[] = $this->getObject($li, $version, $current_h1, $current_h2, $current_h3, $current_h4, $current_link);
+                    $markup[] = $this->getObject($li, $version, $current, $current_link);
                 }
 
                 continue;
@@ -171,13 +177,24 @@ class Indexer
             if (count($link) > 0) {
                 $current_link = $slug . '#' . $link[1];
             } else {
-                $markup[] = $this->getObject($bloc['element'], $version, $current_h1, $current_h2, $current_h3, $current_h4, $current_link);
+                $markup[] = $this->getObject($bloc['element'], $version, $current, $current_link);
             }
         }
 
         $this->index->addObjects($markup);
 
         echo "Indexed $version.$slug" . PHP_EOL;
+    }
+
+    /**
+     * @param $element_name
+     * @return mixed
+     */
+    public function getPositionFromElementName($element_name)
+    {
+        $elements = ['h1', 'h2', 'h3', 'h4', 'h5'];
+
+        return array_search($element_name, $elements);
     }
 
     /**
@@ -192,62 +209,46 @@ class Indexer
      * @param  string  $current_link
      * @return array
      */
-    protected function getObject($element, $version, &$current_h1, &$current_h2, &$current_h3, &$current_h4, &$current_link)
+    protected function getObject($element, $version, &$current, &$current_link)
     {
-        $isContent = true;
+        $text = [
+            'h1' => null,
+            'h2' => null,
+            'h3' => null,
+            'h4' => null,
+            'h5' => null,
+        ];
 
-        if ($element['name'] == 'h1') {
-            $current_h1 = $element['text'];
-            $current_h2 = null;
-            $current_h3 = null;
-            $current_h4 = null;
-            $isContent = false;
-        }
+        $key = $this->getPositionFromElementName($element['name']);
 
-        if ($element['name'] == 'h2') {
-            $current_h2 = $element['text'];
-            $current_h3 = null;
-            $current_h4 = null;
-            $isContent = false;
-        }
-
-        if ($element['name'] == 'h3') {
-            $current_h3 = $element['text'];
-            $current_h4 = null;
-            $isContent = false;
-        }
-
-        if ($element['name'] == 'h4') {
-            $current_h4 = $element['text'];
-            $isContent = false;
+        if ($key !== false) {
+            $key = $key + 1; // We actually start at h1
+            $current['h'.$key] = $element['text'];
+            for ($i = ($key + 1); $i <= 5; $i++) {
+                $current["h".$i] = null;
+            }
+            $text['h'.$key] = $element['text'];
+            $content = null;
+        } else {
+            $content = $element['text'];
         }
 
         $importance = $this->tags[$element['name']];
 
-        if ($importance === 4) {
-            // Only if it's content
-
-            if ($current_h2 !== null) {
-                $importance++;
-            }
-
-            if ($current_h3 !== null) {
-                $importance++;
-            }
-
-            if ($current_h4 !== null) {
-                $importance++;
-            }
-        }
-
         return [
             'objectID'      => $version.'-'.$current_link.'-'.md5($element['text']),
-            'h1'            => $current_h1,
-            'h2'            => $current_h2,
-            'h3'            => $current_h3,
-            'h4'            => $current_h4,
+            'h1'            => $current['h1'],
+            'h2'            => $current['h2'],
+            'h3'            => $current['h3'],
+            'h4'            => $current['h4'],
+            'h5'            => $current['h5'],
+            'text_h1'       => $text['h1'],
+            'text_h2'       => $text['h2'],
+            'text_h3'       => $text['h3'],
+            'text_h4'       => $text['h4'],
+            'text_h5'       => $text['h5'],
             'link'          => $current_link,
-            'content'       => $isContent ? $element['text'] : null,
+            'content'       => $content,
             'importance'    => $importance,
             '_tags'         => [$version]
         ];
@@ -261,11 +262,14 @@ class Indexer
     public function setSettings()
     {
         $this->index->setSettings([
-            'attributesToIndex'         => ['unordered(h1)', 'unordered(h2)', 'unordered(h3)', 'unordered(h4)', 'unordered(content)'],
+            'attributesToIndex'         => [
+                'unordered(text_h1)', 'unordered(text_h2)', 'unordered(text_h3)', 'unordered(text_h4)', 'unordered(text_h5)',
+                'unordered(h1)', 'unordered(h2)', 'unordered(h3)', 'unordered(h4)', 'unordered(h5)', 'unordered(content)'
+            ],
             'attributesToHighlight'     => ['h1', 'h2', 'h3', 'h4', 'content'],
             'attributesToRetrieve'      => ['h1', 'h2', 'h3', 'h4', '_tags', 'link'],
             'customRanking'             => ['asc(importance)'],
-            'ranking'                   => ['words', 'typo', 'attribute', 'proximity', 'exact', 'custom'],
+            'ranking'                   => ['words', 'typo', 'attribute', 'proximity', 'custom'],
             'minWordSizefor1Typo'       => 3,
             'minWordSizefor2Typos'      => 7,
             'allowTyposOnNumericTokens' => false,
