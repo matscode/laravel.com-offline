@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Services\Documentation\Indexer;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -14,7 +15,6 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\ClearPageCache::class,
-        Commands\IndexDocumentation::class,
     ];
 
     /**
@@ -25,8 +25,18 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('docs:index')
-        //         ->sendOutputTo(storage_path('app/index.output'))
-        //         ->hourly();
+        //
+    }
+
+    /**
+     * Register the Closure based commands for the application.
+     *
+     * @return void
+     */
+    protected function commands()
+    {
+        $this->command('docs:index', function () {
+            app(Indexer::class)->indexAllDocuments();
+        })->describe('Index all documentation on Algolia');
     }
 }

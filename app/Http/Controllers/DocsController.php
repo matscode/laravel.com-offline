@@ -7,7 +7,6 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class DocsController extends Controller
 {
-
     /**
      * The documentation repository.
      *

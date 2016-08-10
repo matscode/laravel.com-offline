@@ -7,7 +7,6 @@ use Illuminate\Contracts\Cache\Repository as Cache;
 
 class Documentation
 {
-
     /**
      * The filesystem implementation.
      *
