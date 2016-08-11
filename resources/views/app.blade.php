@@ -26,7 +26,7 @@
 	<nav class="main">
 		<div class="container">
 			<a href="/" class="brand">
-				<img src="/assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				<img src="{{ asset('assets/img/laravel-logo.png') }}" height="30" alt="Laravel logo">
 				Laravel
 			</a>
 

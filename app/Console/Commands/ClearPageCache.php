@@ -1,4 +1,6 @@
-<?php namespace App\Console\Commands;
+<?php
+
+namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
@@ -17,7 +19,7 @@ class ClearPageCache extends Command
      *
      * @var string
      */
-    protected $description = 'Clears the page cache.';
+    protected $description = 'Clears the page cache';
 
     /**
      * Execute the console command.

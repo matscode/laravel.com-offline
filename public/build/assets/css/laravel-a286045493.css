@@ -416,7 +416,6 @@ blockquote {
   font-weight: normal;
   text-align: center;
   vertical-align: middle;
-  -ms-touch-action: manipulation;
   touch-action: manipulation;
   cursor: pointer;
   background-image: none;
@@ -795,6 +794,7 @@ input[type="button"].btn-block {
 
 .fade {
   opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear; }
 
 .fade.in {
@@ -818,8 +818,11 @@ tbody.collapse.in {
   position: relative;
   height: 0;
   overflow: hidden;
+  -webkit-transition-property: height, visibility;
   transition-property: height, visibility;
+  -webkit-transition-duration: 0.35s;
   transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease;
   transition-timing-function: ease; }
 
 .caret {
@@ -1029,7 +1032,6 @@ pre[class*="language-"] {
   -o-tab-size: 4;
   tab-size: 4;
   -webkit-hyphens: none;
-  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none; }
 
@@ -1186,7 +1188,6 @@ pre.line-numbers > code {
     -o-tab-size: 4;
     tab-size: 4;
     -webkit-hyphens: none;
-    -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none; }
   .dark-code pre[class*="language-"] {
@@ -1305,6 +1306,7 @@ pre.line-numbers > code {
   height: 100%;
   display: none;
   z-index: 999999;
+  -webkit-transition: all 100ms ease;
   transition: all 100ms ease;
   -webkit-animation-duration: .5s;
   animation-duration: .5s;

@@ -1,4 +1,6 @@
-<?php namespace App\Services\Documentation;
+<?php
+
+namespace App\Services\Documentation;
 
 use ParsedownExtra;
 use App\CustomParser;

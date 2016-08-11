@@ -37,7 +37,7 @@ home
 &lt;?php
 
 
-class Idea extends Eloquent 
+class Idea extends Eloquent
 {
 
 	/**
@@ -92,7 +92,7 @@ class Idea extends Eloquent
 						</div>
 						<div class='window-content'>
 							<pre class="line-numbers"><code class="language-php">
-class Purchase implements ShouldQueue 
+class Purchase implements ShouldQueue
 {
 
 	/**

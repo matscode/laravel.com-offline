@@ -1,19 +1,23 @@
 #!/bin/bash
+base=/home/forge/laravel.com
+sami=${base}/build/sami
 
-cd /home/forge/laravel.com/build/sami
+cd $sami
+composer install
 
-rm -rf /home/forge/laravel.com/build/sami/build
-rm -rf /home/forge/laravel.com/build/sami/cache
+# Cleanup Before
+rm -rf ${sami}/build
+rm -rf ${sami}/cache
+rm -rf ${sami}/laravel
 
 # Run API Docs
-git clone https://github.com/laravel/framework.git /home/forge/laravel.com/build/sami/laravel
+git clone https://github.com/laravel/framework.git ${sami}/laravel
 
-php /home/forge/laravel.com/vendor/bin/sami.php update /home/forge/laravel.com/build/sami/sami.php
+${sami}/vendor/bin/sami.php update ${sami}/sami.php
 
-cp -r /home/forge/laravel.com/build/sami/build/* /home/forge/laravel.com/public/api
+cp -r ${sami}/build/* ${base}/public/api
 
-rm -rf /home/forge/laravel.com/build/sami/build
-rm -rf /home/forge/laravel.com/build/sami/cache
-
-# Cleanup
-rm -rf /home/forge/laravel.com/build/sami/laravel
+# Cleanup After
+rm -rf ${sami}/build
+rm -rf ${sami}/cache
+rm -rf ${sami}/laravel
