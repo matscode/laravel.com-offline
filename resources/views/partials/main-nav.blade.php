@@ -4,7 +4,7 @@
 <li class="nav-laravel-news"><a href="https://laravel-news.com">News</a></li>
 
 <li class="dropdown community-dropdown">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ecosystem <span class="caret"></span></a>
 	<ul class="dropdown-menu" role="menu">
 		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
 		<li class="divider"></li>
