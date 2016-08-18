@@ -54,15 +54,17 @@
 		<p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
 	</footer>
 
-	@if (Request::is('docs*') && isset($currentVersion))
+
 	<script>
 		var algolia_app_id      = '<?php echo Config::get('algolia.connections.main.id', false); ?>';
 		var algolia_search_key  = '<?php echo Config::get('algolia.connections.main.search_key', false); ?>';
+		@if (Request::is('docs*') && isset($currentVersion))
 		var version             = '<?php echo $currentVersion; ?>';
+		@endif
 	</script>
 
 		@include('partials.algolia_template')
-	@endif
+
 
 	<script src="{{ elixir('assets/js/laravel.js') }}"></script>
 	<script src="/assets/js/viewport-units-buggyfill.js"></script>
