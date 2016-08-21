@@ -222,7 +222,7 @@ Route::get('/user/{user}', function(App\User $user)
                         <div class="callout-icon">{!! svg('cashier') !!}</div>
                     </div>
                     <div class="callout-body">
-                        <p>Make subscription billing painless with built-in Stripe and Braintree integrations. Coupons, swapping subscriptions, cancellations, and even PDF invoices. All out of the box.</p>
+                        <p>Make subscription billing painless with built-in Stripe and Braintree integrations. Coupons, swapping subscriptions, cancellations, and even PDF invoices are ready out of the box.</p>
                     </div>
                 </a>
             </div>
@@ -251,7 +251,8 @@ Route::get('/user/{user}', function(App\User $user)
                         <div class="icon">{!! svg('package') !!}</div>
                         <div class="content">
                             <a href="/docs/elixir" class="package-title">Elixir</a>
-                            <p>If you've ever been frustrated with Gulp and asset compilation, Elixir is for you.</p>
+                            <!-- <p>If you've ever been frustrated with Gulp and asset compilation, Elixir is for you.</p> -->
+                            <p>Laravel Elixir makes front-end a breeze. Start using SASS and Webpack in minutes.</p>
                         </div>
                     </div>
                     <div class="package">
