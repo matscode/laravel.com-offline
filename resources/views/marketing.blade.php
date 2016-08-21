@@ -44,9 +44,7 @@ class Idea extends Eloquent
 	 	// Have a fresh start...
 	 }
 
-}
-
-    	</code></pre>
+}</code></pre>
             {!! svg('macbook') !!}
         </div>
 
