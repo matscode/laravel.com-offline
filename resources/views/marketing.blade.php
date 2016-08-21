@@ -249,7 +249,8 @@ Route::get('/user/{user}', function(App\User $user)
                         <div class="icon">{!! svg('package') !!}</div>
                         <div class="content">
                             <a href="/docs/elixir" class="package-title">Elixir</a>
-                            <p>If you've ever been frustrated with Gulp and asset compilation, Elixir is for you.</p>
+                            <!-- <p>If you've ever been frustrated with Gulp and asset compilation, Elixir is for you.</p> -->
+                            <p>Laravel Elixir makes front-end a breeze. Start using SASS and Webpack in minutes.</p>
                         </div>
                     </div>
                     <div class="package">
