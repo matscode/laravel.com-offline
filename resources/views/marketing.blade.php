@@ -60,7 +60,7 @@ class Idea extends Eloquent
                     <div class="callout-title">Laravel Scout</div>
                     <div class="callout-icon">{!! svg('scout')!!}</div>
                 </div>
-                <p>Driver based full-text search for Eloquent, complete with pagination and native Algolia support.</p>
+                <p>Driver based full-text search for Eloquent, complete with pagination and automatic indexing.</p>
             </a>
             <a href="/docs/broadcasting" class="callout minimal third">
                 <div class="callout-head">
@@ -74,7 +74,7 @@ class Idea extends Eloquent
                     <div class="callout-title">Laravel Passport</div>
                     <div class="callout-icon">{!! svg('passport')!!}</div>
                 </div>
-                <p>A complete oAuth 2 server ready to go in minutes. Available as an optional package.</p>
+                <p>API authentication without the headache. Passport is an OAuth2 server that's ready in minutes.</p>
             </a>
         </div>
 	</div>
@@ -204,7 +204,7 @@ Route::get('/user/{user}', function(App\User $user)
                         <div class="callout-icon">{!! svg('h') !!}</div>
                     </div>
                     <div class="callout-body">
-                        <p>The official Laravel local development environment. Powered by Vagrant, Homestead gets your entire team on the same page with the latest PHP, MySQL, Postgres, Redis, and more.</p>
+                        <p>The official Laravel development environment. Powered by Vagrant, Homestead gets your entire team on the same page with the latest PHP, MySQL, Postgres, Redis, and more.</p>
                     </div>
                 </a>
                 <a class="third callout pop teal" href="https://laracasts.com">
@@ -213,7 +213,7 @@ Route::get('/user/{user}', function(App\User $user)
                         <div class="callout-icon">{!! svg('play') !!}</div>
                     </div>
                     <div class="callout-body">
-                        <p>Hundreds (yes, hundreds) of Laravel and PHP video tutorials with new videos added every week! Skim the basics or start your journey to Laravel mastery. All for the price of lunch.</p>
+                        <p>Hundreds (yes, hundreds) of Laravel and PHP video tutorials with new videos added every week. Skim the basics or start your journey to Laravel mastery. All for the price of lunch.</p>
                     </div>
                 </a>
                 <a class="third callout pop" href="/docs/cashier">
