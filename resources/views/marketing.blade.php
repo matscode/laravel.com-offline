@@ -26,6 +26,8 @@
             <p>The PHP Framework For Web Artisans</p>
         </div>
 
+        @include('partials/browser')
+
         <div class="macbook">
 <pre class="line-numbers"><code class="language-php">
 &lt;?php
