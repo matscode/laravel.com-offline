@@ -47,9 +47,6 @@
 		</div>
 	</nav>
 
-    <div id="search-wrapper">
-    </div>
-
 	@yield('content')
 
 	<footer class="main">
@@ -65,11 +62,10 @@
         </p>
 	</footer>
 
-
 	<script>
 		var algolia_app_id      = '<?php echo Config::get('algolia.connections.main.id', false); ?>';
 		var algolia_search_key  = '<?php echo Config::get('algolia.connections.main.search_key', false); ?>';
-		@if (Request::is('docs*') && isset($currentVersion))
+		@if (isset($currentVersion))
 		var version             = '<?php echo $currentVersion; ?>';
 		@endif
 	</script>
