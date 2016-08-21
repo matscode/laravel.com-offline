@@ -10402,6 +10402,19 @@ c,e){var f=h(a,c,e),d;c={};var k=0,l=!1;for(d=0;d<f.length;++d)f[d].seq&&(k=Math
 escape:"esc",plus:"+",mod:/Mac|iPod|iPhone|iPad/.test(navigator.platform)?"meta":"ctrl"},k;for(g=1;20>g;++g)l[111+g]="f"+g;for(g=0;9>=g;++g)l[g+96]=g;c.prototype.bind=function(a,b,c){a=a instanceof Array?a:[a];this._bindMultiple.call(this,a,b,c);return this};c.prototype.unbind=function(a,b){return this.bind.call(this,a,function(){},b)};c.prototype.trigger=function(a,b){if(this._directMap[a+":"+b])this._directMap[a+":"+b]({},a);return this};c.prototype.reset=function(){this._callbacks={};this._directMap=
 {};return this};c.prototype.stopCallback=function(a,b){return-1<(" "+b.className+" ").indexOf(" mousetrap ")||B(b,this.target)?!1:"INPUT"==b.tagName||"SELECT"==b.tagName||"TEXTAREA"==b.tagName||b.isContentEditable};c.prototype.handleKey=function(){return this._handleKey.apply(this,arguments)};c.init=function(){var a=c(r),b;for(b in a)"_"!==b.charAt(0)&&(c[b]=function(b){return function(){return a[b].apply(a,arguments)}}(b))};c.init();C.Mousetrap=c;"undefined"!==typeof module&&module.exports&&(module.exports=
 c);"function"===typeof define&&define.amd&&define(function(){return c})})(window,document);
+new Vue({
+  el: 'nav.main',
+  data: {
+    search: ''
+  },
+  methods: {
+    reset: function() {
+      this.search = '';
+    }
+  }
+})
+
+
 $(function() {
   // Smooth scroll to anchor
   $('body.home a[href*=#]:not([href=#])').click(function() {
@@ -10543,6 +10556,15 @@ $(function() {
     typeahead.on('typeahead:closed', function () {
       $article.css('opacity', '1');
     });
+
+    typeahead.on('typeahead:closed',
+        function (e) {
+            // keep menu open if input element is still focused
+            if ($(e.target).is(':focus')) {
+                return false;
+            }
+        }
+    );
 
     $('#cross').click(function() {
       typeahead.typeahead('val', '').keyup();

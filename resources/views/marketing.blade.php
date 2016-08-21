@@ -1,8 +1,6 @@
 @extends('app')
 
-@section('body-class')
-home
-@endsection
+@section('body-class', 'home')
 
 @section('content')
 
@@ -20,20 +18,16 @@ home
 
 </nav>
 
-<section class="panel statement light">
-	<div class="content">
-		<h1>Love beautiful code? We do too.</h1>
-		<p>The PHP Framework For Web Artisans</p>
-		<div class='browser-window'>
-			<div class='top-bar'>
-				<div class='circles'>
-					<div class="circle circle-red"></div>
-					<div class="circle circle-yellow"></div>
-					<div class="circle circle-green"></div>
-				</div>
-			</div>
-			<div class='window-content'>
-				<pre class="line-numbers"><code class="language-php">
+<section class="hero">
+	<div class="container">
+
+        <div class="content">
+            <h1>Love beautiful code? We do too.</h1>
+            <p>The PHP Framework For Web Artisans</p>
+        </div>
+
+        <div class="macbook">
+<pre class="line-numbers"><code class="language-php">
 &lt;?php
 
 
@@ -52,28 +46,50 @@ class Idea extends Eloquent
 
 }
 
-	</code></pre>
-				</div>
-			</div>
+    	</code></pre>
+            {!! svg('macbook') !!}
+        </div>
 
-		</div>
+        <div class="callout rule">
+            <span class="text">See What's New In 5.3!</span>
+        </div>
+
+        <div class="callouts">
+            <a href="/docs/scout" class="callout minimal third">
+                <div class="callout-head">
+                    <div class="callout-title">Laravel Scout</div>
+                    <div class="callout-icon">{!! svg('scout')!!}</div>
+                </div>
+                <p>Driver based full-text search for Eloquent, complete with pagination and native Algolia support.</p>
+            </a>
+            <a href="/docs/broadcasting" class="callout minimal third">
+                <div class="callout-head">
+                    <div class="callout-title">Laravel Echo</div>
+                    <div class="callout-icon">{!! svg('echo')!!}</div>
+                </div>
+                <p>Event broadcasting, evolved. Bring the power of WebSockets to your application without the complexity.</p>
+            </a>
+            <a href="/docs/passport" class="callout minimal third">
+                <div class="callout-head">
+                    <div class="callout-title">Laravel Passport</div>
+                    <div class="callout-icon">{!! svg('passport')!!}</div>
+                </div>
+                <p>A complete oAuth 2 server ready to go in minutes. Available as an optional package.</p>
+            </a>
+        </div>
 	</div>
-	<a href="#features" class="next-up">
-		Powerful, Modern Features
-		<img src="/assets/img/down-arrow.png">
-	</a>
 </section>
 
-<section class="panel laracon standout" id="laracon">
+{{-- <section class="panel laracon standout" id="laracon">
     <object type="image/svg+xml" data="/assets/img/laracon-16.svg" width="350"></object>
     <h2>This year Laracon goes <strong>bigger than ever</strong>. Early Bird tickets available for a limited time.</h2>
     <a href="http://laracon.us" class="btn"><em>Laracon US</em>Louisville, Kentucky</a>
     <a href="http://laracon.eu" class="btn"><em>Laracon EU</em>Amsterdam, Netherlands</a>
-</section>
+</section> --}}
 
 <section class="panel features dark" id="features">
 	<h1>Did someone say rapid?</h1>
-	<p>Elegant applications delivered at warp speed.</p>
+	<p class="intro">Elegant applications delivered at warp speed.</p>
 		<div class="blocks stacked">
 			<div class="block odd">
 				<div class="text">
@@ -166,39 +182,103 @@ Route::get('/user/{user}', function(App\User $user)
 				</div>
 			</div><!-- /.block -->
 		</div>
-		<a href="#ecosystem" class="next-up">
-			The Laravel Ecosystem
-			<img src="/assets/img/down-arrow.png">
-		</a>
 	</section>
 
 	<section class="panel ecosystem light" id="ecosystem">
 		<h1>The Laravel Ecosystem</h1>
-		<p>Revolutionize how you build the web.</p>
+		<p class="intro">Revolutionize how you build the web.</p>
 
-		<div class="forge contain">
-			<img src="/assets/img/forge-macbook.png" alt="Forge Dashboard" class="screenshot">
-			<div class="content">
-				<a href="https://forge.laravel.com">
-					<img src="/assets/img/forge-logo.png" alt="Forge">
-				</a>
-				<p>Instant PHP Platforms On Linode, DigitalOcean, and more. Push to deploy, PHP 7.0, HHVM, queues, and everything you need to launch and deploy amazing Laravel applications.</p>
-				<p>Launch your application in minutes!</p>
-			</div>
-		</div>
-		<div class="tiles">
-			<div class="tile">
-				<h2><a href="/docs/homestead">Homestead</a></h2>
-				<p>The official Laravel local development environment. Powered by Vagrant, Homestead gets your entire team on the same page with the latest PHP, MySQL, Postgres, Redis, and more.</p>
-			</div>
-			<div class="tile">
-				<h2><a href="https://laracasts.com">Laracasts</a></h2>
-				<p>Hundreds (yes, hundreds) of Laravel and PHP video tutorials with new videos added every week! Skim the basics or start your journey to Laravel mastery. All for the price of lunch.</p>
-			</div>
-			<div class="tile">
-				<h2>Power Packed</h2>
-				<p>Laravel is amazing out of the box, but there's more to explore! Let <a href="/docs/billing">Cashier</a> make subscription billing painless, or use <a href="https://github.com/laravel/socialite">Socialite</a> to authenticate with Facebook, Twitter, and more.</p>
-			</div>
-		</div>
+        <div class="container">
+    		<a href="https://forge.laravel.com" class="callout full forge">
+    			<div class="content">
+					{!! svg('forge') !!}
+    				<p>Instant PHP Platforms On Linode, DigitalOcean, and more. Push to deploy, PHP 7.0, HHVM, queues, and everything you need to launch and deploy amazing Laravel applications.</p>
+    				<p>Launch your application in minutes!</p>
+    			</div>
+                <img src="https://forge.laravel.com/images/ui-preview.png" alt="Forge UI Preview" height="350" />
+    		</a>
+            <div class="callouts">
+                <a class="third callout pop" href="/docs/homestead">
+                    <div class="callout-head">
+                        <div class="callout-title">Homestead</div>
+                        <div class="callout-icon">{!! svg('h') !!}</div>
+                    </div>
+                    <div class="callout-body">
+                        <p>The official Laravel local development environment. Powered by Vagrant, Homestead gets your entire team on the same page with the latest PHP, MySQL, Postgres, Redis, and more.</p>
+                    </div>
+                </a>
+                <a class="third callout pop teal" href="https://laracasts.com">
+                    <div class="callout-head">
+                        <div class="callout-title">Laracasts</div>
+                        <div class="callout-icon">{!! svg('play') !!}</div>
+                    </div>
+                    <div class="callout-body">
+                        <p>Hundreds (yes, hundreds) of Laravel and PHP video tutorials with new videos added every week! Skim the basics or start your journey to Laravel mastery. All for the price of lunch.</p>
+                    </div>
+                </a>
+                <a class="third callout pop" href="/docs/cashier">
+                    <div class="callout-head">
+                        <div class="callout-title">Laravel Cashier</div>
+                        <div class="callout-icon">{!! svg('cashier') !!}</div>
+                    </div>
+                    <div class="callout-body">
+                        <p>Make subscription billing painless with built-in Stripe and Braintree integrations. Coupons, swapping subscriptions, cancellations, and even PDF invoices. All out of the box.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="callout rule">
+                <span class="text">And so much more!</span>
+            </div>
+            <div class="packages">
+                <div class="third">
+                    <div class="package">
+                        <div class="icon">{!! svg('package') !!}</div>
+                        <div class="content">
+                            <a href="/docs/valet" class="package-title">Valet</a>
+                            <p>A Laravel development environment for Mac minimalists. No Vagrant, no Apache, no fuss.</p>
+                        </div>
+                    </div>
+                    <div class="package">
+                        <div class="icon">{!! svg('package') !!}</div>
+                        <div class="content">
+                            <a href="https://github.com/laravel/socialite" class="package-title">Socialite</a>
+                            <p>OAuth authentication with Facebook, Twitter, Google, LinkedIn, GitHub, and more.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="package">
+                        <div class="icon">{!! svg('package') !!}</div>
+                        <div class="content">
+                            <a href="/docs/elixir" class="package-title">Elixir</a>
+                            <p>If you've ever been frustrated with Gulp and asset compilation, Elixir is for you.</p>
+                        </div>
+                    </div>
+                    <div class="package">
+                        <div class="icon">{!! svg('package') !!}</div>
+                        <div class="content">
+                            <a href="https://spark.laravel.com" class="package-title">Spark</a>
+                            <p>Powerful SaaS application scaffolding. Stop writing boilerplate & focus your application.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="package">
+                        <div class="icon">{!! svg('package') !!}</div>
+                        <div class="content">
+                            <a href="https://lumen.laravel.com" class="package-title">Lumen</a>
+                            <p>If all you need is an API and lightning fast speed, try Lumen. It’s Laravel super-light.</p>
+                        </div>
+                    </div>
+                    <div class="package last">
+                        <div class="icon">{!! svg('package') !!}</div>
+                        <div class="content">
+                            <a href="https://statamic.com" class="package-title">Statamic</a>
+                            <p>Need a CMS that runs on Laravel and is built for developers <em>and</em> clients? Look no further. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 	</section>
 @endsection

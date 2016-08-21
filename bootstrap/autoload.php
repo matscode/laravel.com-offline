@@ -4,6 +4,18 @@ define('LARAVEL_START', microtime(true));
 
 /*
 |--------------------------------------------------------------------------
+| Register Helper Functions
+|--------------------------------------------------------------------------
+|
+| We've got some custom helper functions that are helpful. We just need
+| to load it here so they're available everywhere and we won't have
+| to worry about them at all. Little things. SVGs and whatnot.
+*/
+
+require __DIR__.'/helpers.php';
+
+/*
+|--------------------------------------------------------------------------
 | Register The Composer Auto Loader
 |--------------------------------------------------------------------------
 |

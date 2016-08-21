@@ -8,41 +8,47 @@
 	<meta name="description" content="Laravel - The PHP framework for web artisans.">
 	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	@if (isset($canonical))
 		<link rel="canonical" href="{{ url($canonical) }}" />
 	@endif
-
 	<!--[if lte IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+    <link href='https://fonts.googleapis.com/css?family=Miriam+Libre:400,700|Source+Sans+Pro:200,400,700,600,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="{{ elixir('assets/css/laravel.css') }}">
 	<link rel="apple-touch-icon" href="/favicon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
 </head>
 <body class="@yield('body-class', 'docs') language-php">
 
 	<span class="overlay"></span>
 
 	<nav class="main">
-		<div class="container">
-			<a href="/" class="brand">
-				<img src="{{ asset('assets/img/laravel-logo.png') }}" height="30" alt="Laravel logo">
-				Laravel
-			</a>
+		<a href="/" class="brand nav-block">
+			{!! svg('laravel-logo') !!}
+			<span>Laravel</span>
+		</a>
 
-			<div class="responsive-sidebar-nav">
-				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
-			</div>
+        <div class="search nav-block">
+            {!! svg('search') !!}
+            <input placeholder="search" type="text" v-model="search" id="search-input" v-on:blur="reset" />
+        </div>
 
-			@if (Request::is('docs*') && isset($currentVersion))
-				@include('partials.switcher')
-			@endif
+		<ul class="main-nav" v-if="! search">
+			@include('partials.main-nav')
+		</ul>
 
-			<ul class="main-nav">
-				@include('partials.main-nav')
-			</ul>
+        @if (Request::is('docs*') && isset($currentVersion))
+			@include('partials.switcher')
+		@endif
+
+        <div class="responsive-sidebar-nav">
+			<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
 		</div>
 	</nav>
+
+    <div id="search-wrapper">
+    </div>
 
 	@yield('content')
 
@@ -51,7 +57,12 @@
 			@include('partials.main-nav')
 		</ul>
 		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
-		<p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
+		<p class="less-significant">
+            <a href="http://jackmcdade.com">
+                Designed by<br>
+                {!! svg('jack-mcdade') !!}
+            </a>
+        </p>
 	</footer>
 
 
@@ -63,8 +74,7 @@
 		@endif
 	</script>
 
-		@include('partials.algolia_template')
-
+	@include('partials.algolia_template')
 
 	<script src="{{ elixir('assets/js/laravel.js') }}"></script>
 	<script src="/assets/js/viewport-units-buggyfill.js"></script>

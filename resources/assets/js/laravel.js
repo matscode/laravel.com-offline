@@ -1,3 +1,16 @@
+new Vue({
+  el: 'nav.main',
+  data: {
+    search: ''
+  },
+  methods: {
+    reset: function() {
+      this.search = '';
+    }
+  }
+})
+
+
 $(function() {
   // Smooth scroll to anchor
   $('body.home a[href*=#]:not([href=#])').click(function() {
@@ -139,6 +152,15 @@ $(function() {
     typeahead.on('typeahead:closed', function () {
       $article.css('opacity', '1');
     });
+
+    typeahead.on('typeahead:closed',
+        function (e) {
+            // keep menu open if input element is still focused
+            if ($(e.target).is(':focus')) {
+                return false;
+            }
+        }
+    );
 
     $('#cross').click(function() {
       typeahead.typeahead('val', '').keyup();
