@@ -216,7 +216,7 @@ Route::get('/user/{user}', function(App\User $user)
                         <p>Hundreds (yes, hundreds) of Laravel and PHP video tutorials with new videos added every week. Skim the basics or start your journey to Laravel mastery. All for the price of lunch.</p>
                     </div>
                 </a>
-                <a class="third callout pop" href="/docs/cashier">
+                <a class="third callout pop" href="/docs/billing">
                     <div class="callout-head">
                         <div class="callout-title">Laravel Cashier</div>
                         <div class="callout-icon">{!! svg('cashier') !!}</div>
