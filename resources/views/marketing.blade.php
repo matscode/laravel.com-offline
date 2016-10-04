@@ -259,7 +259,7 @@ Route::get('/user/{user}', function(App\User $user)
                         <div class="icon">{!! svg('package') !!}</div>
                         <div class="content">
                             <a href="https://spark.laravel.com" class="package-title">Spark</a>
-                            <p>Powerful SaaS application scaffolding. Stop writing boilerplate & focus your application.</p>
+                            <p>Powerful SaaS application scaffolding. Stop writing boilerplate & focus on your application.</p>
                         </div>
                     </div>
                 </div>
