@@ -241,8 +241,8 @@ Route::get('/user/{user}', function(App\User $user)
                     <div class="package">
                         <div class="icon">{!! svg('package') !!}</div>
                         <div class="content">
-                            <a href="https://github.com/laravel/socialite" class="package-title">Socialite</a>
-                            <p>OAuth authentication with Facebook, Twitter, Google, LinkedIn, GitHub, and more.</p>
+                            <a href="https://cachethq.io" class="package-title">Cachet</a>
+                            <p>Cachet is the best way to inform customers of downtime. This is your status page.</p>
                         </div>
                     </div>
                 </div>
