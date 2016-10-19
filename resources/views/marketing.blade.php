@@ -241,8 +241,13 @@ Route::get('/user/{user}', function(App\User $user)
                     <div class="package">
                         <div class="icon">{!! svg('package') !!}</div>
                         <div class="content">
+                            @if(rand(0, 1))
                             <a href="https://cachethq.io" class="package-title">Cachet</a>
                             <p>Cachet is the best way to inform customers of downtime. This is your status page.</p>
+                            @else
+                            <a href="https://styleci.io" class="package-title">StyleCI</a>
+                            <p>StyleCI is the PHP coding style continuious integration service for Laravel.</p>
+                            @endif
                         </div>
                     </div>
                 </div>
