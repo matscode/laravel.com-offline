@@ -246,7 +246,7 @@ Route::get('/user/{user}', function(App\User $user)
                             <p>Cachet is the best way to inform customers of downtime. This is your status page.</p>
                             @else
                             <a href="https://styleci.io" class="package-title">StyleCI</a>
-                            <p>StyleCI is the PHP coding style continous integration service for Laravel.</p>
+                            <p>StyleCI is the PHP coding style continuous integration service for Laravel.</p>
                             @endif
                         </div>
                     </div>
