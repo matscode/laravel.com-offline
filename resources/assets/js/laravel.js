@@ -167,4 +167,12 @@ $(function() {
       $article.css('opacity', '1');
     });
   }
+
+  if ($('.sidebar ul').length) {
+    var current = $('.sidebar ul').find('li a[href="' + window.location.pathname + '"]');
+
+    if (current.length) {
+      current.parent().css('font-weight', 'bold');
+    }
+  }
 });
