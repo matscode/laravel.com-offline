@@ -2,6 +2,15 @@
 <li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
 <li class="nav-laravel-news"><a href="https://laravel-news.com">News</a></li>
 <li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://laracon.eu">Laracon EU</a></li>
+		<li><a href="http://laracon.us">Laracon US</a></li>
+	</ul>
+</li>
+
 <li class="nav-laracon"><a href="http://laracon.us">Conference</a></li>
 
 <li class="dropdown community-dropdown">
