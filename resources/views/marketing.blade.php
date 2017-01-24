@@ -51,7 +51,7 @@ class Idea extends Eloquent
         </div>
 
         <div class="callout rule">
-            <span class="text">See What's New In 5.3!</span>
+            <span class="text">See What's New!</span>
         </div>
 
         <div class="callouts">
