@@ -20,10 +20,10 @@ Route::get('/', function () {
 Route::get('docs', 'DocsController@showRootPage');
 Route::get('docs/{version}/{page?}', 'DocsController@show');
 
-Route::get('community', function () {
-    return view('community')->with(['currentVersion' => DEFAULT_VERSION]);
-});
+// Route::get('community', function () {
+//     return view('community')->with(['currentVersion' => DEFAULT_VERSION]);
+// });
 
-Route::get('community-partner', function () {
-    return view('community-partner')->with(['currentVersion' => DEFAULT_VERSION]);
-});
+// Route::get('community-partner', function () {
+//     return view('community-partner')->with(['currentVersion' => DEFAULT_VERSION]);
+// });
