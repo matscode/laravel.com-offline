@@ -29,7 +29,7 @@
 <section class="panel partners dark">
     <div class="container">
         <div class="callouts flex-column mw-620px">
-            <a href="/community-partner-vehikl" class="partner-card">
+            <a href="/community/vehikl" class="partner-card">
                 <div class="partner-card-banner partner-logo-banner-vehikl">
                     <img src="/assets/svg/partner-logo-vehikl.svg">
                 </div>
@@ -41,7 +41,7 @@
                 </div>
             </a>
 
-            <a href="/community-partner-tighten"  class="partner-card">
+            <a href="/community/tighten"  class="partner-card">
                 <div class="partner-card-banner partner-logo-banner-tighten">
                     <img src="/assets/svg/partner-logo-tighten.svg">
                 </div>
