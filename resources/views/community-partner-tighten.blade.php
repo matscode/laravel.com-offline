@@ -23,8 +23,8 @@
         <div class="partner-profile-header clearfix">
             <div class="partner-logo"><img src="/assets/svg/partner-logo-tighten-full.svg"></div>
             <div class="partner-ctas">
-                <div class="btn btn-primary">Hire Tighten Co.</div>
-                <div class="btn btn-default">Visit Website</div>
+                <a href="mailto:hello@tighten.co"><div class="btn btn-primary">Hire Tighten Co.</div></a>
+                <a href="https://tighten.co"><div class="btn btn-default">Visit Website</div></a>
             </div>
         </div>
 
@@ -56,9 +56,9 @@
                     <h4>Elsewhere</h4>
 
                     <ul class="partner-social-list">
-                        <li><img src="/assets/svg/icon-github.svg"></li>
-                        <li><img src="/assets/svg/icon-twitter.svg"></li>
-                        <li><img src="/assets/svg/icon-linkedin.svg"></li>
+                        <li><a href="https://github.com/tightenco"><img src="/assets/svg/icon-github.svg"></a></li>
+                        <li><a href="https://twitter.com/tightenco"><img src="/assets/svg/icon-twitter.svg"></li>
+                        <li><a href="https://www.linkedin.com/company-beta/4795582/?pathWildcard=4795582"><img src="/assets/svg/icon-linkedin.svg"></a></li>
                     </ul>
                 </div>
             </div>

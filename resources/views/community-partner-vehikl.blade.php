@@ -23,14 +23,14 @@
         <div class="partner-profile-header clearfix">
             <div class="partner-logo"><img src="/assets/svg/partner-logo-vehikl-full.svg"></div>
             <div class="partner-ctas">
-                <div class="btn btn-primary">Hire Vehikl</div>
-                <div class="btn btn-default">Visit Website</div>
+                <a href="mailto:go@vehikl.com"><div class="btn btn-primary">Hire Vehikl</div></a>
+                <a href="http://vehikl.com"><div class="btn btn-default">Visit Website</div></a>
             </div>
         </div>
 
         <div class="row">
             <div class="partner-profile-overview col-md-6">
-                <div class="partner-profile-img"><img src="/assets/img/partner-img-tighten.png"></div>
+                <div class="partner-profile-img"><img src="/assets/img/partner-img-vehikl.png"></div>
 
                 <div class="partner-proficiencies">
                     <h4>Proficiencies</h4>
@@ -56,9 +56,9 @@
                     <h4>Elsewhere</h4>
 
                     <ul class="partner-social-list">
-                        <li><img src="/assets/svg/icon-github.svg"></li>
-                        <li><img src="/assets/svg/icon-twitter.svg"></li>
-                        <li><img src="/assets/svg/icon-linkedin.svg"></li>
+                        <li><a href="https://github.com/vehikl"><img src="/assets/svg/icon-github.svg"></a></li>
+                        <li><a href="https://twitter.com/vehikl"><img src="/assets/svg/icon-twitter.svg"></a></li>
+                        <li><a href="https://www.linkedin.com/company-beta/2240858/?pathWildcard=2240858"><img src="/assets/svg/icon-linkedin.svg"></a></li>
                     </ul>
                 </div>
             </div>
