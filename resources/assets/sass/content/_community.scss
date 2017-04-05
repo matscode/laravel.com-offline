@@ -41,9 +41,18 @@
     }
 }
 
-.partner-card {
+.flex-column{
     display: flex;
     flex-direction: column;
+}
+
+.mw-620px{
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.partner-card {
+    display: flex;
     margin-bottom: 20px;
 
     &:hover {
@@ -55,10 +64,10 @@
 
 .partner-card-banner {
     height: 160px;
+    width: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .partner-card-body {
@@ -81,9 +90,14 @@
     align-items: center;
 }
 
+.partner-card-sponsor{
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
 .partner-card-title{
     font-weight: 300;
-    font-size: 26px;
+    font-size: 36px;
     margin-bottom: 0.5rem;
     color: rgb(68, 68, 68);
 }
@@ -94,6 +108,7 @@
     line-height: 1.6;
     margin: 0px;
     font-weight: 400;
+    float: left;
 }
 
 .partner-logo-banner-vehikl{
@@ -193,6 +208,21 @@ ul{
 }
 
 @media (max-width: 760px) {
+    .partner-card {
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.partner-card-banner {
+    height: 160px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
     .partner-logo, .partner-ctas {
         float: inherit;
     }

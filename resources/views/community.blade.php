@@ -20,7 +20,6 @@
 
         <div class="content">
             <h1>Making the web a better place with Laravel</h1>
-
             <p>Meet our fantastic community of teams and individuals who are making Laravel the best it can be.  </p>
         </div>
     </div>
@@ -29,37 +28,28 @@
 
 <section class="panel partners dark">
     <div class="container">
-        <div class="callouts">
-            <a href="/community-partner" class="partner-card third">
+        <div class="callouts flex-column mw-620px">
+            <a href="/community-partner-vehikl" class="partner-card">
                 <div class="partner-card-banner partner-logo-banner-vehikl">
-                    <img src="/assets/svg/partner-logo-1.svg">
+                    <img src="/assets/svg/partner-logo-vehikl.svg">
                 </div>
 
                 <div class="partner-card-body">
-                    <div class="partner-card-title">Fireball Group</div>
-                    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+                    <div class="partner-card-sponsor">Diamond</div>
+                    <div class="partner-card-title">Vehikl</div>
+                    <p>Vehikl is a team of code-crushing Laravel experts.</p>
                 </div>
             </a>
 
-            <a href="/community-partner"  class="partner-card third">
+            <a href="/community-partner-tighten"  class="partner-card">
                 <div class="partner-card-banner partner-logo-banner-tighten">
-                    <img src="/assets/svg/partner-logo-2.svg">
+                    <img src="/assets/svg/partner-logo-tighten.svg">
                 </div>
 
                 <div class="partner-card-body">
-                    <div class="partner-card-title">Anchors Away</div>
-                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
-                </div>
-            </a>
-
-            <a href="/community-partner"  class="partner-card white third">
-                <div class="partner-card-banner partner-logo-banner-laracasts">
-                    <img src="/assets/svg/partner-logo-3.svg">
-                </div>
-
-                <div class="partner-card-body">
-                    <div class="partner-card-title">The Establishment</div>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                    <div class="partner-card-sponsor">Platinum</div>
+                    <div class="partner-card-title">Tighten</div>
+                    <p>We turn great ideas into software that works.</p>
                 </div>
             </a>
         </div>
