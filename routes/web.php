@@ -20,14 +20,14 @@ Route::get('/', function () {
 Route::get('docs', 'DocsController@showRootPage');
 Route::get('docs/{version}/{page?}', 'DocsController@show');
 
-Route::get('community', function () {
-    return view('community')->with(['currentVersion' => DEFAULT_VERSION]);
+Route::get('partners', function () {
+    return view('partners')->with(['currentVersion' => DEFAULT_VERSION]);
 });
 
-Route::get('/community/tighten', function () {
+Route::get('/partner/tighten', function () {
     return view('community-partner-tighten');
 });
 
-Route::get('/community/vehikl', function () {
+Route::get('/partner/vehikl', function () {
     return view('community-partner-vehikl');
 });
