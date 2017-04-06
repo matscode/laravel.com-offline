@@ -23,7 +23,7 @@
         <div class="partner-profile-header clearfix">
             <div class="partner-logo"><img src="/assets/svg/partner-logo-tighten-full.svg"></div>
             <div class="partner-ctas">
-                <a href="mailto:hello@tighten.co"><div class="btn btn-primary">Hire Tighten Co.</div></a>
+                <a href="mailto:&#104;&#101;&#108;&#108;&#111;&#064;&#116;&#105;&#103;&#104;&#116;&#101;&#110;&#046;&#099;&#111;"><div class="btn btn-primary">Hire Tighten Co.</div></a>
                 <a href="https://tighten.co"><div class="btn btn-default">Visit Website</div></a>
             </div>
         </div>
