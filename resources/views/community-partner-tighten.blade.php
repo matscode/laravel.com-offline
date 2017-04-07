@@ -24,7 +24,7 @@
             <div class="partner-logo"><img src="/assets/svg/partner-logo-tighten-full.svg"></div>
             <div class="partner-ctas">
                 <a href="mailto:&#104;&#101;&#108;&#108;&#111;&#064;&#116;&#105;&#103;&#104;&#116;&#101;&#110;&#046;&#099;&#111;"><div class="btn btn-primary">Hire Tighten Co.</div></a>
-                <a href="https://tighten.co"><div class="btn btn-default">Visit Website</div></a>
+                <a href="https://tighten.co/laravel"><div class="btn btn-default">Visit Website</div></a>
             </div>
         </div>
 
@@ -38,13 +38,12 @@
                         <ul class="partner-proficiencies-list multi-col flex-fill">
                             <li>Laravel Applications</li>
                             <li>Laravel Codebase Audits</li>
-                            <li>Training + Mentoring</li>
                             <li>APIs + Aggregators</li>
-                            <li>VueJS + ReactJS</li>
+                            <li>VueJS + React</li>
                         </ul>
 
                         <ul class="partner-proficiencies-list multi-col flex-fill">
-                            <li>CraftCMS + Statamic</li>
+                            <li>Training + Mentoring</li>
                             <li>UX Design</li>
                             <li>Content Strategy</li>
                             <li>Staff Augmentation</li>
@@ -68,7 +67,7 @@
                 <h3>We turn great ideas into software that works.</h3>
                 <p>You've got an amazing product idea and you've got some funding. Now all you need is a development team. But building one from scratch is daunting and expensive. The better move: Let Tighten be your dev team. </p>
                 <p>Our team of top-notch Laravel developers will build your product, help you take it to market, and iterate with you as things change.  We work with big enterprises, small-to-medium sized businesses, and early-stage startups to devise, design, a deliver world-class applications that are loved by users and developers alike.</p>
-                <p>Constant learning and open sharing with the Laravel community are essential to how we work, and a big part of what we love about it.  We are tireless advocates for the Laravel ecosystem, and we’re delighted to be sponsors.</p>
+                <p>Constant learning and open sharing with the Laravel community are essential to how we work. We are tireless advocates for the Laravel ecosystem, and we’re proud to be a part of the Laravel Partners program right from the start.</p>
             </div>
         </div>
     </div>
