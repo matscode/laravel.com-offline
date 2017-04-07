@@ -47,11 +47,12 @@
             </a>
 
             <a href="mailto:&#116;&#097;&#121;&#108;&#111;&#114;&#064;&#108;&#097;&#114;&#097;&#118;&#101;&#108;&#046;&#099;&#111;&#109;"  class="partner-card-sm">
-                <div class="partner-banner-become-title">Become a partner</div>
+                <div class="partner-banner-become-title">Become A Partner</div>
 
                 <div class="partner-card-body">
-                    <p class="mb-2">Lorem ipsum modern web development, through expert screencasts. </p>
-                    <div class="text-red">Get in touch</div>
+                    <p class="mb-2">If you're a web development shop creating high-quality Laravel projects, we would love to discuss partnering with you.
+                    You can get in touch using the link below:</p>
+                    <div class="text-red">Contact Us</div>
                 </div>
             </a>
             </div>
