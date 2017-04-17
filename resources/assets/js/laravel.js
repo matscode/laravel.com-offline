@@ -200,10 +200,12 @@ $(function() {
   }
 
   function expandItem(e) {
+    clearItems();
     e.target.classList.toggle('is-active');
   }
 
   function expandItemKeyboard(e) {
+    clearItems();
     var elem = e.target;
 
     if (e.keyCode === 13) {
@@ -216,6 +218,12 @@ $(function() {
 
     if (e.keyCode === 37) {
       elem.classList.remove('is-active');
+    }
+  }
+
+  function clearItems() {
+    for (var i = 0; i < toggles.length; i++) {
+      toggles[i].classList.remove('is-active');
     }
   }
 });
