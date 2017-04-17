@@ -48,6 +48,17 @@ $(function() {
     scotchPanel.close();
   });
 
+  // Hide the slide menu when changing the browser width
+
+  function checkSize() {
+    if (window.matchMedia("(min-width: 781px)").matches) {
+      scotchPanel.close();
+    }
+  }
+
+  checkSize();
+  window.onresize = checkSize;
+
   // gheading links
   $('.docs-wrapper').find('a[name]').each(function () {
     var anchor = $('<a href="#' + this.name + '"/>');
@@ -173,8 +184,11 @@ $(function() {
 
     if (current.length) {
       current.parent().css('font-weight', 'bold');
+      current.closest('ul').prev().toggleClass('is-active');
     }
   }
+
+  // collapse and expand for the sidebar
 
   var toggles = document.querySelectorAll('.sidebar h2'),
       togglesList = document.querySelectorAll('.sidebar h2 + ul');
