@@ -3,25 +3,77 @@
 	width: 250px;
 	float: left;
 	padding: 35px;
+	
+	h2 {
+		position: relative;
+		font-size: 14px;
+		font-weight: 400;
+		padding: 0.75rem 0 0.75rem 0;
+		margin: 0;
+		font-weight: 600;
+		cursor: pointer;
+		transition: color 0.1s linear;
+		border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+
+		&:focus {
+			outline: 0;
+		}
+
+		&:hover,
+		&:focus {
+			color: #f4645f;
+			border-color: currentColor;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 0.75rem;
+			width: 13px;
+			height: 15px;
+			background: url('/assets/svg/arrow-right.svg') center / 12px no-repeat;
+		}
+
+		& + ul {
+			display: none;
+		}
+
+		&.is-active {
+			color: $color__darker_salmon;
+			border-bottom-style: solid;
+
+			&:after {
+				transform: rotate(90deg);
+			}
+		}
+
+		&.is-active + ul {
+			display: block;
+		}
+	}
+
 	> ul {
 		list-style: none;
 		padding: 0;
 		margin: 0;
+
 		> li {
 			font-size: 14px;
 			font-weight: 400;
-			padding: 0 0 10px;
-			margin: 1em 0 0px;
+			padding: 0;
+			margin: 0;
+
 			> ul {
-				border-top: 1px dashed rgba(0,0,0,.1);
-				display: block;
 				list-style: none;
-				margin: 0.5em 0 0 0;
-				padding: 0.5em 0 0 0;
+				margin: 0.5rem 0 0;
+				padding: 0;
 				font-size: 14px;
+				padding-left: 0.75rem;
 			}
 		}
 	}
+
 	a {
 		line-height: 1.5;
 		&:hover {
@@ -31,18 +83,14 @@
 }
 
 @media (max-width:1080px) {
-
 	.sidebar {
 		padding: 25px;
 		width: 200px;
 	}
-
 }
 
 @media (max-width:780px) {
-
 	.sidebar {
 		display: none;
 	}
-
 }

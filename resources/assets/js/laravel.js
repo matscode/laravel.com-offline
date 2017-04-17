@@ -175,4 +175,33 @@ $(function() {
       current.parent().css('font-weight', 'bold');
     }
   }
+
+  var toggles = document.querySelectorAll('.sidebar h2'),
+      togglesList = document.querySelectorAll('.sidebar h2 + ul');
+
+  for (var i = 0; i < toggles.length; i++) {
+    toggles[i].addEventListener('click', expandItem);
+    toggles[i].addEventListener('keydown', expandItemKeyboard);
+    toggles[i].setAttribute('tabindex', '0');
+  }
+
+  function expandItem(e) {
+    e.target.classList.toggle('is-active');
+  }
+
+  function expandItemKeyboard(e) {
+    var elem = e.target;
+
+    if (e.keyCode === 13) {
+      elem.classList.toggle('is-active');
+    }
+
+    if (e.keyCode === 39) {
+      elem.classList.add('is-active');
+    }
+
+    if (e.keyCode === 37) {
+      elem.classList.remove('is-active');
+    }
+  }
 });
