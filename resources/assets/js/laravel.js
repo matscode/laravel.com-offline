@@ -51,7 +51,7 @@ $(function() {
   // Hide the slide menu when changing the browser width
 
   function checkSize() {
-    if (window.matchMedia("(min-width: 781px)").matches) {
+    if (window.matchMedia("(min-width: 960px)").matches) {
       scotchPanel.close();
     }
   }
