@@ -200,8 +200,14 @@ $(function() {
   }
 
   function expandItem(e) {
-    clearItems();
-    e.target.classList.toggle('is-active');
+    var elem = e.target;
+
+    if(elem.classList.contains('is-active')) {
+      elem.classList.remove('is-active');
+    } else {
+      clearItems();
+      elem.classList.add('is-active');
+    }
   }
 
   function expandItemKeyboard(e) {
