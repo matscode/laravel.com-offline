@@ -18,7 +18,7 @@
 
 <section class="partner-profile">
     <div class="container">
-        <a href="/community"><h4>Laravel Community</h4></a>
+        <a href="/partners"><h4>Laravel Partners</h4></a>
 
         <div class="partner-profile-header clearfix">
             <div class="partner-logo"><img src="/assets/svg/partner-logo-tighten-full.svg"></div>
