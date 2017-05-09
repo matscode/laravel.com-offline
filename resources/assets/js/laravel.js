@@ -96,7 +96,7 @@ $(function() {
 
   Mousetrap.bind('/', function(e) {
     $('#search-input').focus();
-  }, 'keyup');
+  });
 
   initAlgoliaSearch();
 
