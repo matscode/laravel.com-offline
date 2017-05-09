@@ -95,6 +95,7 @@ $(function() {
   });
 
   Mousetrap.bind('/', function(e) {
+    e.preventDefault();
     $('#search-input').focus();
   });
 
