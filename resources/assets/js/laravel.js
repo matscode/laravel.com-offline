@@ -27,9 +27,6 @@ new Vue({
 
 jQuery(function($) {
 
-  // Fixes FOUC for the search box
-  $('.search.invisible').removeClass('invisible');
-
   // Smooth scroll to anchor
   $('body.home a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -118,6 +115,9 @@ jQuery(function($) {
   });
 
   initAlgoliaSearch();
+
+  // Fixes FOUC for the search box
+  $('.search.invisible').removeClass('invisible');
 
   function initAlgoliaSearch() {
     if (window.algolia_app_id === '') {
