@@ -2,7 +2,14 @@
 	background: $color__salmon;
     padding: 0 20px;
     left: -70%;
-    display: none !important;
+
+    @media (min-width: 959px) {
+        display: none;
+    }
+
+    &:not(.scotch-panel-left) {
+        display: none;
+    }
 
     h2 {
         position: relative;
@@ -63,12 +70,6 @@
 
 .wrap {
     position: relative;
-}
-
-@media (max-width: 960px) {
-    .slide-menu {
-        display: block !important;
-    }
 }
 
 .overlay {
