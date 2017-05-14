@@ -1,3 +1,17 @@
+// jQuery core
+window.jQuery = window.$ = require('./vendor/jquery.js');
+
+// These all require jQuery
+require('./vendor/prism.js');
+require('./vendor/bootstrap.js');
+require('./vendor/typeahead.js');
+require('./vendor/scotchPanels.js');
+
+// Standalone vendor libraries
+const Hogan = require('./vendor/hogan.js');
+const Mousetrap = require('./vendor/mousetrap.js');
+const algoliasearch = require('./vendor/algoliasearch.js');
+
 new Vue({
   el: 'nav.main',
   data: {
@@ -11,7 +25,7 @@ new Vue({
 })
 
 
-$(function() {
+jQuery(function($) {
   // Smooth scroll to anchor
   $('body.home a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
