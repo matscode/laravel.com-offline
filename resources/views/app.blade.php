@@ -30,7 +30,7 @@
 			<span>Laravel</span>
 		</a>
 
-        <div class="search nav-block">
+        <div class="search nav-block invisible">
             {!! svg('search') !!}
             <input placeholder="search" type="text" v-model="search" id="search-input" v-on:blur="reset" />
         </div>
