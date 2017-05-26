@@ -64,12 +64,10 @@
 	</footer>
 
 	<script>
-		var algolia_app_id      = '<?php echo Config::get('algolia.connections.main.id', false); ?>';
-		var algolia_search_key  = '<?php echo Config::get('algolia.connections.main.search_key', false); ?>';
-		@if (isset($currentVersion))
-		var version             = '<?php echo $currentVersion; ?>';
-		@endif
-	</script>
+        var algolia_app_id      = '{{ Config::get('algolia.connections.main.id', false) }}';
+        var algolia_search_key  = '{{ Config::get('algolia.connections.main.search_key', false) }}';
+        var version             = '{{ isset($currentVersion) ? $currentVersion : DEFAULT_VERSION }}';
+    </script>
 
 	@include('partials.algolia_template')
 

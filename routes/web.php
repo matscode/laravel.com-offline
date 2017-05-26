@@ -14,14 +14,14 @@ function markdown($text)
 }
 
 Route::get('/', function () {
-    return view('marketing')->with(['currentVersion' => DEFAULT_VERSION]);
+    return view('marketing');
 });
 
 Route::get('docs', 'DocsController@showRootPage');
 Route::get('docs/{version}/{page?}', 'DocsController@show');
 
 Route::get('partners', function () {
-    return view('partners')->with(['currentVersion' => DEFAULT_VERSION]);
+    return view('partners');
 });
 
 Route::get('/partner/tighten', function () {
