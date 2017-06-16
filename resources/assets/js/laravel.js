@@ -114,6 +114,11 @@ jQuery(function($) {
     $('#search-input').focus();
   });
 
+  Mousetrap.bind(["ctrl+b", "command+b"], function(e) {
+    e.preventDefault();
+    $(".sidebar").find( "h2" ).toggleClass('is-active');
+  });
+
   initAlgoliaSearch();
 
   // Fixes FOUC for the search box
