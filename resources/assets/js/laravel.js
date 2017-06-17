@@ -116,7 +116,7 @@ jQuery(function($) {
 
   Mousetrap.bind(["ctrl+b", "command+b"], function(e) {
     e.preventDefault();
-    $(".sidebar").find( "h2" ).toggleClass('is-active');
+    $(".sidebar").find( "h2" ).addClass('is-active');
   });
 
   initAlgoliaSearch();
