@@ -43,8 +43,7 @@
 <script id="search_footer_template" type="text/template">
 	<div class="footer">
 		<a target="_blank" href="https://www.algolia.com/?utm_source=laravel&utm_medium=link&utm_campaign=laravel_documentation_search">
-			<img width="50" src="/assets/img/algolia-logo.png">
-			<div class="powered">powered by</div>
+			<img width="105" src="/assets/img/algolia-logo.svg">
 			<div style="clear: both"></div>
 		</a>
 	</div>
