@@ -203,17 +203,7 @@ jQuery(function($) {
     });
   }
 
-  if ($('.sidebar ul').length) {
-    var current = $('.sidebar ul').find('li a[href="' + window.location.pathname + '"]');
-
-    if (current.length) {
-      current.parent().css('font-weight', 'bold');
-      current.closest('ul').prev().toggleClass('is-active');
-    }
-  }
-
   // collapse and expand for the sidebar
-
   var toggles = document.querySelectorAll('.sidebar h2'),
       togglesList = document.querySelectorAll('.sidebar h2 + ul');
 
@@ -221,6 +211,83 @@ jQuery(function($) {
     toggles[i].addEventListener('click', expandItem);
     toggles[i].addEventListener('keydown', expandItemKeyboard);
     toggles[i].setAttribute('tabindex', '0');
+  }
+
+  // Via https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#Testing_for_availability
+  function storageAvailable(type) {
+    try {
+      var storage = window[type],
+          x = '__storage_test__';
+      storage.setItem(x, x);
+      storage.removeItem(x);
+      return true;
+    } catch(e) {
+      return e instanceof DOMException && (
+          // everything except Firefox
+          e.code === 22 ||
+          // Firefox
+          e.code === 1014 ||
+          // test name field too, because code might not be present
+          // everything except Firefox
+          e.name === 'QuotaExceededError' ||
+          // Firefox
+          e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+          // acknowledge QuotaExceededError only if there's something already stored
+          storage.length !== 0;
+    }
+  }
+
+  // Track the state of the doc collapse
+  var docCollapsed = true;
+  function expandDocs(e) {
+    for (var i = 0; i < toggles.length; i++) {
+      if(docCollapsed) {
+        toggles[i].classList.add('is-active')
+      } else {
+        toggles[i].classList.remove('is-active')
+      }
+    }
+
+    // Modify states
+    docCollapsed = !docCollapsed;
+    document.getElementById('doc-expand').text = (docCollapsed ? 'Expand' : 'Collapse') + ' all';
+
+    // Modify LS if we can
+    if (storageAvailable('localStorage')) {
+      localStorage.setItem('laravel_docCollapsed', docCollapsed);
+    }
+    // Cancel event
+    if(e) {
+      e.preventDefault();
+    }
+  }
+
+  // Load the users previous preference if available
+  if(storageAvailable('localStorage')) {
+    // Can't use if(var) since this is a boolean, LS returns null for unset keys
+    if(localStorage.getItem('laravel_docCollapsed') === null) {
+      localStorage.setItem('laravel_docCollapsed', true)
+    } else {
+      // Load previous state, and if it was false, then expand the doc
+      // LS will store booleans as strings, we will "cast" them back here
+      localStorage.getItem('laravel_docCollapsed') == 'false' ? expandDocs() : null
+    }
+  }
+
+  // Register event listener
+  document.getElementById('doc-expand') ? document.getElementById('doc-expand').addEventListener('click', expandDocs) : null;
+
+  if ($('.sidebar ul').length) {
+    var current = $('.sidebar ul').find('li a[href="' + window.location.pathname + '"]');
+
+    if (current.length) {
+      current.parent().css('font-weight', 'bold');
+
+      // Only toggle the state if the user has collapsed the documentation
+      if(docCollapsed) {
+        current.closest('ul').prev().toggleClass('is-active');
+      }
+    }
   }
 
   function expandItem(e) {
