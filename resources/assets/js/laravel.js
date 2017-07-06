@@ -250,7 +250,7 @@ jQuery(function($) {
 
     // Modify states
     docCollapsed = !docCollapsed;
-    document.getElementById('doc-expand').text = (docCollapsed ? 'Expand' : 'Collapse') + ' all';
+    document.getElementById('doc-expand').text = (docCollapsed ? '▶' : '▼');
 
     // Modify LS if we can
     if (storageAvailable('localStorage')) {
