@@ -25,7 +25,7 @@
 
 	<section class="sidebar">
 		<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=laravelcom" id="_carbonads_js"></script>
-
+		<small><a href="#" id="doc-expand">Expand All</a></small>
 		{!! $index !!}
 	</section>
 
