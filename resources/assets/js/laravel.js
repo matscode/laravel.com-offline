@@ -250,7 +250,7 @@ jQuery(function($) {
 
     // Modify states
     docCollapsed = !docCollapsed;
-    document.getElementById('doc-expand').text = (docCollapsed ? 'Expand' : 'Collapse') + " all";
+    document.getElementById('doc-expand').text = (docCollapsed ? 'Expand' : 'Collapse') + ' all';
 
     // Modify LS if we can
     if (storageAvailable('localStorage')) {
@@ -278,16 +278,15 @@ jQuery(function($) {
   document.getElementById('doc-expand') ? document.getElementById('doc-expand').addEventListener('click', expandDocs) : null;
 
   if ($('.sidebar ul').length) {
-    // If the doc is fully expanded, we don't need to toggle is-active for the current document
-    if(!docCollapsed) {
-      return;
-    }
-
     var current = $('.sidebar ul').find('li a[href="' + window.location.pathname + '"]');
 
     if (current.length) {
       current.parent().css('font-weight', 'bold');
-      current.closest('ul').prev().toggleClass('is-active');
+
+      // Only toggle the state if the user has collapsed the documentation
+      if(docCollapsed) {
+        current.closest('ul').prev().toggleClass('is-active');
+      }
     }
   }
 
