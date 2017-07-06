@@ -203,17 +203,7 @@ jQuery(function($) {
     });
   }
 
-  if ($('.sidebar ul').length) {
-    var current = $('.sidebar ul').find('li a[href="' + window.location.pathname + '"]');
-
-    if (current.length) {
-      current.parent().css('font-weight', 'bold');
-      current.closest('ul').prev().toggleClass('is-active');
-    }
-  }
-
   // collapse and expand for the sidebar
-
   var toggles = document.querySelectorAll('.sidebar h2'),
       togglesList = document.querySelectorAll('.sidebar h2 + ul');
 
@@ -257,7 +247,11 @@ jQuery(function($) {
         toggles[i].classList.remove('is-active')
       }
     }
+
+    // Modify states
     docCollapsed = !docCollapsed;
+    document.getElementById('doc-expand').text = (docCollapsed ? 'Expand' : 'Collapse') + " all";
+
     // Modify LS if we can
     if (storageAvailable('localStorage')) {
       localStorage.setItem('laravel_docCollapsed', docCollapsed);
@@ -282,6 +276,20 @@ jQuery(function($) {
 
   // Register event listener
   document.getElementById('doc-expand') ? document.getElementById('doc-expand').addEventListener('click', expandDocs) : null;
+
+  if ($('.sidebar ul').length) {
+    // If the doc is fully expanded, we don't need to toggle is-active for the current document
+    if(!docCollapsed) {
+      return;
+    }
+
+    var current = $('.sidebar ul').find('li a[href="' + window.location.pathname + '"]');
+
+    if (current.length) {
+      current.parent().css('font-weight', 'bold');
+      current.closest('ul').prev().toggleClass('is-active');
+    }
+  }
 
   function expandItem(e) {
     var elem = e.target;
