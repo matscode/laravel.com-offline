@@ -39,6 +39,7 @@
                             <li>Laravel</li>
                             <li>React</li>
                             <li>Angular</li>
+                            <li>Vue</li>
                             <li>UI/UX Product Design</li>
                             <li>API Design</li>
                         </ul>
