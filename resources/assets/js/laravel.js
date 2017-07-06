@@ -275,7 +275,7 @@ jQuery(function($) {
       localStorage.setItem('laravel_docCollapsed', true)
     } else {
       // Load previous state, and if it was false, then expand the doc
-      // LS will store only strings
+      // LS will store booleans as strings, we will "cast" them back here
       localStorage.getItem('laravel_docCollapsed') == 'false' ? expandDocs() : null
     }
   }
