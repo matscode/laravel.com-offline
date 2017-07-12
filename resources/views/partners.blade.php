@@ -39,22 +39,28 @@
             </a>
 
             <div class="flex-row">
+                <a href="/partner/tighten"  class="partner-card mr-2">
+                    <div class="partner-card-banner partner-card-md partner-logo-banner-tighten">
+                        <img src="/assets/svg/tighten-logo-white.svg">
+                    </div>
+                </a>
+                <a href="/partner/kirschbaum-development-group"  class="partner-card">
+                    <div class="partner-card-banner partner-card-md partner-logo-banner-kirschbaum">
+                        <img src="/assets/svg/kirschbaum-logo-white.svg">
+                    </div>
+                </a>
+            </div>
 
-            <a href="/partner/tighten"  class="partner-card mr-2">
-                <div class="partner-card-banner partner-card-md partner-logo-banner-tighten">
-                    <img src="/assets/svg/tighten-logo-white.svg">
-                </div>
-            </a>
+            <div class="flex-row">
+                <a href="mailto:&#116;&#097;&#121;&#108;&#111;&#114;&#064;&#108;&#097;&#114;&#097;&#118;&#101;&#108;&#046;&#099;&#111;&#109;"  class="partner-card-md mb-2">
+                    <div class="partner-banner-become-title">Become A Partner</div>
 
-            <a href="mailto:&#116;&#097;&#121;&#108;&#111;&#114;&#064;&#108;&#097;&#114;&#097;&#118;&#101;&#108;&#046;&#099;&#111;&#109;"  class="partner-card-sm">
-                <div class="partner-banner-become-title">Become A Partner</div>
-
-                <div class="partner-card-body">
-                    <p class="mb-2">If you're a web development shop creating high-quality Laravel projects, we would love to discuss partnering with you.
-                    You can get in touch using the link below:</p>
-                    <div class="text-red">Contact Us</div>
-                </div>
-            </a>
+                    <div class="partner-card-body">
+                        <p class="mb-2">If you're a web development shop creating high-quality Laravel projects, we would love to discuss partnering with you.
+                            You can get in touch using the link below:</p>
+                        <div class="text-red">Contact Us</div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
