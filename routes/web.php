@@ -31,3 +31,7 @@ Route::get('/partner/tighten', function () {
 Route::get('/partner/vehikl', function () {
     return view('community-partner-vehikl');
 });
+
+Route::get('/partner/kirschbaum-development-group', function () {
+    return view('community-partner-kirschbaum');
+});
