@@ -55,26 +55,26 @@ class Idea extends Eloquent
         </div>
 
         <div class="callouts">
-            <a href="/docs/scout" class="callout minimal third">
+            <a href="/docs/horizon" class="callout minimal third">
                 <div class="callout-head">
-                    <div class="callout-title">Laravel Scout</div>
-                    <div class="callout-icon">{!! svg('scout')!!}</div>
+                    <div class="callout-title">Laravel Horizon</div>
+                    <div class="callout-icon">{!! svg('logo-horizon')!!}</div>
                 </div>
-                <p>Driver based full-text search for Eloquent, complete with pagination and automatic indexing.</p>
+                <p>Laravel Horizon provides a beautiful dashboard and code-driven configuration for your Redis queues.</p>
+            </a>
+            <a href="/docs/dusk" class="callout minimal third">
+                <div class="callout-head">
+                    <div class="callout-title">Laravel Dusk</div>
+                    <div class="callout-icon">{!! svg('logo-dusk')!!}</div>
+                </div>
+                <p>Laravel Dusk provides an expressive, easy-to-use browser automation and testing API. You'll love it.</p>
             </a>
             <a href="/docs/broadcasting" class="callout minimal third">
                 <div class="callout-head">
                     <div class="callout-title">Laravel Echo</div>
-                    <div class="callout-icon">{!! svg('echo')!!}</div>
+                    <div class="callout-icon">{!! svg('logo-echo')!!}</div>
                 </div>
                 <p>Event broadcasting, evolved. Bring the power of WebSockets to your application without the complexity.</p>
-            </a>
-            <a href="/docs/passport" class="callout minimal third">
-                <div class="callout-head">
-                    <div class="callout-title">Laravel Passport</div>
-                    <div class="callout-icon">{!! svg('passport')!!}</div>
-                </div>
-                <p>API authentication without the headache. Passport is an OAuth2 server that's ready in minutes.</p>
             </a>
         </div>
 	</div>
