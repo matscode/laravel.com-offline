@@ -19,10 +19,10 @@ class Idea extends Eloquent
 	 *
 	 * @with Laravel
 	 */
-	 public function create()
-	 {
-	 	// Have a fresh start...
-	 }
+	public function create()
+	{
+		// Have a fresh start...
+	}
 
 }</code></pre>
 	</div>

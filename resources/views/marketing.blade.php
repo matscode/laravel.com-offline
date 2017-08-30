@@ -41,10 +41,10 @@ class Idea extends Eloquent
 	 *
 	 * @with Laravel
 	 */
-	 public function create()
-	 {
-	 	// Have a fresh start...
-	 }
+	public function create()
+	{
+		// Have a fresh start...
+	}
 
 }</code></pre>
             {!! svg('macbook') !!}
@@ -114,13 +114,13 @@ class Purchase implements ShouldQueue
 	/**
 	 * Purchase a new podcast.
 	 */
-	 public function handle(Repository $repo)
-	 {
-	 	foreach ($this->purchases as $purchase)
-	 	{
-	 		//
-	 	}
-	 }
+	public function handle(Repository $repo)
+	{
+		foreach ($this->purchases as $purchase)
+		{
+			//
+		}
+	}
 </code></pre>
 						</div>
 					</div>
