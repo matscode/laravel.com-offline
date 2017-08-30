@@ -3,7 +3,7 @@
 /**
  * Set the default documentation version...
  */
-define('DEFAULT_VERSION', '5.4');
+define('DEFAULT_VERSION', '5.5');
 
 /**
  * Convert some text to Markdown...
