@@ -23,7 +23,7 @@
         <div class="partner-profile-header clearfix">
             <div class="partner-logo"><img src="/assets/svg/partner-logo-vehikl-full.svg"></div>
             <div class="partner-ctas">
-                <a href="mailto:&#103;&#111;&#064;&#118;&#101;&#104;&#105;&#107;&#108;&#046;&#099;&#111;&#109;"><div class="btn btn-primary">Hire Vehikl</div></a>
+                <a href="mailto:go+partner@vehikl.com"><div class="btn btn-primary">Hire Vehikl</div></a>
                 <a href="http://vehikl.com"><div class="btn btn-default">Visit Website</div></a>
             </div>
         </div>

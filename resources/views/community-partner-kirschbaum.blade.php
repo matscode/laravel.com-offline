@@ -23,7 +23,7 @@
         <div class="partner-profile-header clearfix">
             <div class="partner-logo"><img src="/assets/svg/partner-logo-kirschbaum-full.svg"></div>
             <div class="partner-ctas">
-                <a href="mailto:&#104;&#101;&#108;&#108;&#111;&#064;&#107;&#105;&#114;&#115;&#099;&#104;&#098;&#097;&#117;&#109;&#100;&#101;&#118;&#101;&#108;&#111;&#112;&#109;&#101;&#110;&#116;&#046;&#099;&#111;&#109;">
+                <a href="mailto:nathan.kirschbaum@gmail.com">
                     <div class="btn btn-primary">
                         Hire
                         <span class="partner-ctas-visible-desktop">Kirschbaum Development</span>
