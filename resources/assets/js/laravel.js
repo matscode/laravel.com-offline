@@ -262,20 +262,22 @@ jQuery(function($) {
     }
   }
 
-  // Load the users previous preference if available
-  if(storageAvailable('localStorage')) {
-    // Can't use if(var) since this is a boolean, LS returns null for unset keys
-    if(localStorage.getItem('laravel_docCollapsed') === null) {
-      localStorage.setItem('laravel_docCollapsed', true)
-    } else {
-      // Load previous state, and if it was false, then expand the doc
-      // LS will store booleans as strings, we will "cast" them back here
-      localStorage.getItem('laravel_docCollapsed') == 'false' ? expandDocs() : null
+  if (document.getElementById('doc-expand')) {
+    // Load the users previous preference if available
+    if(storageAvailable('localStorage')) {
+      // Can't use if(var) since this is a boolean, LS returns null for unset keys
+      if(localStorage.getItem('laravel_docCollapsed') === null) {
+        localStorage.setItem('laravel_docCollapsed', true)
+      } else {
+        // Load previous state, and if it was false, then expand the doc
+        // LS will store booleans as strings, we will "cast" them back here
+        localStorage.getItem('laravel_docCollapsed') == 'false' ? expandDocs() : null
+      }
     }
-  }
 
-  // Register event listener
-  document.getElementById('doc-expand') ? document.getElementById('doc-expand').addEventListener('click', expandDocs) : null;
+    // Register event listener
+    document.getElementById('doc-expand').addEventListener('click', expandDocs);
+  }
 
   if ($('.sidebar ul').length) {
     var current = $('.sidebar ul').find('li a[href="' + window.location.pathname + '"]');
