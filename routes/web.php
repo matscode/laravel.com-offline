@@ -3,14 +3,8 @@
 /**
  * Set the default documentation version...
  */
-define('DEFAULT_VERSION', '5.5');
-
-/**
- * Convert some text to Markdown...
- */
-function markdown($text)
-{
-    return (new ParsedownExtra)->text($text);
+if (! defined('DEFAULT_VERSION')) {
+    define('DEFAULT_VERSION', '5.5');
 }
 
 Route::get('/', function () {
