@@ -3,7 +3,7 @@ base=/home/forge/laravel.com
 sami=${base}/build/sami
 
 cd $sami
-composer update
+composer install
 
 # Cleanup Before
 rm -rf ${sami}/build
