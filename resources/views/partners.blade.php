@@ -52,6 +52,12 @@
             </div>
 
             <div class="flex-row">
+                <a href="/partner/byte5"  class="partner-card mr-2">
+                    <div class="partner-card-banner partner-card-md partner-logo-banner-byte5">
+                        <img src="/assets/img/partner-img-byte5-logo-while.png" style="max-width: 160px;">
+                    </div>
+                </a>
+
                 <a href="mailto:&#116;&#097;&#121;&#108;&#111;&#114;&#064;&#108;&#097;&#114;&#097;&#118;&#101;&#108;&#046;&#099;&#111;&#109;" class="partner-card-md partner-card-call mb-2">
                     <div class="partner-banner-become-title">Become A Partner</div>
 

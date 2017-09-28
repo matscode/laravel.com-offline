@@ -29,3 +29,7 @@ Route::get('/partner/vehikl', function () {
 Route::get('/partner/kirschbaum-development-group', function () {
     return view('community-partner-kirschbaum');
 });
+
+Route::get('/partner/byte5', function () {
+    return view('community-partner-byte5');
+});
