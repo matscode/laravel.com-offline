@@ -2,6 +2,7 @@
 base=/home/forge/laravel.com
 docs=${base}/resources/docs
 
+cd ${docs}/4.2 && git pull origin 4.2
 cd ${docs}/5.0 && git pull origin 5.0
 cd ${docs}/5.1 && git pull origin 5.1
 cd ${docs}/5.2 && git pull origin 5.2
