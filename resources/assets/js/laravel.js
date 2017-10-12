@@ -304,8 +304,11 @@ jQuery(function($) {
   }
 
   function expandItemKeyboard(e) {
-    clearItems();
     var elem = e.target;
+
+    if ([13, 37, 39].includes(e.keyCode)) {
+      clearItems();
+    }
 
     if (e.keyCode === 13) {
       elem.classList.toggle('is-active');
