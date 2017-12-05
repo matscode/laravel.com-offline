@@ -33,3 +33,7 @@ Route::get('/partner/kirschbaum-development-group', function () {
 Route::get('/partner/byte5', function () {
     return view('community-partner-byte5');
 });
+
+Route::get('/partner/64robots', function () {
+    return view('community-partner-64robots');
+});
