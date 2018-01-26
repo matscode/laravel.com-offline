@@ -14,6 +14,7 @@
 
 		<li class="divider"></li>
 
+		<li><a href="https://laracon.com.au">Laracon AU</a></li>
 		<li><a href="https://laracon.eu">Laracon EU</a></li>
 		<li><a href="http://laracon.us">Laracon US</a></li>
 		<li><a href="https://laracon.net">Laracon Online</a></li>
