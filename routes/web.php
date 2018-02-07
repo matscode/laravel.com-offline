@@ -37,3 +37,7 @@ Route::get('/partner/byte5', function () {
 Route::get('/partner/64robots', function () {
     return view('community-partner-64robots');
 });
+
+Route::get('/partner/cubet', function () {
+    return view('community-partner-cubet');
+});
