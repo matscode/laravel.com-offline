@@ -56,7 +56,15 @@ class DocsController extends Controller
         $content = $this->docs->get($version, $sectionPage);
 
         if (is_null($content)) {
-            abort(404);
+            return response()->view('docs', [
+                'title' => 'Page not found',
+                'index' => $this->docs->getIndex($version),
+                'content' => view('partials.doc-missing'),
+                'currentVersion' => $version,
+                'versions' => Documentation::getDocVersions(),
+                'currentSection' => '',
+                'canonical' => null,
+            ], 404);
         }
 
         $title = (new Crawler($content))->filterXPath('//h1');
