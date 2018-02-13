@@ -8,6 +8,7 @@
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ecosystem <span class="caret"></span></a>
 	<ul class="dropdown-menu" role="menu">
 
+		<li><a href="https://laravel.com/certification">Certification</a></li>
 		<li><a href="https://envoyer.io">Envoyer</a></li>
 		<li><a href="https://horizon.laravel.com">Horizon</a></li>
 		<li><a href="https://lumen.laravel.com">Lumen</a></li>
