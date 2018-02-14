@@ -1,3 +1,10 @@
-<h1>Page not found</h1>
-<p>Sorry, but we could not find that document.</p>
-<p>Please choose an option from the menu on the left.</p>
+<div class="the-404">
+    <div class="contain">
+        <div class="media">
+            <img src="/assets/img/lamp-post.jpg">
+        </div>
+        <div class="content pl-6">
+            <h3>You seem to have upset the delicate internal balance of my housekeeper.</h3>
+        </div>
+    </div>
+</div>
