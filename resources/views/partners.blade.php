@@ -35,6 +35,7 @@
                 <a href="/partner/vehikl" class="partner-card">
                     <div class="partner-card-banner partner-card-lg partner-logo-banner-vehikl">
                         <img src="/assets/svg/vehikl-logo-white.svg">
+                        <div class="flag">🇨🇦</div>
                     </div>
                 </a>
 
@@ -42,11 +43,13 @@
                     <a href="/partner/tighten" class="partner-card mr-2">
                         <div class="partner-card-banner partner-card-md partner-logo-banner-tighten">
                             <img src="/assets/svg/tighten-logo-white.svg">
+                            <div class="flag">🇺🇸</div>
                         </div>
                     </a>
                     <a href="/partner/kirschbaum-development-group" class="partner-card">
                         <div class="partner-card-banner partner-card-md partner-logo-banner-kirschbaum">
                             <img src="/assets/svg/kirschbaum-logo-white.svg">
+                            <div class="flag">🇺🇸</div>
                         </div>
                     </a>
                 </div>
@@ -55,6 +58,7 @@
                     <a href="/partner/byte5" class="partner-card mr-2">
                         <div class="partner-card-banner partner-card-md partner-logo-banner-byte5">
                             <img src="/assets/img/partner-img-byte5-logo-while.png" style="max-width: 160px;">
+                            <div class="flag">🇩🇪</div>
                         </div>
                     </a>
                     <a href="/partner/64robots" class="partner-card">
@@ -66,6 +70,7 @@
                                     <path style="fill: rgb(255, 255, 255);" d="M21.048 9.195c0 .947-.774 1.714-1.729 1.714a1.722 1.722 0 0 1-1.728-1.714c0-.948.774-1.715 1.728-1.715.955 0 1.729.767 1.729 1.715M12.735 9.195c0 .947-.774 1.714-1.728 1.714a1.722 1.722 0 0 1-1.729-1.714c0-.948.774-1.715 1.729-1.715.954 0 1.728.767 1.728 1.715"></path>
                                 </g>
                             </svg>
+                            <div class="flag">🇺🇸</div>
                         </div>
                     </a>
                 </div>
@@ -74,6 +79,7 @@
                     <a href="/partner/cubet" class="partner-card mr-2">
                         <div class="partner-card-banner partner-card-md partner-logo-banner-cubet">
                             <?php echo file_get_contents(public_path('assets/img/partner-img-cubet-logo-while.svg')); ?>
+                            <div class="flag">🇮🇳</div>
                         </div>
                     </a>
 
