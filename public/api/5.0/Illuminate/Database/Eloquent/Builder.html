@@ -1,0 +1,2922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Eloquent\Builder | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Eloquent_Builder" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Database.html">Database</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Database/Eloquent.html">Eloquent</a></li><li class="backslash">\</li><li>Builder</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Builder
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Builder</strong>        (<a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_query">
+                                        protected                                        <a href="../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+                </td>
+                <td>$query</td>
+                <td class="last">The base query builder instance.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_model">
+                                        protected                                        <a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </td>
+                <td>$model</td>
+                <td class="last">The model being queried.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_eagerLoad">
+                                        protected                                        array
+                </td>
+                <td>$eagerLoad</td>
+                <td class="last">The relationships that should be eager loaded.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_macros">
+                                        protected                                        array
+                </td>
+                <td>$macros</td>
+                <td class="last">All of the registered builder macros.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_onDelete">
+                                        protected                                        <a target="_blank" href="http://php.net/Closure">Closure</a>
+                </td>
+                <td>$onDelete</td>
+                <td class="last">A replacement for the typical delete function.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_passthru">
+                                        protected                                        array
+                </td>
+                <td>$passthru</td>
+                <td class="last">The methods that should be returned from query builder.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        
+                                            <p>Create a new Eloquent query builder instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_find">find</a>(mixed $id, array $columns = array(&#039;*&#039;))
+        
+                                            <p>Find a model by its primary key.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_findMany">findMany</a>(array $ids, array $columns = array(&#039;*&#039;))
+        
+                                            <p>Find a model by its primary key.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_findOrFail">findOrFail</a>(mixed $id, array $columns = array(&#039;*&#039;))
+        
+                                            <p>Find a model by its primary key or throw an exception.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_first">first</a>(array $columns = array(&#039;*&#039;))
+        
+                                            <p>Execute the query and get the first result.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_firstOrFail">firstOrFail</a>(array $columns = array(&#039;*&#039;))
+        
+                                            <p>Execute the query and get the first result or throw an exception.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(array $columns = array(&#039;*&#039;))
+        
+                                            <p>Execute the query as a "select" statement.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pluck">pluck</a>(string $column)
+        
+                                            <p>Pluck a single column from the database.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chunk">chunk</a>(int $count, callable $callback)
+        
+                                            <p>Chunk the results of the query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lists">lists</a>(string $column, string $key = null)
+        
+                                            <p>Get an array with the values of a given column.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Contracts/Pagination/LengthAwarePaginator.html"><abbr title="Illuminate\Contracts\Pagination\LengthAwarePaginator">LengthAwarePaginator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_paginate">paginate</a>(int $perPage = null, array $columns = [&#039;*&#039;])
+        
+                                            <p>Paginate the given query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Contracts/Pagination/Paginator.html"><abbr title="Illuminate\Contracts\Pagination\Paginator">Paginator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_simplePaginate">simplePaginate</a>(int $perPage = null, array $columns = [&#039;*&#039;])
+        
+                                            <p>Paginate the given query into a simple paginator.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_update">update</a>(array $values)
+        
+                                            <p>Update a record in the database.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_increment">increment</a>(string $column, int $amount = 1, array $extra = array())
+        
+                                            <p>Increment a column's value by a given amount.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_decrement">decrement</a>(string $column, int $amount = 1, array $extra = array())
+        
+                                            <p>Decrement a column's value by a given amount.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addUpdatedAtColumn">addUpdatedAtColumn</a>(array $values)
+        
+                                            <p>Add the "updated at" column to an array of values.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>()
+        
+                                            <p>Delete a record from the database.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_forceDelete">forceDelete</a>()
+        
+                                            <p>Run the default delete function on the builder.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onDelete">onDelete</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Register a replacement for the default delete function.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getModels">getModels</a>(array $columns = array(&#039;*&#039;))
+        
+                                            <p>Get the hydrated models without eager loading.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_eagerLoadRelations">eagerLoadRelations</a>(array $models)
+        
+                                            <p>Eager load the relationships for the models.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadRelation">loadRelation</a>(array $models, string $name, <a target="_blank" href="http://php.net/Closure">Closure</a> $constraints)
+        
+                                            <p>Eagerly load the relationship on a set of models.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Relations/Relation.html"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRelation">getRelation</a>(string $relation)
+        
+                                            <p>Get the relation instance for the given relation name.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_nestedRelations">nestedRelations</a>(string $relation)
+        
+                                            <p>Get the deeply nested relations for a given top-level relation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isNested">isNested</a>(string $name, string $relation)
+        
+                                            <p>Determine if the relationship is nested.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_where">where</a>(string $column, string $operator = null, mixed $value = null, string $boolean = &#039;and&#039;)
+        
+                                            <p>Add a basic where clause to the query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orWhere">orWhere</a>(string $column, string $operator = null, mixed $value = null)
+        
+                                            <p>Add an "or where" clause to the query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_has">has</a>(string $relation, string $operator = &#039;&gt;=&#039;, int $count = 1, string $boolean = &#039;and&#039;, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+        
+                                            <p>Add a relationship count condition to the query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasNested">hasNested</a>(string $relations, string $operator = &#039;&gt;=&#039;, int $count = 1, string $boolean = &#039;and&#039;, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+        
+                                            <p>Add nested relationship count conditions to the query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_doesntHave">doesntHave</a>(string $relation, string $boolean = &#039;and&#039;, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+        
+                                            <p>Add a relationship count condition to the query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereHas">whereHas</a>(string $relation, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback, string $operator = &#039;&gt;=&#039;, int $count = 1)
+        
+                                            <p>Add a relationship count condition to the query with where clauses.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereDoesntHave">whereDoesntHave</a>(string $relation, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+        
+                                            <p>Add a relationship count condition to the query with where clauses.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orHas">orHas</a>(string $relation, string $operator = &#039;&gt;=&#039;, int $count = 1)
+        
+                                            <p>Add a relationship count condition to the query with an "or".</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orWhereHas">orWhereHas</a>(string $relation, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback, string $operator = &#039;&gt;=&#039;, int $count = 1)
+        
+                                            <p>Add a relationship count condition to the query with where clauses and an "or".</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addHasWhere">addHasWhere</a>(<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $hasQuery, <a href="../../../Illuminate/Database/Eloquent/Relations/Relation.html"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> $relation, string $operator, int $count, string $boolean)
+        
+                                            <p>Add the "has" condition where clause to the query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mergeWheresToHas">mergeWheresToHas</a>(<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $hasQuery, <a href="../../../Illuminate/Database/Eloquent/Relations/Relation.html"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> $relation)
+        
+                                            <p>Merge the "wheres" from a relation query to a has query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHasRelationQuery">getHasRelationQuery</a>(string $relation)
+        
+                                            <p>Get the "has relation" base query instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_with">with</a>(mixed $relations)
+        
+                                            <p>Set the relationships that should be eager loaded.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseRelations">parseRelations</a>(array $relations)
+        
+                                            <p>Parse a list of relations into individuals.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseNested">parseNested</a>(string $name, array $results)
+        
+                                            <p>Parse the nested relationships in a relation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_callScope">callScope</a>(string $scope, array $parameters)
+        
+                                            <p>Call the given model scope on the underlying model.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQuery">getQuery</a>()
+        
+                                            <p>Get the underlying query builder instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setQuery">setQuery</a>(<a href="../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        
+                                            <p>Set the underlying query builder instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEagerLoads">getEagerLoads</a>()
+        
+                                            <p>Get the relationships being eagerly loaded.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEagerLoads">setEagerLoads</a>(array $eagerLoad)
+        
+                                            <p>Set the relationships being eagerly loaded.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getModel">getModel</a>()
+        
+                                            <p>Get the model instance being queried.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setModel">setModel</a>(<a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model)
+        
+                                            <p>Set a model instance for the model being queried.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_macro">macro</a>(string $name, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Extend the builder with a given callback.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/Closure">Closure</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMacro">getMacro</a>(string $name)
+        
+                                            <p>Get the given macro by name.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $parameters)
+        
+                                            <p>Dynamically handle calls into the query instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___clone">__clone</a>()
+        
+                                            <p>Force a clone of the underlying query builder when cloning.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L63">line 63</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new Eloquent query builder instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_find">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L75">line 75</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>|null
+    <strong>find</strong>(mixed $id, array $columns = array(&#039;*&#039;))
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Find a model by its primary key.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_findMany">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L94">line 94</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>
+    <strong>findMany</strong>(array $ids, array $columns = array(&#039;*&#039;))
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Find a model by its primary key.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_findOrFail">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L112">line 112</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>
+    <strong>findOrFail</strong>(mixed $id, array $columns = array(&#039;*&#039;))
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Find a model by its primary key or throw an exception.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Database/Eloquent/ModelNotFoundException.html"><abbr title="Illuminate\Database\Eloquent\ModelNotFoundException">ModelNotFoundException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_first">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L134">line 134</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|null
+    <strong>first</strong>(array $columns = array(&#039;*&#039;))
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute the query and get the first result.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_firstOrFail">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L147">line 147</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>firstOrFail</strong>(array $columns = array(&#039;*&#039;))
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute the query and get the first result or throw an exception.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Database/Eloquent/ModelNotFoundException.html"><abbr title="Illuminate\Database\Eloquent\ModelNotFoundException">ModelNotFoundException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L160">line 160</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>[]
+    <strong>get</strong>(array $columns = array(&#039;*&#039;))
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute the query as a "select" statement.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pluck">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L181">line 181</a></div>
+        <code>                    mixed
+    <strong>pluck</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pluck a single column from the database.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chunk">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L195">line 195</a></div>
+        <code>                    void
+    <strong>chunk</strong>(int $count, callable $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Chunk the results of the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lists">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L219">line 219</a></div>
+        <code>                    array
+    <strong>lists</strong>(string $column, string $key = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an array with the values of a given column.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_paginate">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L246">line 246</a></div>
+        <code>                    <a href="../../../Illuminate/Contracts/Pagination/LengthAwarePaginator.html"><abbr title="Illuminate\Contracts\Pagination\LengthAwarePaginator">LengthAwarePaginator</abbr></a>
+    <strong>paginate</strong>(int $perPage = null, array $columns = [&#039;*&#039;])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Paginate the given query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$perPage</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Contracts/Pagination/LengthAwarePaginator.html"><abbr title="Illuminate\Contracts\Pagination\LengthAwarePaginator">LengthAwarePaginator</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_simplePaginate">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L267">line 267</a></div>
+        <code>                    <a href="../../../Illuminate/Contracts/Pagination/Paginator.html"><abbr title="Illuminate\Contracts\Pagination\Paginator">Paginator</abbr></a>
+    <strong>simplePaginate</strong>(int $perPage = null, array $columns = [&#039;*&#039;])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Paginate the given query into a simple paginator.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$perPage</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Contracts/Pagination/Paginator.html"><abbr title="Illuminate\Contracts\Pagination\Paginator">Paginator</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_update">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L286">line 286</a></div>
+        <code>                    int
+    <strong>update</strong>(array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Update a record in the database.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_increment">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L299">line 299</a></div>
+        <code>                    int
+    <strong>increment</strong>(string $column, int $amount = 1, array $extra = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Increment a column's value by a given amount.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$amount</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extra</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decrement">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L314">line 314</a></div>
+        <code>                    int
+    <strong>decrement</strong>(string $column, int $amount = 1, array $extra = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decrement a column's value by a given amount.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$amount</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extra</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addUpdatedAtColumn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L327">line 327</a></div>
+        <code>            protected        array
+    <strong>addUpdatedAtColumn</strong>(array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the "updated at" column to an array of values.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L341">line 341</a></div>
+        <code>                    mixed
+    <strong>delete</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete a record from the database.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forceDelete">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L356">line 356</a></div>
+        <code>                    mixed
+    <strong>forceDelete</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run the default delete function on the builder.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onDelete">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L367">line 367</a></div>
+        <code>                    void
+    <strong>onDelete</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a replacement for the default delete function.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModels">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L378">line 378</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>[]
+    <strong>getModels</strong>(array $columns = array(&#039;*&#039;))
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the hydrated models without eager loading.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_eagerLoadRelations">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L393">line 393</a></div>
+        <code>                    array
+    <strong>eagerLoadRelations</strong>(array $models)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Eager load the relationships for the models.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadRelation">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L417">line 417</a></div>
+        <code>            protected        array
+    <strong>loadRelation</strong>(array $models, string $name, <a target="_blank" href="http://php.net/Closure">Closure</a> $constraints)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Eagerly load the relationship on a set of models.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$constraints</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelation">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L444">line 444</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Relations/Relation.html"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a>
+    <strong>getRelation</strong>(string $relation)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the relation instance for the given relation name.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Relations/Relation.html"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nestedRelations">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L473">line 473</a></div>
+        <code>            protected        array
+    <strong>nestedRelations</strong>(string $relation)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the deeply nested relations for a given top-level relation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isNested">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L498">line 498</a></div>
+        <code>            protected        bool
+    <strong>isNested</strong>(string $name, string $relation)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the relationship is nested.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_where">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L514">line 514</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\$this">$this</abbr>
+    <strong>where</strong>(string $column, string $operator = null, mixed $value = null, string $boolean = &#039;and&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a basic where clause to the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$boolean</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orWhere">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L540">line 540</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>orWhere</strong>(string $column, string $operator = null, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an "or where" clause to the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_has">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L555">line 555</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>has</strong>(string $relation, string $operator = &#039;&gt;=&#039;, int $count = 1, string $boolean = &#039;and&#039;, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a relationship count condition to the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$boolean</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasNested">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L581">line 581</a></div>
+        <code>            protected        <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>hasNested</strong>(string $relations, string $operator = &#039;&gt;=&#039;, int $count = 1, string $boolean = &#039;and&#039;, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add nested relationship count conditions to the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$relations</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$boolean</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_doesntHave">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L611">line 611</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>doesntHave</strong>(string $relation, string $boolean = &#039;and&#039;, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a relationship count condition to the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$boolean</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereHas">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L625">line 625</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>whereHas</strong>(string $relation, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback, string $operator = &#039;&gt;=&#039;, int $count = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a relationship count condition to the query with where clauses.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereDoesntHave">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L637">line 637</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>whereDoesntHave</strong>(string $relation, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a relationship count condition to the query with where clauses.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orHas">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L650">line 650</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>orHas</strong>(string $relation, string $operator = &#039;&gt;=&#039;, int $count = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a relationship count condition to the query with an "or".</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orWhereHas">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L664">line 664</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>orWhereHas</strong>(string $relation, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback, string $operator = &#039;&gt;=&#039;, int $count = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a relationship count condition to the query with where clauses and an "or".</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addHasWhere">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L679">line 679</a></div>
+        <code>            protected        <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>addHasWhere</strong>(<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $hasQuery, <a href="../../../Illuminate/Database/Eloquent/Relations/Relation.html"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> $relation, string $operator, int $count, string $boolean)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the "has" condition where clause to the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$hasQuery</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Illuminate/Database/Eloquent/Relations/Relation.html"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$boolean</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mergeWheresToHas">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L698">line 698</a></div>
+        <code>            protected        void
+    <strong>mergeWheresToHas</strong>(<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $hasQuery, <a href="../../../Illuminate/Database/Eloquent/Relations/Relation.html"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> $relation)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Merge the "wheres" from a relation query to a has query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$hasQuery</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Illuminate/Database/Eloquent/Relations/Relation.html"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHasRelationQuery">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L720">line 720</a></div>
+        <code>            protected        <a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>getHasRelationQuery</strong>(string $relation)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the "has relation" base query instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_with">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L734">line 734</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\$this">$this</abbr>
+    <strong>with</strong>(mixed $relations)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the relationships that should be eager loaded.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$relations</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseRelations">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L751">line 751</a></div>
+        <code>            protected        array
+    <strong>parseRelations</strong>(array $relations)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse a list of relations into individuals.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$relations</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseNested">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L785">line 785</a></div>
+        <code>            protected        array
+    <strong>parseNested</strong>(string $name, array $results)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse the nested relationships in a relation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$results</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callScope">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L812">line 812</a></div>
+        <code>            protected        <a href="../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+    <strong>callScope</strong>(string $scope, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Call the given model scope on the underlying model.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$scope</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQuery">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L824">line 824</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>getQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the underlying query builder instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>|<a href="../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setQuery">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L835">line 835</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\$this">$this</abbr>
+    <strong>setQuery</strong>(<a href="../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the underlying query builder instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEagerLoads">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L847">line 847</a></div>
+        <code>                    array
+    <strong>getEagerLoads</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the relationships being eagerly loaded.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEagerLoads">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L858">line 858</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\$this">$this</abbr>
+    <strong>setEagerLoads</strong>(array $eagerLoad)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the relationships being eagerly loaded.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$eagerLoad</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModel">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L870">line 870</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+    <strong>getModel</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the model instance being queried.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setModel">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L881">line 881</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\$this">$this</abbr>
+    <strong>setModel</strong>(<a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a model instance for the model being queried.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+                <td>$model</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_macro">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L897">line 897</a></div>
+        <code>                    void
+    <strong>macro</strong>(string $name, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Extend the builder with a given callback.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMacro">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L908">line 908</a></div>
+        <code>                    <a target="_blank" href="http://php.net/Closure">Closure</a>
+    <strong>getMacro</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the given macro by name.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L920">line 920</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Dynamically handle calls into the query instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___clone">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Database/Eloquent/Builder.php#L943">line 943</a></div>
+        <code>                    void
+    <strong>__clone</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Force a clone of the underlying query builder when cloning.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

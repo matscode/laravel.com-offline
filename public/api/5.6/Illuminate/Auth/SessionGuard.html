@@ -1,0 +1,2796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Auth\SessionGuard | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Auth_SessionGuard" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Illuminate/Auth.html">Auth</a></li><li class="backslash">\</li><li>SessionGuard</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            SessionGuard
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>SessionGuard</strong>        implements
+        <a href="../../Illuminate/Contracts/Auth/StatefulGuard.html"><abbr title="Illuminate\Contracts\Auth\StatefulGuard">StatefulGuard</abbr></a>, <a href="../../Illuminate/Contracts/Auth/SupportsBasicAuth.html"><abbr title="Illuminate\Contracts\Auth\SupportsBasicAuth">SupportsBasicAuth</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php">View source</a>)
+</p>
+
+        
+    
+
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Illuminate/Auth/GuardHelpers.html"><abbr title="Illuminate\Auth\GuardHelpers">GuardHelpers</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    These methods are typically the same across all guards.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Illuminate/Support/Traits/Macroable.html"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_user">
+                                        protected                                        <a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>
+                </td>
+                <td>$user</td>
+                <td class="last">The currently authenticated user.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Auth/GuardHelpers.html#property_user"><abbr title="Illuminate\Auth\GuardHelpers">GuardHelpers</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_provider">
+                                        protected                                        <a href="../../Illuminate/Contracts/Auth/UserProvider.html"><abbr title="Illuminate\Contracts\Auth\UserProvider">UserProvider</abbr></a>
+                </td>
+                <td>$provider</td>
+                <td class="last">The user provider implementation.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Auth/GuardHelpers.html#property_provider"><abbr title="Illuminate\Auth\GuardHelpers">GuardHelpers</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_macros">
+                    static                    protected                                        array
+                </td>
+                <td>$macros</td>
+                <td class="last">The registered string macros.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Support/Traits/Macroable.html#property_macros"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_name">
+                                        protected                                        string
+                </td>
+                <td>$name</td>
+                <td class="last">The name of the Guard. Typically "session".</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_lastAttempted">
+                                        protected                                        <a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>
+                </td>
+                <td>$lastAttempted</td>
+                <td class="last">The user we last attempted to retrieve.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_viaRemember">
+                                        protected                                        bool
+                </td>
+                <td>$viaRemember</td>
+                <td class="last">Indicates if the user was authenticated via a recaller cookie.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_session">
+                                        protected                                        <a href="../../Illuminate/Contracts/Session/Session.html"><abbr title="Illuminate\Contracts\Session\Session">Session</abbr></a>
+                </td>
+                <td>$session</td>
+                <td class="last">The session used by the guard.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cookie">
+                                        protected                                        <a href="../../Illuminate/Contracts/Cookie/QueueingFactory.html"><abbr title="Illuminate\Contracts\Cookie\QueueingFactory">QueueingFactory</abbr></a>
+                </td>
+                <td>$cookie</td>
+                <td class="last">The Illuminate cookie creator service.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_request">
+                                        protected                                        <abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr>
+                </td>
+                <td>$request</td>
+                <td class="last">The request instance.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_events">
+                                        protected                                        <a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a>
+                </td>
+                <td>$events</td>
+                <td class="last">The event dispatcher instance.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_loggedOut">
+                                        protected                                        bool
+                </td>
+                <td>$loggedOut</td>
+                <td class="last">Indicates if the logout method has been called.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_recallAttempted">
+                                        protected                                        bool
+                </td>
+                <td>$recallAttempted</td>
+                <td class="last">Indicates if a token user retrieval has been attempted.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_authenticate">authenticate</a>()
+        
+                                            <p>Determine if the current user is authenticated.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Auth/GuardHelpers.html#method_authenticate"><abbr title="Illuminate\Auth\GuardHelpers">GuardHelpers</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_check">check</a>()
+        
+                                            <p>Determine if the current user is authenticated.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Auth/GuardHelpers.html#method_check"><abbr title="Illuminate\Auth\GuardHelpers">GuardHelpers</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_guest">guest</a>()
+        
+                                            <p>Determine if the current user is a guest.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Auth/GuardHelpers.html#method_guest"><abbr title="Illuminate\Auth\GuardHelpers">GuardHelpers</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_id">id</a>()
+        
+                                            <p>Get the ID for the currently authenticated user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUser">setUser</a>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user)
+        
+                                            <p>Set the current user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Contracts/Auth/UserProvider.html"><abbr title="Illuminate\Contracts\Auth\UserProvider">UserProvider</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProvider">getProvider</a>()
+        
+                                            <p>Get the user provider used by the guard.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Auth/GuardHelpers.html#method_getProvider"><abbr title="Illuminate\Auth\GuardHelpers">GuardHelpers</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setProvider">setProvider</a>(<a href="../../Illuminate/Contracts/Auth/UserProvider.html"><abbr title="Illuminate\Contracts\Auth\UserProvider">UserProvider</abbr></a> $provider)
+        
+                                            <p>Set the user provider used by the guard.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Auth/GuardHelpers.html#method_setProvider"><abbr title="Illuminate\Auth\GuardHelpers">GuardHelpers</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_macro">macro</a>(string $name, object|callable $macro)
+        
+                                            <p>Register a custom macro.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Traits/Macroable.html#method_macro"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mixin">mixin</a>(object $mixin)
+        
+                                            <p>Mix another object into the class.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Traits/Macroable.html#method_mixin"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasMacro">hasMacro</a>(string $name)
+        
+                                            <p>Checks if macro is registered.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Traits/Macroable.html#method_hasMacro"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___callStatic">__callStatic</a>(string $method, array $parameters)
+        
+                                            <p>Dynamically handle calls to the class.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Traits/Macroable.html#method___callStatic"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $parameters)
+        
+                                            <p>Dynamically handle calls to the class.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Traits/Macroable.html#method___call"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $name, <a href="../../Illuminate/Contracts/Auth/UserProvider.html"><abbr title="Illuminate\Contracts\Auth\UserProvider">UserProvider</abbr></a> $provider, <a href="../../Illuminate/Contracts/Session/Session.html"><abbr title="Illuminate\Contracts\Session\Session">Session</abbr></a> $session, <abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request = null)
+        
+                                            <p>Create a new authentication guard.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_user">user</a>()
+        
+                                            <p>Get the currently authenticated user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userFromRecaller">userFromRecaller</a>(<a href="../../Illuminate/Auth/Recaller.html"><abbr title="Illuminate\Auth\Recaller">Recaller</abbr></a> $recaller)
+        
+                                            <p>Pull a user from the repository by its "remember me" cookie token.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Auth/Recaller.html"><abbr title="Illuminate\Auth\Recaller">Recaller</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_recaller">recaller</a>()
+        
+                                            <p>Get the decrypted recaller cookie for the request.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_once">once</a>(array $credentials = [])
+        
+                                            <p>Log a user into the application without sessions or cookies.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onceUsingId">onceUsingId</a>(mixed $id)
+        
+                                            <p>Log the given user ID into the application without sessions or cookies.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validate">validate</a>(array $credentials = [])
+        
+                                            <p>Validate a user's credentials.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_basic">basic</a>(string $field = &#039;email&#039;, array $extraConditions = [])
+        
+                                            <p>Attempt to authenticate using HTTP Basic Auth.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onceBasic">onceBasic</a>(string $field = &#039;email&#039;, array $extraConditions = [])
+        
+                                            <p>Perform a stateless HTTP Basic login attempt.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_attemptBasic">attemptBasic</a>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request, string $field, array $extraConditions = [])
+        
+                                            <p>Attempt to authenticate using basic authentication.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_basicCredentials">basicCredentials</a>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request, string $field)
+        
+                                            <p>Get the credential array for a HTTP Basic request.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_failedBasicResponse">failedBasicResponse</a>()
+        
+                                            <p>Get the response for basic authentication.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_attempt">attempt</a>(array $credentials = [], bool $remember = false)
+        
+                                            <p>Attempt to authenticate a user using the given credentials.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasValidCredentials">hasValidCredentials</a>(mixed $user, array $credentials)
+        
+                                            <p>Determine if the user matches the credentials.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loginUsingId">loginUsingId</a>(mixed $id, bool $remember = false)
+        
+                                            <p>Log the given user ID into the application.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_login">login</a>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user, bool $remember = false)
+        
+                                            <p>Log a user into the application.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updateSession">updateSession</a>(string $id)
+        
+                                            <p>Update the session with the given ID.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensureRememberTokenIsSet">ensureRememberTokenIsSet</a>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user)
+        
+                                            <p>Create a new "remember me" token for the user if one doesn't already exist.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_queueRecallerCookie">queueRecallerCookie</a>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user)
+        
+                                            <p>Queue the recaller cookie into the cookie jar.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Symfony\Component\HttpFoundation\Cookie">Cookie</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createRecaller">createRecaller</a>(string $value)
+        
+                                            <p>Create a "remember me" cookie for a given ID.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_logout">logout</a>()
+        
+                                            <p>Log the user out of the application.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearUserDataFromStorage">clearUserDataFromStorage</a>()
+        
+                                            <p>Remove the user data from the session and cookies.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cycleRememberToken">cycleRememberToken</a>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user)
+        
+                                            <p>Refresh the "remember me" token for the user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_attempting">attempting</a>(mixed $callback)
+        
+                                            <p>Register an authentication attempt event listener.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fireAttemptEvent">fireAttemptEvent</a>(array $credentials, bool $remember = false)
+        
+                                            <p>Fire the attempt event with the arguments.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fireLoginEvent">fireLoginEvent</a>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user, bool $remember = false)
+        
+                                            <p>Fire the login event if the dispatcher is set.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fireAuthenticatedEvent">fireAuthenticatedEvent</a>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user)
+        
+                                            <p>Fire the authenticated event if the dispatcher is set.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fireFailedEvent">fireFailedEvent</a>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>|null $user, array $credentials)
+        
+                                            <p>Fire the failed authentication attempt event with the given arguments.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLastAttempted">getLastAttempted</a>()
+        
+                                            <p>Get the last user we attempted to authenticate.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getName">getName</a>()
+        
+                                            <p>Get a unique identifier for the auth session value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRecallerName">getRecallerName</a>()
+        
+                                            <p>Get the name of the cookie used to store the "recaller".</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_viaRemember">viaRemember</a>()
+        
+                                            <p>Determine if the user was authenticated via "remember me" cookie.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Contracts/Cookie/QueueingFactory.html"><abbr title="Illuminate\Contracts\Cookie\QueueingFactory">QueueingFactory</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCookieJar">getCookieJar</a>()
+        
+                                            <p>Get the cookie creator instance used by the guard.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCookieJar">setCookieJar</a>(<a href="../../Illuminate/Contracts/Cookie/QueueingFactory.html"><abbr title="Illuminate\Contracts\Cookie\QueueingFactory">QueueingFactory</abbr></a> $cookie)
+        
+                                            <p>Set the cookie creator instance used by the guard.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDispatcher">getDispatcher</a>()
+        
+                                            <p>Get the event dispatcher instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDispatcher">setDispatcher</a>(<a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a> $events)
+        
+                                            <p>Set the event dispatcher instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Contracts/Session/Session.html"><abbr title="Illuminate\Contracts\Session\Session">Session</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSession">getSession</a>()
+        
+                                            <p>Get the session store used by the guard.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUser">getUser</a>()
+        
+                                            <p>Return the currently cached user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequest">getRequest</a>()
+        
+                                            <p>Get the current request instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Auth\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRequest">setRequest</a>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request)
+        
+                                            <p>Set the current request instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_authenticate">
+        <div class="location">in <a href="../../Illuminate/Auth/GuardHelpers.html#method_authenticate"><abbr title="Illuminate\Auth\GuardHelpers">GuardHelpers</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/GuardHelpers.php#L34">line 34</a></div>
+        <code>                    <a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>
+    <strong>authenticate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the current user is authenticated.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Auth/AuthenticationException.html"><abbr title="Illuminate\Auth\AuthenticationException">AuthenticationException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_check">
+        <div class="location">in <a href="../../Illuminate/Auth/GuardHelpers.html#method_check"><abbr title="Illuminate\Auth\GuardHelpers">GuardHelpers</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/GuardHelpers.php#L48">line 48</a></div>
+        <code>                    bool
+    <strong>check</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the current user is authenticated.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_guest">
+        <div class="location">in <a href="../../Illuminate/Auth/GuardHelpers.html#method_guest"><abbr title="Illuminate\Auth\GuardHelpers">GuardHelpers</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/GuardHelpers.php#L58">line 58</a></div>
+        <code>                    bool
+    <strong>guest</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the current user is a guest.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_id">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L199">line 199</a></div>
+        <code>                    int|null
+    <strong>id</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the ID for the currently authenticated user.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUser">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L720">line 720</a></div>
+        <code>                    void
+    <strong>setUser</strong>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the current user.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProvider">
+        <div class="location">in <a href="../../Illuminate/Auth/GuardHelpers.html#method_getProvider"><abbr title="Illuminate\Auth\GuardHelpers">GuardHelpers</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/GuardHelpers.php#L93">line 93</a></div>
+        <code>                    <a href="../../Illuminate/Contracts/Auth/UserProvider.html"><abbr title="Illuminate\Contracts\Auth\UserProvider">UserProvider</abbr></a>
+    <strong>getProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the user provider used by the guard.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Contracts/Auth/UserProvider.html"><abbr title="Illuminate\Contracts\Auth\UserProvider">UserProvider</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setProvider">
+        <div class="location">in <a href="../../Illuminate/Auth/GuardHelpers.html#method_setProvider"><abbr title="Illuminate\Auth\GuardHelpers">GuardHelpers</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/GuardHelpers.php#L104">line 104</a></div>
+        <code>                    void
+    <strong>setProvider</strong>(<a href="../../Illuminate/Contracts/Auth/UserProvider.html"><abbr title="Illuminate\Contracts\Auth\UserProvider">UserProvider</abbr></a> $provider)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the user provider used by the guard.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Auth/UserProvider.html"><abbr title="Illuminate\Contracts\Auth\UserProvider">UserProvider</abbr></a></td>
+                <td>$provider</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_macro">
+        <div class="location">in <a href="../../Illuminate/Support/Traits/Macroable.html#method_macro"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Support/Traits/Macroable.php#L27">line 27</a></div>
+        <code>        static            void
+    <strong>macro</strong>(string $name, object|callable $macro)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a custom macro.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>object|callable</td>
+                <td>$macro</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mixin">
+        <div class="location">in <a href="../../Illuminate/Support/Traits/Macroable.html#method_mixin"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Support/Traits/Macroable.php#L38">line 38</a></div>
+        <code>        static            void
+    <strong>mixin</strong>(object $mixin)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mix another object into the class.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$mixin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasMacro">
+        <div class="location">in <a href="../../Illuminate/Support/Traits/Macroable.html#method_hasMacro"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Support/Traits/Macroable.php#L57">line 57</a></div>
+        <code>        static            bool
+    <strong>hasMacro</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if macro is registered.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___callStatic">
+        <div class="location">in <a href="../../Illuminate/Support/Traits/Macroable.html#method___callStatic"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Support/Traits/Macroable.php#L71">line 71</a></div>
+        <code>        static            mixed
+    <strong>__callStatic</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Dynamically handle calls to the class.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../Illuminate/Support/Traits/Macroable.html#method___call"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Support/Traits/Macroable.php#L93">line 93</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Dynamically handle calls to the class.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L96">line 96</a></div>
+        <code>                    void
+    <strong>__construct</strong>(string $name, <a href="../../Illuminate/Contracts/Auth/UserProvider.html"><abbr title="Illuminate\Contracts\Auth\UserProvider">UserProvider</abbr></a> $provider, <a href="../../Illuminate/Contracts/Session/Session.html"><abbr title="Illuminate\Contracts\Session\Session">Session</abbr></a> $session, <abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new authentication guard.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Auth/UserProvider.html"><abbr title="Illuminate\Contracts\Auth\UserProvider">UserProvider</abbr></a></td>
+                <td>$provider</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Session/Session.html"><abbr title="Illuminate\Contracts\Session\Session">Session</abbr></a></td>
+                <td>$session</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_user">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L112">line 112</a></div>
+        <code>                    <a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>|null
+    <strong>user</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the currently authenticated user.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userFromRecaller">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L160">line 160</a></div>
+        <code>            protected        mixed
+    <strong>userFromRecaller</strong>(<a href="../../Illuminate/Auth/Recaller.html"><abbr title="Illuminate\Auth\Recaller">Recaller</abbr></a> $recaller)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pull a user from the repository by its "remember me" cookie token.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Auth/Recaller.html"><abbr title="Illuminate\Auth\Recaller">Recaller</abbr></a></td>
+                <td>$recaller</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_recaller">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L183">line 183</a></div>
+        <code>            protected        <a href="../../Illuminate/Auth/Recaller.html"><abbr title="Illuminate\Auth\Recaller">Recaller</abbr></a>|null
+    <strong>recaller</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the decrypted recaller cookie for the request.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Auth/Recaller.html"><abbr title="Illuminate\Auth\Recaller">Recaller</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_once">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L216">line 216</a></div>
+        <code>                    bool
+    <strong>once</strong>(array $credentials = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Log a user into the application without sessions or cookies.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$credentials</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onceUsingId">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L235">line 235</a></div>
+        <code>                    bool
+    <strong>onceUsingId</strong>(mixed $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Log the given user ID into the application without sessions or cookies.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validate">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L252">line 252</a></div>
+        <code>                    bool
+    <strong>validate</strong>(array $credentials = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validate a user's credentials.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$credentials</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_basic">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L266">line 266</a></div>
+        <code>                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>|null
+    <strong>basic</strong>(string $field = &#039;email&#039;, array $extraConditions = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attempt to authenticate using HTTP Basic Auth.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extraConditions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onceBasic">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L289">line 289</a></div>
+        <code>                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>|null
+    <strong>onceBasic</strong>(string $field = &#039;email&#039;, array $extraConditions = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Perform a stateless HTTP Basic login attempt.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extraConditions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attemptBasic">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L306">line 306</a></div>
+        <code>            protected        bool
+    <strong>attemptBasic</strong>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request, string $field, array $extraConditions = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attempt to authenticate using basic authentication.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extraConditions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_basicCredentials">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L324">line 324</a></div>
+        <code>            protected        array
+    <strong>basicCredentials</strong>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request, string $field)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the credential array for a HTTP Basic request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_failedBasicResponse">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L335">line 335</a></div>
+        <code>            protected        void
+    <strong>failedBasicResponse</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the response for basic authentication.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException">UnauthorizedHttpException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attempt">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L347">line 347</a></div>
+        <code>                    bool
+    <strong>attempt</strong>(array $credentials = [], bool $remember = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attempt to authenticate a user using the given credentials.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$credentials</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$remember</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasValidCredentials">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L377">line 377</a></div>
+        <code>            protected        bool
+    <strong>hasValidCredentials</strong>(mixed $user, array $credentials)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the user matches the credentials.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$credentials</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loginUsingId">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L389">line 389</a></div>
+        <code>                    <a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>
+    <strong>loginUsingId</strong>(mixed $id, bool $remember = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Log the given user ID into the application.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$remember</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_login">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L407">line 407</a></div>
+        <code>                    void
+    <strong>login</strong>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user, bool $remember = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Log a user into the application.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$remember</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateSession">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L434">line 434</a></div>
+        <code>            protected        void
+    <strong>updateSession</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Update the session with the given ID.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureRememberTokenIsSet">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L447">line 447</a></div>
+        <code>            protected        void
+    <strong>ensureRememberTokenIsSet</strong>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new "remember me" token for the user if one doesn't already exist.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_queueRecallerCookie">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L460">line 460</a></div>
+        <code>            protected        void
+    <strong>queueRecallerCookie</strong>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Queue the recaller cookie into the cookie jar.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createRecaller">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L473">line 473</a></div>
+        <code>            protected        <abbr title="Symfony\Component\HttpFoundation\Cookie">Cookie</abbr>
+    <strong>createRecaller</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a "remember me" cookie for a given ID.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Symfony\Component\HttpFoundation\Cookie">Cookie</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logout">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L483">line 483</a></div>
+        <code>                    void
+    <strong>logout</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Log the user out of the application.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearUserDataFromStorage">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L513">line 513</a></div>
+        <code>            protected        void
+    <strong>clearUserDataFromStorage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove the user data from the session and cookies.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cycleRememberToken">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L529">line 529</a></div>
+        <code>            protected        void
+    <strong>cycleRememberToken</strong>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Refresh the "remember me" token for the user.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attempting">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L542">line 542</a></div>
+        <code>                    void
+    <strong>attempting</strong>(mixed $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register an authentication attempt event listener.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fireAttemptEvent">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L556">line 556</a></div>
+        <code>            protected        void
+    <strong>fireAttemptEvent</strong>(array $credentials, bool $remember = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fire the attempt event with the arguments.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$credentials</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$remember</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fireLoginEvent">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L572">line 572</a></div>
+        <code>            protected        void
+    <strong>fireLoginEvent</strong>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user, bool $remember = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fire the login event if the dispatcher is set.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$remember</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fireAuthenticatedEvent">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L585">line 585</a></div>
+        <code>            protected        void
+    <strong>fireAuthenticatedEvent</strong>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fire the authenticated event if the dispatcher is set.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fireFailedEvent">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L599">line 599</a></div>
+        <code>            protected        void
+    <strong>fireFailedEvent</strong>(<a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>|null $user, array $credentials)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fire the failed authentication attempt event with the given arguments.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>|null</td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$credentials</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLastAttempted">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L611">line 611</a></div>
+        <code>                    <a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>
+    <strong>getLastAttempted</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the last user we attempted to authenticate.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L621">line 621</a></div>
+        <code>                    string
+    <strong>getName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a unique identifier for the auth session value.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecallerName">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L631">line 631</a></div>
+        <code>                    string
+    <strong>getRecallerName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the name of the cookie used to store the "recaller".</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_viaRemember">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L641">line 641</a></div>
+        <code>                    bool
+    <strong>viaRemember</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the user was authenticated via "remember me" cookie.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCookieJar">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L653">line 653</a></div>
+        <code>                    <a href="../../Illuminate/Contracts/Cookie/QueueingFactory.html"><abbr title="Illuminate\Contracts\Cookie\QueueingFactory">QueueingFactory</abbr></a>
+    <strong>getCookieJar</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the cookie creator instance used by the guard.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Contracts/Cookie/QueueingFactory.html"><abbr title="Illuminate\Contracts\Cookie\QueueingFactory">QueueingFactory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCookieJar">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L668">line 668</a></div>
+        <code>                    void
+    <strong>setCookieJar</strong>(<a href="../../Illuminate/Contracts/Cookie/QueueingFactory.html"><abbr title="Illuminate\Contracts\Cookie\QueueingFactory">QueueingFactory</abbr></a> $cookie)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the cookie creator instance used by the guard.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Cookie/QueueingFactory.html"><abbr title="Illuminate\Contracts\Cookie\QueueingFactory">QueueingFactory</abbr></a></td>
+                <td>$cookie</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDispatcher">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L678">line 678</a></div>
+        <code>                    <a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a>
+    <strong>getDispatcher</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the event dispatcher instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDispatcher">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L689">line 689</a></div>
+        <code>                    void
+    <strong>setDispatcher</strong>(<a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a> $events)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the event dispatcher instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a></td>
+                <td>$events</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSession">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L699">line 699</a></div>
+        <code>                    <a href="../../Illuminate/Contracts/Session/Session.html"><abbr title="Illuminate\Contracts\Session\Session">Session</abbr></a>
+    <strong>getSession</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the session store used by the guard.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Contracts/Session/Session.html"><abbr title="Illuminate\Contracts\Session\Session">Session</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUser">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L709">line 709</a></div>
+        <code>                    <a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>|null
+    <strong>getUser</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the currently cached user.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequest">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L736">line 736</a></div>
+        <code>                    <abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr>
+    <strong>getRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the current request instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRequest">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Auth/SessionGuard.php#L747">line 747</a></div>
+        <code>                    <abbr title="Illuminate\Auth\$this">$this</abbr>
+    <strong>setRequest</strong>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the current request instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Auth\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Routing\RouteUrlGenerator | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Routing_RouteUrlGenerator" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Illuminate/Routing.html">Routing</a></li><li class="backslash">\</li><li>RouteUrlGenerator</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            RouteUrlGenerator
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>RouteUrlGenerator</strong>        (<a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Routing/RouteUrlGenerator.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_url">
+                                        protected                                        
+                </td>
+                <td>$url</td>
+                <td class="last">The URL generator instance.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_request">
+                                        protected                                        <a href="../../Illuminate/Http/Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a>
+                </td>
+                <td>$request</td>
+                <td class="last">The request instance.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultParameters">
+                                                                                array
+                </td>
+                <td>$defaultParameters</td>
+                <td class="last">The named parameter defaults.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dontEncode">
+                                                                                array
+                </td>
+                <td>$dontEncode</td>
+                <td class="last">Characters that should not be URL encoded.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../Illuminate/Routing/UrlGenerator.html"><abbr title="Illuminate\Routing\UrlGenerator">UrlGenerator</abbr></a> $url, <a href="../../Illuminate/Http/Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a> $request)
+        
+                                            <p>Create a new Route URL generator.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_to">to</a>(<a href="../../Illuminate/Routing/Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a> $route, array $parameters = [], bool $absolute = false)
+        
+                                            <p>Generate a URL for the given route.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRouteDomain">getRouteDomain</a>(<a href="../../Illuminate/Routing/Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a> $route, array $parameters)
+        
+                                            <p>Get the formatted domain for a given route.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formatDomain">formatDomain</a>(<a href="../../Illuminate/Routing/Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a> $route, array $parameters)
+        
+                                            <p>Format the domain and port for the route and request.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRouteScheme">getRouteScheme</a>(<a href="../../Illuminate/Routing/Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a> $route)
+        
+                                            <p>Get the scheme for the given route.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addPortToDomain">addPortToDomain</a>(string $domain)
+        
+                                            <p>Add the port to the domain if necessary.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_replaceRootParameters">replaceRootParameters</a>(<a href="../../Illuminate/Routing/Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a> $route, string $domain, array $parameters)
+        
+                                            <p>Replace the parameters on the root path.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_replaceRouteParameters">replaceRouteParameters</a>(string $path, array $parameters)
+        
+                                            <p>Replace all of the wildcard parameters for a route path.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_replaceNamedParameters">replaceNamedParameters</a>(string $path, array $parameters)
+        
+                                            <p>Replace all of the named parameters in the path.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addQueryString">addQueryString</a>(string $uri, array $parameters)
+        
+                                            <p>Add a query string to the URI.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRouteQueryString">getRouteQueryString</a>(array $parameters)
+        
+                                            <p>Get the query string for a given route.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStringParameters">getStringParameters</a>(array $parameters)
+        
+                                            <p>Get the string parameters from a given list.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNumericParameters">getNumericParameters</a>(array $parameters)
+        
+                                            <p>Get the numeric parameters from a given list.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_defaults">defaults</a>(array $defaults)
+        
+                                            <p>Set the default named parameters used by the URL generator.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Routing/RouteUrlGenerator.php#L61">line 61</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../../Illuminate/Routing/UrlGenerator.html"><abbr title="Illuminate\Routing\UrlGenerator">UrlGenerator</abbr></a> $url, <a href="../../Illuminate/Http/Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new Route URL generator.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Routing/UrlGenerator.html"><abbr title="Illuminate\Routing\UrlGenerator">UrlGenerator</abbr></a></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Illuminate/Http/Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_to">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Routing/RouteUrlGenerator.php#L77">line 77</a></div>
+        <code>                    string
+    <strong>to</strong>(<a href="../../Illuminate/Routing/Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a> $route, array $parameters = [], bool $absolute = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate a URL for the given route.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Routing/Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a></td>
+                <td>$route</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$absolute</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Routing/Exceptions/UrlGenerationException.html"><abbr title="Illuminate\Routing\Exceptions\UrlGenerationException">UrlGenerationException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRouteDomain">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Routing/RouteUrlGenerator.php#L112">line 112</a></div>
+        <code>            protected        string
+    <strong>getRouteDomain</strong>(<a href="../../Illuminate/Routing/Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a> $route, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the formatted domain for a given route.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Routing/Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a></td>
+                <td>$route</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatDomain">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Routing/RouteUrlGenerator.php#L124">line 124</a></div>
+        <code>            protected        string
+    <strong>formatDomain</strong>(<a href="../../Illuminate/Routing/Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a> $route, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Format the domain and port for the route and request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Routing/Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a></td>
+                <td>$route</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRouteScheme">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Routing/RouteUrlGenerator.php#L137">line 137</a></div>
+        <code>            protected        string
+    <strong>getRouteScheme</strong>(<a href="../../Illuminate/Routing/Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a> $route)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the scheme for the given route.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Routing/Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a></td>
+                <td>$route</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPortToDomain">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Routing/RouteUrlGenerator.php#L154">line 154</a></div>
+        <code>            protected        string
+    <strong>addPortToDomain</strong>(string $domain)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the port to the domain if necessary.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replaceRootParameters">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Routing/RouteUrlGenerator.php#L172">line 172</a></div>
+        <code>            protected        string
+    <strong>replaceRootParameters</strong>(<a href="../../Illuminate/Routing/Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a> $route, string $domain, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Replace the parameters on the root path.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Routing/Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a></td>
+                <td>$route</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replaceRouteParameters">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Routing/RouteUrlGenerator.php#L188">line 188</a></div>
+        <code>            protected        string
+    <strong>replaceRouteParameters</strong>(string $path, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Replace all of the wildcard parameters for a route path.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replaceNamedParameters">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Routing/RouteUrlGenerator.php#L208">line 208</a></div>
+        <code>            protected        string
+    <strong>replaceNamedParameters</strong>(string $path, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Replace all of the named parameters in the path.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addQueryString">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Routing/RouteUrlGenerator.php#L228">line 228</a></div>
+        <code>            protected        mixed|string
+    <strong>addQueryString</strong>(string $uri, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a query string to the URI.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$uri</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRouteQueryString">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Routing/RouteUrlGenerator.php#L248">line 248</a></div>
+        <code>            protected        string
+    <strong>getRouteQueryString</strong>(array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the query string for a given route.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStringParameters">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Routing/RouteUrlGenerator.php#L279">line 279</a></div>
+        <code>            protected        array
+    <strong>getStringParameters</strong>(array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the string parameters from a given list.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNumericParameters">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Routing/RouteUrlGenerator.php#L290">line 290</a></div>
+        <code>            protected        array
+    <strong>getNumericParameters</strong>(array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the numeric parameters from a given list.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_defaults">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Routing/RouteUrlGenerator.php#L301">line 301</a></div>
+        <code>                    void
+    <strong>defaults</strong>(array $defaults)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the default named parameters used by the URL generator.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$defaults</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

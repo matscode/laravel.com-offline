@@ -1,0 +1,3202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Eloquent\Concerns\HasAttributes | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Eloquent_Concerns_HasAttributes" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Database.html">Database</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Database/Eloquent.html">Eloquent</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Database/Eloquent/Concerns.html">Concerns</a></li><li class="backslash">\</li><li>HasAttributes</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            HasAttributes
+                
+        </h1>
+    </div>
+
+    <p>    trait
+    <strong>HasAttributes</strong>        (<a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_attributes">
+                                        protected                                        array
+                </td>
+                <td>$attributes</td>
+                <td class="last">The model's attributes.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_original">
+                                        protected                                        array
+                </td>
+                <td>$original</td>
+                <td class="last">The model attribute's original state.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_changes">
+                                        protected                                        array
+                </td>
+                <td>$changes</td>
+                <td class="last">The changed model attributes.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_casts">
+                                        protected                                        array
+                </td>
+                <td>$casts</td>
+                <td class="last">The attributes that should be cast to native types.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dates">
+                                        protected                                        array
+                </td>
+                <td>$dates</td>
+                <td class="last">The attributes that should be mutated to dates.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dateFormat">
+                                        protected                                        string
+                </td>
+                <td>$dateFormat</td>
+                <td class="last">The storage format of the model's date columns.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_appends">
+                                        protected                                        array
+                </td>
+                <td>$appends</td>
+                <td class="last">The accessors to append to the model's array form.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_snakeAttributes">
+                    static                                                            bool
+                </td>
+                <td>$snakeAttributes</td>
+                <td class="last">Indicates whether attributes are snake cased on arrays.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mutatorCache">
+                    static                    protected                                        array
+                </td>
+                <td>$mutatorCache</td>
+                <td class="last">The cache of the mutated attributes for each class.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_attributesToArray">attributesToArray</a>()
+        
+                                            <p>Convert the model's attributes to an array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addDateAttributesToArray">addDateAttributesToArray</a>(array $attributes)
+        
+                                            <p>Add the date attributes to the attributes array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addMutatedAttributesToArray">addMutatedAttributesToArray</a>(array $attributes, array $mutatedAttributes)
+        
+                                            <p>Add the mutated attributes to the attributes array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addCastAttributesToArray">addCastAttributesToArray</a>(array $attributes, array $mutatedAttributes)
+        
+                                            <p>Add the casted attributes to the attributes array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getArrayableAttributes">getArrayableAttributes</a>()
+        
+                                            <p>Get an attribute array of all arrayable attributes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getArrayableAppends">getArrayableAppends</a>()
+        
+                                            <p>Get all of the appendable values that are arrayable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_relationsToArray">relationsToArray</a>()
+        
+                                            <p>Get the model's relationships in array form.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getArrayableRelations">getArrayableRelations</a>()
+        
+                                            <p>Get an attribute array of all arrayable relations.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getArrayableItems">getArrayableItems</a>(array $values)
+        
+                                            <p>Get an attribute array of all arrayable values.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttribute">getAttribute</a>(string $key)
+        
+                                            <p>Get an attribute from the model.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributeValue">getAttributeValue</a>(string $key)
+        
+                                            <p>Get a plain attribute (not a relationship).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributeFromArray">getAttributeFromArray</a>(string $key)
+        
+                                            <p>Get an attribute from the $attributes array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRelationValue">getRelationValue</a>(string $key)
+        
+                                            <p>Get a relationship.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRelationshipFromMethod">getRelationshipFromMethod</a>(string $method)
+        
+                                            <p>Get a relationship value from a method.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasGetMutator">hasGetMutator</a>(string $key)
+        
+                                            <p>Determine if a get mutator exists for an attribute.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mutateAttribute">mutateAttribute</a>(string $key, mixed $value)
+        
+                                            <p>Get the value of an attribute using its mutator.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mutateAttributeForArray">mutateAttributeForArray</a>(string $key, mixed $value)
+        
+                                            <p>Get the value of an attribute using its mutator for array conversion.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_castAttribute">castAttribute</a>(string $key, mixed $value)
+        
+                                            <p>Cast an attribute to a native PHP type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCastType">getCastType</a>(string $key)
+        
+                                            <p>Get the type of cast for a model attribute.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isCustomDateTimeCast">isCustomDateTimeCast</a>(string $cast)
+        
+                                            <p>Determine if the cast type is a custom date time cast.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAttribute">setAttribute</a>(string $key, mixed $value)
+        
+                                            <p>Set a given attribute on the model.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasSetMutator">hasSetMutator</a>(string $key)
+        
+                                            <p>Determine if a set mutator exists for an attribute.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDateAttribute">isDateAttribute</a>(string $key)
+        
+                                            <p>Determine if the given attribute is a date or date castable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fillJsonAttribute">fillJsonAttribute</a>(string $key, mixed $value)
+        
+                                            <p>Set a given JSON attribute on the model.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getArrayAttributeWithValue">getArrayAttributeWithValue</a>(string $path, string $key, mixed $value)
+        
+                                            <p>Get an array attribute with the given key and value set.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getArrayAttributeByKey">getArrayAttributeByKey</a>(string $key)
+        
+                                            <p>Get an array attribute or return an empty array if it is not set.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_castAttributeAsJson">castAttributeAsJson</a>(string $key, mixed $value)
+        
+                                            <p>Cast the given attribute to JSON.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_asJson">asJson</a>(mixed $value)
+        
+                                            <p>Encode the given value as JSON.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fromJson">fromJson</a>(string $value, bool $asObject = false)
+        
+                                            <p>Decode the given JSON back into an array or object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Support/Carbon.html"><abbr title="Illuminate\Support\Carbon">Carbon</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_asDate">asDate</a>(mixed $value)
+        
+                                            <p>Return a timestamp as DateTime object with time set to 00:00:00.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Support/Carbon.html"><abbr title="Illuminate\Support\Carbon">Carbon</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_asDateTime">asDateTime</a>(mixed $value)
+        
+                                            <p>Return a timestamp as DateTime object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isStandardDateFormat">isStandardDateFormat</a>(string $value)
+        
+                                            <p>Determine if the given value is a standard date format.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fromDateTime">fromDateTime</a>(<a target="_blank" href="http://php.net/DateTime">DateTime</a>|int $value)
+        
+                                            <p>Convert a DateTime to a storable string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_asTimestamp">asTimestamp</a>(mixed $value)
+        
+                                            <p>Return a timestamp as unix timestamp.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serializeDate">serializeDate</a>(<a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a> $date)
+        
+                                            <p>Prepare a date for array / JSON serialization.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDates">getDates</a>()
+        
+                                            <p>Get the attributes that should be converted to dates.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDateFormat">getDateFormat</a>()
+        
+                                            <p>Get the format for database stored dates.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDateFormat">setDateFormat</a>(string $format)
+        
+                                            <p>Set the date format used by the model.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasCast">hasCast</a>(string $key, array|string|null $types = null)
+        
+                                            <p>Determine whether an attribute should be cast to a native type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCasts">getCasts</a>()
+        
+                                            <p>Get the casts array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDateCastable">isDateCastable</a>(string $key)
+        
+                                            <p>Determine whether a value is Date / DateTime castable for inbound manipulation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isJsonCastable">isJsonCastable</a>(string $key)
+        
+                                            <p>Determine whether a value is JSON castable for inbound manipulation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributes">getAttributes</a>()
+        
+                                            <p>Get all of the current attributes on the model.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRawAttributes">setRawAttributes</a>(array $attributes, bool $sync = false)
+        
+                                            <p>Set the array of model attributes. No checking is done.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOriginal">getOriginal</a>(string|null $key = null, mixed $default = null)
+        
+                                            <p>Get the model's original attribute values.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_only">only</a>(array|mixed $attributes)
+        
+                                            <p>Get a subset of the model's attributes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_syncOriginal">syncOriginal</a>()
+        
+                                            <p>Sync the original attributes with the current.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_syncOriginalAttribute">syncOriginalAttribute</a>(string $attribute)
+        
+                                            <p>Sync a single original attribute with its current value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_syncChanges">syncChanges</a>()
+        
+                                            <p>Sync the changed attributes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDirty">isDirty</a>(array|string|null $attributes = null)
+        
+                                            <p>Determine if the model or given attribute(s) have been modified.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isClean">isClean</a>(array|string|null $attributes = null)
+        
+                                            <p>Determine if the model or given attribute(s) have remained the same.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wasChanged">wasChanged</a>(array|string|null $attributes = null)
+        
+                                            <p>Determine if the model or given attribute(s) have been modified.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasChanges">hasChanges</a>(array $changes, array|string|null $attributes = null)
+        
+                                            <p>Determine if the given attributes were changed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDirty">getDirty</a>()
+        
+                                            <p>Get the attributes that have been changed since last sync.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getChanges">getChanges</a>()
+        
+                                            <p>Get the attributes that were changed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_originalIsEquivalent">originalIsEquivalent</a>(string $key, mixed $current)
+        
+                                            <p>Determine if the new and old values for a given key are equivalent.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_append">append</a>(array|string $attributes)
+        
+                                            <p>Append attributes to query when building a query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAppends">setAppends</a>(array $appends)
+        
+                                            <p>Set the accessors to append to model arrays.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMutatedAttributes">getMutatedAttributes</a>()
+        
+                                            <p>Get the mutated attributes for a given instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cacheMutatedAttributes">cacheMutatedAttributes</a>(string $class)
+        
+                                            <p>Extract and cache all the mutated attributes of a class.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMutatorMethods">getMutatorMethods</a>(mixed $class)
+        
+                                            <p>Get all of the attribute mutator methods.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_attributesToArray">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L85">line 85</a></div>
+        <code>                    array
+    <strong>attributesToArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert the model's attributes to an array.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addDateAttributesToArray">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L121">line 121</a></div>
+        <code>            protected        array
+    <strong>addDateAttributesToArray</strong>(array $attributes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the date attributes to the attributes array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addMutatedAttributesToArray">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L143">line 143</a></div>
+        <code>            protected        array
+    <strong>addMutatedAttributesToArray</strong>(array $attributes, array $mutatedAttributes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the mutated attributes to the attributes array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$mutatedAttributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addCastAttributesToArray">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L171">line 171</a></div>
+        <code>            protected        array
+    <strong>addCastAttributesToArray</strong>(array $attributes, array $mutatedAttributes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the casted attributes to the attributes array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$mutatedAttributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getArrayableAttributes">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L206">line 206</a></div>
+        <code>            protected        array
+    <strong>getArrayableAttributes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an attribute array of all arrayable attributes.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getArrayableAppends">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L216">line 216</a></div>
+        <code>            protected        array
+    <strong>getArrayableAppends</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all of the appendable values that are arrayable.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_relationsToArray">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L232">line 232</a></div>
+        <code>                    array
+    <strong>relationsToArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the model's relationships in array form.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getArrayableRelations">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L276">line 276</a></div>
+        <code>            protected        array
+    <strong>getArrayableRelations</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an attribute array of all arrayable relations.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getArrayableItems">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L287">line 287</a></div>
+        <code>            protected        array
+    <strong>getArrayableItems</strong>(array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an attribute array of all arrayable values.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttribute">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L306">line 306</a></div>
+        <code>                    mixed
+    <strong>getAttribute</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an attribute from the model.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributeValue">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L336">line 336</a></div>
+        <code>                    mixed
+    <strong>getAttributeValue</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a plain attribute (not a relationship).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributeFromArray">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L371">line 371</a></div>
+        <code>            protected        mixed
+    <strong>getAttributeFromArray</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an attribute from the $attributes array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelationValue">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L384">line 384</a></div>
+        <code>                    mixed
+    <strong>getRelationValue</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a relationship.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelationshipFromMethod">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L409">line 409</a></div>
+        <code>            protected        mixed
+    <strong>getRelationshipFromMethod</strong>(string $method)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a relationship value from a method.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/LogicException">LogicException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasGetMutator">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L430">line 430</a></div>
+        <code>                    bool
+    <strong>hasGetMutator</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if a get mutator exists for an attribute.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mutateAttribute">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L442">line 442</a></div>
+        <code>            protected        mixed
+    <strong>mutateAttribute</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the value of an attribute using its mutator.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mutateAttributeForArray">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L454">line 454</a></div>
+        <code>            protected        mixed
+    <strong>mutateAttributeForArray</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the value of an attribute using its mutator for array conversion.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_castAttribute">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L468">line 468</a></div>
+        <code>            protected        mixed
+    <strong>castAttribute</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cast an attribute to a native PHP type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCastType">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L512">line 512</a></div>
+        <code>            protected        string
+    <strong>getCastType</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the type of cast for a model attribute.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isCustomDateTimeCast">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L527">line 527</a></div>
+        <code>            protected        bool
+    <strong>isCustomDateTimeCast</strong>(string $cast)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the cast type is a custom date time cast.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cast</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAttribute">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L540">line 540</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+    <strong>setAttribute</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a given attribute on the model.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasSetMutator">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L580">line 580</a></div>
+        <code>                    bool
+    <strong>hasSetMutator</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if a set mutator exists for an attribute.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDateAttribute">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L591">line 591</a></div>
+        <code>            protected        bool
+    <strong>isDateAttribute</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given attribute is a date or date castable.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fillJsonAttribute">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L604">line 604</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+    <strong>fillJsonAttribute</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a given JSON attribute on the model.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getArrayAttributeWithValue">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L623">line 623</a></div>
+        <code>            protected        <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+    <strong>getArrayAttributeWithValue</strong>(string $path, string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an array attribute with the given key and value set.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getArrayAttributeByKey">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L636">line 636</a></div>
+        <code>            protected        array
+    <strong>getArrayAttributeByKey</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an array attribute or return an empty array if it is not set.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_castAttributeAsJson">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L649">line 649</a></div>
+        <code>            protected        string
+    <strong>castAttributeAsJson</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cast the given attribute to JSON.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_asJson">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L668">line 668</a></div>
+        <code>            protected        string
+    <strong>asJson</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Encode the given value as JSON.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fromJson">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L680">line 680</a></div>
+        <code>                    mixed
+    <strong>fromJson</strong>(string $value, bool $asObject = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decode the given JSON back into an array or object.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$asObject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_asDate">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L691">line 691</a></div>
+        <code>            protected        <a href="../../../../Illuminate/Support/Carbon.html"><abbr title="Illuminate\Support\Carbon">Carbon</abbr></a>
+    <strong>asDate</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a timestamp as DateTime object with time set to 00:00:00.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Support/Carbon.html"><abbr title="Illuminate\Support\Carbon">Carbon</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_asDateTime">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L702">line 702</a></div>
+        <code>            protected        <a href="../../../../Illuminate/Support/Carbon.html"><abbr title="Illuminate\Support\Carbon">Carbon</abbr></a>
+    <strong>asDateTime</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a timestamp as DateTime object.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Support/Carbon.html"><abbr title="Illuminate\Support\Carbon">Carbon</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isStandardDateFormat">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L748">line 748</a></div>
+        <code>            protected        bool
+    <strong>isStandardDateFormat</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given value is a standard date format.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fromDateTime">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L759">line 759</a></div>
+        <code>                    string
+    <strong>fromDateTime</strong>(<a target="_blank" href="http://php.net/DateTime">DateTime</a>|int $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert a DateTime to a storable string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTime">DateTime</a>|int</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_asTimestamp">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L772">line 772</a></div>
+        <code>            protected        int
+    <strong>asTimestamp</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a timestamp as unix timestamp.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serializeDate">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L783">line 783</a></div>
+        <code>            protected        string
+    <strong>serializeDate</strong>(<a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a> $date)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prepare a date for array / JSON serialization.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a></td>
+                <td>$date</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDates">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L793">line 793</a></div>
+        <code>                    array
+    <strong>getDates</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the attributes that should be converted to dates.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDateFormat">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L807">line 807</a></div>
+        <code>                    string
+    <strong>getDateFormat</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the format for database stored dates.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDateFormat">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L818">line 818</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+    <strong>setDateFormat</strong>(string $format)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the date format used by the model.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasCast">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L832">line 832</a></div>
+        <code>                    bool
+    <strong>hasCast</strong>(string $key, array|string|null $types = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine whether an attribute should be cast to a native type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|string|null</td>
+                <td>$types</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCasts">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L846">line 846</a></div>
+        <code>                    array
+    <strong>getCasts</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the casts array.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDateCastable">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L861">line 861</a></div>
+        <code>            protected        bool
+    <strong>isDateCastable</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine whether a value is Date / DateTime castable for inbound manipulation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isJsonCastable">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L872">line 872</a></div>
+        <code>            protected        bool
+    <strong>isJsonCastable</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine whether a value is JSON castable for inbound manipulation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributes">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L882">line 882</a></div>
+        <code>                    array
+    <strong>getAttributes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all of the current attributes on the model.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRawAttributes">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L894">line 894</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+    <strong>setRawAttributes</strong>(array $attributes, bool $sync = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the array of model attributes. No checking is done.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$sync</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOriginal">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L912">line 912</a></div>
+        <code>                    mixed|array
+    <strong>getOriginal</strong>(string|null $key = null, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the model's original attribute values.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_only">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L923">line 923</a></div>
+        <code>                    array
+    <strong>only</strong>(array|mixed $attributes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a subset of the model's attributes.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|mixed</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_syncOriginal">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L939">line 939</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+    <strong>syncOriginal</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sync the original attributes with the current.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_syncOriginalAttribute">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L952">line 952</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+    <strong>syncOriginalAttribute</strong>(string $attribute)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sync a single original attribute with its current value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attribute</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_syncChanges">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L964">line 964</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+    <strong>syncChanges</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sync the changed attributes.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDirty">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L977">line 977</a></div>
+        <code>                    bool
+    <strong>isDirty</strong>(array|string|null $attributes = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the model or given attribute(s) have been modified.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|null</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isClean">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L990">line 990</a></div>
+        <code>                    bool
+    <strong>isClean</strong>(array|string|null $attributes = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the model or given attribute(s) have remained the same.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|null</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wasChanged">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L1001">line 1001</a></div>
+        <code>                    bool
+    <strong>wasChanged</strong>(array|string|null $attributes = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the model or given attribute(s) have been modified.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|null</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasChanges">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L1015">line 1015</a></div>
+        <code>            protected        bool
+    <strong>hasChanges</strong>(array $changes, array|string|null $attributes = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given attributes were changed.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$changes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|string|null</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDirty">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L1041">line 1041</a></div>
+        <code>                    array
+    <strong>getDirty</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the attributes that have been changed since last sync.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getChanges">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L1059">line 1059</a></div>
+        <code>                    array
+    <strong>getChanges</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the attributes that were changed.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_originalIsEquivalent">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L1071">line 1071</a></div>
+        <code>            protected        bool
+    <strong>originalIsEquivalent</strong>(string $key, mixed $current)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the new and old values for a given key are equivalent.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$current</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_append">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L1101">line 1101</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+    <strong>append</strong>(array|string $attributes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append attributes to query when building a query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAppends">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L1116">line 1116</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr>
+    <strong>setAppends</strong>(array $appends)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the accessors to append to model arrays.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$appends</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMutatedAttributes">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L1128">line 1128</a></div>
+        <code>                    array
+    <strong>getMutatedAttributes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the mutated attributes for a given instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cacheMutatedAttributes">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L1145">line 1145</a></div>
+        <code>        static            void
+    <strong>cacheMutatedAttributes</strong>(string $class)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Extract and cache all the mutated attributes of a class.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMutatorMethods">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.6/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php#L1158">line 1158</a></div>
+        <code>        static    protected        array
+    <strong>getMutatorMethods</strong>(mixed $class)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all of the attribute mutator methods.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,2561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Pagination\Paginator | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Pagination_Paginator" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Illuminate/Pagination.html">Pagination</a></li><li class="backslash">\</li><li>Paginator</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Paginator
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Paginator</strong>        extends <a href="../../Illuminate/Pagination/AbstractPaginator.html"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a>        implements
+        <a href="../../Illuminate/Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>, <a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a>, <a target="_blank" href="http://php.net/Countable">Countable</a>, <a target="_blank" href="http://php.net/IteratorAggregate">IteratorAggregate</a>, <a target="_blank" href="http://php.net/JsonSerializable">JsonSerializable</a>, <a href="../../Illuminate/Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>, <a href="../../Illuminate/Contracts/Pagination/Paginator.html"><abbr title="Illuminate\Contracts\Pagination\Paginator">Paginator</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/Paginator.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_items">
+                                        protected                                        <a href="../../Illuminate/Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+                </td>
+                <td>$items</td>
+                <td class="last">All of the items being paginated.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#property_items"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_perPage">
+                                        protected                                        int
+                </td>
+                <td>$perPage</td>
+                <td class="last">The number of items to be shown per page.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#property_perPage"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_currentPage">
+                                        protected                                        int
+                </td>
+                <td>$currentPage</td>
+                <td class="last">The current page being "viewed".</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#property_currentPage"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_path">
+                                        protected                                        string
+                </td>
+                <td>$path</td>
+                <td class="last">The base path to assign to all URLs.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#property_path"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_query">
+                                        protected                                        array
+                </td>
+                <td>$query</td>
+                <td class="last">The query parameters to add to all URLs.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#property_query"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fragment">
+                                        protected                                        string|null
+                </td>
+                <td>$fragment</td>
+                <td class="last">The URL fragment to add to all URLs.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#property_fragment"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pageName">
+                                        protected                                        string
+                </td>
+                <td>$pageName</td>
+                <td class="last">The query string variable used to store the page.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#property_pageName"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_currentPathResolver">
+                    static                    protected                                        <a target="_blank" href="http://php.net/Closure">Closure</a>
+                </td>
+                <td>$currentPathResolver</td>
+                <td class="last">The current page resolver callback.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#property_currentPathResolver"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_currentPageResolver">
+                    static                    protected                                        <a target="_blank" href="http://php.net/Closure">Closure</a>
+                </td>
+                <td>$currentPageResolver</td>
+                <td class="last">The current page resolver callback.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#property_currentPageResolver"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_viewFactoryResolver">
+                    static                    protected                                        <a target="_blank" href="http://php.net/Closure">Closure</a>
+                </td>
+                <td>$viewFactoryResolver</td>
+                <td class="last">The view factory resolver callback.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#property_viewFactoryResolver"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultView">
+                    static                                                            string
+                </td>
+                <td>$defaultView</td>
+                <td class="last">The default pagination view.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#property_defaultView"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultSimpleView">
+                    static                                                            string
+                </td>
+                <td>$defaultSimpleView</td>
+                <td class="last">The default "simple" pagination view.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#property_defaultSimpleView"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hasMore">
+                                        protected                                        
+                </td>
+                <td>$hasMore</td>
+                <td class="last">Determine if there are more items in the data source.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isValidPageNumber">isValidPageNumber</a>(int $page)
+        
+                                            <p>Determine if the given value is a valid page number.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_isValidPageNumber"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUrlRange">getUrlRange</a>(int $start, int $end)
+        
+                                            <p>Create a range of pagination URLs.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_getUrlRange"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_url">url</a>(int $page)
+        
+                                            <p>Get the URL for a given page number.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_url"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_previousPageUrl">previousPageUrl</a>()
+        
+                                            <p>Get the URL for the previous page.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_previousPageUrl"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Pagination\$this">$this</abbr>|string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fragment">fragment</a>(string|null $fragment = null)
+        
+                                            <p>Get / set the URL fragment to be appended to URLs.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_fragment"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Pagination\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appends">appends</a>(array|string $key, string|null $value = null)
+        
+                                            <p>Add a set of query string values to the paginator.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_appends"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Pagination\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendArray">appendArray</a>(array $keys)
+        
+                                            <p>Add an array of query string values.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_appendArray"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Pagination\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addQuery">addQuery</a>(string $key, string $value)
+        
+                                            <p>Add a query string value to the paginator.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_addQuery"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildFragment">buildFragment</a>()
+        
+                                            <p>Build the full fragment portion of a URL.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_buildFragment"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_items">items</a>()
+        
+                                            <p>Get the slice of items being paginated.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_items"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_firstItem">firstItem</a>()
+        
+                                            <p>Get the number of the first item in the slice.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_firstItem"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lastItem">lastItem</a>()
+        
+                                            <p>Get the number of the last item in the slice.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_lastItem"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_perPage">perPage</a>()
+        
+                                            <p>Get the number of items shown per page.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_perPage"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onFirstPage">onFirstPage</a>()
+        
+                                            <p>Determine if the paginator is on the first page.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_onFirstPage"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_currentPage">currentPage</a>()
+        
+                                            <p>Get the current page.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_currentPage"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasPages">hasPages</a>()
+        
+                                            <p>Determine if there are enough items to split into multiple pages.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_hasPages"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resolveCurrentPath">resolveCurrentPath</a>(string $default = &#039;/&#039;)
+        
+                                            <p>Resolve the current request path or return the default value.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_resolveCurrentPath"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_currentPathResolver">currentPathResolver</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $resolver)
+        
+                                            <p>Set the current request path resolver callback.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_currentPathResolver"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resolveCurrentPage">resolveCurrentPage</a>(string $pageName = &#039;page&#039;, int $default = 1)
+        
+                                            <p>Resolve the current page or return the default value.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_resolveCurrentPage"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_currentPageResolver">currentPageResolver</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $resolver)
+        
+                                            <p>Set the current page resolver callback.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_currentPageResolver"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Illuminate/Contracts/View/Factory.html"><abbr title="Illuminate\Contracts\View\Factory">Factory</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_viewFactory">viewFactory</a>()
+        
+                                            <p>Get an instance of the view factory from the resolver.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_viewFactory"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_viewFactoryResolver">viewFactoryResolver</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $resolver)
+        
+                                            <p>Set the view factory resolver callback.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_viewFactoryResolver"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_defaultView">defaultView</a>(string $view)
+        
+                                            <p>Set the default pagination view.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_defaultView"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_defaultSimpleView">defaultSimpleView</a>(string $view)
+        
+                                            <p>Set the default "simple" pagination view.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_defaultSimpleView"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPageName">getPageName</a>()
+        
+                                            <p>Get the query string variable used to store the page.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_getPageName"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Pagination\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPageName">setPageName</a>(string $name)
+        
+                                            <p>Set the query string variable used to store the page.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_setPageName"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Pagination\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPath">setPath</a>(string $path)
+        
+                                            <p>Set the base path to assign to all URLs.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_setPath"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/ArrayIterator">ArrayIterator</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIterator">getIterator</a>()
+        
+                                            <p>Get an iterator for the items.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_getIterator"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isEmpty">isEmpty</a>()
+        
+                                            <p>Determine if the list of items is empty or not.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_isEmpty"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_count">count</a>()
+        
+                                            <p>Get the number of items for the current page.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_count"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCollection">getCollection</a>()
+        
+                                            <p>Get the paginator's underlying collection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_getCollection"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Pagination\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCollection">setCollection</a>(<a href="../../Illuminate/Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a> $collection)
+        
+                                            <p>Set the paginator's underlying collection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_setCollection"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetExists">offsetExists</a>(mixed $key)
+        
+                                            <p>Determine if the given item exists.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_offsetExists"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetGet">offsetGet</a>(mixed $key)
+        
+                                            <p>Get the item at the given offset.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_offsetGet"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetSet">offsetSet</a>(mixed $key, mixed $value)
+        
+                                            <p>Set the item at the given offset.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_offsetSet"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetUnset">offsetUnset</a>(mixed $key)
+        
+                                            <p>Unset the item at the given key.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_offsetUnset"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toHtml">toHtml</a>()
+        
+                                            <p>Render the contents of the paginator to HTML.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method_toHtml"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $parameters)
+        
+                                            <p>Make dynamic calls into the collection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method___call"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p>Render the contents of the paginator when casting to string.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pagination/AbstractPaginator.html#method___toString"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(mixed $items, int $perPage, int|null $currentPage = null, array $options = [])
+        
+                                            <p>Create a new paginator instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCurrentPage">setCurrentPage</a>(int $currentPage)
+        
+                                            <p>Get the current page for the request.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkForMorePages">checkForMorePages</a>()
+        
+                                            <p>Check for more pages. The last item will be sliced off.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_nextPageUrl">nextPageUrl</a>()
+        
+                                            <p>Get the URL for the next page.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Pagination\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasMorePagesWhen">hasMorePagesWhen</a>(bool $value = true)
+        
+                                            <p>Manually indicate that the paginator does have more pages.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasMorePages">hasMorePages</a>()
+        
+                                            <p>Determine if there are more items in the data source.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_links">links</a>(string|null $view = null)
+        
+                                            <p>Render the paginator using the given view.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_render">render</a>(string|null $view = null)
+        
+                                            <p>Render the paginator using the given view.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toArray">toArray</a>()
+        
+                                            <p>Get the instance as an array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_jsonSerialize">jsonSerialize</a>()
+        
+                                            <p>Convert the object into something JSON serializable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toJson">toJson</a>(int $options)
+        
+                                            <p>Convert the object to its JSON representation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_isValidPageNumber">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_isValidPageNumber"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L103">line 103</a></div>
+        <code>            protected        bool
+    <strong>isValidPageNumber</strong>(int $page)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given value is a valid page number.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$page</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrlRange">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_getUrlRange"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L115">line 115</a></div>
+        <code>                    string
+    <strong>getUrlRange</strong>(int $start, int $end)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a range of pagination URLs.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$start</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$end</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_url">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_url"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L132">line 132</a></div>
+        <code>                    string
+    <strong>url</strong>(int $page)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the URL for a given page number.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$page</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_previousPageUrl">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_previousPageUrl"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L158">line 158</a></div>
+        <code>                    string|null
+    <strong>previousPageUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the URL for the previous page.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fragment">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_fragment"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L171">line 171</a></div>
+        <code>                    <abbr title="Illuminate\Pagination\$this">$this</abbr>|string|null
+    <strong>fragment</strong>(string|null $fragment = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get / set the URL fragment to be appended to URLs.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$fragment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Pagination\$this">$this</abbr>|string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appends">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_appends"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L189">line 189</a></div>
+        <code>                    <abbr title="Illuminate\Pagination\$this">$this</abbr>
+    <strong>appends</strong>(array|string $key, string|null $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a set of query string values to the paginator.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Pagination\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendArray">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_appendArray"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L204">line 204</a></div>
+        <code>            protected        <abbr title="Illuminate\Pagination\$this">$this</abbr>
+    <strong>appendArray</strong>(array $keys)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an array of query string values.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Pagination\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addQuery">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_addQuery"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L220">line 220</a></div>
+        <code>                    <abbr title="Illuminate\Pagination\$this">$this</abbr>
+    <strong>addQuery</strong>(string $key, string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a query string value to the paginator.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Pagination\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildFragment">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_buildFragment"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L234">line 234</a></div>
+        <code>            protected        string
+    <strong>buildFragment</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build the full fragment portion of a URL.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_items">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_items"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L244">line 244</a></div>
+        <code>                    array
+    <strong>items</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the slice of items being paginated.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_firstItem">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_firstItem"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L254">line 254</a></div>
+        <code>                    int
+    <strong>firstItem</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the number of the first item in the slice.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lastItem">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_lastItem"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L268">line 268</a></div>
+        <code>                    int
+    <strong>lastItem</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the number of the last item in the slice.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_perPage">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_perPage"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L282">line 282</a></div>
+        <code>                    int
+    <strong>perPage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the number of items shown per page.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onFirstPage">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_onFirstPage"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L292">line 292</a></div>
+        <code>                    bool
+    <strong>onFirstPage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the paginator is on the first page.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currentPage">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_currentPage"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L302">line 302</a></div>
+        <code>                    int
+    <strong>currentPage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the current page.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasPages">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_hasPages"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L312">line 312</a></div>
+        <code>                    bool
+    <strong>hasPages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if there are enough items to split into multiple pages.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveCurrentPath">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_resolveCurrentPath"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L323">line 323</a></div>
+        <code>        static            string
+    <strong>resolveCurrentPath</strong>(string $default = &#039;/&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resolve the current request path or return the default value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currentPathResolver">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_currentPathResolver"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L338">line 338</a></div>
+        <code>        static            void
+    <strong>currentPathResolver</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $resolver)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the current request path resolver callback.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$resolver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveCurrentPage">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_resolveCurrentPage"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L350">line 350</a></div>
+        <code>        static            int
+    <strong>resolveCurrentPage</strong>(string $pageName = &#039;page&#039;, int $default = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resolve the current page or return the default value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$pageName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currentPageResolver">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_currentPageResolver"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L365">line 365</a></div>
+        <code>        static            void
+    <strong>currentPageResolver</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $resolver)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the current page resolver callback.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$resolver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_viewFactory">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_viewFactory"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L375">line 375</a></div>
+        <code>        static            <a href="../../Illuminate/Contracts/View/Factory.html"><abbr title="Illuminate\Contracts\View\Factory">Factory</abbr></a>
+    <strong>viewFactory</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an instance of the view factory from the resolver.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Contracts/View/Factory.html"><abbr title="Illuminate\Contracts\View\Factory">Factory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_viewFactoryResolver">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_viewFactoryResolver"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L386">line 386</a></div>
+        <code>        static            void
+    <strong>viewFactoryResolver</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $resolver)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the view factory resolver callback.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$resolver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_defaultView">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_defaultView"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L397">line 397</a></div>
+        <code>        static            void
+    <strong>defaultView</strong>(string $view)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the default pagination view.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_defaultSimpleView">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_defaultSimpleView"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L408">line 408</a></div>
+        <code>        static            void
+    <strong>defaultSimpleView</strong>(string $view)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the default "simple" pagination view.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPageName">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_getPageName"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L418">line 418</a></div>
+        <code>                    string
+    <strong>getPageName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the query string variable used to store the page.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPageName">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_setPageName"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L429">line 429</a></div>
+        <code>                    <abbr title="Illuminate\Pagination\$this">$this</abbr>
+    <strong>setPageName</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the query string variable used to store the page.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Pagination\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPath">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_setPath"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L442">line 442</a></div>
+        <code>                    <abbr title="Illuminate\Pagination\$this">$this</abbr>
+    <strong>setPath</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the base path to assign to all URLs.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Pagination\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIterator">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_getIterator"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L454">line 454</a></div>
+        <code>                    <a target="_blank" href="http://php.net/ArrayIterator">ArrayIterator</a>
+    <strong>getIterator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an iterator for the items.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/ArrayIterator">ArrayIterator</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isEmpty">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_isEmpty"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L464">line 464</a></div>
+        <code>                    bool
+    <strong>isEmpty</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the list of items is empty or not.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_count"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L474">line 474</a></div>
+        <code>                    int
+    <strong>count</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the number of items for the current page.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCollection">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_getCollection"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L484">line 484</a></div>
+        <code>                    <a href="../../Illuminate/Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+    <strong>getCollection</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the paginator's underlying collection.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCollection">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_setCollection"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L495">line 495</a></div>
+        <code>                    <abbr title="Illuminate\Pagination\$this">$this</abbr>
+    <strong>setCollection</strong>(<a href="../../Illuminate/Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a> $collection)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the paginator's underlying collection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a></td>
+                <td>$collection</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Pagination\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetExists">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_offsetExists"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L508">line 508</a></div>
+        <code>                    bool
+    <strong>offsetExists</strong>(mixed $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given item exists.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetGet">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_offsetGet"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L519">line 519</a></div>
+        <code>                    mixed
+    <strong>offsetGet</strong>(mixed $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the item at the given offset.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetSet">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_offsetSet"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L531">line 531</a></div>
+        <code>                    void
+    <strong>offsetSet</strong>(mixed $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the item at the given offset.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetUnset">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_offsetUnset"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L542">line 542</a></div>
+        <code>                    void
+    <strong>offsetUnset</strong>(mixed $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unset the item at the given key.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toHtml">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method_toHtml"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L552">line 552</a></div>
+        <code>                    string
+    <strong>toHtml</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render the contents of the paginator to HTML.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method___call"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L564">line 564</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Make dynamic calls into the collection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">in <a href="../../Illuminate/Pagination/AbstractPaginator.html#method___toString"><abbr title="Illuminate\Pagination\AbstractPaginator">AbstractPaginator</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/AbstractPaginator.php#L574">line 574</a></div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render the contents of the paginator when casting to string.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/Paginator.php#L33">line 33</a></div>
+        <code>                    void
+    <strong>__construct</strong>(mixed $items, int $perPage, int|null $currentPage = null, array $options = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new paginator instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$items</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$perPage</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$currentPage</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>(path, query, fragment, pageName)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCurrentPage">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/Paginator.php#L53">line 53</a></div>
+        <code>            protected        int
+    <strong>setCurrentPage</strong>(int $currentPage)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the current page for the request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$currentPage</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkForMorePages">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/Paginator.php#L65">line 65</a></div>
+        <code>            protected        void
+    <strong>checkForMorePages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check for more pages. The last item will be sliced off.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nextPageUrl">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/Paginator.php#L77">line 77</a></div>
+        <code>                    string|null
+    <strong>nextPageUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the URL for the next page.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasMorePagesWhen">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/Paginator.php#L90">line 90</a></div>
+        <code>                    <abbr title="Illuminate\Pagination\$this">$this</abbr>
+    <strong>hasMorePagesWhen</strong>(bool $value = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Manually indicate that the paginator does have more pages.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Pagination\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasMorePages">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/Paginator.php#L102">line 102</a></div>
+        <code>                    bool
+    <strong>hasMorePages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if there are more items in the data source.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_links">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/Paginator.php#L113">line 113</a></div>
+        <code>                    string
+    <strong>links</strong>(string|null $view = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render the paginator using the given view.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/Paginator.php#L124">line 124</a></div>
+        <code>                    string
+    <strong>render</strong>(string|null $view = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render the paginator using the given view.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toArray">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/Paginator.php#L138">line 138</a></div>
+        <code>                    array
+    <strong>toArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the instance as an array.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_jsonSerialize">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/Paginator.php#L156">line 156</a></div>
+        <code>                    array
+    <strong>jsonSerialize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert the object into something JSON serializable.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toJson">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Pagination/Paginator.php#L167">line 167</a></div>
+        <code>                    string
+    <strong>toJson</strong>(int $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert the object to its JSON representation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

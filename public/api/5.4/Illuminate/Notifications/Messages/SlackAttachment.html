@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Notifications\Messages\SlackAttachment | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Notifications_Messages_SlackAttachment" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Notifications.html">Notifications</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Notifications/Messages.html">Messages</a></li><li class="backslash">\</li><li>SlackAttachment</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            SlackAttachment
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>SlackAttachment</strong>        (<a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Notifications/Messages/SlackAttachment.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_title">
+                                                                                string
+                </td>
+                <td>$title</td>
+                <td class="last">The attachment's title.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_url">
+                                                                                string
+                </td>
+                <td>$url</td>
+                <td class="last">The attachment's URL.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_content">
+                                                                                string
+                </td>
+                <td>$content</td>
+                <td class="last">The attachment's text content.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fallback">
+                                                                                string
+                </td>
+                <td>$fallback</td>
+                <td class="last">A plain-text summary of the attachment.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_color">
+                                                                                string
+                </td>
+                <td>$color</td>
+                <td class="last">The attachment's color.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fields">
+                                                                                array
+                </td>
+                <td>$fields</td>
+                <td class="last">The attachment's fields.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_markdown">
+                                                                                array
+                </td>
+                <td>$markdown</td>
+                <td class="last">The fields containing markdown.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_imageUrl">
+                                                                                string
+                </td>
+                <td>$imageUrl</td>
+                <td class="last">The attachment's image url.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_footer">
+                                                                                string
+                </td>
+                <td>$footer</td>
+                <td class="last">The attachment's footer.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_footerIcon">
+                                                                                string
+                </td>
+                <td>$footerIcon</td>
+                <td class="last">The attachment's footer icon.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_timestamp">
+                                                                                int
+                </td>
+                <td>$timestamp</td>
+                <td class="last">The attachment's timestamp.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_title">title</a>(string $title, string $url = null)
+        
+                                            <p>Set the title of the attachment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_content">content</a>(string $content)
+        
+                                            <p>Set the content (text) of the attachment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fallback">fallback</a>(string $fallback)
+        
+                                            <p>A plain-text summary of the attachment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_color">color</a>(string $color)
+        
+                                            <p>Set the color of the attachment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_field">field</a>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $title, string $content = &#039;&#039;)
+        
+                                            <p>Add a field to the attachment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fields">fields</a>(array $fields)
+        
+                                            <p>Set the fields of the attachment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_markdown">markdown</a>(array $fields)
+        
+                                            <p>Set the fields containing markdown.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_image">image</a>(string $url)
+        
+                                            <p>Set the image URL.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_footer">footer</a>(string $footer)
+        
+                                            <p>Set the footer content.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_footerIcon">footerIcon</a>(string $icon)
+        
+                                            <p>Set the footer icon.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_timestamp">timestamp</a>(<abbr title="Carbon\Carbon">Carbon</abbr> $timestamp)
+        
+                                            <p>Set the timestamp.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_title">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Notifications/Messages/SlackAttachment.php#L93">line 93</a></div>
+        <code>                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+    <strong>title</strong>(string $title, string $url = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the title of the attachment.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$title</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Notifications\Messages\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_content">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Notifications/Messages/SlackAttachment.php#L107">line 107</a></div>
+        <code>                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+    <strong>content</strong>(string $content)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the content (text) of the attachment.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Notifications\Messages\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fallback">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Notifications/Messages/SlackAttachment.php#L120">line 120</a></div>
+        <code>                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+    <strong>fallback</strong>(string $fallback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>A plain-text summary of the attachment.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fallback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Notifications\Messages\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_color">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Notifications/Messages/SlackAttachment.php#L133">line 133</a></div>
+        <code>                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+    <strong>color</strong>(string $color)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the color of the attachment.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$color</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Notifications\Messages\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_field">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Notifications/Messages/SlackAttachment.php#L147">line 147</a></div>
+        <code>                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+    <strong>field</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $title, string $content = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a field to the attachment.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a>|string</td>
+                <td>$title</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Notifications\Messages\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fields">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Notifications/Messages/SlackAttachment.php#L170">line 170</a></div>
+        <code>                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+    <strong>fields</strong>(array $fields)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the fields of the attachment.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$fields</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Notifications\Messages\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_markdown">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Notifications/Messages/SlackAttachment.php#L183">line 183</a></div>
+        <code>                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+    <strong>markdown</strong>(array $fields)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the fields containing markdown.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$fields</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Notifications\Messages\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_image">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Notifications/Messages/SlackAttachment.php#L196">line 196</a></div>
+        <code>                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+    <strong>image</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the image URL.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Notifications\Messages\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_footer">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Notifications/Messages/SlackAttachment.php#L209">line 209</a></div>
+        <code>                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+    <strong>footer</strong>(string $footer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the footer content.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$footer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Notifications\Messages\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_footerIcon">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Notifications/Messages/SlackAttachment.php#L222">line 222</a></div>
+        <code>                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+    <strong>footerIcon</strong>(string $icon)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the footer icon.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$icon</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Notifications\Messages\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_timestamp">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Notifications/Messages/SlackAttachment.php#L235">line 235</a></div>
+        <code>                    <abbr title="Illuminate\Notifications\Messages\$this">$this</abbr>
+    <strong>timestamp</strong>(<abbr title="Carbon\Carbon">Carbon</abbr> $timestamp)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the timestamp.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Carbon\Carbon">Carbon</abbr></td>
+                <td>$timestamp</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Notifications\Messages\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

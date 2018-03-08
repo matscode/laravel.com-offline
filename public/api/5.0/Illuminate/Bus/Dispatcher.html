@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Bus\Dispatcher | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Bus_Dispatcher" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Illuminate/Bus.html">Bus</a></li><li class="backslash">\</li><li>Dispatcher</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Dispatcher
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Dispatcher</strong>        implements
+        <a href="../../Illuminate/Contracts/Bus/Dispatcher.html"><abbr title="Illuminate\Contracts\Bus\Dispatcher">Dispatcher</abbr></a>, <a href="../../Illuminate/Contracts/Bus/QueueingDispatcher.html"><abbr title="Illuminate\Contracts\Bus\QueueingDispatcher">QueueingDispatcher</abbr></a>, <a href="../../Illuminate/Contracts/Bus/HandlerResolver.html"><abbr title="Illuminate\Contracts\Bus\HandlerResolver">HandlerResolver</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_container">
+                                        protected                                        <a href="../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a>
+                </td>
+                <td>$container</td>
+                <td class="last">The container implementation.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pipeline">
+                                        protected                                        <a href="../../Illuminate/Pipeline/Pipeline.html"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a>
+                </td>
+                <td>$pipeline</td>
+                <td class="last">The pipeline instance for the bus.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pipes">
+                                        protected                                        array
+                </td>
+                <td>$pipes</td>
+                <td class="last">The pipes to send commands through before dispatching.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_queueResolver">
+                                        protected                                        <a target="_blank" href="http://php.net/Closure">Closure</a>|null
+                </td>
+                <td>$queueResolver</td>
+                <td class="last">The queue resolver callback.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mappings">
+                                        protected                                        array
+                </td>
+                <td>$mappings</td>
+                <td class="last">All of the command-to-handler mappings.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mapper">
+                                        protected                                        <a target="_blank" href="http://php.net/Closure">Closure</a>
+                </td>
+                <td>$mapper</td>
+                <td class="last">The fallback mapping Closure.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container, <a target="_blank" href="http://php.net/Closure">Closure</a> $queueResolver = null)
+        
+                                            <p>Create a new command dispatcher instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dispatchFromArray">dispatchFromArray</a>(mixed $command, array $array)
+        
+                                            <p>Marshal a command and dispatch it to its appropriate handler.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dispatchFrom">dispatchFrom</a>(mixed $command, <a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a> $source, array $extras = [])
+        
+                                            <p>Marshal a command and dispatch it to its appropriate handler.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_marshalFromArray">marshalFromArray</a>(string $command, array $array)
+        
+                                            <p>Marshal a command from the given array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_marshal">marshal</a>(string $command, <a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a> $source, array $extras = [])
+        
+                                            <p>Marshal a command from the given array accessible object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParameterValueForCommand">getParameterValueForCommand</a>(string $command, <a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a> $source, <a target="_blank" href="http://php.net/ReflectionParameter">ReflectionParameter</a> $parameter, array $extras = array())
+        
+                                            <p>Get a parameter value for a marshaled command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dispatch">dispatch</a>(mixed $command, <a target="_blank" href="http://php.net/Closure">Closure</a> $afterResolving = null)
+        
+                                            <p>Dispatch a command to its appropriate handler.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dispatchNow">dispatchNow</a>(mixed $command, <a target="_blank" href="http://php.net/Closure">Closure</a> $afterResolving = null)
+        
+                                            <p>Dispatch a command to its appropriate handler in the current process.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_commandShouldBeQueued">commandShouldBeQueued</a>(mixed $command)
+        
+                                            <p>Determine if the given command should be queued.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dispatchToQueue">dispatchToQueue</a>(mixed $command)
+        
+                                            <p>Dispatch a command to its appropriate handler behind a queue.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resolveHandler">resolveHandler</a>(mixed $command)
+        
+                                            <p>Get the handler instance for the given command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHandlerClass">getHandlerClass</a>(mixed $command)
+        
+                                            <p>Get the handler class for the given command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHandlerMethod">getHandlerMethod</a>(mixed $command)
+        
+                                            <p>Get the handler method for the given command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_inflectSegment">inflectSegment</a>(mixed $command, int $segment)
+        
+                                            <p>Get the given handler segment for the given command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMappingSegment">getMappingSegment</a>(string $className, int $segment)
+        
+                                            <p>Get the given segment from a given class handler.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMapperSegment">getMapperSegment</a>(mixed $command, int $segment)
+        
+                                            <p>Get the given segment from a given class handler using the custom mapper.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_maps">maps</a>(array $commands)
+        
+                                            <p>Register command-to-handler mappings.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mapUsing">mapUsing</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $mapper)
+        
+                                            <p>Register a fallback mapper callback.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_simpleMapping">simpleMapping</a>(mixed $command, string $commandNamespace, string $handlerNamespace)
+        
+                                            <p>Map the command to a handler within a given root namespace.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Contracts\Bus\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pipeThrough">pipeThrough</a>(array $pipes)
+        
+                                            <p>Set the pipes through which commands should be piped before dispatching.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L70">line 70</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container, <a target="_blank" href="http://php.net/Closure">Closure</a> $queueResolver = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new command dispatcher instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$queueResolver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dispatchFromArray">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L84">line 84</a></div>
+        <code>                    mixed
+    <strong>dispatchFromArray</strong>(mixed $command, array $array)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Marshal a command and dispatch it to its appropriate handler.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dispatchFrom">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L97">line 97</a></div>
+        <code>                    mixed
+    <strong>dispatchFrom</strong>(mixed $command, <a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a> $source, array $extras = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Marshal a command and dispatch it to its appropriate handler.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a></td>
+                <td>$source</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extras</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_marshalFromArray">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L109">line 109</a></div>
+        <code>            protected        mixed
+    <strong>marshalFromArray</strong>(string $command, array $array)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Marshal a command from the given array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_marshal">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L122">line 122</a></div>
+        <code>            protected        mixed
+    <strong>marshal</strong>(string $command, <a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a> $source, array $extras = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Marshal a command from the given array accessible object.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a></td>
+                <td>$source</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extras</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParameterValueForCommand">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L149">line 149</a></div>
+        <code>            protected        mixed
+    <strong>getParameterValueForCommand</strong>(string $command, <a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a> $source, <a target="_blank" href="http://php.net/ReflectionParameter">ReflectionParameter</a> $parameter, array $extras = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a parameter value for a marshaled command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a></td>
+                <td>$source</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ReflectionParameter">ReflectionParameter</a></td>
+                <td>$parameter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extras</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dispatch">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L177">line 177</a></div>
+        <code>                    mixed
+    <strong>dispatch</strong>(mixed $command, <a target="_blank" href="http://php.net/Closure">Closure</a> $afterResolving = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Dispatch a command to its appropriate handler.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$afterResolving</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dispatchNow">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L196">line 196</a></div>
+        <code>                    mixed
+    <strong>dispatchNow</strong>(mixed $command, <a target="_blank" href="http://php.net/Closure">Closure</a> $afterResolving = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Dispatch a command to its appropriate handler in the current process.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$afterResolving</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_commandShouldBeQueued">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L225">line 225</a></div>
+        <code>            protected        bool
+    <strong>commandShouldBeQueued</strong>(mixed $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given command should be queued.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dispatchToQueue">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L245">line 245</a></div>
+        <code>                    mixed
+    <strong>dispatchToQueue</strong>(mixed $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Dispatch a command to its appropriate handler behind a queue.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveHandler">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L270">line 270</a></div>
+        <code>                    mixed
+    <strong>resolveHandler</strong>(mixed $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the handler instance for the given command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHandlerClass">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L286">line 286</a></div>
+        <code>                    string
+    <strong>getHandlerClass</strong>(mixed $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the handler class for the given command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHandlerMethod">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L302">line 302</a></div>
+        <code>                    string
+    <strong>getHandlerMethod</strong>(mixed $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the handler method for the given command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_inflectSegment">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L319">line 319</a></div>
+        <code>            protected        string
+    <strong>inflectSegment</strong>(mixed $command, int $segment)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the given handler segment for the given command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$segment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMappingSegment">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L342">line 342</a></div>
+        <code>            protected        string
+    <strong>getMappingSegment</strong>(string $className, int $segment)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the given segment from a given class handler.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$segment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMapperSegment">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L354">line 354</a></div>
+        <code>            protected        string
+    <strong>getMapperSegment</strong>(mixed $command, int $segment)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the given segment from a given class handler using the custom mapper.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$segment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_maps">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L365">line 365</a></div>
+        <code>                    void
+    <strong>maps</strong>(array $commands)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register command-to-handler mappings.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$commands</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mapUsing">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L376">line 376</a></div>
+        <code>                    void
+    <strong>mapUsing</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $mapper)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a fallback mapper callback.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$mapper</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_simpleMapping">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L389">line 389</a></div>
+        <code>        static            string
+    <strong>simpleMapping</strong>(mixed $command, string $commandNamespace, string $handlerNamespace)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Map the command to a handler within a given root namespace.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$commandNamespace</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$handlerNamespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pipeThrough">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.0/src/Illuminate/Bus/Dispatcher.php#L402">line 402</a></div>
+        <code>                    <abbr title="Illuminate\Contracts\Bus\$this">$this</abbr>
+    <strong>pipeThrough</strong>(array $pipes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the pipes through which commands should be piped before dispatching.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$pipes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Contracts\Bus\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

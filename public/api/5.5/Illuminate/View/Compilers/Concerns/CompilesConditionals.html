@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\View\Compilers\Concerns\CompilesConditionals | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_View_Compilers_Concerns_CompilesConditionals" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/View.html">View</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/View/Compilers.html">Compilers</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/View/Compilers/Concerns.html">Concerns</a></li><li class="backslash">\</li><li>CompilesConditionals</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            CompilesConditionals
+                
+        </h1>
+    </div>
+
+    <p>    trait
+    <strong>CompilesConditionals</strong>        (<a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_firstCaseInSwitch">
+                                        protected                                        bool
+                </td>
+                <td>$firstCaseInSwitch</td>
+                <td class="last">Identifier for the first case in switch statement.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileAuth">compileAuth</a>($guard = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndAuth">compileEndAuth</a>()
+        
+                                            <p>Compile the end-auth statements into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileGuest">compileGuest</a>(string|null $guard = null)
+        
+                                            <p>Compile the if-guest statements into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndGuest">compileEndGuest</a>()
+        
+                                            <p>Compile the end-guest statements into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileHasSection">compileHasSection</a>(string $expression)
+        
+                                            <p>Compile the has-section statements into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileIf">compileIf</a>(string $expression)
+        
+                                            <p>Compile the if statements into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileUnless">compileUnless</a>(string $expression)
+        
+                                            <p>Compile the unless statements into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileElseif">compileElseif</a>(string $expression)
+        
+                                            <p>Compile the else-if statements into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileElse">compileElse</a>()
+        
+                                            <p>Compile the else statements into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndif">compileEndif</a>()
+        
+                                            <p>Compile the end-if statements into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndunless">compileEndunless</a>()
+        
+                                            <p>Compile the end-unless statements into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileIsset">compileIsset</a>(string $expression)
+        
+                                            <p>Compile the if-isset statements into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndIsset">compileEndIsset</a>()
+        
+                                            <p>Compile the end-isset statements into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileSwitch">compileSwitch</a>(string $expression)
+        
+                                            <p>Compile the switch statements into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileCase">compileCase</a>(string $expression)
+        
+                                            <p>Compile the case statements into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileDefault">compileDefault</a>()
+        
+                                            <p>Compile the default statements in switch case into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndSwitch">compileEndSwitch</a>()
+        
+                                            <p>Compile the end switch statements into valid PHP.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_compileAuth">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L20">line 20</a></div>
+        <code>            protected        
+    <strong>compileAuth</strong>($guard = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$guard</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndAuth">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L32">line 32</a></div>
+        <code>            protected        string
+    <strong>compileEndAuth</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-auth statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileGuest">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L43">line 43</a></div>
+        <code>            protected        string
+    <strong>compileGuest</strong>(string|null $guard = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the if-guest statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$guard</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndGuest">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L55">line 55</a></div>
+        <code>            protected        string
+    <strong>compileEndGuest</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-guest statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileHasSection">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L66">line 66</a></div>
+        <code>            protected        string
+    <strong>compileHasSection</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the has-section statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileIf">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L77">line 77</a></div>
+        <code>            protected        string
+    <strong>compileIf</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the if statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileUnless">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L88">line 88</a></div>
+        <code>            protected        string
+    <strong>compileUnless</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the unless statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileElseif">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L99">line 99</a></div>
+        <code>            protected        string
+    <strong>compileElseif</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the else-if statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileElse">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L109">line 109</a></div>
+        <code>            protected        string
+    <strong>compileElse</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the else statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndif">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L119">line 119</a></div>
+        <code>            protected        string
+    <strong>compileEndif</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-if statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndunless">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L129">line 129</a></div>
+        <code>            protected        string
+    <strong>compileEndunless</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-unless statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileIsset">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L140">line 140</a></div>
+        <code>            protected        string
+    <strong>compileIsset</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the if-isset statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndIsset">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L150">line 150</a></div>
+        <code>            protected        string
+    <strong>compileEndIsset</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-isset statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileSwitch">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L161">line 161</a></div>
+        <code>            protected        string
+    <strong>compileSwitch</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the switch statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileCase">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L174">line 174</a></div>
+        <code>            protected        string
+    <strong>compileCase</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the case statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileDefault">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L190">line 190</a></div>
+        <code>            protected        string
+    <strong>compileDefault</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the default statements in switch case into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndSwitch">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L200">line 200</a></div>
+        <code>            protected        string
+    <strong>compileEndSwitch</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end switch statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

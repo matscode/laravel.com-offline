@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Foundation\Testing\Concerns\MocksApplicationServices | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Foundation_Testing_Concerns_MocksApplicationServices" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Foundation.html">Foundation</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Foundation/Testing.html">Testing</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Foundation/Testing/Concerns.html">Concerns</a></li><li class="backslash">\</li><li>MocksApplicationServices</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            MocksApplicationServices
+                
+        </h1>
+    </div>
+
+    <p>    trait
+    <strong>MocksApplicationServices</strong>        (<a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Foundation/Testing/Concerns/MocksApplicationServices.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_firedEvents">
+                                        protected                                        array
+                </td>
+                <td>$firedEvents</td>
+                <td class="last">All of the fired events.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_firedModelEvents">
+                                        protected                                        array
+                </td>
+                <td>$firedModelEvents</td>
+                <td class="last">All of the fired model events.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dispatchedJobs">
+                                        protected                                        array
+                </td>
+                <td>$dispatchedJobs</td>
+                <td class="last">All of the dispatched jobs.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dispatchedNotifications">
+                                        protected                                        array
+                </td>
+                <td>$dispatchedNotifications</td>
+                <td class="last">All of the dispatched notifications.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_expectsEvents">expectsEvents</a>(array|string $events)
+        
+                                            <p>Specify a list of events that should be fired for the given operation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_doesntExpectEvents">doesntExpectEvents</a>(array|string $events)
+        
+                                            <p>Specify a list of events that should not be fired for the given operation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withoutEvents">withoutEvents</a>()
+        
+                                            <p>Mock the event dispatcher so all events are silenced and collected.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFiredEvents">getFiredEvents</a>(array $events)
+        
+                                            <p>Filter the given events against the fired events.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_expectsJobs">expectsJobs</a>(array|string $jobs)
+        
+                                            <p>Specify a list of jobs that should be dispatched for the given operation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_doesntExpectJobs">doesntExpectJobs</a>(array|string $jobs)
+        
+                                            <p>Specify a list of jobs that should not be dispatched for the given operation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withoutJobs">withoutJobs</a>()
+        
+                                            <p>Mock the job dispatcher so all jobs are silenced and collected.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDispatchedJobs">getDispatchedJobs</a>(array $jobs)
+        
+                                            <p>Filter the given jobs against the dispatched jobs.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDispatched">getDispatched</a>(array $classes, array $dispatched)
+        
+                                            <p>Filter the given classes against an array of dispatched classes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wasDispatched">wasDispatched</a>(string $needle, array $haystack)
+        
+                                            <p>Check if the given class exists in an array of dispatched classes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withoutNotifications">withoutNotifications</a>()
+        
+                                            <p>Mock the notification dispatcher so all notifications are silenced.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_expectsNotification">expectsNotification</a>(mixed $notifiable, string $notification)
+        
+                                            <p>Specify a notification that is expected to be dispatched.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_expectsEvents">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Foundation/Testing/Concerns/MocksApplicationServices.php#L50">line 50</a></div>
+        <code>                    <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+    <strong>expectsEvents</strong>(array|string $events)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify a list of events that should be fired for the given operation.</p>                    <p>These events will be mocked, so that handlers will not actually be executed.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$events</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_doesntExpectEvents">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Foundation/Testing/Concerns/MocksApplicationServices.php#L76">line 76</a></div>
+        <code>                    <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+    <strong>doesntExpectEvents</strong>(array|string $events)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify a list of events that should not be fired for the given operation.</p>                    <p>These events will be mocked, so that handlers will not actually be executed.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$events</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withoutEvents">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Foundation/Testing/Concerns/MocksApplicationServices.php#L97">line 97</a></div>
+        <code>            protected        <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+    <strong>withoutEvents</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mock the event dispatcher so all events are silenced and collected.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFiredEvents">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Foundation/Testing/Concerns/MocksApplicationServices.php#L116">line 116</a></div>
+        <code>            protected        array
+    <strong>getFiredEvents</strong>(array $events)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Filter the given events against the fired events.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$events</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_expectsJobs">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Foundation/Testing/Concerns/MocksApplicationServices.php#L129">line 129</a></div>
+        <code>            protected        <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+    <strong>expectsJobs</strong>(array|string $jobs)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify a list of jobs that should be dispatched for the given operation.</p>                    <p>These jobs will be mocked, so that handlers will not actually be executed.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$jobs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_doesntExpectJobs">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Foundation/Testing/Concerns/MocksApplicationServices.php#L155">line 155</a></div>
+        <code>            protected        <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+    <strong>doesntExpectJobs</strong>(array|string $jobs)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify a list of jobs that should not be dispatched for the given operation.</p>                    <p>These jobs will be mocked, so that handlers will not actually be executed.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$jobs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withoutJobs">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Foundation/Testing/Concerns/MocksApplicationServices.php#L176">line 176</a></div>
+        <code>            protected        <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+    <strong>withoutJobs</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mock the job dispatcher so all jobs are silenced and collected.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDispatchedJobs">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Foundation/Testing/Concerns/MocksApplicationServices.php#L197">line 197</a></div>
+        <code>            protected        array
+    <strong>getDispatchedJobs</strong>(array $jobs)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Filter the given jobs against the dispatched jobs.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$jobs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDispatched">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Foundation/Testing/Concerns/MocksApplicationServices.php#L209">line 209</a></div>
+        <code>            protected        array
+    <strong>getDispatched</strong>(array $classes, array $dispatched)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Filter the given classes against an array of dispatched classes.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$classes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$dispatched</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wasDispatched">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Foundation/Testing/Concerns/MocksApplicationServices.php#L223">line 223</a></div>
+        <code>            protected        bool
+    <strong>wasDispatched</strong>(string $needle, array $haystack)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if the given class exists in an array of dispatched classes.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$needle</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$haystack</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withoutNotifications">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Foundation/Testing/Concerns/MocksApplicationServices.php#L240">line 240</a></div>
+        <code>            protected        <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+    <strong>withoutNotifications</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mock the notification dispatcher so all notifications are silenced.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_expectsNotification">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Foundation/Testing/Concerns/MocksApplicationServices.php#L262">line 262</a></div>
+        <code>            protected        <abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr>
+    <strong>expectsNotification</strong>(mixed $notifiable, string $notification)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify a notification that is expected to be dispatched.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$notifiable</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$notification</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Foundation\Testing\Concerns\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

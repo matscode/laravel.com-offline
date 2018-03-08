@@ -1,0 +1,3774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Eloquent\Relations\MorphToMany | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Eloquent_Relations_MorphToMany" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Database.html">Database</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Database/Eloquent.html">Eloquent</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Database/Eloquent/Relations.html">Relations</a></li><li class="backslash">\</li><li>MorphToMany</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            MorphToMany
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>MorphToMany</strong>        extends <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a>        (<a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/MorphToMany.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_query">
+                                        protected                                        <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </td>
+                <td>$query</td>
+                <td class="last">The Eloquent query builder instance.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#property_query"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_parent">
+                                        protected                                        <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </td>
+                <td>$parent</td>
+                <td class="last">The parent model instance.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#property_parent"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_related">
+                                        protected                                        <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </td>
+                <td>$related</td>
+                <td class="last">The related model instance.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#property_related"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_constraints">
+                    static                    protected                                        bool
+                </td>
+                <td>$constraints</td>
+                <td class="last">Indicates if the relation is adding constraints.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#property_constraints"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_table">
+                                        protected                                        string
+                </td>
+                <td>$table</td>
+                <td class="last">The intermediate table for the relation.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#property_table"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_foreignKey">
+                                        protected                                        string
+                </td>
+                <td>$foreignKey</td>
+                <td class="last">The foreign key of the parent model.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#property_foreignKey"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_otherKey">
+                                        protected                                        string
+                </td>
+                <td>$otherKey</td>
+                <td class="last">The associated key of the relation.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#property_otherKey"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_relationName">
+                                        protected                                        string
+                </td>
+                <td>$relationName</td>
+                <td class="last">The "name" of the relationship.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#property_relationName"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pivotColumns">
+                                        protected                                        array
+                </td>
+                <td>$pivotColumns</td>
+                <td class="last">The pivot table columns to retrieve.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#property_pivotColumns"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pivotWheres">
+                                        protected                                        array
+                </td>
+                <td>$pivotWheres</td>
+                <td class="last">Any pivot table restrictions.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#property_pivotWheres"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_morphType">
+                                        protected                                        string
+                </td>
+                <td>$morphType</td>
+                <td class="last">The type of the polymorphic relation.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_morphClass">
+                                        protected                                        string
+                </td>
+                <td>$morphClass</td>
+                <td class="last">The class name of the morph type constraint.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_inverse">
+                                        protected                                        bool
+                </td>
+                <td>$inverse</td>
+                <td class="last">Indicates if we are connecting the inverse of the relation.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query, <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $parent, string $name, string $table, string $foreignKey, string $otherKey, string $relationName = null, bool $inverse = false)
+        
+                                            <p>Create a new has many relationship instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addConstraints">addConstraints</a>()
+        
+                                            <p>Set the base constraints on the relation query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_addConstraints"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addEagerConstraints">addEagerConstraints</a>(array $models)
+        
+                                            <p>Set the constraints for an eager load of the relation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initRelation">initRelation</a>(array $models, string $relation)
+        
+                                            <p>Initialize the relation on a set of models.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_initRelation"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_match">match</a>(array $models, <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a> $results, string $relation)
+        
+                                            <p>Match the eagerly loaded results to their parents.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_match"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResults">getResults</a>()
+        
+                                            <p>Get the results of the relationship.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getResults"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEager">getEager</a>()
+        
+                                            <p>Get the relationship for eager loading.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getEager"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_touch">touch</a>()
+        
+                                            <p>Touch all of the related models for the relationship.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_touch"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rawUpdate">rawUpdate</a>(array $attributes = array())
+        
+                                            <p>Run a raw update against the base query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_rawUpdate"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRelationCountQuery">getRelationCountQuery</a>(<a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query, <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $parent)
+        
+                                            <p>Add the constraints for a relationship count query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_noConstraints">noConstraints</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Run a callback with constraints disabled on the relation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_noConstraints"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getKeys">getKeys</a>(array $models, string $key = null)
+        
+                                            <p>Get all of the primary keys for an array of models.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getKeys"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQuery">getQuery</a>()
+        
+                                            <p>Get the underlying query for the relation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getQuery"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseQuery">getBaseQuery</a>()
+        
+                                            <p>Get the base query builder driving the Eloquent builder.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getBaseQuery"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParent">getParent</a>()
+        
+                                            <p>Get the parent model of the relation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getParent"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQualifiedParentKeyName">getQualifiedParentKeyName</a>()
+        
+                                            <p>Get the fully qualified parent key name.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getQualifiedParentKeyName"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRelated">getRelated</a>()
+        
+                                            <p>Get the related model of the relation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getRelated"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createdAt">createdAt</a>()
+        
+                                            <p>Get the name of the "created at" column.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_createdAt"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updatedAt">updatedAt</a>()
+        
+                                            <p>Get the name of the "updated at" column.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_updatedAt"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_relatedUpdatedAt">relatedUpdatedAt</a>()
+        
+                                            <p>Get the name of the related model's "updated at" column.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_relatedUpdatedAt"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wrap">wrap</a>(string $value)
+        
+                                            <p>Wrap the given value with the parent query's grammar.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_wrap"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $parameters)
+        
+                                            <p>Handle dynamic method calls to the relationship.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method___call"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wherePivot">wherePivot</a>(string $column, string $operator = null, mixed $value = null, string $boolean = &#039;and&#039;)
+        
+                                            <p>Set a where clause for a pivot table column.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_wherePivot"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orWherePivot">orWherePivot</a>(string $column, string $operator = null, mixed $value = null)
+        
+                                            <p>Set an or where clause for a pivot table column.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_orWherePivot"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_first">first</a>(array $columns = array(&#039;*&#039;))
+        
+                                            <p>Execute the query and get the first result.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_first"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_firstOrFail">firstOrFail</a>(array $columns = array(&#039;*&#039;))
+        
+                                            <p>Execute the query and get the first result or throw an exception.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_firstOrFail"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(array $columns = array(&#039;*&#039;))
+        
+                                            <p>Execute the query as a "select" statement.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_get"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Pagination/Paginator.html"><abbr title="Illuminate\Pagination\Paginator">Paginator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_paginate">paginate</a>(int $perPage = null, array $columns = array(&#039;*&#039;))
+        
+                                            <p>Get a paginator for the "select" statement.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_paginate"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hydratePivotRelation">hydratePivotRelation</a>(array $models)
+        
+                                            <p>Hydrate the pivot table relationship on the models.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_hydratePivotRelation"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cleanPivotAttributes">cleanPivotAttributes</a>(<a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model)
+        
+                                            <p>Get the pivot attributes from a model.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_cleanPivotAttributes"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRelationCountQueryForSelfJoin">getRelationCountQueryForSelfJoin</a>(<a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query, <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $parent)
+        
+                                            <p>Add the constraints for a relationship count query on the same table.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getRelationCountQueryForSelfJoin"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRelationCountHash">getRelationCountHash</a>()
+        
+                                            <p>Get a relationship join table hash.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getRelationCountHash"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSelectColumns">getSelectColumns</a>(array $columns = array(&#039;*&#039;))
+        
+                                            <p>Set the select clause for the relation query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getSelectColumns"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAliasedPivotColumns">getAliasedPivotColumns</a>()
+        
+                                            <p>Get the pivot columns for the relation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getAliasedPivotColumns"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasPivotColumn">hasPivotColumn</a>(string $column)
+        
+                                            <p>Determine whether the given column is defined as a pivot column.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_hasPivotColumn"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Relations\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setJoin">setJoin</a>(<a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|null $query = null)
+        
+                                            <p>Set the join clause for the relation query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_setJoin"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Relations\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setWhere">setWhere</a>()
+        
+                                            <p>Set the where clause for the relation query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildDictionary">buildDictionary</a>(<a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a> $results)
+        
+                                            <p>Build model dictionary keyed by the relation's foreign key.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_buildDictionary"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRelatedIds">getRelatedIds</a>()
+        
+                                            <p>Get all of the IDs for the related models.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getRelatedIds"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_save">save</a>(<a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model, array $joining = array(), bool $touch = true)
+        
+                                            <p>Save a new model and attach it to the parent model.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_save"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saveMany">saveMany</a>(array $models, array $joinings = array())
+        
+                                            <p>Save an array of new models and attach them to the parent model.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_saveMany"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_create">create</a>(array $attributes, array $joining = array(), bool $touch = true)
+        
+                                            <p>Create a new instance of the related model.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_create"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createMany">createMany</a>(array $records, array $joinings = array())
+        
+                                            <p>Create an array of new instances of the related models.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_createMany"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sync">sync</a>(array $ids, bool $detaching = true)
+        
+                                            <p>Sync the intermediate tables with a list of IDs or collection of models.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_sync"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formatSyncList">formatSyncList</a>(array $records)
+        
+                                            <p>Format the sync list so that it is keyed by ID.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_formatSyncList"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_attachNew">attachNew</a>(array $records, array $current, bool $touch = true)
+        
+                                            <p>Attach all of the IDs that aren't in the current array.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_attachNew"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updateExistingPivot">updateExistingPivot</a>(mixed $id, array $attributes, bool $touch = true)
+        
+                                            <p>Update an existing pivot record on the table.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_updateExistingPivot"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_attach">attach</a>(mixed $id, array $attributes = array(), bool $touch = true)
+        
+                                            <p>Attach a model to the parent.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_attach"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createAttachRecords">createAttachRecords</a>(array $ids, array $attributes)
+        
+                                            <p>Create an array of records to insert into the pivot table.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_createAttachRecords"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_attacher">attacher</a>(int $key, mixed $value, array $attributes, bool $timed)
+        
+                                            <p>Create a full attachment record payload.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_attacher"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttachId">getAttachId</a>(mixed $key, mixed $value, array $attributes)
+        
+                                            <p>Get the attach record ID and extra attributes.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getAttachId"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createAttachRecord">createAttachRecord</a>(int $id, bool $timed)
+        
+                                            <p>Create a new pivot attachment record.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTimestampsOnAttach">setTimestampsOnAttach</a>(array $record, bool $exists = false)
+        
+                                            <p>Set the creation and update timestamps on an attach record.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_setTimestampsOnAttach"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_detach">detach</a>(int|array $ids = array(), bool $touch = true)
+        
+                                            <p>Detach models from the relationship.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_detach"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_touchIfTouching">touchIfTouching</a>()
+        
+                                            <p>If we're touching the parent model, touch.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_touchIfTouching"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_touchingParent">touchingParent</a>()
+        
+                                            <p>Determine if we should touch the parent on sync.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_touchingParent"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_guessInverseRelation">guessInverseRelation</a>()
+        
+                                            <p>Attempt to guess the name of the inverse of the relation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_guessInverseRelation"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_newPivotQuery">newPivotQuery</a>()
+        
+                                            <p>Create a new query builder for the pivot table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_newPivotStatement">newPivotStatement</a>()
+        
+                                            <p>Get a new plain query builder for the pivot table.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_newPivotStatement"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_newPivotStatementForId">newPivotStatementForId</a>(mixed $id)
+        
+                                            <p>Get a new pivot statement for a given "other" ID.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_newPivotStatementForId"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Relations/Pivot.html"><abbr title="Illuminate\Database\Eloquent\Relations\Pivot">Pivot</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_newPivot">newPivot</a>(array $attributes = array(), bool $exists = false)
+        
+                                            <p>Create a new pivot model instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Relations/Pivot.html"><abbr title="Illuminate\Database\Eloquent\Relations\Pivot">Pivot</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_newExistingPivot">newExistingPivot</a>(array $attributes = array())
+        
+                                            <p>Create a new existing pivot model instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_newExistingPivot"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Relations\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withPivot">withPivot</a>(mixed $columns)
+        
+                                            <p>Set the columns on the pivot table to retrieve.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_withPivot"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withTimestamps">withTimestamps</a>(mixed $createdAt = null, mixed $updatedAt = null)
+        
+                                            <p>Specify that the pivot table has creation and update timestamps.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_withTimestamps"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRelatedFreshUpdate">getRelatedFreshUpdate</a>()
+        
+                                            <p>Get the related model's updated at column name.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getRelatedFreshUpdate"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHasCompareKey">getHasCompareKey</a>()
+        
+                                            <p>Get the key for comparing against the parent key in "has" query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getHasCompareKey"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getForeignKey">getForeignKey</a>()
+        
+                                            <p>Get the fully qualified foreign key for the relation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getForeignKey"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOtherKey">getOtherKey</a>()
+        
+                                            <p>Get the fully qualified "other key" for the relation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getOtherKey"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTable">getTable</a>()
+        
+                                            <p>Get the intermediate table for the relationship.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getTable"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRelationName">getRelationName</a>()
+        
+                                            <p>Get the relationship name for the relationship.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getRelationName"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMorphType">getMorphType</a>()
+        
+                                            <p>Get the foreign key "type" name.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMorphClass">getMorphClass</a>()
+        
+                                            <p>Get the class name of the parent model.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/MorphToMany.php#L44">line 44</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query, <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $parent, string $name, string $table, string $foreignKey, string $otherKey, string $relationName = null, bool $inverse = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new has many relationship instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$foreignKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$otherKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$relationName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$inverse</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addConstraints">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_addConstraints"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L242">line 242</a></div>
+        <code>                    void
+    <strong>addConstraints</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the base constraints on the relation query.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addEagerConstraints">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/MorphToMany.php#L87">line 87</a></div>
+        <code>                    void
+    <strong>addEagerConstraints</strong>(array $models)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the constraints for an eager load of the relation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initRelation">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_initRelation"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L401">line 401</a></div>
+        <code>                    array
+    <strong>initRelation</strong>(array $models, string $relation)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initialize the relation on a set of models.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_match">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_match"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L419">line 419</a></div>
+        <code>                    array
+    <strong>match</strong>(array $models, <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a> $results, string $relation)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match the eagerly loaded results to their parents.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a></td>
+                <td>$results</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResults">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getResults"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L79">line 79</a></div>
+        <code>                    mixed
+    <strong>getResults</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the results of the relationship.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEager">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getEager"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L101">line 101</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>
+    <strong>getEager</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the relationship for eager loading.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_touch">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_touch"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L469">line 469</a></div>
+        <code>                    void
+    <strong>touch</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Touch all of the related models for the relationship.</p>                    <p>E.g.: Touch all roles associated with this user.</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rawUpdate">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_rawUpdate"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L124">line 124</a></div>
+        <code>                    int
+    <strong>rawUpdate</strong>(array $attributes = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run a raw update against the base query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelationCountQuery">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/MorphToMany.php#L74">line 74</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>getRelationCountQuery</strong>(<a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query, <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $parent)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the constraints for a relationship count query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_noConstraints">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_noConstraints"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L151">line 151</a></div>
+        <code>        static            mixed
+    <strong>noConstraints</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run a callback with constraints disabled on the relation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getKeys">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getKeys"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L172">line 172</a></div>
+        <code>            protected        array
+    <strong>getKeys</strong>(array $models, string $key = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all of the primary keys for an array of models.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQuery">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getQuery"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L186">line 186</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>getQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the underlying query for the relation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseQuery">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getBaseQuery"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L196">line 196</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+    <strong>getBaseQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the base query builder driving the Eloquent builder.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParent">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getParent"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L206">line 206</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+    <strong>getParent</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the parent model of the relation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQualifiedParentKeyName">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getQualifiedParentKeyName"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L216">line 216</a></div>
+        <code>                    string
+    <strong>getQualifiedParentKeyName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the fully qualified parent key name.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelated">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getRelated"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L226">line 226</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+    <strong>getRelated</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the related model of the relation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createdAt">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_createdAt"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L236">line 236</a></div>
+        <code>                    string
+    <strong>createdAt</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the name of the "created at" column.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updatedAt">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_updatedAt"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L246">line 246</a></div>
+        <code>                    string
+    <strong>updatedAt</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the name of the "updated at" column.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_relatedUpdatedAt">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_relatedUpdatedAt"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L256">line 256</a></div>
+        <code>                    string
+    <strong>relatedUpdatedAt</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the name of the related model's "updated at" column.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrap">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_wrap"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L267">line 267</a></div>
+        <code>                    string
+    <strong>wrap</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrap the given value with the parent query's grammar.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method___call"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L279">line 279</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Handle dynamic method calls to the relationship.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wherePivot">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_wherePivot"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L93">line 93</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a>
+    <strong>wherePivot</strong>(string $column, string $operator = null, mixed $value = null, string $boolean = &#039;and&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a where clause for a pivot table column.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$boolean</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orWherePivot">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_orWherePivot"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L108">line 108</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a>
+    <strong>orWherePivot</strong>(string $column, string $operator = null, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set an or where clause for a pivot table column.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_first">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_first"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L119">line 119</a></div>
+        <code>                    mixed
+    <strong>first</strong>(array $columns = array(&#039;*&#039;))
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute the query and get the first result.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_firstOrFail">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_firstOrFail"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L134">line 134</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a>
+    <strong>firstOrFail</strong>(array $columns = array(&#039;*&#039;))
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute the query and get the first result or throw an exception.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/ModelNotFoundException.html"><abbr title="Illuminate\Database\Eloquent\ModelNotFoundException">ModelNotFoundException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_get"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L147">line 147</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>
+    <strong>get</strong>(array $columns = array(&#039;*&#039;))
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute the query as a "select" statement.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_paginate">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_paginate"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L178">line 178</a></div>
+        <code>                    <a href="../../../../Illuminate/Pagination/Paginator.html"><abbr title="Illuminate\Pagination\Paginator">Paginator</abbr></a>
+    <strong>paginate</strong>(int $perPage = null, array $columns = array(&#039;*&#039;))
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a paginator for the "select" statement.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$perPage</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Pagination/Paginator.html"><abbr title="Illuminate\Pagination\Paginator">Paginator</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hydratePivotRelation">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_hydratePivotRelation"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L198">line 198</a></div>
+        <code>            protected        void
+    <strong>hydratePivotRelation</strong>(array $models)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Hydrate the pivot table relationship on the models.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cleanPivotAttributes">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_cleanPivotAttributes"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L217">line 217</a></div>
+        <code>            protected        array
+    <strong>cleanPivotAttributes</strong>(<a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the pivot attributes from a model.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+                <td>$model</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelationCountQueryForSelfJoin">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getRelationCountQueryForSelfJoin"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L275">line 275</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>getRelationCountQueryForSelfJoin</strong>(<a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query, <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $parent)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the constraints for a relationship count query on the same table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelationCountHash">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getRelationCountHash"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L293">line 293</a></div>
+        <code>                    string
+    <strong>getRelationCountHash</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a relationship join table hash.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSelectColumns">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getSelectColumns"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L304">line 304</a></div>
+        <code>            protected        <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a>
+    <strong>getSelectColumns</strong>(array $columns = array(&#039;*&#039;))
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the select clause for the relation query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAliasedPivotColumns">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getAliasedPivotColumns"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L319">line 319</a></div>
+        <code>            protected        array
+    <strong>getAliasedPivotColumns</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the pivot columns for the relation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasPivotColumn">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_hasPivotColumn"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L342">line 342</a></div>
+        <code>            protected        bool
+    <strong>hasPivotColumn</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine whether the given column is defined as a pivot column.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setJoin">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_setJoin"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L353">line 353</a></div>
+        <code>            protected        <abbr title="Illuminate\Database\Eloquent\Relations\$this">$this</abbr>
+    <strong>setJoin</strong>(<a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|null $query = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the join clause for the relation query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|null</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Relations\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setWhere">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/MorphToMany.php#L58">line 58</a></div>
+        <code>            protected        <abbr title="Illuminate\Database\Eloquent\Relations\$this">$this</abbr>
+    <strong>setWhere</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the where clause for the relation query.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Relations\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildDictionary">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_buildDictionary"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L445">line 445</a></div>
+        <code>            protected        array
+    <strong>buildDictionary</strong>(<a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a> $results)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build model dictionary keyed by the relation's foreign key.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a></td>
+                <td>$results</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelatedIds">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getRelatedIds"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L491">line 491</a></div>
+        <code>                    array
+    <strong>getRelatedIds</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all of the IDs for the related models.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_save">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_save"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L508">line 508</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+    <strong>save</strong>(<a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model, array $joining = array(), bool $touch = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Save a new model and attach it to the parent model.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+                <td>$model</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$joining</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$touch</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveMany">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_saveMany"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L524">line 524</a></div>
+        <code>                    array
+    <strong>saveMany</strong>(array $models, array $joinings = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Save an array of new models and attach them to the parent model.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$joinings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_create">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_create"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L544">line 544</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+    <strong>create</strong>(array $attributes, array $joining = array(), bool $touch = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new instance of the related model.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$joining</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$touch</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createMany">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_createMany"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L565">line 565</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+    <strong>createMany</strong>(array $records, array $joinings = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create an array of new instances of the related models.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$records</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$joinings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sync">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_sync"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L586">line 586</a></div>
+        <code>                    array
+    <strong>sync</strong>(array $ids, bool $detaching = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sync the intermediate tables with a list of IDs or collection of models.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$detaching</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatSyncList">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_formatSyncList"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L634">line 634</a></div>
+        <code>            protected        array
+    <strong>formatSyncList</strong>(array $records)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Format the sync list so that it is keyed by ID.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$records</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attachNew">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_attachNew"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L659">line 659</a></div>
+        <code>            protected        array
+    <strong>attachNew</strong>(array $records, array $current, bool $touch = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attach all of the IDs that aren't in the current array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$records</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$current</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$touch</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateExistingPivot">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_updateExistingPivot"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L696">line 696</a></div>
+        <code>                    void
+    <strong>updateExistingPivot</strong>(mixed $id, array $attributes, bool $touch = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Update an existing pivot record on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$touch</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attach">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_attach"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L718">line 718</a></div>
+        <code>                    void
+    <strong>attach</strong>(mixed $id, array $attributes = array(), bool $touch = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attach a model to the parent.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$touch</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createAttachRecords">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_createAttachRecords"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L736">line 736</a></div>
+        <code>            protected        array
+    <strong>createAttachRecords</strong>(array $ids, array $attributes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create an array of records to insert into the pivot table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attacher">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_attacher"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L762">line 762</a></div>
+        <code>            protected        array
+    <strong>attacher</strong>(int $key, mixed $value, array $attributes, bool $timed)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a full attachment record payload.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$timed</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttachId">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getAttachId"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L782">line 782</a></div>
+        <code>            protected        array
+    <strong>getAttachId</strong>(mixed $key, mixed $value, array $attributes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the attach record ID and extra attributes.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createAttachRecord">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/MorphToMany.php#L101">line 101</a></div>
+        <code>            protected        array
+    <strong>createAttachRecord</strong>(int $id, bool $timed)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new pivot attachment record.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$timed</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTimestampsOnAttach">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_setTimestampsOnAttach"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L823">line 823</a></div>
+        <code>            protected        array
+    <strong>setTimestampsOnAttach</strong>(array $record, bool $exists = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the creation and update timestamps on an attach record.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$record</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$exists</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_detach">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_detach"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L847">line 847</a></div>
+        <code>                    int
+    <strong>detach</strong>(int|array $ids = array(), bool $touch = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Detach models from the relationship.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|array</td>
+                <td>$ids</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$touch</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_touchIfTouching">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_touchIfTouching"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L878">line 878</a></div>
+        <code>                    void
+    <strong>touchIfTouching</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>If we're touching the parent model, touch.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_touchingParent">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_touchingParent"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L890">line 890</a></div>
+        <code>            protected        bool
+    <strong>touchingParent</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if we should touch the parent on sync.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_guessInverseRelation">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_guessInverseRelation"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L900">line 900</a></div>
+        <code>            protected        string
+    <strong>guessInverseRelation</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attempt to guess the name of the inverse of the relation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newPivotQuery">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/MorphToMany.php#L113">line 113</a></div>
+        <code>            protected        <a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+    <strong>newPivotQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new query builder for the pivot table.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newPivotStatement">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_newPivotStatement"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L927">line 927</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+    <strong>newPivotStatement</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a new plain query builder for the pivot table.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newPivotStatementForId">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_newPivotStatementForId"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L938">line 938</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+    <strong>newPivotStatementForId</strong>(mixed $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a new pivot statement for a given "other" ID.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newPivot">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/MorphToMany.php#L127">line 127</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Relations/Pivot.html"><abbr title="Illuminate\Database\Eloquent\Relations\Pivot">Pivot</abbr></a>
+    <strong>newPivot</strong>(array $attributes = array(), bool $exists = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new pivot model instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$exists</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Relations/Pivot.html"><abbr title="Illuminate\Database\Eloquent\Relations\Pivot">Pivot</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newExistingPivot">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_newExistingPivot"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L963">line 963</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Relations/Pivot.html"><abbr title="Illuminate\Database\Eloquent\Relations\Pivot">Pivot</abbr></a>
+    <strong>newExistingPivot</strong>(array $attributes = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new existing pivot model instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Relations/Pivot.html"><abbr title="Illuminate\Database\Eloquent\Relations\Pivot">Pivot</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withPivot">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_withPivot"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L974">line 974</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Relations\$this">$this</abbr>
+    <strong>withPivot</strong>(mixed $columns)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the columns on the pivot table to retrieve.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Relations\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withTimestamps">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_withTimestamps"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L990">line 990</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a>
+    <strong>withTimestamps</strong>(mixed $createdAt = null, mixed $updatedAt = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify that the pivot table has creation and update timestamps.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$createdAt</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$updatedAt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelatedFreshUpdate">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getRelatedFreshUpdate"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L1000">line 1000</a></div>
+        <code>                    string
+    <strong>getRelatedFreshUpdate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the related model's updated at column name.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHasCompareKey">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getHasCompareKey"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L1010">line 1010</a></div>
+        <code>                    string
+    <strong>getHasCompareKey</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the key for comparing against the parent key in "has" query.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getForeignKey">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getForeignKey"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L1020">line 1020</a></div>
+        <code>                    string
+    <strong>getForeignKey</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the fully qualified foreign key for the relation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOtherKey">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getOtherKey"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L1030">line 1030</a></div>
+        <code>                    string
+    <strong>getOtherKey</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the fully qualified "other key" for the relation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTable">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getTable"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L1040">line 1040</a></div>
+        <code>                    string
+    <strong>getTable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the intermediate table for the relationship.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelationName">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/BelongsToMany.html#method_getRelationName"><abbr title="Illuminate\Database\Eloquent\Relations\BelongsToMany">BelongsToMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php#L1050">line 1050</a></div>
+        <code>                    string
+    <strong>getRelationName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the relationship name for the relationship.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMorphType">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/MorphToMany.php#L143">line 143</a></div>
+        <code>                    string
+    <strong>getMorphType</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the foreign key "type" name.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMorphClass">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/MorphToMany.php#L153">line 153</a></div>
+        <code>                    string
+    <strong>getMorphClass</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the class name of the parent model.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

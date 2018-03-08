@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Connectors\SqlServerConnector | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Connectors_SqlServerConnector" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Database.html">Database</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Database/Connectors.html">Connectors</a></li><li class="backslash">\</li><li>SqlServerConnector</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            SqlServerConnector
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>SqlServerConnector</strong>        extends <a href="../../../Illuminate/Database/Connectors/Connector.html"><abbr title="Illuminate\Database\Connectors\Connector">Connector</abbr></a>        implements
+        <a href="../../../Illuminate/Database/Connectors/ConnectorInterface.html"><abbr title="Illuminate\Database\Connectors\ConnectorInterface">ConnectorInterface</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/SqlServerConnector.php">View source</a>)
+</p>
+
+        
+    
+
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Illuminate/Database/DetectsLostConnections.html"><abbr title="Illuminate\Database\DetectsLostConnections">DetectsLostConnections</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_options">
+                                        protected                                        array
+                </td>
+                <td>$options</td>
+                <td class="last">The PDO connection options.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_causedByLostConnection">causedByLostConnection</a>(<a target="_blank" href="http://php.net/Exception">Exception</a> $e)
+        
+                                            <p>Determine if the given exception was caused by a lost connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Database/DetectsLostConnections.html#method_causedByLostConnection"><abbr title="Illuminate\Database\DetectsLostConnections">DetectsLostConnections</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOptions">getOptions</a>(array $config)
+        
+                                            <p>Get the PDO options based on the configuration.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Database/Connectors/Connector.html#method_getOptions"><abbr title="Illuminate\Database\Connectors\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/PDO">PDO</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createConnection">createConnection</a>(string $dsn, array $config, array $options)
+        
+                                            <p>Create a new PDO connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Database/Connectors/Connector.html#method_createConnection"><abbr title="Illuminate\Database\Connectors\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultOptions">getDefaultOptions</a>()
+        
+                                            <p>Get the default PDO connection options.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Database/Connectors/Connector.html#method_getDefaultOptions"><abbr title="Illuminate\Database\Connectors\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultOptions">setDefaultOptions</a>(array $options)
+        
+                                            <p>Set the default PDO connection options.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Database/Connectors/Connector.html#method_setDefaultOptions"><abbr title="Illuminate\Database\Connectors\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/PDO">PDO</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tryAgainIfCausedByLostConnection">tryAgainIfCausedByLostConnection</a>(<a target="_blank" href="http://php.net/Exception">Exception</a> $e, string $dsn, string $username, string $password, array $options)
+        
+                                            <p>Handle an exception that occurred during connect execution.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Database/Connectors/Connector.html#method_tryAgainIfCausedByLostConnection"><abbr title="Illuminate\Database\Connectors\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/PDO">PDO</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createPdoConnection">createPdoConnection</a>($dsn, $username, $password, $options)
+        
+                                            <p>Create a new PDO connection instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Database/Connectors/Connector.html#method_createPdoConnection"><abbr title="Illuminate\Database\Connectors\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isPersistentConnection">isPersistentConnection</a>(array $options)
+        
+                                            <p>Determine if the connection is persistent.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Database/Connectors/Connector.html#method_isPersistentConnection"><abbr title="Illuminate\Database\Connectors\Connector">Connector</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/PDO">PDO</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_connect">connect</a>(array $config)
+        
+                                            <p>Establish a database connection.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDsn">getDsn</a>(array $config)
+        
+                                            <p>Create a DSN string from a configuration.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDblibDsn">getDblibDsn</a>(array $config)
+        
+                                            <p>Get the DSN string for a DbLib connection.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prefersOdbc">prefersOdbc</a>(array $config)
+        
+                                            <p>Determine if the database configuration prefers ODBC.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOdbcDsn">getOdbcDsn</a>(array $config)
+        
+                                            <p>Get the DSN string for an ODBC connection.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSqlSrvDsn">getSqlSrvDsn</a>(array $config)
+        
+                                            <p>Get the DSN string for a SqlSrv connection.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildConnectString">buildConnectString</a>(string $driver, array $arguments)
+        
+                                            <p>Build a connection string from the given arguments.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildHostString">buildHostString</a>(array $config, string $separator)
+        
+                                            <p>Build a host string from the given configuration.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAvailableDrivers">getAvailableDrivers</a>()
+        
+                                            <p>Get the available PDO drivers.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_causedByLostConnection">
+        <div class="location">in <a href="../../../Illuminate/Database/DetectsLostConnections.html#method_causedByLostConnection"><abbr title="Illuminate\Database\DetectsLostConnections">DetectsLostConnections</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/DetectsLostConnections.php#L16">line 16</a></div>
+        <code>            protected        bool
+    <strong>causedByLostConnection</strong>(<a target="_blank" href="http://php.net/Exception">Exception</a> $e)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given exception was caused by a lost connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td>$e</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOptions">
+        <div class="location">in <a href="../../../Illuminate/Database/Connectors/Connector.html#method_getOptions"><abbr title="Illuminate\Database\Connectors\Connector">Connector</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/Connector.php#L34">line 34</a></div>
+        <code>                    array
+    <strong>getOptions</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the PDO options based on the configuration.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createConnection">
+        <div class="location">in <a href="../../../Illuminate/Database/Connectors/Connector.html#method_createConnection"><abbr title="Illuminate\Database\Connectors\Connector">Connector</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/Connector.php#L49">line 49</a></div>
+        <code>                    <a target="_blank" href="http://php.net/PDO">PDO</a>
+    <strong>createConnection</strong>(string $dsn, array $config, array $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new PDO connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$dsn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/PDO">PDO</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultOptions">
+        <div class="location">in <a href="../../../Illuminate/Database/Connectors/Connector.html#method_getDefaultOptions"><abbr title="Illuminate\Database\Connectors\Connector">Connector</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/Connector.php#L71">line 71</a></div>
+        <code>                    array
+    <strong>getDefaultOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the default PDO connection options.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultOptions">
+        <div class="location">in <a href="../../../Illuminate/Database/Connectors/Connector.html#method_setDefaultOptions"><abbr title="Illuminate\Database\Connectors\Connector">Connector</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/Connector.php#L82">line 82</a></div>
+        <code>                    void
+    <strong>setDefaultOptions</strong>(array $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the default PDO connection options.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tryAgainIfCausedByLostConnection">
+        <div class="location">in <a href="../../../Illuminate/Database/Connectors/Connector.html#method_tryAgainIfCausedByLostConnection"><abbr title="Illuminate\Database\Connectors\Connector">Connector</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/Connector.php#L99">line 99</a></div>
+        <code>            protected        <a target="_blank" href="http://php.net/PDO">PDO</a>
+    <strong>tryAgainIfCausedByLostConnection</strong>(<a target="_blank" href="http://php.net/Exception">Exception</a> $e, string $dsn, string $username, string $password, array $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Handle an exception that occurred during connect execution.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td>$e</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$dsn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/PDO">PDO</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createPdoConnection">
+        <div class="location">in <a href="../../../Illuminate/Database/Connectors/Connector.html#method_createPdoConnection"><abbr title="Illuminate\Database\Connectors\Connector">Connector</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/Connector.php#L113">line 113</a></div>
+        <code>            protected        <a target="_blank" href="http://php.net/PDO">PDO</a>
+    <strong>createPdoConnection</strong>($dsn, $username, $password, $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new PDO connection instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$dsn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$username</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$password</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/PDO">PDO</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isPersistentConnection">
+        <div class="location">in <a href="../../../Illuminate/Database/Connectors/Connector.html#method_isPersistentConnection"><abbr title="Illuminate\Database\Connectors\Connector">Connector</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/Connector.php#L128">line 128</a></div>
+        <code>            protected        bool
+    <strong>isPersistentConnection</strong>(array $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the connection is persistent.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_connect">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/SqlServerConnector.php#L28">line 28</a></div>
+        <code>                    <a target="_blank" href="http://php.net/PDO">PDO</a>
+    <strong>connect</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Establish a database connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/PDO">PDO</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDsn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/SqlServerConnector.php#L41">line 41</a></div>
+        <code>            protected        string
+    <strong>getDsn</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a DSN string from a configuration.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDblibDsn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/SqlServerConnector.php#L61">line 61</a></div>
+        <code>            protected        string
+    <strong>getDblibDsn</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the DSN string for a DbLib connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prefersOdbc">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/SqlServerConnector.php#L81">line 81</a></div>
+        <code>            protected        bool
+    <strong>prefersOdbc</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the database configuration prefers ODBC.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOdbcDsn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/SqlServerConnector.php#L93">line 93</a></div>
+        <code>            protected        string
+    <strong>getOdbcDsn</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the DSN string for an ODBC connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSqlSrvDsn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/SqlServerConnector.php#L108">line 108</a></div>
+        <code>            protected        string
+    <strong>getSqlSrvDsn</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the DSN string for a SqlSrv connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildConnectString">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/SqlServerConnector.php#L140">line 140</a></div>
+        <code>            protected        string
+    <strong>buildConnectString</strong>(string $driver, array $arguments)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build a connection string from the given arguments.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$driver</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildHostString">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/SqlServerConnector.php#L156">line 156</a></div>
+        <code>            protected        string
+    <strong>buildHostString</strong>(array $config, string $separator)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build a host string from the given configuration.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$separator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAvailableDrivers">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connectors/SqlServerConnector.php#L170">line 170</a></div>
+        <code>            protected        array
+    <strong>getAvailableDrivers</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the available PDO drivers.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

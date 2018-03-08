@@ -1,0 +1,4017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\SqlServerConnection | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_SqlServerConnection" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Illuminate/Database.html">Database</a></li><li class="backslash">\</li><li>SqlServerConnection</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            SqlServerConnection
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>SqlServerConnection</strong>        extends <a href="../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/SqlServerConnection.php">View source</a>)
+</p>
+
+        
+    
+
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Illuminate/Database/DetectsDeadlocks.html"><abbr title="Illuminate\Database\DetectsDeadlocks">DetectsDeadlocks</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Illuminate/Database/DetectsLostConnections.html"><abbr title="Illuminate\Database\DetectsLostConnections">DetectsLostConnections</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_pdo">
+                                        protected                                        <a target="_blank" href="http://php.net/PDO">PDO</a>
+                </td>
+                <td>$pdo</td>
+                <td class="last">The active PDO connection.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_pdo"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_readPdo">
+                                        protected                                        <a target="_blank" href="http://php.net/PDO">PDO</a>
+                </td>
+                <td>$readPdo</td>
+                <td class="last">The active PDO connection used for reads.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_readPdo"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_reconnector">
+                                        protected                                        callable
+                </td>
+                <td>$reconnector</td>
+                <td class="last">The reconnector instance for the connection.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_reconnector"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_queryGrammar">
+                                        protected                                        <a href="../../Illuminate/Database/Query/Grammars/Grammar.html"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a>
+                </td>
+                <td>$queryGrammar</td>
+                <td class="last">The query grammar implementation.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_queryGrammar"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_schemaGrammar">
+                                        protected                                        <a href="../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a>
+                </td>
+                <td>$schemaGrammar</td>
+                <td class="last">The schema grammar implementation.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_schemaGrammar"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_postProcessor">
+                                        protected                                        <a href="../../Illuminate/Database/Query/Processors/Processor.html"><abbr title="Illuminate\Database\Query\Processors\Processor">Processor</abbr></a>
+                </td>
+                <td>$postProcessor</td>
+                <td class="last">The query post processor implementation.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_postProcessor"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_events">
+                                        protected                                        <a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a>
+                </td>
+                <td>$events</td>
+                <td class="last">The event dispatcher instance.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_events"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fetchMode">
+                                        protected                                        int
+                </td>
+                <td>$fetchMode</td>
+                <td class="last">The default fetch mode of the connection.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_fetchMode"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fetchArgument">
+                                        protected                                        mixed
+                </td>
+                <td>$fetchArgument</td>
+                <td class="last">The argument for the fetch mode.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_fetchArgument"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fetchConstructorArgument">
+                                        protected                                        array
+                </td>
+                <td>$fetchConstructorArgument</td>
+                <td class="last">The constructor arguments for the PDO::FETCH_CLASS fetch mode.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_fetchConstructorArgument"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_transactions">
+                                        protected                                        int
+                </td>
+                <td>$transactions</td>
+                <td class="last">The number of active transactions.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_transactions"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_queryLog">
+                                        protected                                        array
+                </td>
+                <td>$queryLog</td>
+                <td class="last">All of the queries run against the connection.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_queryLog"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_loggingQueries">
+                                        protected                                        bool
+                </td>
+                <td>$loggingQueries</td>
+                <td class="last">Indicates whether queries are being logged.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_loggingQueries"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pretending">
+                                        protected                                        bool
+                </td>
+                <td>$pretending</td>
+                <td class="last">Indicates if the connection is in a "dry run".</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_pretending"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_database">
+                                        protected                                        string
+                </td>
+                <td>$database</td>
+                <td class="last">The name of the connected database.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_database"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_doctrineConnection">
+                                        protected                                        <abbr title="Doctrine\DBAL\Connection">Connection</abbr>
+                </td>
+                <td>$doctrineConnection</td>
+                <td class="last">The instance of Doctrine connection.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_doctrineConnection"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tablePrefix">
+                                        protected                                        string
+                </td>
+                <td>$tablePrefix</td>
+                <td class="last">The table prefix for the connection.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_tablePrefix"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        array
+                </td>
+                <td>$config</td>
+                <td class="last">The database connection configuration options.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#property_config"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_causedByDeadlock">causedByDeadlock</a>(<a target="_blank" href="http://php.net/Exception">Exception</a> $e)
+        
+                                            <p>Determine if the given exception was caused by a deadlock.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/DetectsDeadlocks.html#method_causedByDeadlock"><abbr title="Illuminate\Database\DetectsDeadlocks">DetectsDeadlocks</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_causedByLostConnection">causedByLostConnection</a>(<a target="_blank" href="http://php.net/Exception">Exception</a> $e)
+        
+                                            <p>Determine if the given exception was caused by a lost connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/DetectsLostConnections.html#method_causedByLostConnection"><abbr title="Illuminate\Database\DetectsLostConnections">DetectsLostConnections</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a target="_blank" href="http://php.net/PDO">PDO</a>|<a target="_blank" href="http://php.net/Closure">Closure</a> $pdo, string $database = &#039;&#039;, string $tablePrefix = &#039;&#039;, array $config = [])
+        
+                                            <p>Create a new database connection instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method___construct"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_useDefaultQueryGrammar">useDefaultQueryGrammar</a>()
+        
+                                            <p>Set the query grammar to the default implementation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_useDefaultQueryGrammar"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Database/Query/Grammars/Grammar.html"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultQueryGrammar">getDefaultQueryGrammar</a>()
+        
+                                            <p>Get the default query grammar instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_useDefaultSchemaGrammar">useDefaultSchemaGrammar</a>()
+        
+                                            <p>Set the schema grammar to the default implementation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_useDefaultSchemaGrammar"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultSchemaGrammar">getDefaultSchemaGrammar</a>()
+        
+                                            <p>Get the default schema grammar instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_useDefaultPostProcessor">useDefaultPostProcessor</a>()
+        
+                                            <p>Set the query post processor to the default implementation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_useDefaultPostProcessor"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Database/Query/Processors/Processor.html"><abbr title="Illuminate\Database\Query\Processors\Processor">Processor</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultPostProcessor">getDefaultPostProcessor</a>()
+        
+                                            <p>Get the default post processor instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Database/Schema/Builder.html"><abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSchemaBuilder">getSchemaBuilder</a>()
+        
+                                            <p>Get a schema builder instance for the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getSchemaBuilder"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_table">table</a>(string $table)
+        
+                                            <p>Begin a fluent query against a database table.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_table"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_query">query</a>()
+        
+                                            <p>Get a new query builder instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_query"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_raw">raw</a>(mixed $value)
+        
+                                            <p>Get a new raw query expression.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_raw"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_selectOne">selectOne</a>(string $query, array $bindings = [], bool $useReadPdo = true)
+        
+                                            <p>Run a select statement and return a single result.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_selectOne"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_selectFromWriteConnection">selectFromWriteConnection</a>(string $query, array $bindings = [])
+        
+                                            <p>Run a select statement against the database.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_selectFromWriteConnection"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_select">select</a>(string $query, array $bindings = [], bool $useReadPdo = true)
+        
+                                            <p>Run a select statement against the database.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_select"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/Generator">Generator</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cursor">cursor</a>(string $query, array $bindings = [], bool $useReadPdo = true)
+        
+                                            <p>Run a select statement against the database and returns a generator.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_cursor"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_bindValues">bindValues</a>(<a target="_blank" href="http://php.net/PDOStatement">PDOStatement</a> $statement, array $bindings)
+        
+                                            <p>Bind values to their parameters in the given statement.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_bindValues"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/PDO">PDO</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPdoForSelect">getPdoForSelect</a>(bool $useReadPdo = true)
+        
+                                            <p>Get the PDO connection to use for a select query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getPdoForSelect"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_insert">insert</a>(string $query, array $bindings = [])
+        
+                                            <p>Run an insert statement against the database.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_insert"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_update">update</a>(string $query, array $bindings = [])
+        
+                                            <p>Run an update statement against the database.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_update"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>(string $query, array $bindings = [])
+        
+                                            <p>Run a delete statement against the database.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_delete"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_statement">statement</a>(string $query, array $bindings = [])
+        
+                                            <p>Execute an SQL statement and return the boolean result.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_statement"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_affectingStatement">affectingStatement</a>(string $query, array $bindings = [])
+        
+                                            <p>Run an SQL statement and get the number of rows affected.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_affectingStatement"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unprepared">unprepared</a>(string $query)
+        
+                                            <p>Run a raw, unprepared query against the PDO connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_unprepared"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepareBindings">prepareBindings</a>(array $bindings)
+        
+                                            <p>Prepare the query bindings for execution.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_prepareBindings"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_transaction">transaction</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback, int $attempts = 1)
+        
+                                            <p>Execute a Closure within a transaction.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_beginTransaction">beginTransaction</a>()
+        
+                                            <p>Start a new database transaction.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_beginTransaction"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_commit">commit</a>()
+        
+                                            <p>Commit the active database transaction.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_commit"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rollBack">rollBack</a>()
+        
+                                            <p>Rollback the active database transaction.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_rollBack"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_transactionLevel">transactionLevel</a>()
+        
+                                            <p>Get the number of active transactions.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_transactionLevel"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pretend">pretend</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Execute the given callback in "dry run" mode.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_pretend"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_run">run</a>(string $query, array $bindings, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Run a SQL statement and log its execution context.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_run"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_runQueryCallback">runQueryCallback</a>(string $query, array $bindings, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Run a SQL statement.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_runQueryCallback"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tryAgainIfCausedByLostConnection">tryAgainIfCausedByLostConnection</a>(<a href="../../Illuminate/Database/QueryException.html"><abbr title="Illuminate\Database\QueryException">QueryException</abbr></a> $e, string $query, array $bindings, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Handle a query exception that occurred during query execution.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_tryAgainIfCausedByLostConnection"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_disconnect">disconnect</a>()
+        
+                                            <p>Disconnect from the underlying PDO connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_disconnect"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reconnect">reconnect</a>()
+        
+                                            <p>Reconnect to the database.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_reconnect"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reconnectIfMissingConnection">reconnectIfMissingConnection</a>()
+        
+                                            <p>Reconnect to the database if a PDO connection is missing.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_reconnectIfMissingConnection"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_logQuery">logQuery</a>(string $query, array $bindings, float|null $time = null)
+        
+                                            <p>Log a query in the connection's query log.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_logQuery"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listen">listen</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Register a database query listener with the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_listen"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fireConnectionEvent">fireConnectionEvent</a>(string $event)
+        
+                                            <p>Fire an event for this connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_fireConnectionEvent"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getElapsedTime">getElapsedTime</a>(int $start)
+        
+                                            <p>Get the elapsed time since a given starting point.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getElapsedTime"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDoctrineAvailable">isDoctrineAvailable</a>()
+        
+                                            <p>Is Doctrine available?</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_isDoctrineAvailable"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\DBAL\Schema\Column">Column</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDoctrineColumn">getDoctrineColumn</a>(string $table, string $column)
+        
+                                            <p>Get a Doctrine Schema Column instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getDoctrineColumn"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\DBAL\Schema\AbstractSchemaManager">AbstractSchemaManager</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDoctrineSchemaManager">getDoctrineSchemaManager</a>()
+        
+                                            <p>Get the Doctrine DBAL schema manager for the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getDoctrineSchemaManager"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\DBAL\Connection">Connection</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDoctrineConnection">getDoctrineConnection</a>()
+        
+                                            <p>Get the Doctrine DBAL database connection instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getDoctrineConnection"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/PDO">PDO</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPdo">getPdo</a>()
+        
+                                            <p>Get the current PDO connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getPdo"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/PDO">PDO</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getReadPdo">getReadPdo</a>()
+        
+                                            <p>Get the current PDO connection used for reading.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getReadPdo"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPdo">setPdo</a>(<a target="_blank" href="http://php.net/PDO">PDO</a>|null $pdo)
+        
+                                            <p>Set the PDO connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_setPdo"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setReadPdo">setReadPdo</a>(<a target="_blank" href="http://php.net/PDO">PDO</a>|null $pdo)
+        
+                                            <p>Set the PDO connection used for reading.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_setReadPdo"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setReconnector">setReconnector</a>(callable $reconnector)
+        
+                                            <p>Set the reconnect instance on the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_setReconnector"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getName">getName</a>()
+        
+                                            <p>Get the database connection name.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getName"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getConfig">getConfig</a>(string $option)
+        
+                                            <p>Get an option from the configuration options.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getConfig"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDriverName">getDriverName</a>()
+        
+                                            <p>Get the PDO driver name.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getDriverName"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Database/Query/Grammars/Grammar.html"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQueryGrammar">getQueryGrammar</a>()
+        
+                                            <p>Get the query grammar used by the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getQueryGrammar"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setQueryGrammar">setQueryGrammar</a>(<a href="../../Illuminate/Database/Query/Grammars/Grammar.html"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> $grammar)
+        
+                                            <p>Set the query grammar used by the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_setQueryGrammar"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSchemaGrammar">getSchemaGrammar</a>()
+        
+                                            <p>Get the schema grammar used by the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getSchemaGrammar"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSchemaGrammar">setSchemaGrammar</a>(<a href="../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> $grammar)
+        
+                                            <p>Set the schema grammar used by the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_setSchemaGrammar"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Database/Query/Processors/Processor.html"><abbr title="Illuminate\Database\Query\Processors\Processor">Processor</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPostProcessor">getPostProcessor</a>()
+        
+                                            <p>Get the query post processor used by the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getPostProcessor"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPostProcessor">setPostProcessor</a>(<a href="../../Illuminate/Database/Query/Processors/Processor.html"><abbr title="Illuminate\Database\Query\Processors\Processor">Processor</abbr></a> $processor)
+        
+                                            <p>Set the query post processor used by the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_setPostProcessor"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEventDispatcher">getEventDispatcher</a>()
+        
+                                            <p>Get the event dispatcher used by the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getEventDispatcher"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEventDispatcher">setEventDispatcher</a>(<a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a> $events)
+        
+                                            <p>Set the event dispatcher instance on the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_setEventDispatcher"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pretending">pretending</a>()
+        
+                                            <p>Determine if the connection in a "dry run".</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_pretending"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFetchMode">getFetchMode</a>()
+        
+                                            <p>Get the default fetch mode for the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getFetchMode"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFetchArgument">getFetchArgument</a>()
+        
+                                            <p>Get the fetch argument to be applied when selecting.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getFetchArgument"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFetchConstructorArgument">getFetchConstructorArgument</a>()
+        
+                                            <p>Get custom constructor arguments for the PDO::FETCH_CLASS fetch mode.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getFetchConstructorArgument"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFetchMode">setFetchMode</a>(int $fetchMode, mixed $fetchArgument = null, array $fetchConstructorArgument = [])
+        
+                                            <p>Set the default fetch mode for the connection, and optional arguments for the given fetch mode.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_setFetchMode"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQueryLog">getQueryLog</a>()
+        
+                                            <p>Get the connection query log.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getQueryLog"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_flushQueryLog">flushQueryLog</a>()
+        
+                                            <p>Clear the query log.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_flushQueryLog"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_enableQueryLog">enableQueryLog</a>()
+        
+                                            <p>Enable the query log on the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_enableQueryLog"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_disableQueryLog">disableQueryLog</a>()
+        
+                                            <p>Disable the query log on the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_disableQueryLog"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_logging">logging</a>()
+        
+                                            <p>Determine whether we're logging queries.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_logging"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDatabaseName">getDatabaseName</a>()
+        
+                                            <p>Get the name of the connected database.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getDatabaseName"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDatabaseName">setDatabaseName</a>(string $database)
+        
+                                            <p>Set the name of the connected database.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_setDatabaseName"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTablePrefix">getTablePrefix</a>()
+        
+                                            <p>Get the table prefix for the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_getTablePrefix"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTablePrefix">setTablePrefix</a>(string $prefix)
+        
+                                            <p>Set the table prefix in use by the connection.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_setTablePrefix"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Database/Grammar.html"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withTablePrefix">withTablePrefix</a>(<a href="../../Illuminate/Database/Grammar.html"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> $grammar)
+        
+                                            <p>Set the table prefix and return the grammar.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Database/Connection.html#method_withTablePrefix"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\DBAL\Driver\PDOSqlsrv\Driver">Driver</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDoctrineDriver">getDoctrineDriver</a>()
+        
+                                            <p>Get the Doctrine DBAL driver.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_causedByDeadlock">
+        <div class="location">in <a href="../../Illuminate/Database/DetectsDeadlocks.html#method_causedByDeadlock"><abbr title="Illuminate\Database\DetectsDeadlocks">DetectsDeadlocks</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/DetectsDeadlocks.php#L16">line 16</a></div>
+        <code>            protected        bool
+    <strong>causedByDeadlock</strong>(<a target="_blank" href="http://php.net/Exception">Exception</a> $e)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given exception was caused by a deadlock.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td>$e</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_causedByLostConnection">
+        <div class="location">in <a href="../../Illuminate/Database/DetectsLostConnections.html#method_causedByLostConnection"><abbr title="Illuminate\Database\DetectsLostConnections">DetectsLostConnections</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/DetectsLostConnections.php#L16">line 16</a></div>
+        <code>            protected        bool
+    <strong>causedByLostConnection</strong>(<a target="_blank" href="http://php.net/Exception">Exception</a> $e)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given exception was caused by a lost connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td>$e</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method___construct"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L159">line 159</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a target="_blank" href="http://php.net/PDO">PDO</a>|<a target="_blank" href="http://php.net/Closure">Closure</a> $pdo, string $database = &#039;&#039;, string $tablePrefix = &#039;&#039;, array $config = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new database connection instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/PDO">PDO</a>|<a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$pdo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tablePrefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_useDefaultQueryGrammar">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_useDefaultQueryGrammar"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L185">line 185</a></div>
+        <code>                    void
+    <strong>useDefaultQueryGrammar</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the query grammar to the default implementation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultQueryGrammar">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/SqlServerConnection.php#L64">line 64</a></div>
+        <code>            protected        <a href="../../Illuminate/Database/Query/Grammars/Grammar.html"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a>
+    <strong>getDefaultQueryGrammar</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the default query grammar instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Database/Query/Grammars/Grammar.html"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_useDefaultSchemaGrammar">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_useDefaultSchemaGrammar"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L205">line 205</a></div>
+        <code>                    void
+    <strong>useDefaultSchemaGrammar</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the schema grammar to the default implementation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultSchemaGrammar">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/SqlServerConnection.php#L74">line 74</a></div>
+        <code>            protected        <a href="../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a>
+    <strong>getDefaultSchemaGrammar</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the default schema grammar instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_useDefaultPostProcessor">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_useDefaultPostProcessor"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L225">line 225</a></div>
+        <code>                    void
+    <strong>useDefaultPostProcessor</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the query post processor to the default implementation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultPostProcessor">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/SqlServerConnection.php#L84">line 84</a></div>
+        <code>            protected        <a href="../../Illuminate/Database/Query/Processors/Processor.html"><abbr title="Illuminate\Database\Query\Processors\Processor">Processor</abbr></a>
+    <strong>getDefaultPostProcessor</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the default post processor instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Database/Query/Processors/Processor.html"><abbr title="Illuminate\Database\Query\Processors\Processor">Processor</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSchemaBuilder">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getSchemaBuilder"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L245">line 245</a></div>
+        <code>                    <a href="../../Illuminate/Database/Schema/Builder.html"><abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a>
+    <strong>getSchemaBuilder</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a schema builder instance for the connection.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Database/Schema/Builder.html"><abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_table">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_table"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L260">line 260</a></div>
+        <code>                    <a href="../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+    <strong>table</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Begin a fluent query against a database table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_query">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_query"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L270">line 270</a></div>
+        <code>                    <a href="../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+    <strong>query</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a new query builder instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_raw">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_raw"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L283">line 283</a></div>
+        <code>                    <a href="../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>
+    <strong>raw</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a new raw query expression.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_selectOne">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_selectOne"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L296">line 296</a></div>
+        <code>                    mixed
+    <strong>selectOne</strong>(string $query, array $bindings = [], bool $useReadPdo = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run a select statement and return a single result.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$useReadPdo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_selectFromWriteConnection">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_selectFromWriteConnection"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L310">line 310</a></div>
+        <code>                    array
+    <strong>selectFromWriteConnection</strong>(string $query, array $bindings = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run a select statement against the database.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_select">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_select"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L323">line 323</a></div>
+        <code>                    array
+    <strong>select</strong>(string $query, array $bindings = [], bool $useReadPdo = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run a select statement against the database.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$useReadPdo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cursor">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_cursor"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L362">line 362</a></div>
+        <code>                    <a target="_blank" href="http://php.net/Generator">Generator</a>
+    <strong>cursor</strong>(string $query, array $bindings = [], bool $useReadPdo = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run a select statement against the database and returns a generator.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$useReadPdo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/Generator">Generator</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bindValues">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_bindValues"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L405">line 405</a></div>
+        <code>                    void
+    <strong>bindValues</strong>(<a target="_blank" href="http://php.net/PDOStatement">PDOStatement</a> $statement, array $bindings)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Bind values to their parameters in the given statement.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/PDOStatement">PDOStatement</a></td>
+                <td>$statement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPdoForSelect">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getPdoForSelect"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L421">line 421</a></div>
+        <code>            protected        <a target="_blank" href="http://php.net/PDO">PDO</a>
+    <strong>getPdoForSelect</strong>(bool $useReadPdo = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the PDO connection to use for a select query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$useReadPdo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/PDO">PDO</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_insert">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_insert"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L433">line 433</a></div>
+        <code>                    bool
+    <strong>insert</strong>(string $query, array $bindings = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run an insert statement against the database.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_update">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_update"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L445">line 445</a></div>
+        <code>                    int
+    <strong>update</strong>(string $query, array $bindings = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run an update statement against the database.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_delete"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L457">line 457</a></div>
+        <code>                    int
+    <strong>delete</strong>(string $query, array $bindings = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run a delete statement against the database.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_statement">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_statement"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L469">line 469</a></div>
+        <code>                    bool
+    <strong>statement</strong>(string $query, array $bindings = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute an SQL statement and return the boolean result.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_affectingStatement">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_affectingStatement"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L491">line 491</a></div>
+        <code>                    int
+    <strong>affectingStatement</strong>(string $query, array $bindings = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run an SQL statement and get the number of rows affected.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unprepared">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_unprepared"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L517">line 517</a></div>
+        <code>                    bool
+    <strong>unprepared</strong>(string $query)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run a raw, unprepared query against the PDO connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareBindings">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_prepareBindings"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L534">line 534</a></div>
+        <code>                    array
+    <strong>prepareBindings</strong>(array $bindings)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prepare the query bindings for execution.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_transaction">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/SqlServerConnection.php#L24">line 24</a></div>
+        <code>                    mixed
+    <strong>transaction</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback, int $attempts = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute a Closure within a transaction.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$attempts</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Exception|\Throwable">Throwable</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_beginTransaction">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_beginTransaction"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L608">line 608</a></div>
+        <code>                    void
+    <strong>beginTransaction</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Start a new database transaction.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_commit">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_commit"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L637">line 637</a></div>
+        <code>                    void
+    <strong>commit</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Commit the active database transaction.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rollBack">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_rollBack"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L653">line 653</a></div>
+        <code>                    void
+    <strong>rollBack</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Rollback the active database transaction.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_transactionLevel">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_transactionLevel"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L673">line 673</a></div>
+        <code>                    int
+    <strong>transactionLevel</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the number of active transactions.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pretend">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_pretend"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L684">line 684</a></div>
+        <code>                    array
+    <strong>pretend</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute the given callback in "dry run" mode.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_run">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_run"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L716">line 716</a></div>
+        <code>            protected        mixed
+    <strong>run</strong>(string $query, array $bindings, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run a SQL statement and log its execution context.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Database/QueryException.html"><abbr title="Illuminate\Database\QueryException">QueryException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_runQueryCallback">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_runQueryCallback"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L757">line 757</a></div>
+        <code>            protected        mixed
+    <strong>runQueryCallback</strong>(string $query, array $bindings, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run a SQL statement.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Database/QueryException.html"><abbr title="Illuminate\Database\QueryException">QueryException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tryAgainIfCausedByLostConnection">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_tryAgainIfCausedByLostConnection"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L789">line 789</a></div>
+        <code>            protected        mixed
+    <strong>tryAgainIfCausedByLostConnection</strong>(<a href="../../Illuminate/Database/QueryException.html"><abbr title="Illuminate\Database\QueryException">QueryException</abbr></a> $e, string $query, array $bindings, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Handle a query exception that occurred during query execution.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Database/QueryException.html"><abbr title="Illuminate\Database\QueryException">QueryException</abbr></a></td>
+                <td>$e</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Database/QueryException.html"><abbr title="Illuminate\Database\QueryException">QueryException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disconnect">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_disconnect"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L805">line 805</a></div>
+        <code>                    void
+    <strong>disconnect</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Disconnect from the underlying PDO connection.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reconnect">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_reconnect"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L817">line 817</a></div>
+        <code>                    void
+    <strong>reconnect</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reconnect to the database.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/LogicException">LogicException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reconnectIfMissingConnection">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_reconnectIfMissingConnection"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L831">line 831</a></div>
+        <code>            protected        void
+    <strong>reconnectIfMissingConnection</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reconnect to the database if a PDO connection is missing.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logQuery">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_logQuery"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L846">line 846</a></div>
+        <code>                    void
+    <strong>logQuery</strong>(string $query, array $bindings, float|null $time = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Log a query in the connection's query log.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float|null</td>
+                <td>$time</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listen">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_listen"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L865">line 865</a></div>
+        <code>                    void
+    <strong>listen</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a database query listener with the connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fireConnectionEvent">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_fireConnectionEvent"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L878">line 878</a></div>
+        <code>            protected        void
+    <strong>fireConnectionEvent</strong>(string $event)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fire an event for this connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getElapsedTime">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getElapsedTime"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L900">line 900</a></div>
+        <code>            protected        float
+    <strong>getElapsedTime</strong>(int $start)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the elapsed time since a given starting point.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$start</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDoctrineAvailable">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_isDoctrineAvailable"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L910">line 910</a></div>
+        <code>                    bool
+    <strong>isDoctrineAvailable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is Doctrine available?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDoctrineColumn">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getDoctrineColumn"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L922">line 922</a></div>
+        <code>                    <abbr title="Doctrine\DBAL\Schema\Column">Column</abbr>
+    <strong>getDoctrineColumn</strong>(string $table, string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a Doctrine Schema Column instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\DBAL\Schema\Column">Column</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDoctrineSchemaManager">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getDoctrineSchemaManager"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L934">line 934</a></div>
+        <code>                    <abbr title="Doctrine\DBAL\Schema\AbstractSchemaManager">AbstractSchemaManager</abbr>
+    <strong>getDoctrineSchemaManager</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the Doctrine DBAL schema manager for the connection.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\DBAL\Schema\AbstractSchemaManager">AbstractSchemaManager</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDoctrineConnection">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getDoctrineConnection"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L944">line 944</a></div>
+        <code>                    <abbr title="Doctrine\DBAL\Connection">Connection</abbr>
+    <strong>getDoctrineConnection</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the Doctrine DBAL database connection instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\DBAL\Connection">Connection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPdo">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getPdo"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L962">line 962</a></div>
+        <code>                    <a target="_blank" href="http://php.net/PDO">PDO</a>
+    <strong>getPdo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the current PDO connection.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/PDO">PDO</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getReadPdo">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getReadPdo"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L976">line 976</a></div>
+        <code>                    <a target="_blank" href="http://php.net/PDO">PDO</a>
+    <strong>getReadPdo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the current PDO connection used for reading.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/PDO">PDO</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPdo">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_setPdo"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L995">line 995</a></div>
+        <code>                    <abbr title="Illuminate\Database\$this">$this</abbr>
+    <strong>setPdo</strong>(<a target="_blank" href="http://php.net/PDO">PDO</a>|null $pdo)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the PDO connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/PDO">PDO</a>|null</td>
+                <td>$pdo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setReadPdo">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_setReadPdo"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1010">line 1010</a></div>
+        <code>                    <abbr title="Illuminate\Database\$this">$this</abbr>
+    <strong>setReadPdo</strong>(<a target="_blank" href="http://php.net/PDO">PDO</a>|null $pdo)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the PDO connection used for reading.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/PDO">PDO</a>|null</td>
+                <td>$pdo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setReconnector">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_setReconnector"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1023">line 1023</a></div>
+        <code>                    <abbr title="Illuminate\Database\$this">$this</abbr>
+    <strong>setReconnector</strong>(callable $reconnector)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the reconnect instance on the connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$reconnector</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getName"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1035">line 1035</a></div>
+        <code>                    string|null
+    <strong>getName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the database connection name.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfig">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getConfig"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1046">line 1046</a></div>
+        <code>                    mixed
+    <strong>getConfig</strong>(string $option)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an option from the configuration options.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$option</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDriverName">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getDriverName"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1056">line 1056</a></div>
+        <code>                    string
+    <strong>getDriverName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the PDO driver name.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQueryGrammar">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getQueryGrammar"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1066">line 1066</a></div>
+        <code>                    <a href="../../Illuminate/Database/Query/Grammars/Grammar.html"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a>
+    <strong>getQueryGrammar</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the query grammar used by the connection.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Database/Query/Grammars/Grammar.html"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setQueryGrammar">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_setQueryGrammar"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1077">line 1077</a></div>
+        <code>                    void
+    <strong>setQueryGrammar</strong>(<a href="../../Illuminate/Database/Query/Grammars/Grammar.html"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> $grammar)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the query grammar used by the connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Database/Query/Grammars/Grammar.html"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></td>
+                <td>$grammar</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSchemaGrammar">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getSchemaGrammar"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1087">line 1087</a></div>
+        <code>                    <a href="../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a>
+    <strong>getSchemaGrammar</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the schema grammar used by the connection.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSchemaGrammar">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_setSchemaGrammar"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1098">line 1098</a></div>
+        <code>                    void
+    <strong>setSchemaGrammar</strong>(<a href="../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> $grammar)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the schema grammar used by the connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></td>
+                <td>$grammar</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPostProcessor">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getPostProcessor"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1108">line 1108</a></div>
+        <code>                    <a href="../../Illuminate/Database/Query/Processors/Processor.html"><abbr title="Illuminate\Database\Query\Processors\Processor">Processor</abbr></a>
+    <strong>getPostProcessor</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the query post processor used by the connection.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Database/Query/Processors/Processor.html"><abbr title="Illuminate\Database\Query\Processors\Processor">Processor</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPostProcessor">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_setPostProcessor"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1119">line 1119</a></div>
+        <code>                    void
+    <strong>setPostProcessor</strong>(<a href="../../Illuminate/Database/Query/Processors/Processor.html"><abbr title="Illuminate\Database\Query\Processors\Processor">Processor</abbr></a> $processor)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the query post processor used by the connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Database/Query/Processors/Processor.html"><abbr title="Illuminate\Database\Query\Processors\Processor">Processor</abbr></a></td>
+                <td>$processor</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEventDispatcher">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getEventDispatcher"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1129">line 1129</a></div>
+        <code>                    <a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a>
+    <strong>getEventDispatcher</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the event dispatcher used by the connection.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEventDispatcher">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_setEventDispatcher"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1140">line 1140</a></div>
+        <code>                    void
+    <strong>setEventDispatcher</strong>(<a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a> $events)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the event dispatcher instance on the connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a></td>
+                <td>$events</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pretending">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_pretending"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1150">line 1150</a></div>
+        <code>                    bool
+    <strong>pretending</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the connection in a "dry run".</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFetchMode">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getFetchMode"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1160">line 1160</a></div>
+        <code>                    int
+    <strong>getFetchMode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the default fetch mode for the connection.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFetchArgument">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getFetchArgument"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1170">line 1170</a></div>
+        <code>                    mixed
+    <strong>getFetchArgument</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the fetch argument to be applied when selecting.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFetchConstructorArgument">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getFetchConstructorArgument"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1180">line 1180</a></div>
+        <code>                    array
+    <strong>getFetchConstructorArgument</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get custom constructor arguments for the PDO::FETCH_CLASS fetch mode.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFetchMode">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_setFetchMode"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1193">line 1193</a></div>
+        <code>                    int
+    <strong>setFetchMode</strong>(int $fetchMode, mixed $fetchArgument = null, array $fetchConstructorArgument = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the default fetch mode for the connection, and optional arguments for the given fetch mode.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$fetchMode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$fetchArgument</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$fetchConstructorArgument</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQueryLog">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getQueryLog"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1205">line 1205</a></div>
+        <code>                    array
+    <strong>getQueryLog</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the connection query log.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flushQueryLog">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_flushQueryLog"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1215">line 1215</a></div>
+        <code>                    void
+    <strong>flushQueryLog</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clear the query log.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_enableQueryLog">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_enableQueryLog"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1225">line 1225</a></div>
+        <code>                    void
+    <strong>enableQueryLog</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enable the query log on the connection.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disableQueryLog">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_disableQueryLog"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1235">line 1235</a></div>
+        <code>                    void
+    <strong>disableQueryLog</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Disable the query log on the connection.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logging">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_logging"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1245">line 1245</a></div>
+        <code>                    bool
+    <strong>logging</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine whether we're logging queries.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDatabaseName">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getDatabaseName"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1255">line 1255</a></div>
+        <code>                    string
+    <strong>getDatabaseName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the name of the connected database.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDatabaseName">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_setDatabaseName"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1266">line 1266</a></div>
+        <code>                    string
+    <strong>setDatabaseName</strong>(string $database)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the name of the connected database.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTablePrefix">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_getTablePrefix"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1276">line 1276</a></div>
+        <code>                    string
+    <strong>getTablePrefix</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the table prefix for the connection.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTablePrefix">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_setTablePrefix"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1287">line 1287</a></div>
+        <code>                    void
+    <strong>setTablePrefix</strong>(string $prefix)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the table prefix in use by the connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withTablePrefix">
+        <div class="location">in <a href="../../Illuminate/Database/Connection.html#method_withTablePrefix"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/Connection.php#L1300">line 1300</a></div>
+        <code>                    <a href="../../Illuminate/Database/Grammar.html"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a>
+    <strong>withTablePrefix</strong>(<a href="../../Illuminate/Database/Grammar.html"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> $grammar)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the table prefix and return the grammar.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Database/Grammar.html"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></td>
+                <td>$grammar</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Database/Grammar.html"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDoctrineDriver">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Database/SqlServerConnection.php#L94">line 94</a></div>
+        <code>            protected        <abbr title="Doctrine\DBAL\Driver\PDOSqlsrv\Driver">Driver</abbr>
+    <strong>getDoctrineDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the Doctrine DBAL driver.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\DBAL\Driver\PDOSqlsrv\Driver">Driver</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

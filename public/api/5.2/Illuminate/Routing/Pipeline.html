@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Routing\Pipeline | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Routing_Pipeline" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Illuminate/Routing.html">Routing</a></li><li class="backslash">\</li><li>Pipeline</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Pipeline
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Pipeline</strong>        extends <a href="../../Illuminate/Pipeline/Pipeline.html"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Routing/Pipeline.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>This extended pipeline catches any exceptions that occur during each slice.</p>            <p>The exceptions are converted to HTTP responses for proper middleware handling.</p>                    </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_container">
+                                        protected                                        <a href="../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a>
+                </td>
+                <td>$container</td>
+                <td class="last">The container implementation.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pipeline/Pipeline.html#property_container"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_passable">
+                                        protected                                        mixed
+                </td>
+                <td>$passable</td>
+                <td class="last">The object being passed through the pipeline.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pipeline/Pipeline.html#property_passable"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pipes">
+                                        protected                                        array
+                </td>
+                <td>$pipes</td>
+                <td class="last">The array of class pipes.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pipeline/Pipeline.html#property_pipes"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_method">
+                                        protected                                        string
+                </td>
+                <td>$method</td>
+                <td class="last">The method to call on each pipe.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Pipeline/Pipeline.html#property_method"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container)
+        
+                                            <p>Create a new class instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pipeline/Pipeline.html#method___construct"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Contracts\Pipeline\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_send">send</a>(mixed $passable)
+        
+                                            <p>Set the object being sent through the pipeline.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pipeline/Pipeline.html#method_send"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Contracts\Pipeline\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_through">through</a>(array|mixed $pipes)
+        
+                                            <p>Set the array of pipes.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pipeline/Pipeline.html#method_through"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Contracts\Pipeline\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_via">via</a>(string $method)
+        
+                                            <p>Set the method to call on the pipes.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pipeline/Pipeline.html#method_via"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_then">then</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $destination)
+        
+                                            <p>Run the pipeline with a final destination callback.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pipeline/Pipeline.html#method_then"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/Closure">Closure</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSlice">getSlice</a>()
+        
+                                            <p>Get a Closure that represents a slice of the application onion.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/Closure">Closure</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInitialSlice">getInitialSlice</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $destination)
+        
+                                            <p>Get the initial slice to begin the stack call.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parsePipeString">parsePipeString</a>(string $pipe)
+        
+                                            <p>Parse full pipe string to get name and parameters.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Pipeline/Pipeline.html#method_parsePipeString"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_handleException">handleException</a>(mixed $passable, <a target="_blank" href="http://php.net/Exception">Exception</a> $e)
+        
+                                            <p>Handle the given exception.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../Illuminate/Pipeline/Pipeline.html#method___construct"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Pipeline/Pipeline.php#L45">line 45</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new class instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_send">
+        <div class="location">in <a href="../../Illuminate/Pipeline/Pipeline.html#method_send"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Pipeline/Pipeline.php#L56">line 56</a></div>
+        <code>                    <abbr title="Illuminate\Contracts\Pipeline\$this">$this</abbr>
+    <strong>send</strong>(mixed $passable)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the object being sent through the pipeline.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$passable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Contracts\Pipeline\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_through">
+        <div class="location">in <a href="../../Illuminate/Pipeline/Pipeline.html#method_through"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Pipeline/Pipeline.php#L69">line 69</a></div>
+        <code>                    <abbr title="Illuminate\Contracts\Pipeline\$this">$this</abbr>
+    <strong>through</strong>(array|mixed $pipes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the array of pipes.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|mixed</td>
+                <td>$pipes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Contracts\Pipeline\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_via">
+        <div class="location">in <a href="../../Illuminate/Pipeline/Pipeline.html#method_via"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Pipeline/Pipeline.php#L82">line 82</a></div>
+        <code>                    <abbr title="Illuminate\Contracts\Pipeline\$this">$this</abbr>
+    <strong>via</strong>(string $method)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the method to call on the pipes.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Contracts\Pipeline\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_then">
+        <div class="location">in <a href="../../Illuminate/Pipeline/Pipeline.html#method_then"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Pipeline/Pipeline.php#L95">line 95</a></div>
+        <code>                    mixed
+    <strong>then</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $destination)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run the pipeline with a final destination callback.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$destination</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSlice">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Routing/Pipeline.php#L25">line 25</a></div>
+        <code>            protected        <a target="_blank" href="http://php.net/Closure">Closure</a>
+    <strong>getSlice</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a Closure that represents a slice of the application onion.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInitialSlice">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Routing/Pipeline.php#L48">line 48</a></div>
+        <code>            protected        <a target="_blank" href="http://php.net/Closure">Closure</a>
+    <strong>getInitialSlice</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $destination)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the initial slice to begin the stack call.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$destination</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parsePipeString">
+        <div class="location">in <a href="../../Illuminate/Pipeline/Pipeline.html#method_parsePipeString"><abbr title="Illuminate\Pipeline\Pipeline">Pipeline</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Pipeline/Pipeline.php#L160">line 160</a></div>
+        <code>            protected        array
+    <strong>parsePipeString</strong>(string $pipe)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse full pipe string to get name and parameters.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$pipe</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handleException">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Routing/Pipeline.php#L70">line 70</a></div>
+        <code>            protected        mixed
+    <strong>handleException</strong>(mixed $passable, <a target="_blank" href="http://php.net/Exception">Exception</a> $e)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Handle the given exception.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$passable</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td>$e</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

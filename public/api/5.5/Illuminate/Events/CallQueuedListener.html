@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Events\CallQueuedListener | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Events_CallQueuedListener" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Illuminate/Events.html">Events</a></li><li class="backslash">\</li><li>CallQueuedListener</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            CallQueuedListener
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>CallQueuedListener</strong>        implements
+        <a href="../../Illuminate/Contracts/Queue/ShouldQueue.html"><abbr title="Illuminate\Contracts\Queue\ShouldQueue">ShouldQueue</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Events/CallQueuedListener.php">View source</a>)
+</p>
+
+        
+    
+
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Illuminate/Queue/InteractsWithQueue.html"><abbr title="Illuminate\Queue\InteractsWithQueue">InteractsWithQueue</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_job">
+                                        protected                                        <a href="../../Illuminate/Contracts/Queue/Job.html"><abbr title="Illuminate\Contracts\Queue\Job">Job</abbr></a>
+                </td>
+                <td>$job</td>
+                <td class="last">The underlying queue job instance.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Queue/InteractsWithQueue.html#property_job"><abbr title="Illuminate\Queue\InteractsWithQueue">InteractsWithQueue</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_class">
+                                                                                string
+                </td>
+                <td>$class</td>
+                <td class="last">The listener class name.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_method">
+                                                                                string
+                </td>
+                <td>$method</td>
+                <td class="last">The listener method.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_data">
+                                                                                array
+                </td>
+                <td>$data</td>
+                <td class="last">The data to be passed to the listener.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tries">
+                                                                                int
+                </td>
+                <td>$tries</td>
+                <td class="last">The number of times the job may be attempted.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_timeoutAt">
+                                                                                int
+                </td>
+                <td>$timeoutAt</td>
+                <td class="last">The timestamp indicating when the job should timeout.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_timeout">
+                                                                                int
+                </td>
+                <td>$timeout</td>
+                <td class="last">The number of seconds the job can run before timing out.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_attempts">attempts</a>()
+        
+                                            <p>Get the number of times the job has been attempted.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/InteractsWithQueue.html#method_attempts"><abbr title="Illuminate\Queue\InteractsWithQueue">InteractsWithQueue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>()
+        
+                                            <p>Delete the job from the queue.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/InteractsWithQueue.html#method_delete"><abbr title="Illuminate\Queue\InteractsWithQueue">InteractsWithQueue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fail">fail</a>(<a target="_blank" href="http://php.net/Throwable">Throwable</a> $exception = null)
+        
+                                            <p>Fail the job from the queue.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/InteractsWithQueue.html#method_fail"><abbr title="Illuminate\Queue\InteractsWithQueue">InteractsWithQueue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_release">release</a>(int $delay)
+        
+                                            <p>Release the job back into the queue.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/InteractsWithQueue.html#method_release"><abbr title="Illuminate\Queue\InteractsWithQueue">InteractsWithQueue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Queue\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setJob">setJob</a>(<a href="../../Illuminate/Contracts/Queue/Job.html"><abbr title="Illuminate\Contracts\Queue\Job">Job</abbr></a> $job)
+        
+                                            <p>Set the base queue job instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/InteractsWithQueue.html#method_setJob"><abbr title="Illuminate\Queue\InteractsWithQueue">InteractsWithQueue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $class, string $method, array $data)
+        
+                                            <p>Create a new job instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_handle">handle</a>(<a href="../../Illuminate/Container/Container.html"><abbr title="Illuminate\Container\Container">Container</abbr></a> $container)
+        
+                                            <p>Handle the queued job.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setJobInstanceIfNecessary">setJobInstanceIfNecessary</a>(<a href="../../Illuminate/Contracts/Queue/Job.html"><abbr title="Illuminate\Contracts\Queue\Job">Job</abbr></a> $job, mixed $instance)
+        
+                                            <p>Set the job instance of the given class if necessary.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_failed">failed</a>(<a target="_blank" href="http://php.net/Exception">Exception</a> $e)
+        
+                                            <p>Call the failed method on the job instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepareData">prepareData</a>()
+        
+                                            <p>Unserialize the data if needed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_displayName">displayName</a>()
+        
+                                            <p>Get the display name for the queued job.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___clone">__clone</a>()
+        
+                                            <p>Prepare the instance for cloning.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_attempts">
+        <div class="location">in <a href="../../Illuminate/Queue/InteractsWithQueue.html#method_attempts"><abbr title="Illuminate\Queue\InteractsWithQueue">InteractsWithQueue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Queue/InteractsWithQueue.php#L21">line 21</a></div>
+        <code>                    int
+    <strong>attempts</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the number of times the job has been attempted.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">in <a href="../../Illuminate/Queue/InteractsWithQueue.html#method_delete"><abbr title="Illuminate\Queue\InteractsWithQueue">InteractsWithQueue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Queue/InteractsWithQueue.php#L31">line 31</a></div>
+        <code>                    void
+    <strong>delete</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete the job from the queue.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fail">
+        <div class="location">in <a href="../../Illuminate/Queue/InteractsWithQueue.html#method_fail"><abbr title="Illuminate\Queue\InteractsWithQueue">InteractsWithQueue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Queue/InteractsWithQueue.php#L44">line 44</a></div>
+        <code>                    void
+    <strong>fail</strong>(<a target="_blank" href="http://php.net/Throwable">Throwable</a> $exception = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fail the job from the queue.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Throwable">Throwable</a></td>
+                <td>$exception</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_release">
+        <div class="location">in <a href="../../Illuminate/Queue/InteractsWithQueue.html#method_release"><abbr title="Illuminate\Queue\InteractsWithQueue">InteractsWithQueue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Queue/InteractsWithQueue.php#L57">line 57</a></div>
+        <code>                    void
+    <strong>release</strong>(int $delay)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Release the job back into the queue.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$delay</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setJob">
+        <div class="location">in <a href="../../Illuminate/Queue/InteractsWithQueue.html#method_setJob"><abbr title="Illuminate\Queue\InteractsWithQueue">InteractsWithQueue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Queue/InteractsWithQueue.php#L70">line 70</a></div>
+        <code>                    <abbr title="Illuminate\Queue\$this">$this</abbr>
+    <strong>setJob</strong>(<a href="../../Illuminate/Contracts/Queue/Job.html"><abbr title="Illuminate\Contracts\Queue\Job">Job</abbr></a> $job)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the base queue job instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Queue/Job.html"><abbr title="Illuminate\Contracts\Queue\Job">Job</abbr></a></td>
+                <td>$job</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Queue\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Events/CallQueuedListener.php#L64">line 64</a></div>
+        <code>                    void
+    <strong>__construct</strong>(string $class, string $method, array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new job instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handle">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Events/CallQueuedListener.php#L77">line 77</a></div>
+        <code>                    void
+    <strong>handle</strong>(<a href="../../Illuminate/Container/Container.html"><abbr title="Illuminate\Container\Container">Container</abbr></a> $container)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Handle the queued job.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Container/Container.html"><abbr title="Illuminate\Container\Container">Container</abbr></a></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setJobInstanceIfNecessary">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Events/CallQueuedListener.php#L97">line 97</a></div>
+        <code>            protected        mixed
+    <strong>setJobInstanceIfNecessary</strong>(<a href="../../Illuminate/Contracts/Queue/Job.html"><abbr title="Illuminate\Contracts\Queue\Job">Job</abbr></a> $job, mixed $instance)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the job instance of the given class if necessary.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Queue/Job.html"><abbr title="Illuminate\Contracts\Queue\Job">Job</abbr></a></td>
+                <td>$job</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$instance</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_failed">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Events/CallQueuedListener.php#L114">line 114</a></div>
+        <code>                    void
+    <strong>failed</strong>(<a target="_blank" href="http://php.net/Exception">Exception</a> $e)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Call the failed method on the job instance.</p>                    <p>The event instance and the exception will be passed.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td>$e</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareData">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Events/CallQueuedListener.php#L132">line 132</a></div>
+        <code>            protected        void
+    <strong>prepareData</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unserialize the data if needed.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_displayName">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Events/CallQueuedListener.php#L144">line 144</a></div>
+        <code>                    string
+    <strong>displayName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the display name for the queued job.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___clone">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.5/src/Illuminate/Events/CallQueuedListener.php#L154">line 154</a></div>
+        <code>                    void
+    <strong>__clone</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prepare the instance for cloning.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

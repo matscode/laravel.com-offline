@@ -1,0 +1,2405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Cache\RedisTaggedCache | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Cache_RedisTaggedCache" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Illuminate/Cache.html">Cache</a></li><li class="backslash">\</li><li>RedisTaggedCache</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            RedisTaggedCache
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>RedisTaggedCache</strong>        extends <a href="../../Illuminate/Cache/TaggedCache.html"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/RedisTaggedCache.php">View source</a>)
+</p>
+
+        
+    
+
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Illuminate/Cache/RetrievesMultipleKeys.html"><abbr title="Illuminate\Cache\RetrievesMultipleKeys">RetrievesMultipleKeys</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Illuminate/Support/Traits/Macroable.html"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>REFERENCE_KEY_FOREVER</td>
+                <td class="last">
+                    <p><em>Forever reference key.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>REFERENCE_KEY_STANDARD</td>
+                <td class="last">
+                    <p><em>Standard reference key.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_macros">
+                    static                    protected                                        array
+                </td>
+                <td>$macros</td>
+                <td class="last">The registered string macros.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Support/Traits/Macroable.html#property_macros"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_store">
+                                        protected                                        <a href="../../Illuminate/Contracts/Cache/Store.html"><abbr title="Illuminate\Contracts\Cache\Store">Store</abbr></a>
+                </td>
+                <td>$store</td>
+                <td class="last">The cache store implementation.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#property_store"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_events">
+                                        protected                                        <a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a>
+                </td>
+                <td>$events</td>
+                <td class="last">The event dispatcher implementation.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#property_events"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_default">
+                                        protected                                        float|int
+                </td>
+                <td>$default</td>
+                <td class="last">The default number of minutes to store items.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#property_default"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tags">
+                                        protected                                        <a href="../../Illuminate/Cache/TagSet.html"><abbr title="Illuminate\Cache\TagSet">TagSet</abbr></a>
+                </td>
+                <td>$tags</td>
+                <td class="last">The tag set instance.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Cache/TaggedCache.html#property_tags"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_macro">macro</a>(string $name, callable $macro)
+        
+                                            <p>Register a custom macro.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Traits/Macroable.html#method_macro"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasMacro">hasMacro</a>(string $name)
+        
+                                            <p>Checks if macro is registered.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Traits/Macroable.html#method_hasMacro"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___callStatic">__callStatic</a>(string $method, array $parameters)
+        
+                                            <p>Dynamically handle calls to the class.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Traits/Macroable.html#method___callStatic"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $parameters)
+        
+                                            <p>Dynamically handle calls to the class.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Traits/Macroable.html#method___call"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../Illuminate/Contracts/Cache/Store.html"><abbr title="Illuminate\Contracts\Cache\Store">Store</abbr></a> $store, <a href="../../Illuminate/Cache/TagSet.html"><abbr title="Illuminate\Cache\TagSet">TagSet</abbr></a> $tags)
+        
+                                            <p>Create a new cache repository instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/TaggedCache.html#method___construct"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEventDispatcher">setEventDispatcher</a>(<a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a> $events)
+        
+                                            <p>Set the event dispatcher instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_setEventDispatcher"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fireCacheEvent">fireCacheEvent</a>(string $event, array $payload)
+        
+                                            <p>Fire an event for this cache instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/TaggedCache.html#method_fireCacheEvent"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_has">has</a>(string $key)
+        
+                                            <p>Determine if an item exists in the cache.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_has"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(string $key, mixed $default = null)
+        
+                                            <p>Retrieve an item from the cache by key.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_get"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_many">many</a>(array $keys)
+        
+                                            <p>Retrieve multiple items from the cache by key.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/RetrievesMultipleKeys.html#method_many"><abbr title="Illuminate\Cache\RetrievesMultipleKeys">RetrievesMultipleKeys</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pull">pull</a>(string $key, mixed $default = null)
+        
+                                            <p>Retrieve an item from the cache and delete it.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_pull"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_put">put</a>(string $key, mixed $value, <a target="_blank" href="http://php.net/DateTime">DateTime</a>|float|int $minutes = null)
+        
+                                            <p>Store an item in the cache.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_putMany">putMany</a>(array $values, float|int $minutes)
+        
+                                            <p>Store multiple items in the cache for a given number of minutes.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/RetrievesMultipleKeys.html#method_putMany"><abbr title="Illuminate\Cache\RetrievesMultipleKeys">RetrievesMultipleKeys</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_add">add</a>(string $key, mixed $value, <a target="_blank" href="http://php.net/DateTime">DateTime</a>|float|int $minutes)
+        
+                                            <p>Store an item in the cache if the key does not exist.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_add"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_increment">increment</a>(string $key, mixed $value = 1)
+        
+                                            <p>Increment the value of an item in the cache.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/TaggedCache.html#method_increment"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_decrement">decrement</a>(string $key, mixed $value = 1)
+        
+                                            <p>Decrement the value of an item in the cache.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/TaggedCache.html#method_decrement"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_forever">forever</a>(string $key, mixed $value)
+        
+                                            <p>Store an item in the cache indefinitely.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_remember">remember</a>(string $key, <a target="_blank" href="http://php.net/DateTime">DateTime</a>|float|int $minutes, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Get an item from the cache, or store the default value.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_remember"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sear">sear</a>(string $key, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Get an item from the cache, or store the default value forever.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_sear"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rememberForever">rememberForever</a>(string $key, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Get an item from the cache, or store the default value forever.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_rememberForever"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_forget">forget</a>(string $key)
+        
+                                            <p>Remove an item from the cache.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_forget"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Cache/TaggedCache.html"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tags">tags</a>(array|mixed $names)
+        
+                                            <p>Begin executing a new tags operation if the store supports it.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_tags"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_itemKey">itemKey</a>(string $key)
+        
+                                            <p>Format the key for a cache item.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/TaggedCache.html#method_itemKey"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultCacheTime">getDefaultCacheTime</a>()
+        
+                                            <p>Get the default cache time.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_getDefaultCacheTime"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultCacheTime">setDefaultCacheTime</a>(float|int $minutes)
+        
+                                            <p>Set the default cache time in minutes.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_setDefaultCacheTime"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Contracts/Cache/Store.html"><abbr title="Illuminate\Contracts\Cache\Store">Store</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStore">getStore</a>()
+        
+                                            <p>Get the cache store implementation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_getStore"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetExists">offsetExists</a>(string $key)
+        
+                                            <p>Determine if a cached value exists.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_offsetExists"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetGet">offsetGet</a>(string $key)
+        
+                                            <p>Retrieve an item from the cache by key.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_offsetGet"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetSet">offsetSet</a>(string $key, mixed $value)
+        
+                                            <p>Store an item in the cache for the default time.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_offsetSet"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetUnset">offsetUnset</a>(string $key)
+        
+                                            <p>Remove an item from the cache.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_offsetUnset"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|int|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMinutes">getMinutes</a>(<a target="_blank" href="http://php.net/DateTime">DateTime</a>|float|int $duration)
+        
+                                            <p>Calculate the number of minutes with the given duration.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method_getMinutes"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___clone">__clone</a>()
+        
+                                            <p>Clone cache repository instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/Repository.html#method___clone"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_flush">flush</a>()
+        
+                                            <p>Remove all items from the cache.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_taggedItemKey">taggedItemKey</a>(string $key)
+        
+                                            <p>Get a fully qualified key for a tagged item.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Cache/TaggedCache.html#method_taggedItemKey"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pushStandardKeys">pushStandardKeys</a>(string $namespace, string $key)
+        
+                                            <p>Store standard key references into store.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pushForeverKeys">pushForeverKeys</a>(string $namespace, string $key)
+        
+                                            <p>Store forever key references into store.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pushKeys">pushKeys</a>(string $namespace, string $key, string $reference)
+        
+                                            <p>Store a reference to the cache key against the reference key.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteForeverKeys">deleteForeverKeys</a>()
+        
+                                            <p>Delete all of the items that were stored forever.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteStandardKeys">deleteStandardKeys</a>()
+        
+                                            <p>Delete all standard items.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteKeysByReference">deleteKeysByReference</a>(string $reference)
+        
+                                            <p>Find and delete all of the items that were stored against a reference.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteValues">deleteValues</a>(string $referenceKey)
+        
+                                            <p>Delete item keys that have been stored against a reference.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_referenceKey">referenceKey</a>(string $segment, string $suffix)
+        
+                                            <p>Get the reference key for the segment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_macro">
+        <div class="location">in <a href="../../Illuminate/Support/Traits/Macroable.html#method_macro"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Support/Traits/Macroable.php#L24">line 24</a></div>
+        <code>        static            void
+    <strong>macro</strong>(string $name, callable $macro)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a custom macro.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$macro</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasMacro">
+        <div class="location">in <a href="../../Illuminate/Support/Traits/Macroable.html#method_hasMacro"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Support/Traits/Macroable.php#L35">line 35</a></div>
+        <code>        static            bool
+    <strong>hasMacro</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if macro is registered.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___callStatic">
+        <div class="location">in <a href="../../Illuminate/Support/Traits/Macroable.html#method___callStatic"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Support/Traits/Macroable.php#L49">line 49</a></div>
+        <code>        static            mixed
+    <strong>__callStatic</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Dynamically handle calls to the class.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../Illuminate/Support/Traits/Macroable.html#method___call"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Support/Traits/Macroable.php#L71">line 71</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Dynamically handle calls to the class.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../Illuminate/Cache/TaggedCache.html#method___construct"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/TaggedCache.php#L25">line 25</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../../Illuminate/Contracts/Cache/Store.html"><abbr title="Illuminate\Contracts\Cache\Store">Store</abbr></a> $store, <a href="../../Illuminate/Cache/TagSet.html"><abbr title="Illuminate\Cache\TagSet">TagSet</abbr></a> $tags)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new cache repository instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Cache/Store.html"><abbr title="Illuminate\Contracts\Cache\Store">Store</abbr></a></td>
+                <td>$store</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Illuminate/Cache/TagSet.html"><abbr title="Illuminate\Cache\TagSet">TagSet</abbr></a></td>
+                <td>$tags</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEventDispatcher">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_setEventDispatcher"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L59">line 59</a></div>
+        <code>                    void
+    <strong>setEventDispatcher</strong>(<a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a> $events)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the event dispatcher instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a></td>
+                <td>$events</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fireCacheEvent">
+        <div class="location">in <a href="../../Illuminate/Cache/TaggedCache.html#method_fireCacheEvent"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/TaggedCache.php#L35">line 35</a></div>
+        <code>            protected        void
+    <strong>fireCacheEvent</strong>(string $event, array $payload)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fire an event for this cache instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$payload</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_has">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_has"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L111">line 111</a></div>
+        <code>                    bool
+    <strong>has</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if an item exists in the cache.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_get"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L123">line 123</a></div>
+        <code>                    mixed
+    <strong>get</strong>(string $key, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve an item from the cache by key.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_many">
+        <div class="location">in <a href="../../Illuminate/Cache/RetrievesMultipleKeys.html#method_many"><abbr title="Illuminate\Cache\RetrievesMultipleKeys">RetrievesMultipleKeys</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/RetrievesMultipleKeys.php#L15">line 15</a></div>
+        <code>                    array
+    <strong>many</strong>(array $keys)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve multiple items from the cache by key.</p>                    <p>Items not found in the cache will have a null value.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pull">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_pull"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L180">line 180</a></div>
+        <code>                    mixed
+    <strong>pull</strong>(string $key, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve an item from the cache and delete it.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_put">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/RedisTaggedCache.php#L28">line 28</a></div>
+        <code>                    void
+    <strong>put</strong>(string $key, mixed $value, <a target="_blank" href="http://php.net/DateTime">DateTime</a>|float|int $minutes = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Store an item in the cache.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTime">DateTime</a>|float|int</td>
+                <td>$minutes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putMany">
+        <div class="location">in <a href="../../Illuminate/Cache/RetrievesMultipleKeys.html#method_putMany"><abbr title="Illuminate\Cache\RetrievesMultipleKeys">RetrievesMultipleKeys</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/RetrievesMultipleKeys.php#L33">line 33</a></div>
+        <code>                    void
+    <strong>putMany</strong>(array $values, float|int $minutes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Store multiple items in the cache for a given number of minutes.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float|int</td>
+                <td>$minutes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_add">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_add"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L240">line 240</a></div>
+        <code>                    bool
+    <strong>add</strong>(string $key, mixed $value, <a target="_blank" href="http://php.net/DateTime">DateTime</a>|float|int $minutes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Store an item in the cache if the key does not exist.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTime">DateTime</a>|float|int</td>
+                <td>$minutes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_increment">
+        <div class="location">in <a href="../../Illuminate/Cache/TaggedCache.html#method_increment"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/TaggedCache.php#L49">line 49</a></div>
+        <code>                    int|bool
+    <strong>increment</strong>(string $key, mixed $value = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Increment the value of an item in the cache.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decrement">
+        <div class="location">in <a href="../../Illuminate/Cache/TaggedCache.html#method_decrement"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/TaggedCache.php#L61">line 61</a></div>
+        <code>                    int|bool
+    <strong>decrement</strong>(string $key, mixed $value = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decrement the value of an item in the cache.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forever">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/RedisTaggedCache.php#L42">line 42</a></div>
+        <code>                    void
+    <strong>forever</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Store an item in the cache indefinitely.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_remember">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_remember"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L307">line 307</a></div>
+        <code>                    mixed
+    <strong>remember</strong>(string $key, <a target="_blank" href="http://php.net/DateTime">DateTime</a>|float|int $minutes, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an item from the cache, or store the default value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTime">DateTime</a>|float|int</td>
+                <td>$minutes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sear">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_sear"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L328">line 328</a></div>
+        <code>                    mixed
+    <strong>sear</strong>(string $key, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an item from the cache, or store the default value forever.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rememberForever">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_rememberForever"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L340">line 340</a></div>
+        <code>                    mixed
+    <strong>rememberForever</strong>(string $key, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an item from the cache, or store the default value forever.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forget">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_forget"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L360">line 360</a></div>
+        <code>                    bool
+    <strong>forget</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove an item from the cache.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tags">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_tags"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L377">line 377</a></div>
+        <code>                    <a href="../../Illuminate/Cache/TaggedCache.html"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a>
+    <strong>tags</strong>(array|mixed $names)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Begin executing a new tags operation if the store supports it.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|mixed</td>
+                <td>$names</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Cache/TaggedCache.html"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_itemKey">
+        <div class="location">in <a href="../../Illuminate/Cache/TaggedCache.html#method_itemKey"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/TaggedCache.php#L79">line 79</a></div>
+        <code>            protected        string
+    <strong>itemKey</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Format the key for a cache item.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultCacheTime">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_getDefaultCacheTime"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L410">line 410</a></div>
+        <code>                    float|int
+    <strong>getDefaultCacheTime</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the default cache time.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultCacheTime">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_setDefaultCacheTime"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L421">line 421</a></div>
+        <code>                    void
+    <strong>setDefaultCacheTime</strong>(float|int $minutes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the default cache time in minutes.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float|int</td>
+                <td>$minutes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStore">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_getStore"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L431">line 431</a></div>
+        <code>                    <a href="../../Illuminate/Contracts/Cache/Store.html"><abbr title="Illuminate\Contracts\Cache\Store">Store</abbr></a>
+    <strong>getStore</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the cache store implementation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Contracts/Cache/Store.html"><abbr title="Illuminate\Contracts\Cache\Store">Store</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetExists">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_offsetExists"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L442">line 442</a></div>
+        <code>                    bool
+    <strong>offsetExists</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if a cached value exists.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetGet">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_offsetGet"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L453">line 453</a></div>
+        <code>                    mixed
+    <strong>offsetGet</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve an item from the cache by key.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetSet">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_offsetSet"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L465">line 465</a></div>
+        <code>                    void
+    <strong>offsetSet</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Store an item in the cache for the default time.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetUnset">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_offsetUnset"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L476">line 476</a></div>
+        <code>                    void
+    <strong>offsetUnset</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove an item from the cache.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMinutes">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method_getMinutes"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L487">line 487</a></div>
+        <code>            protected        float|int|null
+    <strong>getMinutes</strong>(<a target="_blank" href="http://php.net/DateTime">DateTime</a>|float|int $duration)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Calculate the number of minutes with the given duration.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTime">DateTime</a>|float|int</td>
+                <td>$duration</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|int|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___clone">
+        <div class="location">in <a href="../../Illuminate/Cache/Repository.html#method___clone"><abbr title="Illuminate\Cache\Repository">Repository</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/Repository.php#L517">line 517</a></div>
+        <code>                    void
+    <strong>__clone</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clone cache repository instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flush">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/RedisTaggedCache.php#L54">line 54</a></div>
+        <code>                    void
+    <strong>flush</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove all items from the cache.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_taggedItemKey">
+        <div class="location">in <a href="../../Illuminate/Cache/TaggedCache.html#method_taggedItemKey"><abbr title="Illuminate\Cache\TaggedCache">TaggedCache</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/TaggedCache.php#L90">line 90</a></div>
+        <code>                    string
+    <strong>taggedItemKey</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a fully qualified key for a tagged item.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pushStandardKeys">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/RedisTaggedCache.php#L69">line 69</a></div>
+        <code>            protected        void
+    <strong>pushStandardKeys</strong>(string $namespace, string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Store standard key references into store.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pushForeverKeys">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/RedisTaggedCache.php#L81">line 81</a></div>
+        <code>            protected        void
+    <strong>pushForeverKeys</strong>(string $namespace, string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Store forever key references into store.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pushKeys">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/RedisTaggedCache.php#L94">line 94</a></div>
+        <code>            protected        void
+    <strong>pushKeys</strong>(string $namespace, string $key, string $reference)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Store a reference to the cache key against the reference key.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reference</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteForeverKeys">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/RedisTaggedCache.php#L108">line 108</a></div>
+        <code>            protected        void
+    <strong>deleteForeverKeys</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete all of the items that were stored forever.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteStandardKeys">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/RedisTaggedCache.php#L118">line 118</a></div>
+        <code>            protected        void
+    <strong>deleteStandardKeys</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete all standard items.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteKeysByReference">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/RedisTaggedCache.php#L129">line 129</a></div>
+        <code>            protected        void
+    <strong>deleteKeysByReference</strong>(string $reference)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Find and delete all of the items that were stored against a reference.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$reference</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteValues">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/RedisTaggedCache.php#L144">line 144</a></div>
+        <code>            protected        void
+    <strong>deleteValues</strong>(string $referenceKey)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete item keys that have been stored against a reference.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$referenceKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_referenceKey">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Cache/RedisTaggedCache.php#L162">line 162</a></div>
+        <code>            protected        string
+    <strong>referenceKey</strong>(string $segment, string $suffix)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the reference key for the segment.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$segment</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$suffix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

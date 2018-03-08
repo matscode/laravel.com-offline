@@ -1,0 +1,4499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\View\Compilers\BladeCompiler | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_View_Compilers_BladeCompiler" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/View.html">View</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/View/Compilers.html">Compilers</a></li><li class="backslash">\</li><li>BladeCompiler</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            BladeCompiler
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>BladeCompiler</strong>        extends <a href="../../../Illuminate/View/Compilers/Compiler.html"><abbr title="Illuminate\View\Compilers\Compiler">Compiler</abbr></a>        implements
+        <a href="../../../Illuminate/View/Compilers/CompilerInterface.html"><abbr title="Illuminate\View\Compilers\CompilerInterface">CompilerInterface</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php">View source</a>)
+</p>
+
+        
+    
+
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Illuminate/View/Compilers/Concerns/CompilesAuthorizations.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesAuthorizations">CompilesAuthorizations</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Illuminate/View/Compilers/Concerns/CompilesComments.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesComments">CompilesComments</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Illuminate/View/Compilers/Concerns/CompilesComponents.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesComponents">CompilesComponents</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Illuminate/View/Compilers/Concerns/CompilesEchos.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesEchos">CompilesEchos</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Illuminate/View/Compilers/Concerns/CompilesIncludes.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesIncludes">CompilesIncludes</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Illuminate/View/Compilers/Concerns/CompilesInjections.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesInjections">CompilesInjections</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Illuminate/View/Compilers/Concerns/CompilesRawPhp.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesRawPhp">CompilesRawPhp</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Illuminate/View/Compilers/Concerns/CompilesStacks.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesStacks">CompilesStacks</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Illuminate/View/Compilers/Concerns/CompilesTranslations.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesTranslations">CompilesTranslations</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_files">
+                                        protected                                        <a href="../../../Illuminate/Filesystem/Filesystem.html"><abbr title="Illuminate\Filesystem\Filesystem">Filesystem</abbr></a>
+                </td>
+                <td>$files</td>
+                <td class="last">The Filesystem instance.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Compiler.html#property_files"><abbr title="Illuminate\View\Compilers\Compiler">Compiler</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cachePath">
+                                        protected                                        string
+                </td>
+                <td>$cachePath</td>
+                <td class="last">Get the cache path for the compiled views.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Compiler.html#property_cachePath"><abbr title="Illuminate\View\Compilers\Compiler">Compiler</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_lastSection">
+                                        protected                                        string
+                </td>
+                <td>$lastSection</td>
+                <td class="last">The name of the last section that was started.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#property_lastSection"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_forElseCounter">
+                                        protected                                        int
+                </td>
+                <td>$forElseCounter</td>
+                <td class="last">Counter to keep track of nested forelse statements.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#property_forElseCounter"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_extensions">
+                                        protected                                        array
+                </td>
+                <td>$extensions</td>
+                <td class="last">All of the registered extensions.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_customDirectives">
+                                        protected                                        array
+                </td>
+                <td>$customDirectives</td>
+                <td class="last">All custom "directive" handlers.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_path">
+                                        protected                                        string
+                </td>
+                <td>$path</td>
+                <td class="last">The file currently being compiled.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_compilers">
+                                        protected                                        array
+                </td>
+                <td>$compilers</td>
+                <td class="last">All of the available compiler functions.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_rawTags">
+                                        protected                                        array
+                </td>
+                <td>$rawTags</td>
+                <td class="last">Array of opening and closing tags for raw echos.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_contentTags">
+                                        protected                                        array
+                </td>
+                <td>$contentTags</td>
+                <td class="last">Array of opening and closing tags for regular echos.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_escapedTags">
+                                        protected                                        array
+                </td>
+                <td>$escapedTags</td>
+                <td class="last">Array of opening and closing tags for escaped echos.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_echoFormat">
+                                        protected                                        string
+                </td>
+                <td>$echoFormat</td>
+                <td class="last">The "regular" / legacy echo string format.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_footer">
+                                        protected                                        array
+                </td>
+                <td>$footer</td>
+                <td class="last">Array of footer lines to be added to template.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_verbatimPlaceholder">
+                                        protected                                        string
+                </td>
+                <td>$verbatimPlaceholder</td>
+                <td class="last">Placeholder to temporary mark the position of verbatim blocks.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_verbatimBlocks">
+                                        protected                                        array
+                </td>
+                <td>$verbatimBlocks</td>
+                <td class="last">Array to temporary store the verbatim blocks found in the template.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Illuminate/Filesystem/Filesystem.html"><abbr title="Illuminate\Filesystem\Filesystem">Filesystem</abbr></a> $files, string $cachePath)
+        
+                                            <p>Create a new compiler instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Compiler.html#method___construct"><abbr title="Illuminate\View\Compilers\Compiler">Compiler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCompiledPath">getCompiledPath</a>(string $path)
+        
+                                            <p>Get the path to the compiled version of a view.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Compiler.html#method_getCompiledPath"><abbr title="Illuminate\View\Compilers\Compiler">Compiler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isExpired">isExpired</a>(string $path)
+        
+                                            <p>Determine if the view at the given path is expired.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Compiler.html#method_isExpired"><abbr title="Illuminate\View\Compilers\Compiler">Compiler</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileCan">compileCan</a>(string $expression)
+        
+                                            <p>Compile the can statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesAuthorizations.html#method_compileCan"><abbr title="Illuminate\View\Compilers\Concerns\CompilesAuthorizations">CompilesAuthorizations</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileCannot">compileCannot</a>(string $expression)
+        
+                                            <p>Compile the cannot statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesAuthorizations.html#method_compileCannot"><abbr title="Illuminate\View\Compilers\Concerns\CompilesAuthorizations">CompilesAuthorizations</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileElsecan">compileElsecan</a>(string $expression)
+        
+                                            <p>Compile the else-can statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesAuthorizations.html#method_compileElsecan"><abbr title="Illuminate\View\Compilers\Concerns\CompilesAuthorizations">CompilesAuthorizations</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileElsecannot">compileElsecannot</a>(string $expression)
+        
+                                            <p>Compile the else-cannot statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesAuthorizations.html#method_compileElsecannot"><abbr title="Illuminate\View\Compilers\Concerns\CompilesAuthorizations">CompilesAuthorizations</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndcan">compileEndcan</a>()
+        
+                                            <p>Compile the end-can statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesAuthorizations.html#method_compileEndcan"><abbr title="Illuminate\View\Compilers\Concerns\CompilesAuthorizations">CompilesAuthorizations</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndcannot">compileEndcannot</a>()
+        
+                                            <p>Compile the end-cannot statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesAuthorizations.html#method_compileEndcannot"><abbr title="Illuminate\View\Compilers\Concerns\CompilesAuthorizations">CompilesAuthorizations</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileComments">compileComments</a>(string $value)
+        
+                                            <p>Compile Blade comments into an empty string.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesComments.html#method_compileComments"><abbr title="Illuminate\View\Compilers\Concerns\CompilesComments">CompilesComments</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileComponent">compileComponent</a>(string $expression)
+        
+                                            <p>Compile the component statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesComponents.html#method_compileComponent"><abbr title="Illuminate\View\Compilers\Concerns\CompilesComponents">CompilesComponents</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndComponent">compileEndComponent</a>()
+        
+                                            <p>Compile the end-component statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesComponents.html#method_compileEndComponent"><abbr title="Illuminate\View\Compilers\Concerns\CompilesComponents">CompilesComponents</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileSlot">compileSlot</a>(string $expression)
+        
+                                            <p>Compile the slot statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesComponents.html#method_compileSlot"><abbr title="Illuminate\View\Compilers\Concerns\CompilesComponents">CompilesComponents</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndSlot">compileEndSlot</a>()
+        
+                                            <p>Compile the end-slot statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesComponents.html#method_compileEndSlot"><abbr title="Illuminate\View\Compilers\Concerns\CompilesComponents">CompilesComponents</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileHasSection">compileHasSection</a>(string $expression)
+        
+                                            <p>Compile the has-section statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileHasSection"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileAuth">compileAuth</a>(string|null $guard = null)
+        
+                                            <p>Compile the if-auth statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileAuth"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndAuth">compileEndAuth</a>()
+        
+                                            <p>Compile the end-auth statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileEndAuth"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileGuest">compileGuest</a>(string|null $guard = null)
+        
+                                            <p>Compile the if-guest statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileGuest"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndGuest">compileEndGuest</a>()
+        
+                                            <p>Compile the end-guest statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileEndGuest"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileIf">compileIf</a>(string $expression)
+        
+                                            <p>Compile the if statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileIf"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileUnless">compileUnless</a>(string $expression)
+        
+                                            <p>Compile the unless statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileUnless"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileElseif">compileElseif</a>(string $expression)
+        
+                                            <p>Compile the else-if statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileElseif"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileElse">compileElse</a>()
+        
+                                            <p>Compile the else statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileElse"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndif">compileEndif</a>()
+        
+                                            <p>Compile the end-if statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileEndif"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndunless">compileEndunless</a>()
+        
+                                            <p>Compile the end-unless statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileEndunless"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileIsset">compileIsset</a>(string $expression)
+        
+                                            <p>Compile the if-isset statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileIsset"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndIsset">compileEndIsset</a>()
+        
+                                            <p>Compile the end-isset statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileEndIsset"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEchos">compileEchos</a>(string $value)
+        
+                                            <p>Compile Blade echos into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesEchos.html#method_compileEchos"><abbr title="Illuminate\View\Compilers\Concerns\CompilesEchos">CompilesEchos</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEchoMethods">getEchoMethods</a>()
+        
+                                            <p>Get the echo methods in the proper order for compilation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesEchos.html#method_getEchoMethods"><abbr title="Illuminate\View\Compilers\Concerns\CompilesEchos">CompilesEchos</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileRawEchos">compileRawEchos</a>(string $value)
+        
+                                            <p>Compile the "raw" echo statements.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesEchos.html#method_compileRawEchos"><abbr title="Illuminate\View\Compilers\Concerns\CompilesEchos">CompilesEchos</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileRegularEchos">compileRegularEchos</a>(string $value)
+        
+                                            <p>Compile the "regular" echo statements.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesEchos.html#method_compileRegularEchos"><abbr title="Illuminate\View\Compilers\Concerns\CompilesEchos">CompilesEchos</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEscapedEchos">compileEscapedEchos</a>(string $value)
+        
+                                            <p>Compile the escaped echo statements.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesEchos.html#method_compileEscapedEchos"><abbr title="Illuminate\View\Compilers\Concerns\CompilesEchos">CompilesEchos</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEchoDefaults">compileEchoDefaults</a>(string $value)
+        
+                                            <p>Compile the default values for the echo statement.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesEchos.html#method_compileEchoDefaults"><abbr title="Illuminate\View\Compilers\Concerns\CompilesEchos">CompilesEchos</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEach">compileEach</a>(string $expression)
+        
+                                            <p>Compile the each statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesIncludes.html#method_compileEach"><abbr title="Illuminate\View\Compilers\Concerns\CompilesIncludes">CompilesIncludes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileInclude">compileInclude</a>(string $expression)
+        
+                                            <p>Compile the include statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesIncludes.html#method_compileInclude"><abbr title="Illuminate\View\Compilers\Concerns\CompilesIncludes">CompilesIncludes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileIncludeIf">compileIncludeIf</a>(string $expression)
+        
+                                            <p>Compile the include-if statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesIncludes.html#method_compileIncludeIf"><abbr title="Illuminate\View\Compilers\Concerns\CompilesIncludes">CompilesIncludes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileIncludeWhen">compileIncludeWhen</a>(string $expression)
+        
+                                            <p>Compile the include-when statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesIncludes.html#method_compileIncludeWhen"><abbr title="Illuminate\View\Compilers\Concerns\CompilesIncludes">CompilesIncludes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileInject">compileInject</a>(string $expression)
+        
+                                            <p>Compile the inject statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesInjections.html#method_compileInject"><abbr title="Illuminate\View\Compilers\Concerns\CompilesInjections">CompilesInjections</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileExtends">compileExtends</a>(string $expression)
+        
+                                            <p>Compile the extends statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileExtends"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileSection">compileSection</a>(string $expression)
+        
+                                            <p>Compile the section statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileSection"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileParent">compileParent</a>()
+        
+                                            <p>Replace the @parent directive to a placeholder.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileParent"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileYield">compileYield</a>(string $expression)
+        
+                                            <p>Compile the yield statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileYield"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileShow">compileShow</a>()
+        
+                                            <p>Compile the show statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileShow"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileAppend">compileAppend</a>()
+        
+                                            <p>Compile the append statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileAppend"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileOverwrite">compileOverwrite</a>()
+        
+                                            <p>Compile the overwrite statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileOverwrite"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileStop">compileStop</a>()
+        
+                                            <p>Compile the stop statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileStop"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndsection">compileEndsection</a>()
+        
+                                            <p>Compile the end-section statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileEndsection"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileForelse">compileForelse</a>(string $expression)
+        
+                                            <p>Compile the for-else statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileForelse"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEmpty">compileEmpty</a>(string $expression)
+        
+                                            <p>Compile the for-else-empty and empty statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileEmpty"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndforelse">compileEndforelse</a>()
+        
+                                            <p>Compile the end-for-else statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileEndforelse"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndEmpty">compileEndEmpty</a>()
+        
+                                            <p>Compile the end-empty statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileEndEmpty"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileFor">compileFor</a>(string $expression)
+        
+                                            <p>Compile the for statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileFor"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileForeach">compileForeach</a>(string $expression)
+        
+                                            <p>Compile the for-each statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileForeach"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileBreak">compileBreak</a>(string $expression)
+        
+                                            <p>Compile the break statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileBreak"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileContinue">compileContinue</a>(string $expression)
+        
+                                            <p>Compile the continue statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileContinue"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndfor">compileEndfor</a>()
+        
+                                            <p>Compile the end-for statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileEndfor"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndforeach">compileEndforeach</a>()
+        
+                                            <p>Compile the end-for-each statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileEndforeach"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileWhile">compileWhile</a>(string $expression)
+        
+                                            <p>Compile the while statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileWhile"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndwhile">compileEndwhile</a>()
+        
+                                            <p>Compile the end-while statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileEndwhile"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compilePhp">compilePhp</a>(string $expression)
+        
+                                            <p>Compile the raw PHP statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesRawPhp.html#method_compilePhp"><abbr title="Illuminate\View\Compilers\Concerns\CompilesRawPhp">CompilesRawPhp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndphp">compileEndphp</a>()
+        
+                                            <p>Compile end-php statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesRawPhp.html#method_compileEndphp"><abbr title="Illuminate\View\Compilers\Concerns\CompilesRawPhp">CompilesRawPhp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileUnset">compileUnset</a>(string $expression)
+        
+                                            <p>Compile the unset statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesRawPhp.html#method_compileUnset"><abbr title="Illuminate\View\Compilers\Concerns\CompilesRawPhp">CompilesRawPhp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileStack">compileStack</a>(string $expression)
+        
+                                            <p>Compile the stack statements into the content.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesStacks.html#method_compileStack"><abbr title="Illuminate\View\Compilers\Concerns\CompilesStacks">CompilesStacks</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compilePush">compilePush</a>(string $expression)
+        
+                                            <p>Compile the push statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesStacks.html#method_compilePush"><abbr title="Illuminate\View\Compilers\Concerns\CompilesStacks">CompilesStacks</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndpush">compileEndpush</a>()
+        
+                                            <p>Compile the end-push statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesStacks.html#method_compileEndpush"><abbr title="Illuminate\View\Compilers\Concerns\CompilesStacks">CompilesStacks</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compilePrepend">compilePrepend</a>(string $expression)
+        
+                                            <p>Compile the prepend statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesStacks.html#method_compilePrepend"><abbr title="Illuminate\View\Compilers\Concerns\CompilesStacks">CompilesStacks</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndprepend">compileEndprepend</a>()
+        
+                                            <p>Compile the end-prepend statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesStacks.html#method_compileEndprepend"><abbr title="Illuminate\View\Compilers\Concerns\CompilesStacks">CompilesStacks</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileLang">compileLang</a>(string $expression)
+        
+                                            <p>Compile the lang statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesTranslations.html#method_compileLang"><abbr title="Illuminate\View\Compilers\Concerns\CompilesTranslations">CompilesTranslations</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEndlang">compileEndlang</a>()
+        
+                                            <p>Compile the end-lang statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesTranslations.html#method_compileEndlang"><abbr title="Illuminate\View\Compilers\Concerns\CompilesTranslations">CompilesTranslations</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileChoice">compileChoice</a>(string $expression)
+        
+                                            <p>Compile the choice statements into valid PHP.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/View/Compilers/Concerns/CompilesTranslations.html#method_compileChoice"><abbr title="Illuminate\View\Compilers\Concerns\CompilesTranslations">CompilesTranslations</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compile">compile</a>(string $path = null)
+        
+                                            <p>Compile the view at the given path.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPath">getPath</a>()
+        
+                                            <p>Get the path currently being compiled.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPath">setPath</a>(string $path)
+        
+                                            <p>Set the path currently being compiled.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileString">compileString</a>(string $value)
+        
+                                            <p>Compile the given Blade template contents.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_storeVerbatimBlocks">storeVerbatimBlocks</a>(string $value)
+        
+                                            <p>Store the verbatim blocks and replace them with a temporary placeholder.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_restoreVerbatimBlocks">restoreVerbatimBlocks</a>(string $result)
+        
+                                            <p>Replace the raw placeholders with the original code stored in the raw blocks.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addFooters">addFooters</a>(string $result)
+        
+                                            <p>Add the stored footers onto the given content.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseToken">parseToken</a>(array $token)
+        
+                                            <p>Parse the tokens from the template.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileExtensions">compileExtensions</a>(string $value)
+        
+                                            <p>Execute the user defined extensions.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileStatements">compileStatements</a>(string $value)
+        
+                                            <p>Compile Blade statements that start with "@".</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileStatement">compileStatement</a>(array $match)
+        
+                                            <p>Compile a single Blade @ statement.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_callCustomDirective">callCustomDirective</a>(string $name, string|null $value)
+        
+                                            <p>Call the given directive with the given value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_stripParentheses">stripParentheses</a>(string $expression)
+        
+                                            <p>Strip the parentheses from the given expression.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_extend">extend</a>(callable $compiler)
+        
+                                            <p>Register a custom Blade compiler.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExtensions">getExtensions</a>()
+        
+                                            <p>Get the extensions used by the compiler.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_directive">directive</a>(string $name, callable $handler)
+        
+                                            <p>Register a handler for custom directives.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCustomDirectives">getCustomDirectives</a>()
+        
+                                            <p>Get the list of custom directives.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEchoFormat">setEchoFormat</a>(string $format)
+        
+                                            <p>Set the echo format to be used by the compiler.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Compiler.html#method___construct"><abbr title="Illuminate\View\Compilers\Compiler">Compiler</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Compiler.php#L33">line 33</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../../../Illuminate/Filesystem/Filesystem.html"><abbr title="Illuminate\Filesystem\Filesystem">Filesystem</abbr></a> $files, string $cachePath)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new compiler instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Filesystem/Filesystem.html"><abbr title="Illuminate\Filesystem\Filesystem">Filesystem</abbr></a></td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$cachePath</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCompiledPath">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Compiler.html#method_getCompiledPath"><abbr title="Illuminate\View\Compilers\Compiler">Compiler</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Compiler.php#L49">line 49</a></div>
+        <code>                    string
+    <strong>getCompiledPath</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the path to the compiled version of a view.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isExpired">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Compiler.html#method_isExpired"><abbr title="Illuminate\View\Compilers\Compiler">Compiler</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Compiler.php#L60">line 60</a></div>
+        <code>                    bool
+    <strong>isExpired</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the view at the given path is expired.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileCan">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesAuthorizations.html#method_compileCan"><abbr title="Illuminate\View\Compilers\Concerns\CompilesAuthorizations">CompilesAuthorizations</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesAuthorizations.php#L13">line 13</a></div>
+        <code>            protected        string
+    <strong>compileCan</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the can statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileCannot">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesAuthorizations.html#method_compileCannot"><abbr title="Illuminate\View\Compilers\Concerns\CompilesAuthorizations">CompilesAuthorizations</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesAuthorizations.php#L24">line 24</a></div>
+        <code>            protected        string
+    <strong>compileCannot</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the cannot statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileElsecan">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesAuthorizations.html#method_compileElsecan"><abbr title="Illuminate\View\Compilers\Concerns\CompilesAuthorizations">CompilesAuthorizations</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesAuthorizations.php#L35">line 35</a></div>
+        <code>            protected        string
+    <strong>compileElsecan</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the else-can statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileElsecannot">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesAuthorizations.html#method_compileElsecannot"><abbr title="Illuminate\View\Compilers\Concerns\CompilesAuthorizations">CompilesAuthorizations</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesAuthorizations.php#L46">line 46</a></div>
+        <code>            protected        string
+    <strong>compileElsecannot</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the else-cannot statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndcan">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesAuthorizations.html#method_compileEndcan"><abbr title="Illuminate\View\Compilers\Concerns\CompilesAuthorizations">CompilesAuthorizations</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesAuthorizations.php#L56">line 56</a></div>
+        <code>            protected        string
+    <strong>compileEndcan</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-can statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndcannot">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesAuthorizations.html#method_compileEndcannot"><abbr title="Illuminate\View\Compilers\Concerns\CompilesAuthorizations">CompilesAuthorizations</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesAuthorizations.php#L66">line 66</a></div>
+        <code>            protected        string
+    <strong>compileEndcannot</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-cannot statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileComments">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesComments.html#method_compileComments"><abbr title="Illuminate\View\Compilers\Concerns\CompilesComments">CompilesComments</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesComments.php#L13">line 13</a></div>
+        <code>            protected        string
+    <strong>compileComments</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile Blade comments into an empty string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileComponent">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesComponents.html#method_compileComponent"><abbr title="Illuminate\View\Compilers\Concerns\CompilesComponents">CompilesComponents</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesComponents.php#L13">line 13</a></div>
+        <code>            protected        string
+    <strong>compileComponent</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the component statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndComponent">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesComponents.html#method_compileEndComponent"><abbr title="Illuminate\View\Compilers\Concerns\CompilesComponents">CompilesComponents</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesComponents.php#L23">line 23</a></div>
+        <code>            protected        string
+    <strong>compileEndComponent</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-component statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileSlot">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesComponents.html#method_compileSlot"><abbr title="Illuminate\View\Compilers\Concerns\CompilesComponents">CompilesComponents</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesComponents.php#L34">line 34</a></div>
+        <code>            protected        string
+    <strong>compileSlot</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the slot statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndSlot">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesComponents.html#method_compileEndSlot"><abbr title="Illuminate\View\Compilers\Concerns\CompilesComponents">CompilesComponents</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesComponents.php#L44">line 44</a></div>
+        <code>            protected        string
+    <strong>compileEndSlot</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-slot statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileHasSection">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileHasSection"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L13">line 13</a></div>
+        <code>            protected        string
+    <strong>compileHasSection</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the has-section statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileAuth">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileAuth"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L24">line 24</a></div>
+        <code>            protected        string
+    <strong>compileAuth</strong>(string|null $guard = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the if-auth statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$guard</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndAuth">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileEndAuth"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L36">line 36</a></div>
+        <code>            protected        string
+    <strong>compileEndAuth</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-auth statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileGuest">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileGuest"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L47">line 47</a></div>
+        <code>            protected        string
+    <strong>compileGuest</strong>(string|null $guard = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the if-guest statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$guard</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndGuest">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileEndGuest"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L59">line 59</a></div>
+        <code>            protected        string
+    <strong>compileEndGuest</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-guest statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileIf">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileIf"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L70">line 70</a></div>
+        <code>            protected        string
+    <strong>compileIf</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the if statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileUnless">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileUnless"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L81">line 81</a></div>
+        <code>            protected        string
+    <strong>compileUnless</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the unless statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileElseif">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileElseif"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L92">line 92</a></div>
+        <code>            protected        string
+    <strong>compileElseif</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the else-if statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileElse">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileElse"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L102">line 102</a></div>
+        <code>            protected        string
+    <strong>compileElse</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the else statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndif">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileEndif"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L112">line 112</a></div>
+        <code>            protected        string
+    <strong>compileEndif</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-if statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndunless">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileEndunless"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L122">line 122</a></div>
+        <code>            protected        string
+    <strong>compileEndunless</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-unless statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileIsset">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileIsset"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L133">line 133</a></div>
+        <code>            protected        string
+    <strong>compileIsset</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the if-isset statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndIsset">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesConditionals.html#method_compileEndIsset"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesConditionals.php#L143">line 143</a></div>
+        <code>            protected        string
+    <strong>compileEndIsset</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-isset statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEchos">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesEchos.html#method_compileEchos"><abbr title="Illuminate\View\Compilers\Concerns\CompilesEchos">CompilesEchos</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesEchos.php#L13">line 13</a></div>
+        <code>            protected        string
+    <strong>compileEchos</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile Blade echos into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEchoMethods">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesEchos.html#method_getEchoMethods"><abbr title="Illuminate\View\Compilers\Concerns\CompilesEchos">CompilesEchos</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesEchos.php#L27">line 27</a></div>
+        <code>            protected        array
+    <strong>getEchoMethods</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the echo methods in the proper order for compilation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileRawEchos">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesEchos.html#method_compileRawEchos"><abbr title="Illuminate\View\Compilers\Concerns\CompilesEchos">CompilesEchos</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesEchos.php#L42">line 42</a></div>
+        <code>            protected        string
+    <strong>compileRawEchos</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the "raw" echo statements.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileRegularEchos">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesEchos.html#method_compileRegularEchos"><abbr title="Illuminate\View\Compilers\Concerns\CompilesEchos">CompilesEchos</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesEchos.php#L61">line 61</a></div>
+        <code>            protected        string
+    <strong>compileRegularEchos</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the "regular" echo statements.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEscapedEchos">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesEchos.html#method_compileEscapedEchos"><abbr title="Illuminate\View\Compilers\Concerns\CompilesEchos">CompilesEchos</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesEchos.php#L82">line 82</a></div>
+        <code>            protected        string
+    <strong>compileEscapedEchos</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the escaped echo statements.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEchoDefaults">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesEchos.html#method_compileEchoDefaults"><abbr title="Illuminate\View\Compilers\Concerns\CompilesEchos">CompilesEchos</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesEchos.php#L101">line 101</a></div>
+        <code>                    string
+    <strong>compileEchoDefaults</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the default values for the echo statement.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEach">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesIncludes.html#method_compileEach"><abbr title="Illuminate\View\Compilers\Concerns\CompilesIncludes">CompilesIncludes</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesIncludes.php#L13">line 13</a></div>
+        <code>            protected        string
+    <strong>compileEach</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the each statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileInclude">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesIncludes.html#method_compileInclude"><abbr title="Illuminate\View\Compilers\Concerns\CompilesIncludes">CompilesIncludes</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesIncludes.php#L24">line 24</a></div>
+        <code>            protected        string
+    <strong>compileInclude</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the include statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileIncludeIf">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesIncludes.html#method_compileIncludeIf"><abbr title="Illuminate\View\Compilers\Concerns\CompilesIncludes">CompilesIncludes</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesIncludes.php#L37">line 37</a></div>
+        <code>            protected        string
+    <strong>compileIncludeIf</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the include-if statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileIncludeWhen">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesIncludes.html#method_compileIncludeWhen"><abbr title="Illuminate\View\Compilers\Concerns\CompilesIncludes">CompilesIncludes</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesIncludes.php#L50">line 50</a></div>
+        <code>            protected        string
+    <strong>compileIncludeWhen</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the include-when statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileInject">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesInjections.html#method_compileInject"><abbr title="Illuminate\View\Compilers\Concerns\CompilesInjections">CompilesInjections</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesInjections.php#L13">line 13</a></div>
+        <code>            protected        string
+    <strong>compileInject</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the inject statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileExtends">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileExtends"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLayouts.php#L22">line 22</a></div>
+        <code>            protected        string
+    <strong>compileExtends</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the extends statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileSection">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileSection"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLayouts.php#L39">line 39</a></div>
+        <code>            protected        string
+    <strong>compileSection</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the section statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileParent">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileParent"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLayouts.php#L51">line 51</a></div>
+        <code>            protected        string
+    <strong>compileParent</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Replace the @parent directive to a placeholder.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileYield">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileYield"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLayouts.php#L62">line 62</a></div>
+        <code>            protected        string
+    <strong>compileYield</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the yield statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileShow">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileShow"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLayouts.php#L72">line 72</a></div>
+        <code>            protected        string
+    <strong>compileShow</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the show statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileAppend">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileAppend"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLayouts.php#L82">line 82</a></div>
+        <code>            protected        string
+    <strong>compileAppend</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the append statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileOverwrite">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileOverwrite"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLayouts.php#L92">line 92</a></div>
+        <code>            protected        string
+    <strong>compileOverwrite</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the overwrite statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileStop">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileStop"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLayouts.php#L102">line 102</a></div>
+        <code>            protected        string
+    <strong>compileStop</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the stop statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndsection">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLayouts.html#method_compileEndsection"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLayouts.php#L112">line 112</a></div>
+        <code>            protected        string
+    <strong>compileEndsection</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-section statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileForelse">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileForelse"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLoops.php#L20">line 20</a></div>
+        <code>            protected        string
+    <strong>compileForelse</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the for-else statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEmpty">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileEmpty"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLoops.php#L43">line 43</a></div>
+        <code>            protected        string
+    <strong>compileEmpty</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the for-else-empty and empty statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndforelse">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileEndforelse"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLoops.php#L59">line 59</a></div>
+        <code>            protected        string
+    <strong>compileEndforelse</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-for-else statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndEmpty">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileEndEmpty"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLoops.php#L69">line 69</a></div>
+        <code>            protected        string
+    <strong>compileEndEmpty</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-empty statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileFor">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileFor"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLoops.php#L80">line 80</a></div>
+        <code>            protected        string
+    <strong>compileFor</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the for statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileForeach">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileForeach"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLoops.php#L91">line 91</a></div>
+        <code>            protected        string
+    <strong>compileForeach</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the for-each statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileBreak">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileBreak"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLoops.php#L112">line 112</a></div>
+        <code>            protected        string
+    <strong>compileBreak</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the break statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileContinue">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileContinue"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLoops.php#L129">line 129</a></div>
+        <code>            protected        string
+    <strong>compileContinue</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the continue statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndfor">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileEndfor"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLoops.php#L145">line 145</a></div>
+        <code>            protected        string
+    <strong>compileEndfor</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-for statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndforeach">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileEndforeach"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLoops.php#L155">line 155</a></div>
+        <code>            protected        string
+    <strong>compileEndforeach</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-for-each statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileWhile">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileWhile"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLoops.php#L166">line 166</a></div>
+        <code>            protected        string
+    <strong>compileWhile</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the while statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndwhile">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesLoops.html#method_compileEndwhile"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesLoops.php#L176">line 176</a></div>
+        <code>            protected        string
+    <strong>compileEndwhile</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-while statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compilePhp">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesRawPhp.html#method_compilePhp"><abbr title="Illuminate\View\Compilers\Concerns\CompilesRawPhp">CompilesRawPhp</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesRawPhp.php#L13">line 13</a></div>
+        <code>            protected        string
+    <strong>compilePhp</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the raw PHP statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndphp">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesRawPhp.html#method_compileEndphp"><abbr title="Illuminate\View\Compilers\Concerns\CompilesRawPhp">CompilesRawPhp</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesRawPhp.php#L23">line 23</a></div>
+        <code>            protected        string
+    <strong>compileEndphp</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile end-php statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileUnset">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesRawPhp.html#method_compileUnset"><abbr title="Illuminate\View\Compilers\Concerns\CompilesRawPhp">CompilesRawPhp</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesRawPhp.php#L34">line 34</a></div>
+        <code>            protected        string
+    <strong>compileUnset</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the unset statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileStack">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesStacks.html#method_compileStack"><abbr title="Illuminate\View\Compilers\Concerns\CompilesStacks">CompilesStacks</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesStacks.php#L13">line 13</a></div>
+        <code>            protected        string
+    <strong>compileStack</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the stack statements into the content.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compilePush">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesStacks.html#method_compilePush"><abbr title="Illuminate\View\Compilers\Concerns\CompilesStacks">CompilesStacks</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesStacks.php#L24">line 24</a></div>
+        <code>            protected        string
+    <strong>compilePush</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the push statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndpush">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesStacks.html#method_compileEndpush"><abbr title="Illuminate\View\Compilers\Concerns\CompilesStacks">CompilesStacks</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesStacks.php#L34">line 34</a></div>
+        <code>            protected        string
+    <strong>compileEndpush</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-push statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compilePrepend">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesStacks.html#method_compilePrepend"><abbr title="Illuminate\View\Compilers\Concerns\CompilesStacks">CompilesStacks</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesStacks.php#L45">line 45</a></div>
+        <code>            protected        string
+    <strong>compilePrepend</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the prepend statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndprepend">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesStacks.html#method_compileEndprepend"><abbr title="Illuminate\View\Compilers\Concerns\CompilesStacks">CompilesStacks</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesStacks.php#L55">line 55</a></div>
+        <code>            protected        string
+    <strong>compileEndprepend</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-prepend statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileLang">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesTranslations.html#method_compileLang"><abbr title="Illuminate\View\Compilers\Concerns\CompilesTranslations">CompilesTranslations</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesTranslations.php#L13">line 13</a></div>
+        <code>            protected        string
+    <strong>compileLang</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the lang statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEndlang">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesTranslations.html#method_compileEndlang"><abbr title="Illuminate\View\Compilers\Concerns\CompilesTranslations">CompilesTranslations</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesTranslations.php#L29">line 29</a></div>
+        <code>            protected        string
+    <strong>compileEndlang</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the end-lang statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileChoice">
+        <div class="location">in <a href="../../../Illuminate/View/Compilers/Concerns/CompilesTranslations.html#method_compileChoice"><abbr title="Illuminate\View\Compilers\Concerns\CompilesTranslations">CompilesTranslations</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/Concerns/CompilesTranslations.php#L40">line 40</a></div>
+        <code>            protected        string
+    <strong>compileChoice</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the choice statements into valid PHP.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compile">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L113">line 113</a></div>
+        <code>                    void
+    <strong>compile</strong>(string $path = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the view at the given path.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPath">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L131">line 131</a></div>
+        <code>                    string
+    <strong>getPath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the path currently being compiled.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPath">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L142">line 142</a></div>
+        <code>                    void
+    <strong>setPath</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the path currently being compiled.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileString">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L153">line 153</a></div>
+        <code>                    string
+    <strong>compileString</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the given Blade template contents.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_storeVerbatimBlocks">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L190">line 190</a></div>
+        <code>            protected        string
+    <strong>storeVerbatimBlocks</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Store the verbatim blocks and replace them with a temporary placeholder.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_restoreVerbatimBlocks">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L205">line 205</a></div>
+        <code>            protected        string
+    <strong>restoreVerbatimBlocks</strong>(string $result)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Replace the raw placeholders with the original code stored in the raw blocks.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$result</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFooters">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L222">line 222</a></div>
+        <code>            protected        string
+    <strong>addFooters</strong>(string $result)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the stored footers onto the given content.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$result</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseToken">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L234">line 234</a></div>
+        <code>            protected        string
+    <strong>parseToken</strong>(array $token)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse the tokens from the template.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$token</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileExtensions">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L253">line 253</a></div>
+        <code>            protected        string
+    <strong>compileExtensions</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute the user defined extensions.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileStatements">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L268">line 268</a></div>
+        <code>            protected        string
+    <strong>compileStatements</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile Blade statements that start with "@".</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileStatement">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L283">line 283</a></div>
+        <code>            protected        string
+    <strong>compileStatement</strong>(array $match)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a single Blade @ statement.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$match</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callCustomDirective">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L303">line 303</a></div>
+        <code>            protected        string
+    <strong>callCustomDirective</strong>(string $name, string|null $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Call the given directive with the given value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_stripParentheses">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L318">line 318</a></div>
+        <code>                    string
+    <strong>stripParentheses</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Strip the parentheses from the given expression.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extend">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L333">line 333</a></div>
+        <code>                    void
+    <strong>extend</strong>(callable $compiler)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a custom Blade compiler.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$compiler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExtensions">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L343">line 343</a></div>
+        <code>                    array
+    <strong>getExtensions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the extensions used by the compiler.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_directive">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L355">line 355</a></div>
+        <code>                    void
+    <strong>directive</strong>(string $name, callable $handler)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a handler for custom directives.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$handler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCustomDirectives">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L365">line 365</a></div>
+        <code>                    array
+    <strong>getCustomDirectives</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the list of custom directives.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEchoFormat">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/Compilers/BladeCompiler.php#L376">line 376</a></div>
+        <code>                    void
+    <strong>setEchoFormat</strong>(string $format)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the echo format to be used by the compiler.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

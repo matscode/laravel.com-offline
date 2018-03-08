@@ -1,0 +1,3247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Console\Scheduling\CallbackEvent | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Console_Scheduling_CallbackEvent" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Console.html">Console</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Console/Scheduling.html">Scheduling</a></li><li class="backslash">\</li><li>CallbackEvent</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            CallbackEvent
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>CallbackEvent</strong>        extends <a href="../../../Illuminate/Console/Scheduling/Event.html"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/CallbackEvent.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_command">
+                                                                                string
+                </td>
+                <td>$command</td>
+                <td class="last">The command string.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#property_command"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_expression">
+                                                                                string
+                </td>
+                <td>$expression</td>
+                <td class="last">The cron expression representing the event's frequency.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#property_expression"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_timezone">
+                                                                                <a target="_blank" href="http://php.net/DateTimeZone">DateTimeZone</a>|string
+                </td>
+                <td>$timezone</td>
+                <td class="last">The timezone the date should be evaluated on.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#property_timezone"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_user">
+                                                                                string
+                </td>
+                <td>$user</td>
+                <td class="last">The user the command should run as.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#property_user"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_environments">
+                                                                                array
+                </td>
+                <td>$environments</td>
+                <td class="last">The list of environments the command should run under.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#property_environments"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_evenInMaintenanceMode">
+                                                                                bool
+                </td>
+                <td>$evenInMaintenanceMode</td>
+                <td class="last">Indicates if the command should run in maintenance mode.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#property_evenInMaintenanceMode"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_withoutOverlapping">
+                                                                                bool
+                </td>
+                <td>$withoutOverlapping</td>
+                <td class="last">Indicates if the command should not overlap itself.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#property_withoutOverlapping"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_runInBackground">
+                                                                                bool
+                </td>
+                <td>$runInBackground</td>
+                <td class="last">Indicates if the command should run in background.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#property_runInBackground"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_filters">
+                                        protected                                        array
+                </td>
+                <td>$filters</td>
+                <td class="last">The array of filter callbacks.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#property_filters"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_rejects">
+                                        protected                                        array
+                </td>
+                <td>$rejects</td>
+                <td class="last">The array of reject callbacks.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#property_rejects"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_output">
+                                                                                string
+                </td>
+                <td>$output</td>
+                <td class="last">The location that output should be sent to.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#property_output"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shouldAppendOutput">
+                                        protected                                        bool
+                </td>
+                <td>$shouldAppendOutput</td>
+                <td class="last">Indicates whether output should be appended.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#property_shouldAppendOutput"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_beforeCallbacks">
+                                        protected                                        array
+                </td>
+                <td>$beforeCallbacks</td>
+                <td class="last">The array of callbacks to be run before the event is started.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#property_beforeCallbacks"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_afterCallbacks">
+                                        protected                                        array
+                </td>
+                <td>$afterCallbacks</td>
+                <td class="last">The array of callbacks to be run after the event is finished.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#property_afterCallbacks"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_description">
+                                                                                string
+                </td>
+                <td>$description</td>
+                <td class="last">The human readable description of the event.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#property_description"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_callback">
+                                        protected                                        string
+                </td>
+                <td>$callback</td>
+                <td class="last">The callback to call.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_parameters">
+                                        protected                                        array
+                </td>
+                <td>$parameters</td>
+                <td class="last">The parameters to pass to the method.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $callback, array $parameters = [])
+        
+                                            <p>Create a new event instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultOutput">getDefaultOutput</a>()
+        
+                                            <p>Get the default output depending on the OS.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_getDefaultOutput"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_run">run</a>(<a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container)
+        
+                                            <p>Run the given event.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_runCommandInForeground">runCommandInForeground</a>(<a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container)
+        
+                                            <p>Run the command in the foreground.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_runCommandInForeground"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_runCommandInBackground">runCommandInBackground</a>()
+        
+                                            <p>Run the command in the background.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_runCommandInBackground"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_callBeforeCallbacks">callBeforeCallbacks</a>(<a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container)
+        
+                                            <p>Call all of the "before" callbacks for the event.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_callBeforeCallbacks"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_callAfterCallbacks">callAfterCallbacks</a>(<a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container)
+        
+                                            <p>Call all of the "after" callbacks for the event.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_callAfterCallbacks"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildCommand">buildCommand</a>()
+        
+                                            <p>Build the command string.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_buildCommand"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mutexPath">mutexPath</a>()
+        
+                                            <p>Get the mutex path for the scheduled command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDue">isDue</a>(<a href="../../../Illuminate/Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a> $app)
+        
+                                            <p>Determine if the given event should run based on the Cron expression.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_isDue"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_expressionPasses">expressionPasses</a>()
+        
+                                            <p>Determine if the Cron expression passes.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_expressionPasses"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_filtersPass">filtersPass</a>(<a href="../../../Illuminate/Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a> $app)
+        
+                                            <p>Determine if the filters pass for the event.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_filtersPass"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_runsInEnvironment">runsInEnvironment</a>(string $environment)
+        
+                                            <p>Determine if the event runs in the given environment.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_runsInEnvironment"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_runsInMaintenanceMode">runsInMaintenanceMode</a>()
+        
+                                            <p>Determine if the event runs in maintenance mode.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_runsInMaintenanceMode"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cron">cron</a>(string $expression)
+        
+                                            <p>The Cron expression representing the event's frequency.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_cron"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hourly">hourly</a>()
+        
+                                            <p>Schedule the event to run hourly.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_hourly"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_daily">daily</a>()
+        
+                                            <p>Schedule the event to run daily.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_daily"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_at">at</a>(string $time)
+        
+                                            <p>Schedule the command at a given time.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_at"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dailyAt">dailyAt</a>(string $time)
+        
+                                            <p>Schedule the event to run daily at a given time (10:00, 19:30, etc).</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_dailyAt"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_twiceDaily">twiceDaily</a>(int $first = 1, int $second = 13)
+        
+                                            <p>Schedule the event to run twice daily.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_twiceDaily"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_weekdays">weekdays</a>()
+        
+                                            <p>Schedule the event to run only on weekdays.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_weekdays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mondays">mondays</a>()
+        
+                                            <p>Schedule the event to run only on Mondays.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_mondays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tuesdays">tuesdays</a>()
+        
+                                            <p>Schedule the event to run only on Tuesdays.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_tuesdays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wednesdays">wednesdays</a>()
+        
+                                            <p>Schedule the event to run only on Wednesdays.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_wednesdays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_thursdays">thursdays</a>()
+        
+                                            <p>Schedule the event to run only on Thursdays.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_thursdays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fridays">fridays</a>()
+        
+                                            <p>Schedule the event to run only on Fridays.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_fridays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saturdays">saturdays</a>()
+        
+                                            <p>Schedule the event to run only on Saturdays.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_saturdays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sundays">sundays</a>()
+        
+                                            <p>Schedule the event to run only on Sundays.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_sundays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_weekly">weekly</a>()
+        
+                                            <p>Schedule the event to run weekly.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_weekly"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_weeklyOn">weeklyOn</a>(int $day, string $time = &#039;0:0&#039;)
+        
+                                            <p>Schedule the event to run weekly on a given day and time.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_weeklyOn"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_monthly">monthly</a>()
+        
+                                            <p>Schedule the event to run monthly.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_monthly"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_monthlyOn">monthlyOn</a>(int $day = 1, string $time = &#039;0:0&#039;)
+        
+                                            <p>Schedule the event to run monthly on a given day and time.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_monthlyOn"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_quarterly">quarterly</a>()
+        
+                                            <p>Schedule the event to run quarterly.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_quarterly"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_yearly">yearly</a>()
+        
+                                            <p>Schedule the event to run yearly.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_yearly"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_everyMinute">everyMinute</a>()
+        
+                                            <p>Schedule the event to run every minute.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_everyMinute"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_everyFiveMinutes">everyFiveMinutes</a>()
+        
+                                            <p>Schedule the event to run every five minutes.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_everyFiveMinutes"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_everyTenMinutes">everyTenMinutes</a>()
+        
+                                            <p>Schedule the event to run every ten minutes.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_everyTenMinutes"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_everyThirtyMinutes">everyThirtyMinutes</a>()
+        
+                                            <p>Schedule the event to run every thirty minutes.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_everyThirtyMinutes"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_days">days</a>(array|mixed $days)
+        
+                                            <p>Set the days of the week the command should run on.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_days"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_runInBackground">runInBackground</a>()
+        
+                                            <p>State that the command should run in background.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_runInBackground"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_timezone">timezone</a>(<a target="_blank" href="http://php.net/DateTimeZone">DateTimeZone</a>|string $timezone)
+        
+                                            <p>Set the timezone the date should be evaluated on.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_timezone"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_user">user</a>(string $user)
+        
+                                            <p>Set which user the command should run as.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_user"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_environments">environments</a>(array|mixed $environments)
+        
+                                            <p>Limit the environments the command should run in.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_environments"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_evenInMaintenanceMode">evenInMaintenanceMode</a>()
+        
+                                            <p>State that the command should run even in maintenance mode.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_evenInMaintenanceMode"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withoutOverlapping">withoutOverlapping</a>()
+        
+                                            <p>Do not allow the event to overlap each other.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_when">when</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Register a callback to further filter the schedule.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_when"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_skip">skip</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Register a callback to further filter the schedule.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_skip"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendOutputTo">sendOutputTo</a>(string $location, bool $append = false)
+        
+                                            <p>Send the output of the command to a given location.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_sendOutputTo"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendOutputTo">appendOutputTo</a>(string $location)
+        
+                                            <p>Append the output of the command to a given location.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_appendOutputTo"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_emailOutputTo">emailOutputTo</a>(array|mixed $addresses, bool $onlyIfOutputExists = false)
+        
+                                            <p>E-mail the results of the scheduled operation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_emailOutputTo"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_emailWrittenOutputTo">emailWrittenOutputTo</a>(array|mixed $addresses)
+        
+                                            <p>E-mail the results of the scheduled operation if it produces output.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_emailWrittenOutputTo"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_emailOutput">emailOutput</a>(<a href="../../../Illuminate/Contracts/Mail/Mailer.html"><abbr title="Illuminate\Contracts\Mail\Mailer">Mailer</abbr></a> $mailer, array $addresses, bool $onlyIfOutputExists = false)
+        
+                                            <p>E-mail the output of the event to the recipients.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_emailOutput"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEmailSubject">getEmailSubject</a>()
+        
+                                            <p>Get the e-mail subject line for output results.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_getEmailSubject"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pingBefore">pingBefore</a>(string $url)
+        
+                                            <p>Register a callback to ping a given URL before the job runs.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_pingBefore"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_before">before</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Register a callback to be called before the operation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_before"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_thenPing">thenPing</a>(string $url)
+        
+                                            <p>Register a callback to ping a given URL after the job runs.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_thenPing"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_after">after</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Register a callback to be called after the operation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_after"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_then">then</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Register a callback to be called after the operation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_then"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_name">name</a>(string $description)
+        
+                                            <p>Set the human-friendly description of the event.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_name"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_description">description</a>(string $description)
+        
+                                            <p>Set the human-friendly description of the event.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_description"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_spliceIntoPosition">spliceIntoPosition</a>(int $position, string $value)
+        
+                                            <p>Splice the given value into the given position of the expression.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_spliceIntoPosition"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSummaryForDisplay">getSummaryForDisplay</a>()
+        
+                                            <p>Get the summary of the event for display.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExpression">getExpression</a>()
+        
+                                            <p>Get the Cron expression for the event.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Console/Scheduling/Event.html#method_getExpression"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeMutex">removeMutex</a>()
+        
+                                            <p>Remove the mutex file from disk.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/CallbackEvent.php#L34">line 34</a></div>
+        <code>                    void
+    <strong>__construct</strong>(string $callback, array $parameters = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new event instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultOutput">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_getDefaultOutput"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L139">line 139</a></div>
+        <code>            protected        string
+    <strong>getDefaultOutput</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the default output depending on the OS.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_run">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/CallbackEvent.php#L54">line 54</a></div>
+        <code>                    void
+    <strong>run</strong>(<a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run the given event.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_runCommandInForeground">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_runCommandInForeground"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L165">line 165</a></div>
+        <code>            protected        void
+    <strong>runCommandInForeground</strong>(<a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run the command in the foreground.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_runCommandInBackground">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_runCommandInBackground"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L181">line 181</a></div>
+        <code>            protected        void
+    <strong>runCommandInBackground</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run the command in the background.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callBeforeCallbacks">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_callBeforeCallbacks"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L194">line 194</a></div>
+        <code>            protected        void
+    <strong>callBeforeCallbacks</strong>(<a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Call all of the "before" callbacks for the event.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callAfterCallbacks">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_callAfterCallbacks"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L207">line 207</a></div>
+        <code>            protected        void
+    <strong>callAfterCallbacks</strong>(<a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Call all of the "after" callbacks for the event.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildCommand">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_buildCommand"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L219">line 219</a></div>
+        <code>                    string
+    <strong>buildCommand</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build the command string.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mutexPath">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/CallbackEvent.php#L108">line 108</a></div>
+        <code>            protected        string
+    <strong>mutexPath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the mutex path for the scheduled command.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDue">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_isDue"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L254">line 254</a></div>
+        <code>                    bool
+    <strong>isDue</strong>(<a href="../../../Illuminate/Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a> $app)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given event should run based on the Cron expression.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a></td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_expressionPasses">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_expressionPasses"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L269">line 269</a></div>
+        <code>            protected        bool
+    <strong>expressionPasses</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the Cron expression passes.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_filtersPass">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_filtersPass"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L286">line 286</a></div>
+        <code>                    bool
+    <strong>filtersPass</strong>(<a href="../../../Illuminate/Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a> $app)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the filters pass for the event.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a></td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_runsInEnvironment">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_runsInEnvironment"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L309">line 309</a></div>
+        <code>                    bool
+    <strong>runsInEnvironment</strong>(string $environment)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the event runs in the given environment.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$environment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_runsInMaintenanceMode">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_runsInMaintenanceMode"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L319">line 319</a></div>
+        <code>                    bool
+    <strong>runsInMaintenanceMode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the event runs in maintenance mode.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cron">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_cron"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L330">line 330</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>cron</strong>(string $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The Cron expression representing the event's frequency.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hourly">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_hourly"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L342">line 342</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>hourly</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run hourly.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_daily">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_daily"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L352">line 352</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>daily</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run daily.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_at">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_at"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L363">line 363</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>at</strong>(string $time)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the command at a given time.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$time</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dailyAt">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_dailyAt"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L374">line 374</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>dailyAt</strong>(string $time)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run daily at a given time (10:00, 19:30, etc).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$time</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_twiceDaily">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_twiceDaily"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L389">line 389</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>twiceDaily</strong>(int $first = 1, int $second = 13)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run twice daily.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$first</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$second</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_weekdays">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_weekdays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L402">line 402</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>weekdays</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run only on weekdays.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mondays">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_mondays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L412">line 412</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>mondays</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run only on Mondays.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tuesdays">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_tuesdays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L422">line 422</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>tuesdays</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run only on Tuesdays.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wednesdays">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_wednesdays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L432">line 432</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>wednesdays</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run only on Wednesdays.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_thursdays">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_thursdays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L442">line 442</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>thursdays</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run only on Thursdays.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fridays">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_fridays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L452">line 452</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>fridays</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run only on Fridays.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saturdays">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_saturdays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L462">line 462</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>saturdays</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run only on Saturdays.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sundays">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_sundays"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L472">line 472</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>sundays</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run only on Sundays.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_weekly">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_weekly"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L482">line 482</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>weekly</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run weekly.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_weeklyOn">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_weeklyOn"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L494">line 494</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>weeklyOn</strong>(int $day, string $time = &#039;0:0&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run weekly on a given day and time.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$day</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$time</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_monthly">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_monthly"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L506">line 506</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>monthly</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run monthly.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_monthlyOn">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_monthlyOn"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L518">line 518</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>monthlyOn</strong>(int $day = 1, string $time = &#039;0:0&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run monthly on a given day and time.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$day</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$time</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_quarterly">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_quarterly"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L530">line 530</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>quarterly</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run quarterly.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_yearly">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_yearly"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L540">line 540</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>yearly</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run yearly.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_everyMinute">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_everyMinute"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L550">line 550</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>everyMinute</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run every minute.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_everyFiveMinutes">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_everyFiveMinutes"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L560">line 560</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>everyFiveMinutes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run every five minutes.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_everyTenMinutes">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_everyTenMinutes"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L570">line 570</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>everyTenMinutes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run every ten minutes.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_everyThirtyMinutes">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_everyThirtyMinutes"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L580">line 580</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>everyThirtyMinutes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Schedule the event to run every thirty minutes.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_days">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_days"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L591">line 591</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>days</strong>(array|mixed $days)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the days of the week the command should run on.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|mixed</td>
+                <td>$days</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_runInBackground">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_runInBackground"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L603">line 603</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>runInBackground</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>State that the command should run in background.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_timezone">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_timezone"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L616">line 616</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>timezone</strong>(<a target="_blank" href="http://php.net/DateTimeZone">DateTimeZone</a>|string $timezone)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the timezone the date should be evaluated on.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTimeZone">DateTimeZone</a>|string</td>
+                <td>$timezone</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_user">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_user"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L629">line 629</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>user</strong>(string $user)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set which user the command should run as.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_environments">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_environments"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L642">line 642</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>environments</strong>(array|mixed $environments)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Limit the environments the command should run in.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|mixed</td>
+                <td>$environments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_evenInMaintenanceMode">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_evenInMaintenanceMode"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L654">line 654</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>evenInMaintenanceMode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>State that the command should run even in maintenance mode.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withoutOverlapping">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/CallbackEvent.php#L90">line 90</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>withoutOverlapping</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Do not allow the event to overlap each other.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/LogicException">LogicException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_when">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_when"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L681">line 681</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>when</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a callback to further filter the schedule.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_skip">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_skip"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L694">line 694</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>skip</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a callback to further filter the schedule.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendOutputTo">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_sendOutputTo"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L708">line 708</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>sendOutputTo</strong>(string $location, bool $append = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send the output of the command to a given location.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$location</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$append</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendOutputTo">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_appendOutputTo"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L723">line 723</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>appendOutputTo</strong>(string $location)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append the output of the command to a given location.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$location</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_emailOutputTo">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_emailOutputTo"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L737">line 737</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>emailOutputTo</strong>(array|mixed $addresses, bool $onlyIfOutputExists = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>E-mail the results of the scheduled operation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|mixed</td>
+                <td>$addresses</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$onlyIfOutputExists</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/LogicException">LogicException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_emailWrittenOutputTo">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_emailWrittenOutputTo"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L758">line 758</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>emailWrittenOutputTo</strong>(array|mixed $addresses)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>E-mail the results of the scheduled operation if it produces output.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|mixed</td>
+                <td>$addresses</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/LogicException">LogicException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_emailOutput">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_emailOutput"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L771">line 771</a></div>
+        <code>            protected        void
+    <strong>emailOutput</strong>(<a href="../../../Illuminate/Contracts/Mail/Mailer.html"><abbr title="Illuminate\Contracts\Mail\Mailer">Mailer</abbr></a> $mailer, array $addresses, bool $onlyIfOutputExists = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>E-mail the output of the event to the recipients.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Contracts/Mail/Mailer.html"><abbr title="Illuminate\Contracts\Mail\Mailer">Mailer</abbr></a></td>
+                <td>$mailer</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$addresses</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$onlyIfOutputExists</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEmailSubject">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_getEmailSubject"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L793">line 793</a></div>
+        <code>            protected        string
+    <strong>getEmailSubject</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the e-mail subject line for output results.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pingBefore">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_pingBefore"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L808">line 808</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>pingBefore</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a callback to ping a given URL before the job runs.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_before">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_before"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L821">line 821</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>before</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a callback to be called before the operation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_thenPing">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_thenPing"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L834">line 834</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>thenPing</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a callback to ping a given URL after the job runs.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_after">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_after"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L847">line 847</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>after</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a callback to be called after the operation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_then">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_then"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L858">line 858</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>then</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a callback to be called after the operation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_name">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_name"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L871">line 871</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>name</strong>(string $description)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the human-friendly description of the event.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$description</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_description">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_description"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L882">line 882</a></div>
+        <code>                    <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>description</strong>(string $description)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the human-friendly description of the event.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$description</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_spliceIntoPosition">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_spliceIntoPosition"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L896">line 896</a></div>
+        <code>            protected        <abbr title="Illuminate\Console\Scheduling\$this">$this</abbr>
+    <strong>spliceIntoPosition</strong>(int $position, string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Splice the given value into the given position of the expression.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$position</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Console\Scheduling\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSummaryForDisplay">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/CallbackEvent.php#L118">line 118</a></div>
+        <code>                    string
+    <strong>getSummaryForDisplay</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the summary of the event for display.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpression">
+        <div class="location">in <a href="../../../Illuminate/Console/Scheduling/Event.html#method_getExpression"><abbr title="Illuminate\Console\Scheduling\Event">Event</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/Event.php#L924">line 924</a></div>
+        <code>                    string
+    <strong>getExpression</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the Cron expression for the event.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeMutex">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Console/Scheduling/CallbackEvent.php#L76">line 76</a></div>
+        <code>            protected        void
+    <strong>removeMutex</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove the mutex file from disk.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

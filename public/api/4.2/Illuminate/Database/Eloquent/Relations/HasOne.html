@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Eloquent\Relations\HasOne | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Eloquent_Relations_HasOne" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Database.html">Database</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Database/Eloquent.html">Eloquent</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Database/Eloquent/Relations.html">Relations</a></li><li class="backslash">\</li><li>HasOne</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            HasOne
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>HasOne</strong>        extends <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a>        (<a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOne.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_query">
+                                        protected                                        <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </td>
+                <td>$query</td>
+                <td class="last">The Eloquent query builder instance.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#property_query"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_parent">
+                                        protected                                        <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </td>
+                <td>$parent</td>
+                <td class="last">The parent model instance.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#property_parent"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_related">
+                                        protected                                        <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </td>
+                <td>$related</td>
+                <td class="last">The related model instance.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#property_related"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_constraints">
+                    static                    protected                                        bool
+                </td>
+                <td>$constraints</td>
+                <td class="last">Indicates if the relation is adding constraints.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#property_constraints"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_foreignKey">
+                                        protected                                        string
+                </td>
+                <td>$foreignKey</td>
+                <td class="last">The foreign key of the parent model.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#property_foreignKey"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_localKey">
+                                        protected                                        string
+                </td>
+                <td>$localKey</td>
+                <td class="last">The local key of the parent model.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#property_localKey"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query, <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $parent, string $foreignKey, string $localKey)
+        
+                                            <p>Create a new has many relationship instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method___construct"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addConstraints">addConstraints</a>()
+        
+                                            <p>Set the base constraints on the relation query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_addConstraints"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addEagerConstraints">addEagerConstraints</a>(array $models)
+        
+                                            <p>Set the constraints for an eager load of the relation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_addEagerConstraints"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initRelation">initRelation</a>(array $models, string $relation)
+        
+                                            <p>Initialize the relation on a set of models.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_match">match</a>(array $models, <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a> $results, string $relation)
+        
+                                            <p>Match the eagerly loaded results to their parents.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResults">getResults</a>()
+        
+                                            <p>Get the results of the relationship.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEager">getEager</a>()
+        
+                                            <p>Get the relationship for eager loading.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getEager"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_touch">touch</a>()
+        
+                                            <p>Touch all of the related models for the relationship.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_touch"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rawUpdate">rawUpdate</a>(array $attributes = array())
+        
+                                            <p>Run a raw update against the base query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_rawUpdate"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRelationCountQuery">getRelationCountQuery</a>(<a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query, <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $parent)
+        
+                                            <p>Add the constraints for a relationship count query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getRelationCountQuery"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_noConstraints">noConstraints</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Run a callback with constraints disabled on the relation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_noConstraints"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getKeys">getKeys</a>(array $models, string $key = null)
+        
+                                            <p>Get all of the primary keys for an array of models.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getKeys"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQuery">getQuery</a>()
+        
+                                            <p>Get the underlying query for the relation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getQuery"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseQuery">getBaseQuery</a>()
+        
+                                            <p>Get the base query builder driving the Eloquent builder.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getBaseQuery"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParent">getParent</a>()
+        
+                                            <p>Get the parent model of the relation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getParent"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQualifiedParentKeyName">getQualifiedParentKeyName</a>()
+        
+                                            <p>Get the fully qualified parent key name.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_getQualifiedParentKeyName"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRelated">getRelated</a>()
+        
+                                            <p>Get the related model of the relation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getRelated"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createdAt">createdAt</a>()
+        
+                                            <p>Get the name of the "created at" column.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_createdAt"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updatedAt">updatedAt</a>()
+        
+                                            <p>Get the name of the "updated at" column.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_updatedAt"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_relatedUpdatedAt">relatedUpdatedAt</a>()
+        
+                                            <p>Get the name of the related model's "updated at" column.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_relatedUpdatedAt"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wrap">wrap</a>(string $value)
+        
+                                            <p>Wrap the given value with the parent query's grammar.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_wrap"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $parameters)
+        
+                                            <p>Handle dynamic method calls to the relationship.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method___call"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchOne">matchOne</a>(array $models, <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a> $results, string $relation)
+        
+                                            <p>Match the eagerly loaded results to their single parents.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_matchOne"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchMany">matchMany</a>(array $models, <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a> $results, string $relation)
+        
+                                            <p>Match the eagerly loaded results to their many parents.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_matchMany"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_matchOneOrMany">matchOneOrMany</a>(array $models, <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a> $results, string $relation, string $type)
+        
+                                            <p>Match the eagerly loaded results to their many parents.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_matchOneOrMany"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRelationValue">getRelationValue</a>(array $dictionary, string $key, string $type)
+        
+                                            <p>Get the value of a relationship by one or many type.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_getRelationValue"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildDictionary">buildDictionary</a>(<a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a> $results)
+        
+                                            <p>Build model dictionary keyed by the relation's foreign key.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_buildDictionary"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_save">save</a>(<a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model)
+        
+                                            <p>Attach a model instance to the parent model.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_save"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saveMany">saveMany</a>(array $models)
+        
+                                            <p>Attach an array of models to the parent instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_saveMany"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_create">create</a>(array $attributes)
+        
+                                            <p>Create a new instance of the related model.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_create"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createMany">createMany</a>(array $records)
+        
+                                            <p>Create an array of new instances of the related model.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_createMany"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_update">update</a>(array $attributes)
+        
+                                            <p>Perform an update on all the related models.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_update"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHasCompareKey">getHasCompareKey</a>()
+        
+                                            <p>Get the key for comparing against the parent key in "has" query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_getHasCompareKey"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getForeignKey">getForeignKey</a>()
+        
+                                            <p>Get the foreign key for the relationship.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_getForeignKey"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPlainForeignKey">getPlainForeignKey</a>()
+        
+                                            <p>Get the plain foreign key.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_getPlainForeignKey"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParentKey">getParentKey</a>()
+        
+                                            <p>Get the key value of the parent's local key.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_getParentKey"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method___construct"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L32">line 32</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query, <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $parent, string $foreignKey, string $localKey)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new has many relationship instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$foreignKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$localKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addConstraints">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_addConstraints"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L45">line 45</a></div>
+        <code>                    void
+    <strong>addConstraints</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the base constraints on the relation query.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addEagerConstraints">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_addEagerConstraints"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L59">line 59</a></div>
+        <code>                    void
+    <strong>addEagerConstraints</strong>(array $models)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the constraints for an eager load of the relation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initRelation">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOne.php#L24">line 24</a></div>
+        <code>                    array
+    <strong>initRelation</strong>(array $models, string $relation)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initialize the relation on a set of models.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_match">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOne.php#L42">line 42</a></div>
+        <code>                    array
+    <strong>match</strong>(array $models, <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a> $results, string $relation)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match the eagerly loaded results to their parents.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a></td>
+                <td>$results</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResults">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOne.php#L12">line 12</a></div>
+        <code>                    mixed
+    <strong>getResults</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the results of the relationship.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEager">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getEager"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L101">line 101</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>
+    <strong>getEager</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the relationship for eager loading.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_touch">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_touch"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L111">line 111</a></div>
+        <code>                    void
+    <strong>touch</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Touch all of the related models for the relationship.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rawUpdate">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_rawUpdate"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L124">line 124</a></div>
+        <code>                    int
+    <strong>rawUpdate</strong>(array $attributes = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run a raw update against the base query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelationCountQuery">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getRelationCountQuery"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L136">line 136</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>getRelationCountQuery</strong>(<a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query, <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $parent)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the constraints for a relationship count query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_noConstraints">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_noConstraints"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L151">line 151</a></div>
+        <code>        static            mixed
+    <strong>noConstraints</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run a callback with constraints disabled on the relation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getKeys">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getKeys"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L172">line 172</a></div>
+        <code>            protected        array
+    <strong>getKeys</strong>(array $models, string $key = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all of the primary keys for an array of models.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQuery">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getQuery"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L186">line 186</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>getQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the underlying query for the relation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseQuery">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getBaseQuery"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L196">line 196</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+    <strong>getBaseQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the base query builder driving the Eloquent builder.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParent">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getParent"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L206">line 206</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+    <strong>getParent</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the parent model of the relation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQualifiedParentKeyName">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_getQualifiedParentKeyName"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L286">line 286</a></div>
+        <code>                    string
+    <strong>getQualifiedParentKeyName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the fully qualified parent key name.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelated">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_getRelated"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L226">line 226</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+    <strong>getRelated</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the related model of the relation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createdAt">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_createdAt"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L236">line 236</a></div>
+        <code>                    string
+    <strong>createdAt</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the name of the "created at" column.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updatedAt">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_updatedAt"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L246">line 246</a></div>
+        <code>                    string
+    <strong>updatedAt</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the name of the "updated at" column.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_relatedUpdatedAt">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_relatedUpdatedAt"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L256">line 256</a></div>
+        <code>                    string
+    <strong>relatedUpdatedAt</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the name of the related model's "updated at" column.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrap">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method_wrap"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L267">line 267</a></div>
+        <code>                    string
+    <strong>wrap</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrap the given value with the parent query's grammar.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/Relation.html#method___call"><abbr title="Illuminate\Database\Eloquent\Relations\Relation">Relation</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/Relation.php#L279">line 279</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Handle dynamic method calls to the relationship.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchOne">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_matchOne"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L72">line 72</a></div>
+        <code>                    array
+    <strong>matchOne</strong>(array $models, <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a> $results, string $relation)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match the eagerly loaded results to their single parents.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a></td>
+                <td>$results</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchMany">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_matchMany"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L85">line 85</a></div>
+        <code>                    array
+    <strong>matchMany</strong>(array $models, <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a> $results, string $relation)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match the eagerly loaded results to their many parents.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a></td>
+                <td>$results</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchOneOrMany">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_matchOneOrMany"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L99">line 99</a></div>
+        <code>            protected        array
+    <strong>matchOneOrMany</strong>(array $models, <a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a> $results, string $relation, string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Match the eagerly loaded results to their many parents.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a></td>
+                <td>$results</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelationValue">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_getRelationValue"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L129">line 129</a></div>
+        <code>            protected        mixed
+    <strong>getRelationValue</strong>(array $dictionary, string $key, string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the value of a relationship by one or many type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$dictionary</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildDictionary">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_buildDictionary"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L142">line 142</a></div>
+        <code>            protected        array
+    <strong>buildDictionary</strong>(<a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a> $results)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build model dictionary keyed by the relation's foreign key.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a></td>
+                <td>$results</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_save">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_save"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L165">line 165</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+    <strong>save</strong>(<a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attach a model instance to the parent model.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+                <td>$model</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveMany">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_saveMany"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L178">line 178</a></div>
+        <code>                    array
+    <strong>saveMany</strong>(array $models)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attach an array of models to the parent instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_create">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_create"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L191">line 191</a></div>
+        <code>                    <a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+    <strong>create</strong>(array $attributes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new instance of the related model.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createMany">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_createMany"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L211">line 211</a></div>
+        <code>                    array
+    <strong>createMany</strong>(array $records)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create an array of new instances of the related model.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$records</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_update">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_update"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L229">line 229</a></div>
+        <code>                    int
+    <strong>update</strong>(array $attributes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Perform an update on all the related models.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHasCompareKey">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_getHasCompareKey"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L244">line 244</a></div>
+        <code>                    string
+    <strong>getHasCompareKey</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the key for comparing against the parent key in "has" query.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getForeignKey">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_getForeignKey"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L254">line 254</a></div>
+        <code>                    string
+    <strong>getForeignKey</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the foreign key for the relationship.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPlainForeignKey">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_getPlainForeignKey"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L264">line 264</a></div>
+        <code>                    string
+    <strong>getPlainForeignKey</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the plain foreign key.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParentKey">
+        <div class="location">in <a href="../../../../Illuminate/Database/Eloquent/Relations/HasOneOrMany.html#method_getParentKey"><abbr title="Illuminate\Database\Eloquent\Relations\HasOneOrMany">HasOneOrMany</abbr></a> at         <a href="https://github.com/laravel/framework/blob/4.2/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php#L276">line 276</a></div>
+        <code>                    mixed
+    <strong>getParentKey</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the key value of the parent's local key.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Query\JoinClause | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Query_JoinClause" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Database.html">Database</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Database/Query.html">Query</a></li><li class="backslash">\</li><li>JoinClause</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            JoinClause
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>JoinClause</strong>        (<a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Database/Query/JoinClause.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_type">
+                                                                                string
+                </td>
+                <td>$type</td>
+                <td class="last">The type of join being performed.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_table">
+                                                                                string
+                </td>
+                <td>$table</td>
+                <td class="last">The table the join clause is joining to.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_clauses">
+                                                                                array
+                </td>
+                <td>$clauses</td>
+                <td class="last">The "on" clauses for the join.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_bindings">
+                                                                                array
+                </td>
+                <td>$bindings</td>
+                <td class="last">The "on" bindings for the join.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $type, string $table)
+        
+                                            <p>Create a new join clause instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Query\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_on">on</a>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $first, string|null $operator = null, string|null $second = null, string $boolean = &#039;and&#039;, bool $where = false)
+        
+                                            <p>Add an "on" clause to the join.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orOn">orOn</a>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $first, string|null $operator = null, string|null $second = null)
+        
+                                            <p>Add an "or on" clause to the join.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_where">where</a>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $first, string|null $operator = null, string|null $second = null, string $boolean = &#039;and&#039;)
+        
+                                            <p>Add an "on where" clause to the join.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orWhere">orWhere</a>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $first, string|null $operator = null, string|null $second = null)
+        
+                                            <p>Add an "or on where" clause to the join.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereNull">whereNull</a>(string $column, string $boolean = &#039;and&#039;)
+        
+                                            <p>Add an "on where is null" clause to the join.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orWhereNull">orWhereNull</a>(string $column)
+        
+                                            <p>Add an "or on where is null" clause to the join.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereNotNull">whereNotNull</a>(string $column, string $boolean = &#039;and&#039;)
+        
+                                            <p>Add an "on where is not null" clause to the join.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orWhereNotNull">orWhereNotNull</a>(string $column)
+        
+                                            <p>Add an "or on where is not null" clause to the join.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereIn">whereIn</a>(string $column, array $values)
+        
+                                            <p>Add an "on where in (.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereNotIn">whereNotIn</a>(string $column, array $values)
+        
+                                            <p>Add an "on where not in (.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orWhereIn">orWhereIn</a>(string $column, array $values)
+        
+                                            <p>Add an "or on where in (.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orWhereNotIn">orWhereNotIn</a>(string $column, array $values)
+        
+                                            <p>Add an "or on where not in (.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_nest">nest</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback, string $boolean = &#039;and&#039;)
+        
+                                            <p>Add a nested where statement to the query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Database/Query/JoinClause.php#L45">line 45</a></div>
+        <code>                    void
+    <strong>__construct</strong>(string $type, string $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new join clause instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_on">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Database/Query/JoinClause.php#L72">line 72</a></div>
+        <code>                    <abbr title="Illuminate\Database\Query\$this">$this</abbr>
+    <strong>on</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $first, string|null $operator = null, string|null $second = null, string $boolean = &#039;and&#039;, bool $where = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an "on" clause to the join.</p>                    <p>On clauses can be chained, e.g.</p>
+
+<p>$join->on('contacts.user_id', '=', 'users.id')
+      ->on('contacts.info_id', '=', 'info.id')</p>
+
+<p>will produce the following SQL:</p>
+
+<p>on <code>contacts</code>.<code>user_id</code> = <code>users</code>.<code>id</code>  and <code>contacts</code>.<code>info_id</code> = <code>info</code>.<code>id</code></p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a>|string</td>
+                <td>$first</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$second</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$boolean</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Query\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orOn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Database/Query/JoinClause.php#L105">line 105</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+    <strong>orOn</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $first, string|null $operator = null, string|null $second = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an "or on" clause to the join.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a>|string</td>
+                <td>$first</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$second</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_where">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Database/Query/JoinClause.php#L119">line 119</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+    <strong>where</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $first, string|null $operator = null, string|null $second = null, string $boolean = &#039;and&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an "on where" clause to the join.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a>|string</td>
+                <td>$first</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$second</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$boolean</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orWhere">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Database/Query/JoinClause.php#L132">line 132</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+    <strong>orWhere</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a>|string $first, string|null $operator = null, string|null $second = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an "or on where" clause to the join.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a>|string</td>
+                <td>$first</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$second</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereNull">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Database/Query/JoinClause.php#L144">line 144</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+    <strong>whereNull</strong>(string $column, string $boolean = &#039;and&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an "on where is null" clause to the join.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$boolean</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orWhereNull">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Database/Query/JoinClause.php#L155">line 155</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+    <strong>orWhereNull</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an "or on where is null" clause to the join.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereNotNull">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Database/Query/JoinClause.php#L167">line 167</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+    <strong>whereNotNull</strong>(string $column, string $boolean = &#039;and&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an "on where is not null" clause to the join.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$boolean</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orWhereNotNull">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Database/Query/JoinClause.php#L178">line 178</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+    <strong>orWhereNotNull</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an "or on where is not null" clause to the join.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereIn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Database/Query/JoinClause.php#L190">line 190</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+    <strong>whereIn</strong>(string $column, array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an "on where in (.</p>                    <p>..)" clause to the join.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereNotIn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Database/Query/JoinClause.php#L202">line 202</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+    <strong>whereNotIn</strong>(string $column, array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an "on where not in (.</p>                    <p>..)" clause to the join.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orWhereIn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Database/Query/JoinClause.php#L214">line 214</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+    <strong>orWhereIn</strong>(string $column, array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an "or on where in (.</p>                    <p>..)" clause to the join.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orWhereNotIn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Database/Query/JoinClause.php#L226">line 226</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+    <strong>orWhereNotIn</strong>(string $column, array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an "or on where not in (.</p>                    <p>..)" clause to the join.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nest">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Database/Query/JoinClause.php#L238">line 238</a></div>
+        <code>                    <a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a>
+    <strong>nest</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $callback, string $boolean = &#039;and&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a nested where statement to the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$boolean</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Database/Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Notifications\ChannelManager | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Notifications_ChannelManager" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Illuminate/Notifications.html">Notifications</a></li><li class="backslash">\</li><li>ChannelManager</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            ChannelManager
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>ChannelManager</strong>        extends <a href="../../Illuminate/Support/Manager.html"><abbr title="Illuminate\Support\Manager">Manager</abbr></a>        implements
+        <a href="../../Illuminate/Contracts/Notifications/Dispatcher.html"><abbr title="Illuminate\Contracts\Notifications\Dispatcher">Dispatcher</abbr></a>, <a href="../../Illuminate/Contracts/Notifications/Factory.html"><abbr title="Illuminate\Contracts\Notifications\Factory">Factory</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_app">
+                                        protected                                        <a href="../../Illuminate/Foundation/Application.html"><abbr title="Illuminate\Foundation\Application">Application</abbr></a>
+                </td>
+                <td>$app</td>
+                <td class="last">The application instance.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Support/Manager.html#property_app"><abbr title="Illuminate\Support\Manager">Manager</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_customCreators">
+                                        protected                                        array
+                </td>
+                <td>$customCreators</td>
+                <td class="last">The registered custom driver creators.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Support/Manager.html#property_customCreators"><abbr title="Illuminate\Support\Manager">Manager</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_drivers">
+                                        protected                                        array
+                </td>
+                <td>$drivers</td>
+                <td class="last">The array of created "drivers".</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Support/Manager.html#property_drivers"><abbr title="Illuminate\Support\Manager">Manager</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultChannel">
+                                        protected                                        string
+                </td>
+                <td>$defaultChannel</td>
+                <td class="last">The default channel used to deliver messages.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../Illuminate/Foundation/Application.html"><abbr title="Illuminate\Foundation\Application">Application</abbr></a> $app)
+        
+                                            <p>Create a new manager instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Manager.html#method___construct"><abbr title="Illuminate\Support\Manager">Manager</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultDriver">getDefaultDriver</a>()
+        
+                                            <p>Get the default channel driver name.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_driver">driver</a>(string $driver = null)
+        
+                                            <p>Get a driver instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Manager.html#method_driver"><abbr title="Illuminate\Support\Manager">Manager</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createDriver">createDriver</a>(string $driver)
+        
+                                            <p>Create a new driver instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_callCustomCreator">callCustomCreator</a>(string $driver)
+        
+                                            <p>Call a custom driver creator.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Manager.html#method_callCustomCreator"><abbr title="Illuminate\Support\Manager">Manager</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Support\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_extend">extend</a>(string $driver, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Register a custom driver creator Closure.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Manager.html#method_extend"><abbr title="Illuminate\Support\Manager">Manager</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDrivers">getDrivers</a>()
+        
+                                            <p>Get all of the created "drivers".</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Manager.html#method_getDrivers"><abbr title="Illuminate\Support\Manager">Manager</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $parameters)
+        
+                                            <p>Dynamically call the default driver instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Manager.html#method___call"><abbr title="Illuminate\Support\Manager">Manager</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_send">send</a>(<a href="../../Illuminate/Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>|array|mixed $notifiables, mixed $notification)
+        
+                                            <p>Send the given notification to the given notifiable entities.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendNow">sendNow</a>(<a href="../../Illuminate/Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>|array|mixed $notifiables, mixed $notification, array $channels = null)
+        
+                                            <p>Send the given notification immediately.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_shouldSendNotification">shouldSendNotification</a>(mixed $notifiable, mixed $notification, string $channel)
+        
+                                            <p>Determines if the notification can be sent.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_queueNotification">queueNotification</a>(mixed $notifiables, <abbr title="Illuminate\Notifications\array[\Illuminate\Notifications\Channels\Notification]">Notification]</abbr> $notification)
+        
+                                            <p>Queue the given notification instances.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formatNotifiables">formatNotifiables</a>(mixed $notifiables)
+        
+                                            <p>Format the notifiables into a Collection / array if necessary.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_channel">channel</a>(string|null $name = null)
+        
+                                            <p>Get a channel instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Notifications/Channels/DatabaseChannel.html"><abbr title="Illuminate\Notifications\Channels\DatabaseChannel">DatabaseChannel</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createDatabaseDriver">createDatabaseDriver</a>()
+        
+                                            <p>Create an instance of the database driver.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Notifications/Channels/BroadcastChannel.html"><abbr title="Illuminate\Notifications\Channels\BroadcastChannel">BroadcastChannel</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createBroadcastDriver">createBroadcastDriver</a>()
+        
+                                            <p>Create an instance of the broadcast driver.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Notifications/Channels/MailChannel.html"><abbr title="Illuminate\Notifications\Channels\MailChannel">MailChannel</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createMailDriver">createMailDriver</a>()
+        
+                                            <p>Create an instance of the mail driver.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Notifications/Channels/NexmoSmsChannel.html"><abbr title="Illuminate\Notifications\Channels\NexmoSmsChannel">NexmoSmsChannel</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createNexmoDriver">createNexmoDriver</a>()
+        
+                                            <p>Create an instance of the Nexmo driver.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Notifications/Channels/SlackWebhookChannel.html"><abbr title="Illuminate\Notifications\Channels\SlackWebhookChannel">SlackWebhookChannel</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createSlackDriver">createSlackDriver</a>()
+        
+                                            <p>Create an instance of the Slack driver.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deliversVia">deliversVia</a>()
+        
+                                            <p>Get the default channel driver name.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deliverVia">deliverVia</a>(string $channel)
+        
+                                            <p>Set the default channel driver name.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../Illuminate/Support/Manager.html#method___construct"><abbr title="Illuminate\Support\Manager">Manager</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Support/Manager.php#L37">line 37</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../../Illuminate/Foundation/Application.html"><abbr title="Illuminate\Foundation\Application">Application</abbr></a> $app)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new manager instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Foundation/Application.html"><abbr title="Illuminate\Foundation\Application">Application</abbr></a></td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultDriver">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php#L245">line 245</a></div>
+        <code>                    string
+    <strong>getDefaultDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the default channel driver name.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_driver">
+        <div class="location">in <a href="../../Illuminate/Support/Manager.html#method_driver"><abbr title="Illuminate\Support\Manager">Manager</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Support/Manager.php#L55">line 55</a></div>
+        <code>                    mixed
+    <strong>driver</strong>(string $driver = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a driver instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$driver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createDriver">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php#L227">line 227</a></div>
+        <code>            protected        mixed
+    <strong>createDriver</strong>(string $driver)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new driver instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$driver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callCustomCreator">
+        <div class="location">in <a href="../../Illuminate/Support/Manager.html#method_callCustomCreator"><abbr title="Illuminate\Support\Manager">Manager</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Support/Manager.php#L99">line 99</a></div>
+        <code>            protected        mixed
+    <strong>callCustomCreator</strong>(string $driver)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Call a custom driver creator.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$driver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extend">
+        <div class="location">in <a href="../../Illuminate/Support/Manager.html#method_extend"><abbr title="Illuminate\Support\Manager">Manager</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Support/Manager.php#L111">line 111</a></div>
+        <code>                    <abbr title="Illuminate\Support\$this">$this</abbr>
+    <strong>extend</strong>(string $driver, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a custom driver creator Closure.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$driver</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Support\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDrivers">
+        <div class="location">in <a href="../../Illuminate/Support/Manager.html#method_getDrivers"><abbr title="Illuminate\Support\Manager">Manager</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Support/Manager.php#L123">line 123</a></div>
+        <code>                    array
+    <strong>getDrivers</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all of the created "drivers".</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../Illuminate/Support/Manager.html#method___call"><abbr title="Illuminate\Support\Manager">Manager</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Support/Manager.php#L135">line 135</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Dynamically call the default driver instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_send">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php#L35">line 35</a></div>
+        <code>                    void
+    <strong>send</strong>(<a href="../../Illuminate/Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>|array|mixed $notifiables, mixed $notification)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send the given notification to the given notifiable entities.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>|array|mixed</td>
+                <td>$notifiables</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$notification</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendNow">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php#L53">line 53</a></div>
+        <code>                    void
+    <strong>sendNow</strong>(<a href="../../Illuminate/Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>|array|mixed $notifiables, mixed $notification, array $channels = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send the given notification immediately.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>|array|mixed</td>
+                <td>$notifiables</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$notification</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$channels</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldSendNotification">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php#L96">line 96</a></div>
+        <code>            protected        bool
+    <strong>shouldSendNotification</strong>(mixed $notifiable, mixed $notification, string $channel)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determines if the notification can be sent.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$notifiable</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$notification</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$channel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_queueNotification">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php#L110">line 110</a></div>
+        <code>            protected        void
+    <strong>queueNotification</strong>(mixed $notifiables, <abbr title="Illuminate\Notifications\array[\Illuminate\Notifications\Channels\Notification]">Notification]</abbr> $notification)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Queue the given notification instances.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$notifiables</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Notifications\array[\Illuminate\Notifications\Channels\Notification]">Notification]</abbr></td>
+                <td>$notification</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatNotifiables">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php#L142">line 142</a></div>
+        <code>            protected        <a href="../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>|array
+    <strong>formatNotifiables</strong>(mixed $notifiables)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Format the notifiables into a Collection / array if necessary.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$notifiables</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_channel">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php#L158">line 158</a></div>
+        <code>                    mixed
+    <strong>channel</strong>(string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a channel instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createDatabaseDriver">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php#L168">line 168</a></div>
+        <code>            protected        <a href="../../Illuminate/Notifications/Channels/DatabaseChannel.html"><abbr title="Illuminate\Notifications\Channels\DatabaseChannel">DatabaseChannel</abbr></a>
+    <strong>createDatabaseDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create an instance of the database driver.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Notifications/Channels/DatabaseChannel.html"><abbr title="Illuminate\Notifications\Channels\DatabaseChannel">DatabaseChannel</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createBroadcastDriver">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php#L178">line 178</a></div>
+        <code>            protected        <a href="../../Illuminate/Notifications/Channels/BroadcastChannel.html"><abbr title="Illuminate\Notifications\Channels\BroadcastChannel">BroadcastChannel</abbr></a>
+    <strong>createBroadcastDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create an instance of the broadcast driver.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Notifications/Channels/BroadcastChannel.html"><abbr title="Illuminate\Notifications\Channels\BroadcastChannel">BroadcastChannel</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createMailDriver">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php#L188">line 188</a></div>
+        <code>            protected        <a href="../../Illuminate/Notifications/Channels/MailChannel.html"><abbr title="Illuminate\Notifications\Channels\MailChannel">MailChannel</abbr></a>
+    <strong>createMailDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create an instance of the mail driver.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Notifications/Channels/MailChannel.html"><abbr title="Illuminate\Notifications\Channels\MailChannel">MailChannel</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createNexmoDriver">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php#L198">line 198</a></div>
+        <code>            protected        <a href="../../Illuminate/Notifications/Channels/NexmoSmsChannel.html"><abbr title="Illuminate\Notifications\Channels\NexmoSmsChannel">NexmoSmsChannel</abbr></a>
+    <strong>createNexmoDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create an instance of the Nexmo driver.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Notifications/Channels/NexmoSmsChannel.html"><abbr title="Illuminate\Notifications\Channels\NexmoSmsChannel">NexmoSmsChannel</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createSlackDriver">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php#L214">line 214</a></div>
+        <code>            protected        <a href="../../Illuminate/Notifications/Channels/SlackWebhookChannel.html"><abbr title="Illuminate\Notifications\Channels\SlackWebhookChannel">SlackWebhookChannel</abbr></a>
+    <strong>createSlackDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create an instance of the Slack driver.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Notifications/Channels/SlackWebhookChannel.html"><abbr title="Illuminate\Notifications\Channels\SlackWebhookChannel">SlackWebhookChannel</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deliversVia">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php#L255">line 255</a></div>
+        <code>                    string
+    <strong>deliversVia</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the default channel driver name.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deliverVia">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.3/src/Illuminate/Notifications/ChannelManager.php#L266">line 266</a></div>
+        <code>                    void
+    <strong>deliverVia</strong>(string $channel)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the default channel driver name.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

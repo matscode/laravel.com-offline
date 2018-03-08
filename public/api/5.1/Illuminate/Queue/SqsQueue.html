@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Queue\SqsQueue | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Queue_SqsQueue" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Illuminate/Queue.html">Queue</a></li><li class="backslash">\</li><li>SqsQueue</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            SqsQueue
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>SqsQueue</strong>        extends <a href="../../Illuminate/Queue/Queue.html"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a>        implements
+        <a href="../../Illuminate/Contracts/Queue/Queue.html"><abbr title="Illuminate\Contracts\Queue\Queue">Queue</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/SqsQueue.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_container">
+                                        protected                                        <a href="../../Illuminate/Container/Container.html"><abbr title="Illuminate\Container\Container">Container</abbr></a>
+                </td>
+                <td>$container</td>
+                <td class="last">The IoC container instance.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Queue/Queue.html#property_container"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sqs">
+                                        protected                                        <abbr title="Aws\Sqs\SqsClient">SqsClient</abbr>
+                </td>
+                <td>$sqs</td>
+                <td class="last">The Amazon SQS instance.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_default">
+                                        protected                                        string
+                </td>
+                <td>$default</td>
+                <td class="last">The name of the default tube.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_prefix">
+                                        protected                                        string
+                </td>
+                <td>$prefix</td>
+                <td class="last">The sqs prefix url.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_jobCreator">
+                                        protected                                        callable|null
+                </td>
+                <td>$jobCreator</td>
+                <td class="last">The job creator callback.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pushOn">pushOn</a>(string $queue, string $job, mixed $data = &#039;&#039;)
+        
+                                            <p>Push a new job onto the queue.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/Queue.html#method_pushOn"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_laterOn">laterOn</a>(string $queue, <a target="_blank" href="http://php.net/DateTime">DateTime</a>|int $delay, string $job, mixed $data = &#039;&#039;)
+        
+                                            <p>Push a new job onto the queue after a delay.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/Queue.html#method_laterOn"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_marshal">marshal</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>Marshal a push queue request and fire the job.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/Queue.html#method_marshal"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_bulk">bulk</a>(array $jobs, mixed $data = &#039;&#039;, string $queue = null)
+        
+                                            <p>Push an array of jobs onto the queue.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/Queue.html#method_bulk"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createPayload">createPayload</a>(string $job, mixed $data = &#039;&#039;, string $queue = null)
+        
+                                            <p>Create a payload string from the given job and data.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/Queue.html#method_createPayload"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createPlainPayload">createPlainPayload</a>(string $job, mixed $data)
+        
+                                            <p>Create a typical, "plain" queue payload array.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/Queue.html#method_createPlainPayload"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepareQueueableEntities">prepareQueueableEntities</a>(mixed $data)
+        
+                                            <p>Prepare any queueable entities for storage in the queue.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/Queue.html#method_prepareQueueableEntities"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepareQueueableEntity">prepareQueueableEntity</a>(mixed $value)
+        
+                                            <p>Prepare a single queueable entity for storage on the queue.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/Queue.html#method_prepareQueueableEntity"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createClosurePayload">createClosurePayload</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $job, mixed $data)
+        
+                                            <p>Create a payload string for the given Closure job.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/Queue.html#method_createClosurePayload"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMeta">setMeta</a>(string $payload, string $key, string $value)
+        
+                                            <p>Set additional meta on a payload string.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/Queue.html#method_setMeta"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSeconds">getSeconds</a>(<a target="_blank" href="http://php.net/DateTime">DateTime</a>|int $delay)
+        
+                                            <p>Calculate the number of seconds with the given delay.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/Queue.html#method_getSeconds"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTime">getTime</a>()
+        
+                                            <p>Get the current UNIX timestamp.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/Queue.html#method_getTime"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setContainer">setContainer</a>(<a href="../../Illuminate/Container/Container.html"><abbr title="Illuminate\Container\Container">Container</abbr></a> $container)
+        
+                                            <p>Set the IoC container instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/Queue.html#method_setContainer"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEncrypter">setEncrypter</a>(<a href="../../Illuminate/Contracts/Encryption/Encrypter.html"><abbr title="Illuminate\Contracts\Encryption\Encrypter">Encrypter</abbr></a> $crypt)
+        
+                                            <p>Set the encrypter instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Queue/Queue.html#method_setEncrypter"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<abbr title="Aws\Sqs\SqsClient">SqsClient</abbr> $sqs, string $default, string $prefix = &#039;&#039;)
+        
+                                            <p>Create a new Amazon SQS queue instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_push">push</a>(string $job, mixed $data = &#039;&#039;, string $queue = null)
+        
+                                            <p>Push a new job onto the queue.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pushRaw">pushRaw</a>(string $payload, string $queue = null, array $options = [])
+        
+                                            <p>Push a raw payload onto the queue.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_later">later</a>(<a target="_blank" href="http://php.net/DateTime">DateTime</a>|int $delay, string $job, mixed $data = &#039;&#039;, string $queue = null)
+        
+                                            <p>Push a new job onto the queue after a delay.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Contracts/Queue/Job.html"><abbr title="Illuminate\Contracts\Queue\Job">Job</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pop">pop</a>(string $queue = null)
+        
+                                            <p>Pop the next job off of the queue.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Queue\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createJobsUsing">createJobsUsing</a>(callable $callback)
+        
+                                            <p>Define the job creator callback for the connection.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQueue">getQueue</a>(string|null $queue)
+        
+                                            <p>Get the queue or return the default.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Aws\Sqs\SqsClient">SqsClient</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSqs">getSqs</a>()
+        
+                                            <p>Get the underlying SQS instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_pushOn">
+        <div class="location">in <a href="../../Illuminate/Queue/Queue.html#method_pushOn"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/Queue.php#L31">line 31</a></div>
+        <code>                    mixed
+    <strong>pushOn</strong>(string $queue, string $job, mixed $data = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Push a new job onto the queue.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$queue</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$job</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_laterOn">
+        <div class="location">in <a href="../../Illuminate/Queue/Queue.html#method_laterOn"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/Queue.php#L45">line 45</a></div>
+        <code>                    mixed
+    <strong>laterOn</strong>(string $queue, <a target="_blank" href="http://php.net/DateTime">DateTime</a>|int $delay, string $job, mixed $data = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Push a new job onto the queue after a delay.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$queue</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTime">DateTime</a>|int</td>
+                <td>$delay</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$job</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_marshal">
+        <div class="location">in <a href="../../Illuminate/Queue/Queue.html#method_marshal"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/Queue.php#L57">line 57</a></div>
+        <code>                    
+    <strong>marshal</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>since</td>
+                    <td>version 5.1.</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>Marshal a push queue request and fire the job.</p>                                                </div>
+                <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bulk">
+        <div class="location">in <a href="../../Illuminate/Queue/Queue.html#method_bulk"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/Queue.php#L70">line 70</a></div>
+        <code>                    mixed
+    <strong>bulk</strong>(array $jobs, mixed $data = &#039;&#039;, string $queue = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Push an array of jobs onto the queue.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$jobs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$queue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createPayload">
+        <div class="location">in <a href="../../Illuminate/Queue/Queue.html#method_createPayload"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/Queue.php#L85">line 85</a></div>
+        <code>            protected        string
+    <strong>createPayload</strong>(string $job, mixed $data = &#039;&#039;, string $queue = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a payload string from the given job and data.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$job</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$queue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createPlainPayload">
+        <div class="location">in <a href="../../Illuminate/Queue/Queue.html#method_createPlainPayload"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/Queue.php#L106">line 106</a></div>
+        <code>            protected        array
+    <strong>createPlainPayload</strong>(string $job, mixed $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a typical, "plain" queue payload array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$job</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareQueueableEntities">
+        <div class="location">in <a href="../../Illuminate/Queue/Queue.html#method_prepareQueueableEntities"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/Queue.php#L117">line 117</a></div>
+        <code>            protected        mixed
+    <strong>prepareQueueableEntities</strong>(mixed $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prepare any queueable entities for storage in the queue.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareQueueableEntity">
+        <div class="location">in <a href="../../Illuminate/Queue/Queue.html#method_prepareQueueableEntity"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/Queue.php#L142">line 142</a></div>
+        <code>            protected        mixed
+    <strong>prepareQueueableEntity</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prepare a single queueable entity for storage on the queue.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createClosurePayload">
+        <div class="location">in <a href="../../Illuminate/Queue/Queue.html#method_createClosurePayload"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/Queue.php#L158">line 158</a></div>
+        <code>            protected        string
+    <strong>createClosurePayload</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $job, mixed $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a payload string for the given Closure job.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$job</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMeta">
+        <div class="location">in <a href="../../Illuminate/Queue/Queue.html#method_setMeta"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/Queue.php#L173">line 173</a></div>
+        <code>            protected        string
+    <strong>setMeta</strong>(string $payload, string $key, string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set additional meta on a payload string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$payload</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSeconds">
+        <div class="location">in <a href="../../Illuminate/Queue/Queue.html#method_getSeconds"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/Queue.php#L186">line 186</a></div>
+        <code>            protected        int
+    <strong>getSeconds</strong>(<a target="_blank" href="http://php.net/DateTime">DateTime</a>|int $delay)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Calculate the number of seconds with the given delay.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTime">DateTime</a>|int</td>
+                <td>$delay</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTime">
+        <div class="location">in <a href="../../Illuminate/Queue/Queue.html#method_getTime"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/Queue.php#L200">line 200</a></div>
+        <code>            protected        int
+    <strong>getTime</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the current UNIX timestamp.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setContainer">
+        <div class="location">in <a href="../../Illuminate/Queue/Queue.html#method_setContainer"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/Queue.php#L211">line 211</a></div>
+        <code>                    void
+    <strong>setContainer</strong>(<a href="../../Illuminate/Container/Container.html"><abbr title="Illuminate\Container\Container">Container</abbr></a> $container)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the IoC container instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Container/Container.html"><abbr title="Illuminate\Container\Container">Container</abbr></a></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEncrypter">
+        <div class="location">in <a href="../../Illuminate/Queue/Queue.html#method_setEncrypter"><abbr title="Illuminate\Queue\Queue">Queue</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/Queue.php#L222">line 222</a></div>
+        <code>                    void
+    <strong>setEncrypter</strong>(<a href="../../Illuminate/Contracts/Encryption/Encrypter.html"><abbr title="Illuminate\Contracts\Encryption\Encrypter">Encrypter</abbr></a> $crypt)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the encrypter instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Encryption/Encrypter.html"><abbr title="Illuminate\Contracts\Encryption\Encrypter">Encrypter</abbr></a></td>
+                <td>$crypt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/SqsQueue.php#L47">line 47</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<abbr title="Aws\Sqs\SqsClient">SqsClient</abbr> $sqs, string $default, string $prefix = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new Amazon SQS queue instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Aws\Sqs\SqsClient">SqsClient</abbr></td>
+                <td>$sqs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_push">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/SqsQueue.php#L62">line 62</a></div>
+        <code>                    mixed
+    <strong>push</strong>(string $job, mixed $data = &#039;&#039;, string $queue = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Push a new job onto the queue.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$job</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$queue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pushRaw">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/SqsQueue.php#L75">line 75</a></div>
+        <code>                    mixed
+    <strong>pushRaw</strong>(string $payload, string $queue = null, array $options = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Push a raw payload onto the queue.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$payload</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$queue</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_later">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/SqsQueue.php#L91">line 91</a></div>
+        <code>                    mixed
+    <strong>later</strong>(<a target="_blank" href="http://php.net/DateTime">DateTime</a>|int $delay, string $job, mixed $data = &#039;&#039;, string $queue = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Push a new job onto the queue after a delay.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTime">DateTime</a>|int</td>
+                <td>$delay</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$job</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$queue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pop">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/SqsQueue.php#L109">line 109</a></div>
+        <code>                    <a href="../../Illuminate/Contracts/Queue/Job.html"><abbr title="Illuminate\Contracts\Queue\Job">Job</abbr></a>|null
+    <strong>pop</strong>(string $queue = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pop the next job off of the queue.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$queue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Contracts/Queue/Job.html"><abbr title="Illuminate\Contracts\Queue\Job">Job</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createJobsUsing">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/SqsQueue.php#L132">line 132</a></div>
+        <code>                    <abbr title="Illuminate\Queue\$this">$this</abbr>
+    <strong>createJobsUsing</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Define the job creator callback for the connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Queue\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQueue">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/SqsQueue.php#L145">line 145</a></div>
+        <code>                    string
+    <strong>getQueue</strong>(string|null $queue)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the queue or return the default.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$queue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSqs">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/SqsQueue.php#L161">line 161</a></div>
+        <code>                    <abbr title="Aws\Sqs\SqsClient">SqsClient</abbr>
+    <strong>getSqs</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the underlying SQS instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Aws\Sqs\SqsClient">SqsClient</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

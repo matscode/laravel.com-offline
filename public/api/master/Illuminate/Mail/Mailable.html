@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Mail\Mailable | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Mail_Mailable" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Illuminate/Mail.html">Mail</a></li><li class="backslash">\</li><li>Mailable</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Mailable
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Mailable</strong>        implements
+        <a href="../../Illuminate/Contracts/Mail/Mailable.html"><abbr title="Illuminate\Contracts\Mail\Mailable">Mailable</abbr></a>, <a href="../../Illuminate/Contracts/Support/Renderable.html"><abbr title="Illuminate\Contracts\Support\Renderable">Renderable</abbr></a>        (<a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php">View source</a>)
+</p>
+
+        
+    
+
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Illuminate/Support/Traits/Localizable.html"><abbr title="Illuminate\Support\Traits\Localizable">Localizable</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_locale">
+                                                                                string
+                </td>
+                <td>$locale</td>
+                <td class="last">The locale of the message.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_from">
+                                                                                array
+                </td>
+                <td>$from</td>
+                <td class="last">The person the message is from.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_to">
+                                                                                array
+                </td>
+                <td>$to</td>
+                <td class="last">The "to" recipients of the message.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cc">
+                                                                                array
+                </td>
+                <td>$cc</td>
+                <td class="last">The "cc" recipients of the message.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_bcc">
+                                                                                array
+                </td>
+                <td>$bcc</td>
+                <td class="last">The "bcc" recipients of the message.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_replyTo">
+                                                                                array
+                </td>
+                <td>$replyTo</td>
+                <td class="last">The "reply to" recipients of the message.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_subject">
+                                                                                string
+                </td>
+                <td>$subject</td>
+                <td class="last">The subject of the message.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_markdown">
+                                        protected                                        string
+                </td>
+                <td>$markdown</td>
+                <td class="last">The Markdown template for the message (if applicable).</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_html">
+                                        protected                                        string
+                </td>
+                <td>$html</td>
+                <td class="last">The HTML to use for the message.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_view">
+                                                                                string
+                </td>
+                <td>$view</td>
+                <td class="last">The view to use for the message.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_textView">
+                                                                                string
+                </td>
+                <td>$textView</td>
+                <td class="last">The plain text view to use for the message.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_viewData">
+                                                                                array
+                </td>
+                <td>$viewData</td>
+                <td class="last">The view data for the message.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_attachments">
+                                                                                array
+                </td>
+                <td>$attachments</td>
+                <td class="last">The attachments for the message.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_rawAttachments">
+                                                                                array
+                </td>
+                <td>$rawAttachments</td>
+                <td class="last">The raw attachments for the message.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_callbacks">
+                                                                                array
+                </td>
+                <td>$callbacks</td>
+                <td class="last">The callbacks for the message.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withLocale">withLocale</a>(string $locale, <a href="../../Illuminate/Contracts/Translation/Translator.html"><abbr title="Illuminate\Contracts\Translation\Translator">Translator</abbr></a> $translator, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Run the callback with the given locale.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/Traits/Localizable.html#method_withLocale"><abbr title="Illuminate\Support\Traits\Localizable">Localizable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_send">send</a>(<a href="../../Illuminate/Contracts/Mail/Mailer.html"><abbr title="Illuminate\Contracts\Mail\Mailer">Mailer</abbr></a> $mailer)
+        
+                                            <p>Send the message using the given mailer.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_queue">queue</a>(<a href="../../Illuminate/Contracts/Queue/Factory.html"><abbr title="Illuminate\Contracts\Queue\Factory">Factory</abbr></a> $queue)
+        
+                                            <p>Queue the message for sending.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_later">later</a>(<a target="_blank" href="http://php.net/DateTime">DateTime</a>|int $delay, <a href="../../Illuminate/Contracts/Queue/Factory.html"><abbr title="Illuminate\Contracts\Queue\Factory">Factory</abbr></a> $queue)
+        
+                                            <p>Deliver the queued message after the given delay.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_render">render</a>()
+        
+                                            <p>Render the mailable into a view.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildView">buildView</a>()
+        
+                                            <p>Build the view for the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildMarkdownView">buildMarkdownView</a>()
+        
+                                            <p>Build the Markdown view for the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildViewData">buildViewData</a>()
+        
+                                            <p>Build the view data for the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildMarkdownText">buildMarkdownText</a>(<a href="../../Illuminate/Mail/Markdown.html"><abbr title="Illuminate\Mail\Markdown">Markdown</abbr></a> $markdown, array $data)
+        
+                                            <p>Build the text view for a Markdown message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildFrom">buildFrom</a>(<a href="../../Illuminate/Mail/Message.html"><abbr title="Illuminate\Mail\Message">Message</abbr></a> $message)
+        
+                                            <p>Add the sender to the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildRecipients">buildRecipients</a>(<a href="../../Illuminate/Mail/Message.html"><abbr title="Illuminate\Mail\Message">Message</abbr></a> $message)
+        
+                                            <p>Add all of the recipients to the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildSubject">buildSubject</a>(<a href="../../Illuminate/Mail/Message.html"><abbr title="Illuminate\Mail\Message">Message</abbr></a> $message)
+        
+                                            <p>Set the subject for the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildAttachments">buildAttachments</a>(<a href="../../Illuminate/Mail/Message.html"><abbr title="Illuminate\Mail\Message">Message</abbr></a> $message)
+        
+                                            <p>Add all of the attachments to the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_runCallbacks">runCallbacks</a>(<a href="../../Illuminate/Mail/Message.html"><abbr title="Illuminate\Mail\Message">Message</abbr></a> $message)
+        
+                                            <p>Run the callbacks for the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_locale">locale</a>(string $locale)
+        
+                                            <p>Set the locale of the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_priority">priority</a>(int $level = 3)
+        
+                                            <p>Set the priority of this message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_from">from</a>(object|array|string $address, string|null $name = null)
+        
+                                            <p>Set the sender of the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasFrom">hasFrom</a>(object|array|string $address, string|null $name = null)
+        
+                                            <p>Determine if the given recipient is set on the mailable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_to">to</a>(object|array|string $address, string|null $name = null)
+        
+                                            <p>Set the recipients of the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasTo">hasTo</a>(object|array|string $address, string|null $name = null)
+        
+                                            <p>Determine if the given recipient is set on the mailable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cc">cc</a>(object|array|string $address, string|null $name = null)
+        
+                                            <p>Set the recipients of the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasCc">hasCc</a>(object|array|string $address, string|null $name = null)
+        
+                                            <p>Determine if the given recipient is set on the mailable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_bcc">bcc</a>(object|array|string $address, string|null $name = null)
+        
+                                            <p>Set the recipients of the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasBcc">hasBcc</a>(object|array|string $address, string|null $name = null)
+        
+                                            <p>Determine if the given recipient is set on the mailable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_replyTo">replyTo</a>(object|array|string $address, string|null $name = null)
+        
+                                            <p>Set the "reply to" address of the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasReplyTo">hasReplyTo</a>(object|array|string $address, string|null $name = null)
+        
+                                            <p>Determine if the given recipient is set on the mailable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAddress">setAddress</a>(object|array|string $address, string|null $name = null, string $property = &#039;to&#039;)
+        
+                                            <p>Set the recipients of the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addressesToArray">addressesToArray</a>(object|array|string $address, string|null $name)
+        
+                                            <p>Convert the given recipient arguments to an array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_normalizeRecipient">normalizeRecipient</a>(mixed $recipient)
+        
+                                            <p>Convert the given recipient into an object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasRecipient">hasRecipient</a>(object|array|string $address, string|null $name = null, string $property = &#039;to&#039;)
+        
+                                            <p>Determine if the given recipient is set on the mailable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_subject">subject</a>(string $subject)
+        
+                                            <p>Set the subject of the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_markdown">markdown</a>(string $view, array $data = [])
+        
+                                            <p>Set the Markdown template for the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_view">view</a>(string $view, array $data = [])
+        
+                                            <p>Set the view and view data for the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_html">html</a>(string $html)
+        
+                                            <p>Set the rendered HTML content for the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_text">text</a>(string $textView, array $data = [])
+        
+                                            <p>Set the plain text view for the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_with">with</a>(string|array $key, mixed $value = null)
+        
+                                            <p>Set the view data for the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_attach">attach</a>(string $file, array $options = [])
+        
+                                            <p>Attach a file to the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_attachData">attachData</a>(string $data, string $name, array $options = [])
+        
+                                            <p>Attach in-memory data as an attachment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withSwiftMessage">withSwiftMessage</a>(callable $callback)
+        
+                                            <p>Register a callback to be called with the Swift message instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $parameters)
+        
+                                            <p>Dynamically bind parameters to the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_withLocale">
+        <div class="location">in <a href="../../Illuminate/Support/Traits/Localizable.html#method_withLocale"><abbr title="Illuminate\Support\Traits\Localizable">Localizable</abbr></a> at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Support/Traits/Localizable.php#L15">line 15</a></div>
+        <code>                    bool
+    <strong>withLocale</strong>(string $locale, <a href="../../Illuminate/Contracts/Translation/Translator.html"><abbr title="Illuminate\Contracts\Translation\Translator">Translator</abbr></a> $translator, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run the callback with the given locale.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Translation/Translator.html"><abbr title="Illuminate\Contracts\Translation\Translator">Translator</abbr></a></td>
+                <td>$translator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_send">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L134">line 134</a></div>
+        <code>                    void
+    <strong>send</strong>(<a href="../../Illuminate/Contracts/Mail/Mailer.html"><abbr title="Illuminate\Contracts\Mail\Mailer">Mailer</abbr></a> $mailer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send the message using the given mailer.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Mail/Mailer.html"><abbr title="Illuminate\Contracts\Mail\Mailer">Mailer</abbr></a></td>
+                <td>$mailer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_queue">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L157">line 157</a></div>
+        <code>                    mixed
+    <strong>queue</strong>(<a href="../../Illuminate/Contracts/Queue/Factory.html"><abbr title="Illuminate\Contracts\Queue\Factory">Factory</abbr></a> $queue)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Queue the message for sending.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Queue/Factory.html"><abbr title="Illuminate\Contracts\Queue\Factory">Factory</abbr></a></td>
+                <td>$queue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_later">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L179">line 179</a></div>
+        <code>                    mixed
+    <strong>later</strong>(<a target="_blank" href="http://php.net/DateTime">DateTime</a>|int $delay, <a href="../../Illuminate/Contracts/Queue/Factory.html"><abbr title="Illuminate\Contracts\Queue\Factory">Factory</abbr></a> $queue)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Deliver the queued message after the given delay.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTime">DateTime</a>|int</td>
+                <td>$delay</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Queue/Factory.html"><abbr title="Illuminate\Contracts\Queue\Factory">Factory</abbr></a></td>
+                <td>$queue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L195">line 195</a></div>
+        <code>                    string
+    <strong>render</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render the mailable into a view.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildView">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L209">line 209</a></div>
+        <code>            protected        array|string
+    <strong>buildView</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build the view for the message.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildMarkdownView">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L236">line 236</a></div>
+        <code>            protected        array
+    <strong>buildMarkdownView</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build the Markdown view for the message.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildViewData">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L257">line 257</a></div>
+        <code>                    array
+    <strong>buildViewData</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build the view data for the message.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildMarkdownText">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L277">line 277</a></div>
+        <code>            protected        string
+    <strong>buildMarkdownText</strong>(<a href="../../Illuminate/Mail/Markdown.html"><abbr title="Illuminate\Mail\Markdown">Markdown</abbr></a> $markdown, array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build the text view for a Markdown message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Mail/Markdown.html"><abbr title="Illuminate\Mail\Markdown">Markdown</abbr></a></td>
+                <td>$markdown</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildFrom">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L289">line 289</a></div>
+        <code>            protected        <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>buildFrom</strong>(<a href="../../Illuminate/Mail/Message.html"><abbr title="Illuminate\Mail\Message">Message</abbr></a> $message)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the sender to the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Mail/Message.html"><abbr title="Illuminate\Mail\Message">Message</abbr></a></td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildRecipients">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L304">line 304</a></div>
+        <code>            protected        <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>buildRecipients</strong>(<a href="../../Illuminate/Mail/Message.html"><abbr title="Illuminate\Mail\Message">Message</abbr></a> $message)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add all of the recipients to the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Mail/Message.html"><abbr title="Illuminate\Mail\Message">Message</abbr></a></td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildSubject">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L321">line 321</a></div>
+        <code>            protected        <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>buildSubject</strong>(<a href="../../Illuminate/Mail/Message.html"><abbr title="Illuminate\Mail\Message">Message</abbr></a> $message)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the subject for the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Mail/Message.html"><abbr title="Illuminate\Mail\Message">Message</abbr></a></td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildAttachments">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L338">line 338</a></div>
+        <code>            protected        <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>buildAttachments</strong>(<a href="../../Illuminate/Mail/Message.html"><abbr title="Illuminate\Mail\Message">Message</abbr></a> $message)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add all of the attachments to the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Mail/Message.html"><abbr title="Illuminate\Mail\Message">Message</abbr></a></td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_runCallbacks">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L359">line 359</a></div>
+        <code>            protected        <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>runCallbacks</strong>(<a href="../../Illuminate/Mail/Message.html"><abbr title="Illuminate\Mail\Message">Message</abbr></a> $message)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run the callbacks for the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Mail/Message.html"><abbr title="Illuminate\Mail\Message">Message</abbr></a></td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_locale">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L374">line 374</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>locale</strong>(string $locale)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the locale of the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_priority">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L389">line 389</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>priority</strong>(int $level = 3)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the priority of this message.</p>                    <p>The value is an integer where 1 is the highest priority and 5 is the lowest.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$level</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_from">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L405">line 405</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>from</strong>(object|array|string $address, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the sender of the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasFrom">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L417">line 417</a></div>
+        <code>                    bool
+    <strong>hasFrom</strong>(object|array|string $address, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given recipient is set on the mailable.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_to">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L429">line 429</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>to</strong>(object|array|string $address, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the recipients of the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasTo">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L441">line 441</a></div>
+        <code>                    bool
+    <strong>hasTo</strong>(object|array|string $address, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given recipient is set on the mailable.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cc">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L453">line 453</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>cc</strong>(object|array|string $address, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the recipients of the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasCc">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L465">line 465</a></div>
+        <code>                    bool
+    <strong>hasCc</strong>(object|array|string $address, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given recipient is set on the mailable.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bcc">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L477">line 477</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>bcc</strong>(object|array|string $address, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the recipients of the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasBcc">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L489">line 489</a></div>
+        <code>                    bool
+    <strong>hasBcc</strong>(object|array|string $address, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given recipient is set on the mailable.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replyTo">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L501">line 501</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>replyTo</strong>(object|array|string $address, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the "reply to" address of the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasReplyTo">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L513">line 513</a></div>
+        <code>                    bool
+    <strong>hasReplyTo</strong>(object|array|string $address, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given recipient is set on the mailable.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAddress">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L528">line 528</a></div>
+        <code>            protected        <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>setAddress</strong>(object|array|string $address, string|null $name = null, string $property = &#039;to&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the recipients of the message.</p>                    <p>All recipients are stored internally as [['name' => ?, 'address' => ?]]</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addressesToArray">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L549">line 549</a></div>
+        <code>            protected        array
+    <strong>addressesToArray</strong>(object|array|string $address, string|null $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert the given recipient arguments to an array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalizeRecipient">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L564">line 564</a></div>
+        <code>            protected        object
+    <strong>normalizeRecipient</strong>(mixed $recipient)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert the given recipient into an object.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$recipient</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasRecipient">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L583">line 583</a></div>
+        <code>            protected        bool
+    <strong>hasRecipient</strong>(object|array|string $address, string|null $name = null, string $property = &#039;to&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given recipient is set on the mailable.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_subject">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L609">line 609</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>subject</strong>(string $subject)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the subject of the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_markdown">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L623">line 623</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>markdown</strong>(string $view, array $data = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the Markdown template for the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_view">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L638">line 638</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>view</strong>(string $view, array $data = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the view and view data for the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_html">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L652">line 652</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>html</strong>(string $html)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the rendered HTML content for the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$html</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_text">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L666">line 666</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>text</strong>(string $textView, array $data = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the plain text view for the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$textView</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_with">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L681">line 681</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>with</strong>(string|array $key, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the view data for the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attach">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L699">line 699</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>attach</strong>(string $file, array $options = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attach a file to the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attachData">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L714">line 714</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>attachData</strong>(string $data, string $name, array $options = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attach in-memory data as an attachment.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withSwiftMessage">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L727">line 727</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>withSwiftMessage</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a callback to be called with the Swift message instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Mail/Mailable.php#L743">line 743</a></div>
+        <code>                    <abbr title="Illuminate\Mail\$this">$this</abbr>
+    <strong>__call</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Dynamically bind parameters to the message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Mail\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

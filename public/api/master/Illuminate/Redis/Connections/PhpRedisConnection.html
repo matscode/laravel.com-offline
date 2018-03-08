@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Redis\Connections\PhpRedisConnection | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Redis_Connections_PhpRedisConnection" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Redis.html">Redis</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Redis/Connections.html">Connections</a></li><li class="backslash">\</li><li>PhpRedisConnection</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            PhpRedisConnection
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>PhpRedisConnection</strong>        extends <a href="../../../Illuminate/Redis/Connections/Connection.html"><abbr title="Illuminate\Redis\Connections\Connection">Connection</abbr></a>        (<a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_client">
+                                        protected                                        <abbr title="Predis\Client">Client</abbr>
+                </td>
+                <td>$client</td>
+                <td class="last">The Predis client.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Redis/Connections/Connection.html#property_client"><abbr title="Illuminate\Redis\Connections\Connection">Connection</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_name">
+                                        protected                                        string|null
+                </td>
+                <td>$name</td>
+                <td class="last">The Redis connection name.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Redis/Connections/Connection.html#property_name"><abbr title="Illuminate\Redis\Connections\Connection">Connection</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createSubscription">createSubscription</a>(array|string $channels, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback, string $method = &#039;subscribe&#039;)
+        
+                                            <p>Subscribe to a set of given channels for messages.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Redis/Limiters/ConcurrencyLimiterBuilder.html"><abbr title="Illuminate\Redis\Limiters\ConcurrencyLimiterBuilder">ConcurrencyLimiterBuilder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_funnel">funnel</a>(string $name)
+        
+                                            <p>Funnel a callback for a maximum number of simultaneous executions.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Redis/Connections/Connection.html#method_funnel"><abbr title="Illuminate\Redis\Connections\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Redis/Limiters/DurationLimiterBuilder.html"><abbr title="Illuminate\Redis\Limiters\DurationLimiterBuilder">DurationLimiterBuilder</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_throttle">throttle</a>(string $name)
+        
+                                            <p>Throttle a callback for a maximum number of executions over a given duration.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Redis/Connections/Connection.html#method_throttle"><abbr title="Illuminate\Redis\Connections\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_client">client</a>()
+        
+                                            <p>Get the underlying Redis client.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Redis/Connections/Connection.html#method_client"><abbr title="Illuminate\Redis\Connections\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_subscribe">subscribe</a>(array|string $channels, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Subscribe to a set of given channels for messages.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_psubscribe">psubscribe</a>(array|string $channels, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Subscribe to a set of given channels with wildcards.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_command">command</a>(string $method, array $parameters = [])
+        
+                                            <p>Run a command against the Redis database.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Redis/Connections/Connection.html#method_command"><abbr title="Illuminate\Redis\Connections\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getName">getName</a>()
+        
+                                            <p>Get the connection name.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Redis/Connections/Connection.html#method_getName"><abbr title="Illuminate\Redis\Connections\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Redis\Connections\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setName">setName</a>(string $name)
+        
+                                            <p>Set the connections name.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Redis/Connections/Connection.html#method_setName"><abbr title="Illuminate\Redis\Connections\Connection">Connection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $parameters)
+        
+                                            <p>Pass other method calls down to the underlying client.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(Redis $client)
+        
+                                            <p>Create a new PhpRedis connection.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(string $key)
+        
+                                            <p>Returns the value of the given key.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mget">mget</a>(array $keys)
+        
+                                            <p>Get the values of all the given keys.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_exists">exists</a>(<abbr title="Illuminate\Redis\Connections\dynamic">dynamic</abbr> $keys)
+        
+                                            <p>Determine if the given keys exist.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_set">set</a>(string $key, mixed $value, string|null $expireResolution = null, int|null $expireTTL = null, string|null $flag = null)
+        
+                                            <p>Set the string value in argument as value of the key.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setnx">setnx</a>(string $key, string $value)
+        
+                                            <p>Set the given key if it doesn't exist.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hmget">hmget</a>(string $key, <abbr title="Illuminate\Redis\Connections\dynamic">dynamic</abbr> $dictionary)
+        
+                                            <p>Get the value of the given hash fields.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hmset">hmset</a>(string $key, <abbr title="Illuminate\Redis\Connections\dynamic">dynamic</abbr> $dictionary)
+        
+                                            <p>Set the given hash fields to their respective values.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hsetnx">hsetnx</a>(string $hash, string $key, string $value)
+        
+                                            <p>Set the given hash field if it doesn't exist.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|<abbr title="Illuminate\Redis\Connections\false">false</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lrem">lrem</a>(string $key, int $count, $value)
+        
+                                            <p>Removes the first count occurrences of the value element from the list.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|<abbr title="Illuminate\Redis\Connections\false">false</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_spop">spop</a>(string $key, int|null $count = null)
+        
+                                            <p>Removes and returns a random element from the set value at key.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_zadd">zadd</a>(string $key, <abbr title="Illuminate\Redis\Connections\dynamic">dynamic</abbr> $dictionary)
+        
+                                            <p>Add one or more members to a sorted set or update its score if it already exists.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_zrangebyscore">zrangebyscore</a>(string $key, mixed $min, mixed $max, array $options = [])
+        
+                                            <p>Return elements with score between $min and $max.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_zrevrangebyscore">zrevrangebyscore</a>(string $key, mixed $min, mixed $max, array $options = [])
+        
+                                            <p>Return elements with score between $min and $max.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_zinterstore">zinterstore</a>(string $output, array $keys, array $options = [])
+        
+                                            <p>Find the intersection between sets and store in a new set.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_zunionstore">zunionstore</a>(string $output, array $keys, array $options = [])
+        
+                                            <p>Find the union between sets and store in a new set.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    Redis|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pipeline">pipeline</a>(callable $callback = null)
+        
+                                            <p>Execute commands in a pipeline.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    Redis|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_transaction">transaction</a>(callable $callback = null)
+        
+                                            <p>Execute commands in a transaction.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_evalsha">evalsha</a>(string $script, int $numkeys, mixed $arguments)
+        
+                                            <p>Evaluate a LUA script serverside, from the SHA1 hash of the script instead of the script itself.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_eval">eval</a>(string $script, int $numberOfKeys, <abbr title="Illuminate\Redis\Connections\dynamic">dynamic</abbr> $arguments)
+        
+                                            <p>Evaluate a script and retunr its result.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_executeRaw">executeRaw</a>(array $parameters)
+        
+                                            <p>Execute a raw command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_disconnect">disconnect</a>()
+        
+                                            <p>Disconnects from the Redis instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_createSubscription">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L359">line 359</a></div>
+        <code>                    void
+    <strong>createSubscription</strong>(array|string $channels, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback, string $method = &#039;subscribe&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Subscribe to a set of given channels for messages.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$channels</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_funnel">
+        <div class="location">in <a href="../../../Illuminate/Redis/Connections/Connection.html#method_funnel"><abbr title="Illuminate\Redis\Connections\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/Connection.php#L44">line 44</a></div>
+        <code>                    <a href="../../../Illuminate/Redis/Limiters/ConcurrencyLimiterBuilder.html"><abbr title="Illuminate\Redis\Limiters\ConcurrencyLimiterBuilder">ConcurrencyLimiterBuilder</abbr></a>
+    <strong>funnel</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Funnel a callback for a maximum number of simultaneous executions.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Redis/Limiters/ConcurrencyLimiterBuilder.html"><abbr title="Illuminate\Redis\Limiters\ConcurrencyLimiterBuilder">ConcurrencyLimiterBuilder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_throttle">
+        <div class="location">in <a href="../../../Illuminate/Redis/Connections/Connection.html#method_throttle"><abbr title="Illuminate\Redis\Connections\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/Connection.php#L55">line 55</a></div>
+        <code>                    <a href="../../../Illuminate/Redis/Limiters/DurationLimiterBuilder.html"><abbr title="Illuminate\Redis\Limiters\DurationLimiterBuilder">DurationLimiterBuilder</abbr></a>
+    <strong>throttle</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Throttle a callback for a maximum number of executions over a given duration.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Redis/Limiters/DurationLimiterBuilder.html"><abbr title="Illuminate\Redis\Limiters\DurationLimiterBuilder">DurationLimiterBuilder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_client">
+        <div class="location">in <a href="../../../Illuminate/Redis/Connections/Connection.html#method_client"><abbr title="Illuminate\Redis\Connections\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/Connection.php#L65">line 65</a></div>
+        <code>                    mixed
+    <strong>client</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the underlying Redis client.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_subscribe">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L330">line 330</a></div>
+        <code>                    void
+    <strong>subscribe</strong>(array|string $channels, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Subscribe to a set of given channels for messages.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$channels</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_psubscribe">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L344">line 344</a></div>
+        <code>                    void
+    <strong>psubscribe</strong>(array|string $channels, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Subscribe to a set of given channels with wildcards.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$channels</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_command">
+        <div class="location">in <a href="../../../Illuminate/Redis/Connections/Connection.html#method_command"><abbr title="Illuminate\Redis\Connections\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/Connection.php#L101">line 101</a></div>
+        <code>                    mixed
+    <strong>command</strong>(string $method, array $parameters = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run a command against the Redis database.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName">
+        <div class="location">in <a href="../../../Illuminate/Redis/Connections/Connection.html#method_getName"><abbr title="Illuminate\Redis\Connections\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/Connection.php#L111">line 111</a></div>
+        <code>                    string|null
+    <strong>getName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the connection name.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setName">
+        <div class="location">in <a href="../../../Illuminate/Redis/Connections/Connection.html#method_setName"><abbr title="Illuminate\Redis\Connections\Connection">Connection</abbr></a> at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/Connection.php#L122">line 122</a></div>
+        <code>                    <abbr title="Illuminate\Redis\Connections\$this">$this</abbr>
+    <strong>setName</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the connections name.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Redis\Connections\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L405">line 405</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pass other method calls down to the underlying client.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L19">line 19</a></div>
+        <code>                    void
+    <strong>__construct</strong>(Redis $client)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new PhpRedis connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Redis</td>
+                <td>$client</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L30">line 30</a></div>
+        <code>                    string|null
+    <strong>get</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the value of the given key.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mget">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L43">line 43</a></div>
+        <code>                    array
+    <strong>mget</strong>(array $keys)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the values of all the given keys.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_exists">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L56">line 56</a></div>
+        <code>                    int
+    <strong>exists</strong>(<abbr title="Illuminate\Redis\Connections\dynamic">dynamic</abbr> $keys)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given keys exist.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Redis\Connections\dynamic">dynamic</abbr></td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_set">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L75">line 75</a></div>
+        <code>                    bool
+    <strong>set</strong>(string $key, mixed $value, string|null $expireResolution = null, int|null $expireTTL = null, string|null $flag = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the string value in argument as value of the key.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$expireResolution</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$expireTTL</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setnx">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L91">line 91</a></div>
+        <code>                    int
+    <strong>setnx</strong>(string $key, string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the given key if it doesn't exist.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hmget">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L103">line 103</a></div>
+        <code>                    int
+    <strong>hmget</strong>(string $key, <abbr title="Illuminate\Redis\Connections\dynamic">dynamic</abbr> $dictionary)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the value of the given hash fields.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Redis\Connections\dynamic">dynamic</abbr></td>
+                <td>$dictionary</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hmset">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L119">line 119</a></div>
+        <code>                    int
+    <strong>hmset</strong>(string $key, <abbr title="Illuminate\Redis\Connections\dynamic">dynamic</abbr> $dictionary)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the given hash fields to their respective values.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Redis\Connections\dynamic">dynamic</abbr></td>
+                <td>$dictionary</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hsetnx">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L140">line 140</a></div>
+        <code>                    int
+    <strong>hsetnx</strong>(string $hash, string $key, string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the given hash field if it doesn't exist.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$hash</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lrem">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L153">line 153</a></div>
+        <code>                    int|<abbr title="Illuminate\Redis\Connections\false">false</abbr>
+    <strong>lrem</strong>(string $key, int $count, $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Removes the first count occurrences of the value element from the list.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td>$value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|<abbr title="Illuminate\Redis\Connections\false">false</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_spop">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L165">line 165</a></div>
+        <code>                    mixed|<abbr title="Illuminate\Redis\Connections\false">false</abbr>
+    <strong>spop</strong>(string $key, int|null $count = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Removes and returns a random element from the set value at key.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|<abbr title="Illuminate\Redis\Connections\false">false</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_zadd">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L177">line 177</a></div>
+        <code>                    int
+    <strong>zadd</strong>(string $key, <abbr title="Illuminate\Redis\Connections\dynamic">dynamic</abbr> $dictionary)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add one or more members to a sorted set or update its score if it already exists.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Redis\Connections\dynamic">dynamic</abbr></td>
+                <td>$dictionary</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_zrangebyscore">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L200">line 200</a></div>
+        <code>                    int
+    <strong>zrangebyscore</strong>(string $key, mixed $min, mixed $max, array $options = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return elements with score between $min and $max.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$min</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$max</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_zrevrangebyscore">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L221">line 221</a></div>
+        <code>                    int
+    <strong>zrevrangebyscore</strong>(string $key, mixed $min, mixed $max, array $options = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return elements with score between $min and $max.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$min</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$max</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_zinterstore">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L241">line 241</a></div>
+        <code>                    int
+    <strong>zinterstore</strong>(string $output, array $keys, array $options = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Find the intersection between sets and store in a new set.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$output</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_zunionstore">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L257">line 257</a></div>
+        <code>                    int
+    <strong>zunionstore</strong>(string $output, array $keys, array $options = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Find the union between sets and store in a new set.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$output</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pipeline">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L271">line 271</a></div>
+        <code>                    Redis|array
+    <strong>pipeline</strong>(callable $callback = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute commands in a pipeline.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>Redis|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_transaction">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L286">line 286</a></div>
+        <code>                    Redis|array
+    <strong>transaction</strong>(callable $callback = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute commands in a transaction.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>Redis|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_evalsha">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L303">line 303</a></div>
+        <code>                    mixed
+    <strong>evalsha</strong>(string $script, int $numkeys, mixed $arguments)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Evaluate a LUA script serverside, from the SHA1 hash of the script instead of the script itself.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$numkeys</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_eval">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L318">line 318</a></div>
+        <code>                    mixed
+    <strong>eval</strong>(string $script, int $numberOfKeys, <abbr title="Illuminate\Redis\Connections\dynamic">dynamic</abbr> $arguments)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Evaluate a script and retunr its result.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$numberOfKeys</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Redis\Connections\dynamic">dynamic</abbr></td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_executeRaw">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L370">line 370</a></div>
+        <code>                    mixed
+    <strong>executeRaw</strong>(array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute a raw command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disconnect">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/master/src/Illuminate/Redis/Connections/PhpRedisConnection.php#L380">line 380</a></div>
+        <code>                    void
+    <strong>disconnect</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Disconnects from the Redis instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

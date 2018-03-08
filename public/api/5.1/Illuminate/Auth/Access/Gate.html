@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Auth\Access\Gate | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Auth_Access_Gate" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Auth.html">Auth</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Auth/Access.html">Access</a></li><li class="backslash">\</li><li>Gate</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Gate
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Gate</strong>        implements
+        <a href="../../../Illuminate/Contracts/Auth/Access/Gate.html"><abbr title="Illuminate\Contracts\Auth\Access\Gate">Gate</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php">View source</a>)
+</p>
+
+        
+    
+
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Illuminate/Auth/Access/HandlesAuthorization.html"><abbr title="Illuminate\Auth\Access\HandlesAuthorization">HandlesAuthorization</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_container">
+                                        protected                                        <a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a>
+                </td>
+                <td>$container</td>
+                <td class="last">The container instance.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_userResolver">
+                                        protected                                        callable
+                </td>
+                <td>$userResolver</td>
+                <td class="last">The user resolver callable.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_abilities">
+                                        protected                                        array
+                </td>
+                <td>$abilities</td>
+                <td class="last">All of the defined abilities.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_policies">
+                                        protected                                        array
+                </td>
+                <td>$policies</td>
+                <td class="last">All of the defined policies.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_beforeCallbacks">
+                                        protected                                        array
+                </td>
+                <td>$beforeCallbacks</td>
+                <td class="last">All of the registered before callbacks.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_afterCallbacks">
+                                        protected                                        array
+                </td>
+                <td>$afterCallbacks</td>
+                <td class="last">All of the registered after callbacks.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Auth/Access/Response.html"><abbr title="Illuminate\Auth\Access\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_allow">allow</a>(string|null $message = null)
+        
+                                            <p>Create a new access response.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Auth/Access/HandlesAuthorization.html#method_allow"><abbr title="Illuminate\Auth\Access\HandlesAuthorization">HandlesAuthorization</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deny">deny</a>(string $message = &#039;This action is unauthorized.&#039;)
+        
+                                            <p>Throws an unauthorized exception.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Auth/Access/HandlesAuthorization.html#method_deny"><abbr title="Illuminate\Auth\Access\HandlesAuthorization">HandlesAuthorization</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container, callable $userResolver, array $abilities = [], array $policies = [], array $beforeCallbacks = [], array $afterCallbacks = [])
+        
+                                            <p>Create a new gate instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_has">has</a>(string $ability)
+        
+                                            <p>Determine if a given ability has been defined.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Contracts\Auth\Access\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_define">define</a>(string $ability, callable|string $callback)
+        
+                                            <p>Define a new ability.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/Closure">Closure</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildAbilityCallback">buildAbilityCallback</a>(string $callback)
+        
+                                            <p>Create the ability callback for a callback string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Contracts\Auth\Access\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_policy">policy</a>(string $class, string $policy)
+        
+                                            <p>Define a policy class for a given class type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Auth\Access\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_before">before</a>(callable $callback)
+        
+                                            <p>Register a callback to run before all Gate checks.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Auth\Access\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_after">after</a>(callable $callback)
+        
+                                            <p>Register a callback to run after all Gate checks.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_allows">allows</a>(string $ability, array|mixed $arguments = [])
+        
+                                            <p>Determine if the given ability should be granted for the current user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_denies">denies</a>(string $ability, array|mixed $arguments = [])
+        
+                                            <p>Determine if the given ability should be denied for the current user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_check">check</a>(string $ability, array|mixed $arguments = [])
+        
+                                            <p>Determine if the given ability should be granted for the current user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Auth/Access/Response.html"><abbr title="Illuminate\Auth\Access\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_authorize">authorize</a>(string $ability, array|mixed $arguments = [])
+        
+                                            <p>Determine if the given ability should be granted for the current user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_raw">raw</a>(string $ability, array|mixed $arguments = [])
+        
+                                            <p>Get the raw result for the given ability for the current user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_callAuthCallback">callAuthCallback</a>(<a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user, string $ability, array $arguments)
+        
+                                            <p>Resolve and call the appropriate authorization callback.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_callBeforeCallbacks">callBeforeCallbacks</a>(<a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user, string $ability, array $arguments)
+        
+                                            <p>Call all of the before callbacks and return if a result is given.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_callAfterCallbacks">callAfterCallbacks</a>(<a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user, string $ability, array $arguments, bool $result)
+        
+                                            <p>Call all of the after callbacks with check result.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    callable
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resolveAuthCallback">resolveAuthCallback</a>(<a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user, string $ability, array $arguments)
+        
+                                            <p>Resolve the callable for the given ability and arguments.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_firstArgumentCorrespondsToPolicy">firstArgumentCorrespondsToPolicy</a>(array $arguments)
+        
+                                            <p>Determine if the first argument in the array corresponds to a policy.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    callable
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resolvePolicyCallback">resolvePolicyCallback</a>(<a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user, string $ability, array $arguments)
+        
+                                            <p>Resolve the callback for a policy check.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPolicyFor">getPolicyFor</a>(object|string $class)
+        
+                                            <p>Get a policy instance for a given class.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resolvePolicy">resolvePolicy</a>(object|string $class)
+        
+                                            <p>Build a policy class instance of the given type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Auth/Access/Gate.html"><abbr title="Illuminate\Auth\Access\Gate">Gate</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_forUser">forUser</a>(<a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>|mixed $user)
+        
+                                            <p>Get a guard instance for the given user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resolveUser">resolveUser</a>()
+        
+                                            <p>Resolve the user from the user resolver.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_allow">
+        <div class="location">in <a href="../../../Illuminate/Auth/Access/HandlesAuthorization.html#method_allow"><abbr title="Illuminate\Auth\Access\HandlesAuthorization">HandlesAuthorization</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/HandlesAuthorization.php#L13">line 13</a></div>
+        <code>            protected        <a href="../../../Illuminate/Auth/Access/Response.html"><abbr title="Illuminate\Auth\Access\Response">Response</abbr></a>
+    <strong>allow</strong>(string|null $message = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new access response.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Auth/Access/Response.html"><abbr title="Illuminate\Auth\Access\Response">Response</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deny">
+        <div class="location">in <a href="../../../Illuminate/Auth/Access/HandlesAuthorization.html#method_deny"><abbr title="Illuminate\Auth\Access\HandlesAuthorization">HandlesAuthorization</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/HandlesAuthorization.php#L26">line 26</a></div>
+        <code>            protected        void
+    <strong>deny</strong>(string $message = &#039;This action is unauthorized.&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Throws an unauthorized exception.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Auth/Access/UnauthorizedException.html"><abbr title="Illuminate\Auth\Access\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L67">line 67</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container, callable $userResolver, array $abilities = [], array $policies = [], array $beforeCallbacks = [], array $afterCallbacks = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new gate instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$userResolver</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$abilities</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$policies</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$beforeCallbacks</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$afterCallbacks</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_has">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L83">line 83</a></div>
+        <code>                    bool
+    <strong>has</strong>(string $ability)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if a given ability has been defined.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ability</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_define">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L97">line 97</a></div>
+        <code>                    <abbr title="Illuminate\Contracts\Auth\Access\$this">$this</abbr>
+    <strong>define</strong>(string $ability, callable|string $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Define a new ability.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ability</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Contracts\Auth\Access\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildAbilityCallback">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L116">line 116</a></div>
+        <code>            protected        <a target="_blank" href="http://php.net/Closure">Closure</a>
+    <strong>buildAbilityCallback</strong>(string $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the ability callback for a callback string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_policy">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L132">line 132</a></div>
+        <code>                    <abbr title="Illuminate\Contracts\Auth\Access\$this">$this</abbr>
+    <strong>policy</strong>(string $class, string $policy)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Define a policy class for a given class type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$policy</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Contracts\Auth\Access\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_before">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L145">line 145</a></div>
+        <code>                    <abbr title="Illuminate\Auth\Access\$this">$this</abbr>
+    <strong>before</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a callback to run before all Gate checks.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Auth\Access\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_after">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L158">line 158</a></div>
+        <code>                    <abbr title="Illuminate\Auth\Access\$this">$this</abbr>
+    <strong>after</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a callback to run after all Gate checks.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Auth\Access\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_allows">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L172">line 172</a></div>
+        <code>                    bool
+    <strong>allows</strong>(string $ability, array|mixed $arguments = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given ability should be granted for the current user.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ability</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|mixed</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_denies">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L184">line 184</a></div>
+        <code>                    bool
+    <strong>denies</strong>(string $ability, array|mixed $arguments = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given ability should be denied for the current user.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ability</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|mixed</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_check">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L196">line 196</a></div>
+        <code>                    bool
+    <strong>check</strong>(string $ability, array|mixed $arguments = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given ability should be granted for the current user.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ability</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|mixed</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_authorize">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L216">line 216</a></div>
+        <code>                    <a href="../../../Illuminate/Auth/Access/Response.html"><abbr title="Illuminate\Auth\Access\Response">Response</abbr></a>
+    <strong>authorize</strong>(string $ability, array|mixed $arguments = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given ability should be granted for the current user.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ability</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|mixed</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Auth/Access/Response.html"><abbr title="Illuminate\Auth\Access\Response">Response</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Auth/Access/UnauthorizedException.html"><abbr title="Illuminate\Auth\Access\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_raw">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L234">line 234</a></div>
+        <code>            protected        mixed
+    <strong>raw</strong>(string $ability, array|mixed $arguments = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the raw result for the given ability for the current user.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ability</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|mixed</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callAuthCallback">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L261">line 261</a></div>
+        <code>            protected        bool
+    <strong>callAuthCallback</strong>(<a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user, string $ability, array $arguments)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resolve and call the appropriate authorization callback.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ability</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callBeforeCallbacks">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L280">line 280</a></div>
+        <code>            protected        bool|null
+    <strong>callBeforeCallbacks</strong>(<a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user, string $ability, array $arguments)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Call all of the before callbacks and return if a result is given.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ability</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callAfterCallbacks">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L300">line 300</a></div>
+        <code>            protected        void
+    <strong>callAfterCallbacks</strong>(<a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user, string $ability, array $arguments, bool $result)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Call all of the after callbacks with check result.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ability</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$result</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveAuthCallback">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L317">line 317</a></div>
+        <code>            protected        callable
+    <strong>resolveAuthCallback</strong>(<a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user, string $ability, array $arguments)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resolve the callable for the given ability and arguments.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ability</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callable</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_firstArgumentCorrespondsToPolicy">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L336">line 336</a></div>
+        <code>            protected        bool
+    <strong>firstArgumentCorrespondsToPolicy</strong>(array $arguments)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the first argument in the array corresponds to a policy.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolvePolicyCallback">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L357">line 357</a></div>
+        <code>            protected        callable
+    <strong>resolvePolicyCallback</strong>(<a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a> $user, string $ability, array $arguments)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resolve the callback for a policy check.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ability</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callable</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPolicyFor">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L402">line 402</a></div>
+        <code>                    mixed
+    <strong>getPolicyFor</strong>(object|string $class)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a policy instance for a given class.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolvePolicy">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L421">line 421</a></div>
+        <code>                    mixed
+    <strong>resolvePolicy</strong>(object|string $class)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build a policy class instance of the given type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forUser">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L432">line 432</a></div>
+        <code>                    <a href="../../../Illuminate/Auth/Access/Gate.html"><abbr title="Illuminate\Auth\Access\Gate">Gate</abbr></a>
+    <strong>forUser</strong>(<a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>|mixed $user)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a guard instance for the given user.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Contracts/Auth/Authenticatable.html"><abbr title="Illuminate\Contracts\Auth\Authenticatable">Authenticatable</abbr></a>|mixed</td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Auth/Access/Gate.html"><abbr title="Illuminate\Auth\Access\Gate">Gate</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveUser">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.1/src/Illuminate/Auth/Access/Gate.php#L449">line 449</a></div>
+        <code>            protected        mixed
+    <strong>resolveUser</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resolve the user from the user resolver.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\View\ViewServiceProvider | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_View_ViewServiceProvider" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Illuminate/View.html">View</a></li><li class="backslash">\</li><li>ViewServiceProvider</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            ViewServiceProvider
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>ViewServiceProvider</strong>        extends <a href="../../Illuminate/Support/ServiceProvider.html"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/ViewServiceProvider.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_app">
+                                        protected                                        <a href="../../Illuminate/Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a>
+                </td>
+                <td>$app</td>
+                <td class="last">The application instance.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#property_app"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defer">
+                                        protected                                        bool
+                </td>
+                <td>$defer</td>
+                <td class="last">Indicates if loading of the provider is deferred.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#property_defer"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_publishes">
+                    static                    protected                                        array
+                </td>
+                <td>$publishes</td>
+                <td class="last">The paths that should be published.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#property_publishes"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_publishGroups">
+                    static                    protected                                        array
+                </td>
+                <td>$publishGroups</td>
+                <td class="last">The paths that should be published by group.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#property_publishGroups"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../Illuminate/Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a> $app)
+        
+                                            <p>Create a new service provider instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method___construct"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mergeConfigFrom">mergeConfigFrom</a>(string $path, string $key)
+        
+                                            <p>Merge the given configuration with the existing configuration.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_mergeConfigFrom"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadRoutesFrom">loadRoutesFrom</a>(string $path)
+        
+                                            <p>Load the given routes file if routes are not already cached.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_loadRoutesFrom"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadViewsFrom">loadViewsFrom</a>(string $path, string $namespace)
+        
+                                            <p>Register a view file namespace.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_loadViewsFrom"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadTranslationsFrom">loadTranslationsFrom</a>(string $path, string $namespace)
+        
+                                            <p>Register a translation file namespace.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_loadTranslationsFrom"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadMigrationsFrom">loadMigrationsFrom</a>(array|string $paths)
+        
+                                            <p>Register a database migration path.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_loadMigrationsFrom"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_publishes">publishes</a>(array $paths, string $group = null)
+        
+                                            <p>Register paths to be published by the publish command.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_publishes"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensurePublishArrayInitialized">ensurePublishArrayInitialized</a>(string $class)
+        
+                                            <p>Ensure the publish array for the service provider is initialized.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_ensurePublishArrayInitialized"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addPublishGroup">addPublishGroup</a>(string $group, array $paths)
+        
+                                            <p>Add a publish group / tag to the service provider.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_addPublishGroup"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pathsToPublish">pathsToPublish</a>(string $provider = null, string $group = null)
+        
+                                            <p>Get the paths to publish.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_pathsToPublish"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pathsForProviderOrGroup">pathsForProviderOrGroup</a>(string|null $provider, string|null $group)
+        
+                                            <p>Get the paths for the provider or group (or both).</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_pathsForProviderOrGroup"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pathsForProviderAndGroup">pathsForProviderAndGroup</a>(string $provider, string $group)
+        
+                                            <p>Get the paths for the provider and group.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_pathsForProviderAndGroup"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_commands">commands</a>(array|mixed $commands)
+        
+                                            <p>Register the package's custom Artisan commands.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_commands"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_provides">provides</a>()
+        
+                                            <p>Get the services provided by the provider.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_provides"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_when">when</a>()
+        
+                                            <p>Get the events that trigger this service provider to register.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_when"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDeferred">isDeferred</a>()
+        
+                                            <p>Determine if the provider is deferred.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_isDeferred"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compiles">compiles</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>Get a list of files that should be compiled for the package.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Support/ServiceProvider.html#method_compiles"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_register">register</a>()
+        
+                                            <p>Register the service provider.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerFactory">registerFactory</a>()
+        
+                                            <p>Register the view environment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerViewFinder">registerViewFinder</a>()
+        
+                                            <p>Register the view finder implementation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerEngineResolver">registerEngineResolver</a>()
+        
+                                            <p>Register the engine resolver instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerFileEngine">registerFileEngine</a>(<a href="../../Illuminate/View/Engines/EngineResolver.html"><abbr title="Illuminate\View\Engines\EngineResolver">EngineResolver</abbr></a> $resolver)
+        
+                                            <p>Register the file engine implementation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerPhpEngine">registerPhpEngine</a>(<a href="../../Illuminate/View/Engines/EngineResolver.html"><abbr title="Illuminate\View\Engines\EngineResolver">EngineResolver</abbr></a> $resolver)
+        
+                                            <p>Register the PHP engine implementation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerBladeEngine">registerBladeEngine</a>(<a href="../../Illuminate/View/Engines/EngineResolver.html"><abbr title="Illuminate\View\Engines\EngineResolver">EngineResolver</abbr></a> $resolver)
+        
+                                            <p>Register the Blade engine implementation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method___construct"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L43">line 43</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../../Illuminate/Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a> $app)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new service provider instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a></td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mergeConfigFrom">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_mergeConfigFrom"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L55">line 55</a></div>
+        <code>            protected        void
+    <strong>mergeConfigFrom</strong>(string $path, string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Merge the given configuration with the existing configuration.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadRoutesFrom">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_loadRoutesFrom"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L68">line 68</a></div>
+        <code>            protected        void
+    <strong>loadRoutesFrom</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load the given routes file if routes are not already cached.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadViewsFrom">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_loadViewsFrom"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L82">line 82</a></div>
+        <code>            protected        void
+    <strong>loadViewsFrom</strong>(string $path, string $namespace)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a view file namespace.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadTranslationsFrom">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_loadTranslationsFrom"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L98">line 98</a></div>
+        <code>            protected        void
+    <strong>loadTranslationsFrom</strong>(string $path, string $namespace)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a translation file namespace.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadMigrationsFrom">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_loadMigrationsFrom"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L109">line 109</a></div>
+        <code>            protected        void
+    <strong>loadMigrationsFrom</strong>(array|string $paths)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a database migration path.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$paths</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_publishes">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_publishes"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L125">line 125</a></div>
+        <code>            protected        void
+    <strong>publishes</strong>(array $paths, string $group = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register paths to be published by the publish command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$paths</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensurePublishArrayInitialized">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_ensurePublishArrayInitialized"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L142">line 142</a></div>
+        <code>            protected        void
+    <strong>ensurePublishArrayInitialized</strong>(string $class)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure the publish array for the service provider is initialized.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPublishGroup">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_addPublishGroup"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L156">line 156</a></div>
+        <code>            protected        void
+    <strong>addPublishGroup</strong>(string $group, array $paths)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a publish group / tag to the service provider.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$paths</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pathsToPublish">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_pathsToPublish"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L174">line 174</a></div>
+        <code>        static            array
+    <strong>pathsToPublish</strong>(string $provider = null, string $group = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the paths to publish.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$provider</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pathsForProviderOrGroup">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_pathsForProviderOrGroup"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L192">line 192</a></div>
+        <code>        static    protected        array
+    <strong>pathsForProviderOrGroup</strong>(string|null $provider, string|null $group)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the paths for the provider or group (or both).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$provider</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pathsForProviderAndGroup">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_pathsForProviderAndGroup"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L212">line 212</a></div>
+        <code>        static    protected        array
+    <strong>pathsForProviderAndGroup</strong>(string $provider, string $group)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the paths for the provider and group.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$provider</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_commands">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_commands"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L227">line 227</a></div>
+        <code>                    void
+    <strong>commands</strong>(array|mixed $commands)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register the package's custom Artisan commands.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|mixed</td>
+                <td>$commands</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_provides">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_provides"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L241">line 241</a></div>
+        <code>                    array
+    <strong>provides</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the services provided by the provider.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_when">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_when"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L251">line 251</a></div>
+        <code>                    array
+    <strong>when</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the events that trigger this service provider to register.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDeferred">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_isDeferred"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L261">line 261</a></div>
+        <code>                    bool
+    <strong>isDeferred</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the provider is deferred.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compiles">
+        <div class="location">in <a href="../../Illuminate/Support/ServiceProvider.html#method_compiles"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/ServiceProvider.php#L273">line 273</a></div>
+        <code>        static            array
+    <strong>compiles</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>Get a list of files that should be compiled for the package.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_register">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/ViewServiceProvider.php#L19">line 19</a></div>
+        <code>                    void
+    <strong>register</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register the service provider.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerFactory">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/ViewServiceProvider.php#L33">line 33</a></div>
+        <code>                    void
+    <strong>registerFactory</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register the view environment.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerViewFinder">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/ViewServiceProvider.php#L61">line 61</a></div>
+        <code>                    void
+    <strong>registerViewFinder</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register the view finder implementation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerEngineResolver">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/ViewServiceProvider.php#L73">line 73</a></div>
+        <code>                    void
+    <strong>registerEngineResolver</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register the engine resolver instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerFileEngine">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/ViewServiceProvider.php#L95">line 95</a></div>
+        <code>                    void
+    <strong>registerFileEngine</strong>(<a href="../../Illuminate/View/Engines/EngineResolver.html"><abbr title="Illuminate\View\Engines\EngineResolver">EngineResolver</abbr></a> $resolver)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register the file engine implementation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/View/Engines/EngineResolver.html"><abbr title="Illuminate\View\Engines\EngineResolver">EngineResolver</abbr></a></td>
+                <td>$resolver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerPhpEngine">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/ViewServiceProvider.php#L108">line 108</a></div>
+        <code>                    void
+    <strong>registerPhpEngine</strong>(<a href="../../Illuminate/View/Engines/EngineResolver.html"><abbr title="Illuminate\View\Engines\EngineResolver">EngineResolver</abbr></a> $resolver)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register the PHP engine implementation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/View/Engines/EngineResolver.html"><abbr title="Illuminate\View\Engines\EngineResolver">EngineResolver</abbr></a></td>
+                <td>$resolver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerBladeEngine">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/View/ViewServiceProvider.php#L121">line 121</a></div>
+        <code>                    void
+    <strong>registerBladeEngine</strong>(<a href="../../Illuminate/View/Engines/EngineResolver.html"><abbr title="Illuminate\View\Engines\EngineResolver">EngineResolver</abbr></a> $resolver)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register the Blade engine implementation.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/View/Engines/EngineResolver.html"><abbr title="Illuminate\View\Engines\EngineResolver">EngineResolver</abbr></a></td>
+                <td>$resolver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

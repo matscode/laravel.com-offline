@@ -1,0 +1,4717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Schema\Blueprint | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Schema_Blueprint" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Database.html">Database</a></li><li class="backslash">\</li><li><a href="../../../Illuminate/Database/Schema.html">Schema</a></li><li class="backslash">\</li><li>Blueprint</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Blueprint
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Blueprint</strong>        (<a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php">View source</a>)
+</p>
+
+        
+    
+
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Illuminate/Support/Traits/Macroable.html"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_macros">
+                    static                    protected                                        array
+                </td>
+                <td>$macros</td>
+                <td class="last">The registered string macros.</td>
+                <td><small>from&nbsp;<a href="../../../Illuminate/Support/Traits/Macroable.html#property_macros"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_table">
+                                        protected                                        string
+                </td>
+                <td>$table</td>
+                <td class="last">The table the blueprint describes.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_columns">
+                                        protected                                        array
+                </td>
+                <td>$columns</td>
+                <td class="last">The columns that should be added to the table.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_commands">
+                                        protected                                        array
+                </td>
+                <td>$commands</td>
+                <td class="last">The commands that should be run for the table.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_engine">
+                                                                                string
+                </td>
+                <td>$engine</td>
+                <td class="last">The storage engine that should be used for the table.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_charset">
+                                                                                
+                </td>
+                <td>$charset</td>
+                <td class="last">The default character set that should be used for the table.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_collation">
+                                                                                
+                </td>
+                <td>$collation</td>
+                <td class="last">The collation that should be used for the table.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_temporary">
+                                                                                bool
+                </td>
+                <td>$temporary</td>
+                <td class="last">Whether to make the table temporary.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_macro">macro</a>(string $name, callable $macro)
+        
+                                            <p>Register a custom macro.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Support/Traits/Macroable.html#method_macro"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasMacro">hasMacro</a>(string $name)
+        
+                                            <p>Checks if macro is registered.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Support/Traits/Macroable.html#method_hasMacro"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___callStatic">__callStatic</a>(string $method, array $parameters)
+        
+                                            <p>Dynamically handle calls to the class.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Support/Traits/Macroable.html#method___callStatic"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $parameters)
+        
+                                            <p>Dynamically handle calls to the class.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Illuminate/Support/Traits/Macroable.html#method___call"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $table, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+        
+                                            <p>Create a new schema blueprint.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_build">build</a>(<a href="../../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection, <a href="../../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> $grammar)
+        
+                                            <p>Execute the blueprint against the database.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toSql">toSql</a>(<a href="../../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection, <a href="../../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> $grammar)
+        
+                                            <p>Get the raw SQL statements for the blueprint.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addImpliedCommands">addImpliedCommands</a>()
+        
+                                            <p>Add the commands that are implied by the blueprint's state.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addFluentIndexes">addFluentIndexes</a>()
+        
+                                            <p>Add the index commands fluently specified on columns.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_creating">creating</a>()
+        
+                                            <p>Determine if the blueprint has a create command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_create">create</a>()
+        
+                                            <p>Indicate that the table needs to be created.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_temporary">temporary</a>()
+        
+                                            <p>Indicate that the table needs to be temporary.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_drop">drop</a>()
+        
+                                            <p>Indicate that the table should be dropped.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dropIfExists">dropIfExists</a>()
+        
+                                            <p>Indicate that the table should be dropped if it exists.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dropColumn">dropColumn</a>(array|mixed $columns)
+        
+                                            <p>Indicate that the given columns should be dropped.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renameColumn">renameColumn</a>(string $from, string $to)
+        
+                                            <p>Indicate that the given columns should be renamed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dropPrimary">dropPrimary</a>(string|array $index = null)
+        
+                                            <p>Indicate that the given primary key should be dropped.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dropUnique">dropUnique</a>(string|array $index)
+        
+                                            <p>Indicate that the given unique key should be dropped.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dropIndex">dropIndex</a>(string|array $index)
+        
+                                            <p>Indicate that the given index should be dropped.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dropForeign">dropForeign</a>(string|array $index)
+        
+                                            <p>Indicate that the given foreign key should be dropped.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dropTimestamps">dropTimestamps</a>()
+        
+                                            <p>Indicate that the timestamp columns should be dropped.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dropTimestampsTz">dropTimestampsTz</a>()
+        
+                                            <p>Indicate that the timestamp columns should be dropped.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dropSoftDeletes">dropSoftDeletes</a>()
+        
+                                            <p>Indicate that the soft delete column should be dropped.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dropSoftDeletesTz">dropSoftDeletesTz</a>()
+        
+                                            <p>Indicate that the soft delete column should be dropped.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dropRememberToken">dropRememberToken</a>()
+        
+                                            <p>Indicate that the remember token column should be dropped.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rename">rename</a>(string $to)
+        
+                                            <p>Rename the table to a given name.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_primary">primary</a>(string|array $columns, string $name = null, string|null $algorithm = null)
+        
+                                            <p>Specify the primary key(s) for the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unique">unique</a>(string|array $columns, string $name = null, string|null $algorithm = null)
+        
+                                            <p>Specify a unique index for the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_index">index</a>(string|array $columns, string $name = null, string|null $algorithm = null)
+        
+                                            <p>Specify an index for the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_foreign">foreign</a>(string|array $columns, string $name = null)
+        
+                                            <p>Specify a foreign key for the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_increments">increments</a>(string $column)
+        
+                                            <p>Create a new auto-incrementing integer (4-byte) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tinyIncrements">tinyIncrements</a>(string $column)
+        
+                                            <p>Create a new auto-incrementing tiny integer (1-byte) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_smallIncrements">smallIncrements</a>(string $column)
+        
+                                            <p>Create a new auto-incrementing small integer (2-byte) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mediumIncrements">mediumIncrements</a>(string $column)
+        
+                                            <p>Create a new auto-incrementing medium integer (3-byte) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_bigIncrements">bigIncrements</a>(string $column)
+        
+                                            <p>Create a new auto-incrementing big integer (8-byte) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_char">char</a>(string $column, int $length = null)
+        
+                                            <p>Create a new char column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_string">string</a>(string $column, int $length = null)
+        
+                                            <p>Create a new string column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_text">text</a>(string $column)
+        
+                                            <p>Create a new text column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mediumText">mediumText</a>(string $column)
+        
+                                            <p>Create a new medium text column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_longText">longText</a>(string $column)
+        
+                                            <p>Create a new long text column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_integer">integer</a>(string $column, bool $autoIncrement = false, bool $unsigned = false)
+        
+                                            <p>Create a new integer (4-byte) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tinyInteger">tinyInteger</a>(string $column, bool $autoIncrement = false, bool $unsigned = false)
+        
+                                            <p>Create a new tiny integer (1-byte) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_smallInteger">smallInteger</a>(string $column, bool $autoIncrement = false, bool $unsigned = false)
+        
+                                            <p>Create a new small integer (2-byte) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mediumInteger">mediumInteger</a>(string $column, bool $autoIncrement = false, bool $unsigned = false)
+        
+                                            <p>Create a new medium integer (3-byte) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_bigInteger">bigInteger</a>(string $column, bool $autoIncrement = false, bool $unsigned = false)
+        
+                                            <p>Create a new big integer (8-byte) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unsignedInteger">unsignedInteger</a>(string $column, bool $autoIncrement = false)
+        
+                                            <p>Create a new unsigned integer (4-byte) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unsignedTinyInteger">unsignedTinyInteger</a>(string $column, bool $autoIncrement = false)
+        
+                                            <p>Create a new unsigned tiny integer (1-byte) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unsignedSmallInteger">unsignedSmallInteger</a>(string $column, bool $autoIncrement = false)
+        
+                                            <p>Create a new unsigned small integer (2-byte) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unsignedMediumInteger">unsignedMediumInteger</a>(string $column, bool $autoIncrement = false)
+        
+                                            <p>Create a new unsigned medium integer (3-byte) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unsignedBigInteger">unsignedBigInteger</a>(string $column, bool $autoIncrement = false)
+        
+                                            <p>Create a new unsigned big integer (8-byte) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_float">float</a>(string $column, int $total = 8, int $places = 2)
+        
+                                            <p>Create a new float column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_double">double</a>(string $column, int|null $total = null, int|null $places = null)
+        
+                                            <p>Create a new double column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_decimal">decimal</a>(string $column, int $total = 8, int $places = 2)
+        
+                                            <p>Create a new decimal column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unsignedDecimal">unsignedDecimal</a>(string $column, int $total = 8, int $places = 2)
+        
+                                            <p>Create a new unsigned decimal column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_boolean">boolean</a>(string $column)
+        
+                                            <p>Create a new boolean column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_enum">enum</a>(string $column, array $allowed)
+        
+                                            <p>Create a new enum column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_json">json</a>(string $column)
+        
+                                            <p>Create a new json column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_jsonb">jsonb</a>(string $column)
+        
+                                            <p>Create a new jsonb column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_date">date</a>(string $column)
+        
+                                            <p>Create a new date column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dateTime">dateTime</a>(string $column)
+        
+                                            <p>Create a new date-time column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dateTimeTz">dateTimeTz</a>(string $column)
+        
+                                            <p>Create a new date-time column (with time zone) on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_time">time</a>(string $column)
+        
+                                            <p>Create a new time column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_timeTz">timeTz</a>(string $column)
+        
+                                            <p>Create a new time column (with time zone) on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_timestamp">timestamp</a>(string $column)
+        
+                                            <p>Create a new timestamp column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_timestampTz">timestampTz</a>(string $column)
+        
+                                            <p>Create a new timestamp (with time zone) column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_timestamps">timestamps</a>()
+        
+                                            <p>Add nullable creation and update timestamps to the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_nullableTimestamps">nullableTimestamps</a>()
+        
+                                            <p>Add nullable creation and update timestamps to the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_timestampsTz">timestampsTz</a>()
+        
+                                            <p>Add creation and update timestampTz columns to the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_softDeletes">softDeletes</a>(string $column = &#039;deleted_at&#039;)
+        
+                                            <p>Add a "deleted at" timestamp for the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_softDeletesTz">softDeletesTz</a>()
+        
+                                            <p>Add a "deleted at" timestampTz for the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_binary">binary</a>(string $column)
+        
+                                            <p>Create a new binary column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_uuid">uuid</a>(string $column)
+        
+                                            <p>Create a new uuid column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ipAddress">ipAddress</a>(string $column)
+        
+                                            <p>Create a new IP address column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_macAddress">macAddress</a>(string $column)
+        
+                                            <p>Create a new MAC address column on the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_morphs">morphs</a>(string $name, string|null $indexName = null)
+        
+                                            <p>Add the proper columns for a polymorphic table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_nullableMorphs">nullableMorphs</a>(string $name, string|null $indexName = null)
+        
+                                            <p>Add nullable columns for a polymorphic table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rememberToken">rememberToken</a>()
+        
+                                            <p>Adds the <code>remember_token</code> column to the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_indexCommand">indexCommand</a>(string $type, string|array $columns, string $index, string|null $algorithm = null)
+        
+                                            <p>Add a new index command to the blueprint.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dropIndexCommand">dropIndexCommand</a>(string $command, string $type, string|array $index)
+        
+                                            <p>Create a new drop index command on the blueprint.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createIndexName">createIndexName</a>(string $type, array $columns)
+        
+                                            <p>Create a default index name for the table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addColumn">addColumn</a>(string $type, string $name, array $parameters = [])
+        
+                                            <p>Add a new column to the blueprint.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Schema\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeColumn">removeColumn</a>(string $name)
+        
+                                            <p>Remove a column from the schema blueprint.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addCommand">addCommand</a>(string $name, array $parameters = [])
+        
+                                            <p>Add a new command to the blueprint.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createCommand">createCommand</a>(string $name, array $parameters = [])
+        
+                                            <p>Create a new Fluent command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTable">getTable</a>()
+        
+                                            <p>Get the table the blueprint describes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getColumns">getColumns</a>()
+        
+                                            <p>Get the columns on the blueprint.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCommands">getCommands</a>()
+        
+                                            <p>Get the commands on the blueprint.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAddedColumns">getAddedColumns</a>()
+        
+                                            <p>Get the columns on the blueprint that should be added.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getChangedColumns">getChangedColumns</a>()
+        
+                                            <p>Get the columns on the blueprint that should be changed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_macro">
+        <div class="location">in <a href="../../../Illuminate/Support/Traits/Macroable.html#method_macro"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/Traits/Macroable.php#L24">line 24</a></div>
+        <code>        static            void
+    <strong>macro</strong>(string $name, callable $macro)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a custom macro.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$macro</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasMacro">
+        <div class="location">in <a href="../../../Illuminate/Support/Traits/Macroable.html#method_hasMacro"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/Traits/Macroable.php#L35">line 35</a></div>
+        <code>        static            bool
+    <strong>hasMacro</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if macro is registered.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___callStatic">
+        <div class="location">in <a href="../../../Illuminate/Support/Traits/Macroable.html#method___callStatic"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/Traits/Macroable.php#L49">line 49</a></div>
+        <code>        static            mixed
+    <strong>__callStatic</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Dynamically handle calls to the class.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../../Illuminate/Support/Traits/Macroable.html#method___call"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Support/Traits/Macroable.php#L71">line 71</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Dynamically handle calls to the class.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L67">line 67</a></div>
+        <code>                    void
+    <strong>__construct</strong>(string $table, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new schema blueprint.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_build">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L83">line 83</a></div>
+        <code>                    void
+    <strong>build</strong>(<a href="../../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection, <a href="../../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> $grammar)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute the blueprint against the database.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></td>
+                <td>$grammar</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toSql">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L97">line 97</a></div>
+        <code>                    array
+    <strong>toSql</strong>(<a href="../../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection, <a href="../../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> $grammar)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the raw SQL statements for the blueprint.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></td>
+                <td>$grammar</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addImpliedCommands">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L124">line 124</a></div>
+        <code>            protected        void
+    <strong>addImpliedCommands</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the commands that are implied by the blueprint's state.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFluentIndexes">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L142">line 142</a></div>
+        <code>            protected        void
+    <strong>addFluentIndexes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the index commands fluently specified on columns.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_creating">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L172">line 172</a></div>
+        <code>            protected        bool
+    <strong>creating</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the blueprint has a create command.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_create">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L184">line 184</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>create</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate that the table needs to be created.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_temporary">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L194">line 194</a></div>
+        <code>                    void
+    <strong>temporary</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate that the table needs to be temporary.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_drop">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L204">line 204</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>drop</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate that the table should be dropped.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropIfExists">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L214">line 214</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>dropIfExists</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate that the table should be dropped if it exists.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropColumn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L225">line 225</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>dropColumn</strong>(array|mixed $columns)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate that the given columns should be dropped.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|mixed</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renameColumn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L239">line 239</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>renameColumn</strong>(string $from, string $to)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate that the given columns should be renamed.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropPrimary">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L250">line 250</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>dropPrimary</strong>(string|array $index = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate that the given primary key should be dropped.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropUnique">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L261">line 261</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>dropUnique</strong>(string|array $index)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate that the given unique key should be dropped.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropIndex">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L272">line 272</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>dropIndex</strong>(string|array $index)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate that the given index should be dropped.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropForeign">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L283">line 283</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>dropForeign</strong>(string|array $index)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate that the given foreign key should be dropped.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropTimestamps">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L293">line 293</a></div>
+        <code>                    void
+    <strong>dropTimestamps</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate that the timestamp columns should be dropped.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropTimestampsTz">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L303">line 303</a></div>
+        <code>                    void
+    <strong>dropTimestampsTz</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate that the timestamp columns should be dropped.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropSoftDeletes">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L313">line 313</a></div>
+        <code>                    void
+    <strong>dropSoftDeletes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate that the soft delete column should be dropped.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropSoftDeletesTz">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L323">line 323</a></div>
+        <code>                    void
+    <strong>dropSoftDeletesTz</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate that the soft delete column should be dropped.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropRememberToken">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L333">line 333</a></div>
+        <code>                    void
+    <strong>dropRememberToken</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate that the remember token column should be dropped.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rename">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L344">line 344</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>rename</strong>(string $to)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Rename the table to a given name.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_primary">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L357">line 357</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>primary</strong>(string|array $columns, string $name = null, string|null $algorithm = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify the primary key(s) for the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$algorithm</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unique">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L370">line 370</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>unique</strong>(string|array $columns, string $name = null, string|null $algorithm = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify a unique index for the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$algorithm</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_index">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L383">line 383</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>index</strong>(string|array $columns, string $name = null, string|null $algorithm = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify an index for the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$algorithm</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_foreign">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L395">line 395</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>foreign</strong>(string|array $columns, string $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify a foreign key for the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_increments">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L406">line 406</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>increments</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new auto-incrementing integer (4-byte) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tinyIncrements">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L417">line 417</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>tinyIncrements</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new auto-incrementing tiny integer (1-byte) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_smallIncrements">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L428">line 428</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>smallIncrements</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new auto-incrementing small integer (2-byte) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mediumIncrements">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L439">line 439</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>mediumIncrements</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new auto-incrementing medium integer (3-byte) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bigIncrements">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L450">line 450</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>bigIncrements</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new auto-incrementing big integer (8-byte) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_char">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L462">line 462</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>char</strong>(string $column, int $length = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new char column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_string">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L476">line 476</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>string</strong>(string $column, int $length = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new string column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_text">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L489">line 489</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>text</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new text column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mediumText">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L500">line 500</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>mediumText</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new medium text column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_longText">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L511">line 511</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>longText</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new long text column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_integer">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L524">line 524</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>integer</strong>(string $column, bool $autoIncrement = false, bool $unsigned = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new integer (4-byte) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$autoIncrement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$unsigned</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tinyInteger">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L537">line 537</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>tinyInteger</strong>(string $column, bool $autoIncrement = false, bool $unsigned = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new tiny integer (1-byte) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$autoIncrement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$unsigned</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_smallInteger">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L550">line 550</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>smallInteger</strong>(string $column, bool $autoIncrement = false, bool $unsigned = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new small integer (2-byte) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$autoIncrement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$unsigned</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mediumInteger">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L563">line 563</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>mediumInteger</strong>(string $column, bool $autoIncrement = false, bool $unsigned = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new medium integer (3-byte) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$autoIncrement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$unsigned</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bigInteger">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L576">line 576</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>bigInteger</strong>(string $column, bool $autoIncrement = false, bool $unsigned = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new big integer (8-byte) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$autoIncrement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$unsigned</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unsignedInteger">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L588">line 588</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>unsignedInteger</strong>(string $column, bool $autoIncrement = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new unsigned integer (4-byte) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$autoIncrement</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unsignedTinyInteger">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L600">line 600</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>unsignedTinyInteger</strong>(string $column, bool $autoIncrement = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new unsigned tiny integer (1-byte) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$autoIncrement</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unsignedSmallInteger">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L612">line 612</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>unsignedSmallInteger</strong>(string $column, bool $autoIncrement = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new unsigned small integer (2-byte) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$autoIncrement</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unsignedMediumInteger">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L624">line 624</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>unsignedMediumInteger</strong>(string $column, bool $autoIncrement = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new unsigned medium integer (3-byte) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$autoIncrement</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unsignedBigInteger">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L636">line 636</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>unsignedBigInteger</strong>(string $column, bool $autoIncrement = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new unsigned big integer (8-byte) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$autoIncrement</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_float">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L649">line 649</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>float</strong>(string $column, int $total = 8, int $places = 2)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new float column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$total</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$places</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_double">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L662">line 662</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>double</strong>(string $column, int|null $total = null, int|null $places = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new double column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$total</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$places</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decimal">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L675">line 675</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>decimal</strong>(string $column, int $total = 8, int $places = 2)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new decimal column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$total</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$places</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unsignedDecimal">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L688">line 688</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>unsignedDecimal</strong>(string $column, int $total = 8, int $places = 2)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new unsigned decimal column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$total</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$places</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_boolean">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L701">line 701</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>boolean</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new boolean column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_enum">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L713">line 713</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>enum</strong>(string $column, array $allowed)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new enum column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$allowed</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_json">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L724">line 724</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>json</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new json column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_jsonb">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L735">line 735</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>jsonb</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new jsonb column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_date">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L746">line 746</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>date</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new date column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dateTime">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L757">line 757</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>dateTime</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new date-time column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dateTimeTz">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L768">line 768</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>dateTimeTz</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new date-time column (with time zone) on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_time">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L779">line 779</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>time</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new time column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_timeTz">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L790">line 790</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>timeTz</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new time column (with time zone) on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_timestamp">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L801">line 801</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>timestamp</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new timestamp column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_timestampTz">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L812">line 812</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>timestampTz</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new timestamp (with time zone) column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_timestamps">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L822">line 822</a></div>
+        <code>                    void
+    <strong>timestamps</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add nullable creation and update timestamps to the table.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nullableTimestamps">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L836">line 836</a></div>
+        <code>                    void
+    <strong>nullableTimestamps</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add nullable creation and update timestamps to the table.</p>                    <p>Alias for self::timestamps().</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_timestampsTz">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L846">line 846</a></div>
+        <code>                    void
+    <strong>timestampsTz</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add creation and update timestampTz columns to the table.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_softDeletes">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L859">line 859</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>softDeletes</strong>(string $column = &#039;deleted_at&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a "deleted at" timestamp for the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_softDeletesTz">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L869">line 869</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>softDeletesTz</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a "deleted at" timestampTz for the table.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_binary">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L880">line 880</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>binary</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new binary column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_uuid">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L891">line 891</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>uuid</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new uuid column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ipAddress">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L902">line 902</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>ipAddress</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new IP address column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_macAddress">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L913">line 913</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>macAddress</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new MAC address column on the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_morphs">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L925">line 925</a></div>
+        <code>                    void
+    <strong>morphs</strong>(string $name, string|null $indexName = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the proper columns for a polymorphic table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$indexName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nullableMorphs">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L941">line 941</a></div>
+        <code>                    void
+    <strong>nullableMorphs</strong>(string $name, string|null $indexName = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add nullable columns for a polymorphic table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$indexName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rememberToken">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L955">line 955</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>rememberToken</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds the <code>remember_token</code> column to the table.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_indexCommand">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L969">line 969</a></div>
+        <code>            protected        <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>indexCommand</strong>(string $type, string|array $columns, string $index, string|null $algorithm = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a new index command to the blueprint.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$algorithm</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropIndexCommand">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L991">line 991</a></div>
+        <code>            protected        <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>dropIndexCommand</strong>(string $command, string $type, string|array $index)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new drop index command on the blueprint.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createIndexName">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L1012">line 1012</a></div>
+        <code>            protected        string
+    <strong>createIndexName</strong>(string $type, array $columns)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a default index name for the table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addColumn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L1027">line 1027</a></div>
+        <code>                    <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>addColumn</strong>(string $type, string $name, array $parameters = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a new column to the blueprint.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeColumn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L1042">line 1042</a></div>
+        <code>                    <abbr title="Illuminate\Database\Schema\$this">$this</abbr>
+    <strong>removeColumn</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove a column from the schema blueprint.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Schema\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addCommand">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L1058">line 1058</a></div>
+        <code>            protected        <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>addCommand</strong>(string $name, array $parameters = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a new command to the blueprint.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createCommand">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L1072">line 1072</a></div>
+        <code>            protected        <a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>
+    <strong>createCommand</strong>(string $name, array $parameters = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new Fluent command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTable">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L1082">line 1082</a></div>
+        <code>                    string
+    <strong>getTable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the table the blueprint describes.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getColumns">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L1092">line 1092</a></div>
+        <code>                    array
+    <strong>getColumns</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the columns on the blueprint.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCommands">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L1102">line 1102</a></div>
+        <code>                    array
+    <strong>getCommands</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the commands on the blueprint.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAddedColumns">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L1112">line 1112</a></div>
+        <code>                    array
+    <strong>getAddedColumns</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the columns on the blueprint that should be added.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getChangedColumns">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Schema/Blueprint.php#L1124">line 1124</a></div>
+        <code>                    array
+    <strong>getChangedColumns</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the columns on the blueprint that should be changed.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

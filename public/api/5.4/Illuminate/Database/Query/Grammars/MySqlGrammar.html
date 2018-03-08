@@ -1,0 +1,4040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Query\Grammars\MySqlGrammar | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Query_Grammars_MySqlGrammar" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Database.html">Database</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Database/Query.html">Query</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Database/Query/Grammars.html">Grammars</a></li><li class="backslash">\</li><li>MySqlGrammar</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            MySqlGrammar
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>MySqlGrammar</strong>        extends <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_tablePrefix">
+                                        protected                                        string
+                </td>
+                <td>$tablePrefix</td>
+                <td class="last">The grammar table prefix.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#property_tablePrefix"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_operators">
+                                        protected                                        array
+                </td>
+                <td>$operators</td>
+                <td class="last">The grammar specific operators.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#property_operators"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_selectComponents">
+                                        protected                                        array
+                </td>
+                <td>$selectComponents</td>
+                <td class="last">The components that make up a select clause.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wrapArray">wrapArray</a>(array $values)
+        
+                                            <p>Wrap an array of values.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_wrapArray"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wrapTable">wrapTable</a>(<a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>|string $table)
+        
+                                            <p>Wrap a table in keyword identifiers.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_wrapTable"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wrap">wrap</a>(<a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>|string $value, bool $prefixAlias = false)
+        
+                                            <p>Wrap a value in keyword identifiers.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_wrap"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wrapAliasedValue">wrapAliasedValue</a>(string $value, bool $prefixAlias = false)
+        
+                                            <p>Wrap a value that has an alias.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_wrapAliasedValue"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wrapSegments">wrapSegments</a>(array $segments)
+        
+                                            <p>Wrap the given value segments.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_wrapSegments"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wrapValue">wrapValue</a>(string $value)
+        
+                                            <p>Wrap a single string in keyword identifiers.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_columnize">columnize</a>(array $columns)
+        
+                                            <p>Convert an array of column names into a delimited string.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_columnize"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parameterize">parameterize</a>(array $values)
+        
+                                            <p>Create query parameter place-holders for an array.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_parameterize"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parameter">parameter</a>(mixed $value)
+        
+                                            <p>Get the appropriate query parameter place-holder for a value.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_parameter"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isExpression">isExpression</a>(mixed $value)
+        
+                                            <p>Determine if the given value is a raw expression.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_isExpression"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getValue">getValue</a>(<a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a> $expression)
+        
+                                            <p>Get the value of a raw expression.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_getValue"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDateFormat">getDateFormat</a>()
+        
+                                            <p>Get the format for database stored dates.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_getDateFormat"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTablePrefix">getTablePrefix</a>()
+        
+                                            <p>Get the grammar's table prefix.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_getTablePrefix"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTablePrefix">setTablePrefix</a>(string $prefix)
+        
+                                            <p>Set the grammar's table prefix.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_setTablePrefix"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileSelect">compileSelect</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        
+                                            <p>Compile a select query into SQL.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileComponents">compileComponents</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        
+                                            <p>Compile the components necessary for a select clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileComponents"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileAggregate">compileAggregate</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $aggregate)
+        
+                                            <p>Compile an aggregated select clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileAggregate"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileColumns">compileColumns</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $columns)
+        
+                                            <p>Compile the "select *" portion of the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileColumns"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileFrom">compileFrom</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, string $table)
+        
+                                            <p>Compile the "from" portion of the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileFrom"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileJoins">compileJoins</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $joins)
+        
+                                            <p>Compile the "join" portions of the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileJoins"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileWheres">compileWheres</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        
+                                            <p>Compile the "where" portions of the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileWheres"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileWheresToArray">compileWheresToArray</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        
+                                            <p>Get an array of all the where clauses for the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileWheresToArray"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_concatenateWhereClauses">concatenateWhereClauses</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $sql)
+        
+                                            <p>Format the where clause statements into one string.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_concatenateWhereClauses"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereRaw">whereRaw</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a raw where clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereRaw"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereBasic">whereBasic</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a basic where clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereBasic"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereIn">whereIn</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a "where in" clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereIn"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereNotIn">whereNotIn</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a "where not in" clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereNotIn"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereInSub">whereInSub</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a where in sub-select clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereInSub"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereNotInSub">whereNotInSub</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a where not in sub-select clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereNotInSub"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereNull">whereNull</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a "where null" clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereNull"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereNotNull">whereNotNull</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a "where not null" clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereNotNull"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereBetween">whereBetween</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a "between" where clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereBetween"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereDate">whereDate</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a "where date" clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereDate"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereTime">whereTime</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a "where time" clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereTime"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereDay">whereDay</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a "where day" clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereDay"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereMonth">whereMonth</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a "where month" clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereMonth"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereYear">whereYear</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a "where year" clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereYear"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dateBasedWhere">dateBasedWhere</a>(string $type, <a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a date based where clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_dateBasedWhere"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereColumn">whereColumn</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a where clause comparing two columns.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereColumn"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereNested">whereNested</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a nested where clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereNested"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereSub">whereSub</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a where condition with a sub-select.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereSub"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereExists">whereExists</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a where exists clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereExists"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereNotExists">whereNotExists</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        
+                                            <p>Compile a where exists clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereNotExists"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileGroups">compileGroups</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $groups)
+        
+                                            <p>Compile the "group by" portions of the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileGroups"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileHavings">compileHavings</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $havings)
+        
+                                            <p>Compile the "having" portions of the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileHavings"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileHaving">compileHaving</a>(array $having)
+        
+                                            <p>Compile a single having clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileHaving"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileBasicHaving">compileBasicHaving</a>(array $having)
+        
+                                            <p>Compile a basic having clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileBasicHaving"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileOrders">compileOrders</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $orders)
+        
+                                            <p>Compile the "order by" portions of the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileOrders"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileOrdersToArray">compileOrdersToArray</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $orders)
+        
+                                            <p>Compile the query orders to an array.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileOrdersToArray"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileRandom">compileRandom</a>(string $seed)
+        
+                                            <p>Compile the random statement into SQL.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileLimit">compileLimit</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, int $limit)
+        
+                                            <p>Compile the "limit" portions of the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileLimit"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileOffset">compileOffset</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, int $offset)
+        
+                                            <p>Compile the "offset" portions of the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileOffset"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileUnions">compileUnions</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        
+                                            <p>Compile the "union" queries attached to the main query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileUnions"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileUnion">compileUnion</a>(array $union)
+        
+                                            <p>Compile a single union statement.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileExists">compileExists</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        
+                                            <p>Compile an exists statement into SQL.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileExists"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileInsert">compileInsert</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $values)
+        
+                                            <p>Compile an insert statement into SQL.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileInsert"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileInsertGetId">compileInsertGetId</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $values, string $sequence)
+        
+                                            <p>Compile an insert and get ID statement into SQL.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileInsertGetId"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileUpdate">compileUpdate</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $values)
+        
+                                            <p>Compile an update statement into SQL.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepareBindingsForUpdate">prepareBindingsForUpdate</a>(array $bindings, array $values)
+        
+                                            <p>Prepare the bindings for an update statement.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileDelete">compileDelete</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        
+                                            <p>Compile a delete statement into SQL.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileTruncate">compileTruncate</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        
+                                            <p>Compile a truncate table statement into SQL.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileTruncate"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileLock">compileLock</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, bool|string $value)
+        
+                                            <p>Compile the lock into SQL.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_supportsSavepoints">supportsSavepoints</a>()
+        
+                                            <p>Determine if the grammar supports savepoints.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_supportsSavepoints"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileSavepoint">compileSavepoint</a>(string $name)
+        
+                                            <p>Compile the SQL statement to define a savepoint.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileSavepoint"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileSavepointRollBack">compileSavepointRollBack</a>(string $name)
+        
+                                            <p>Compile the SQL statement to execute a savepoint rollback.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileSavepointRollBack"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_concatenate">concatenate</a>(array $segments)
+        
+                                            <p>Concatenate an array of segments, removing empties.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_concatenate"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeLeadingBoolean">removeLeadingBoolean</a>(string $value)
+        
+                                            <p>Remove the leading boolean from a statement.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_removeLeadingBoolean"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOperators">getOperators</a>()
+        
+                                            <p>Get the grammar specific operators.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_getOperators"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileUpdateColumns">compileUpdateColumns</a>(array $values)
+        
+                                            <p>Compile all of the columns for an update statement.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileJsonUpdateColumn">compileJsonUpdateColumn</a>(string $key, <a href="../../../../Illuminate/Database/Query/JsonExpression.html"><abbr title="Illuminate\Database\Query\JsonExpression">JsonExpression</abbr></a> $value)
+        
+                                            <p>Prepares a JSON column being updated using the JSON_SET function.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileDeleteWithoutJoins">compileDeleteWithoutJoins</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, string $table, array $where)
+        
+                                            <p>Compile a delete query that does not use joins.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileDeleteWithJoins">compileDeleteWithJoins</a>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, string $table, array $where)
+        
+                                            <p>Compile a delete query that uses joins.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wrapJsonSelector">wrapJsonSelector</a>(string $value)
+        
+                                            <p>Wrap the given JSON selector.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isJsonSelector">isJsonSelector</a>(string $value)
+        
+                                            <p>Determine if the given string is a JSON selector.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_wrapArray">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_wrapArray"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Grammar.php#L22">line 22</a></div>
+        <code>                    array
+    <strong>wrapArray</strong>(array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrap an array of values.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrapTable">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_wrapTable"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Grammar.php#L33">line 33</a></div>
+        <code>                    string
+    <strong>wrapTable</strong>(<a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>|string $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrap a table in keyword identifiers.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>|string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrap">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_wrap"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Grammar.php#L49">line 49</a></div>
+        <code>                    string
+    <strong>wrap</strong>(<a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>|string $value, bool $prefixAlias = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrap a value in keyword identifiers.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>|string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prefixAlias</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrapAliasedValue">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_wrapAliasedValue"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Grammar.php#L72">line 72</a></div>
+        <code>            protected        string
+    <strong>wrapAliasedValue</strong>(string $value, bool $prefixAlias = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrap a value that has an alias.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prefixAlias</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrapSegments">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_wrapSegments"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Grammar.php#L94">line 94</a></div>
+        <code>            protected        string
+    <strong>wrapSegments</strong>(array $segments)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrap the given value segments.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$segments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrapValue">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php#L257">line 257</a></div>
+        <code>            protected        string
+    <strong>wrapValue</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrap a single string in keyword identifiers.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_columnize">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_columnize"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Grammar.php#L124">line 124</a></div>
+        <code>                    string
+    <strong>columnize</strong>(array $columns)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert an array of column names into a delimited string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parameterize">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_parameterize"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Grammar.php#L135">line 135</a></div>
+        <code>                    string
+    <strong>parameterize</strong>(array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create query parameter place-holders for an array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parameter">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_parameter"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Grammar.php#L146">line 146</a></div>
+        <code>                    string
+    <strong>parameter</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the appropriate query parameter place-holder for a value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isExpression">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_isExpression"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Grammar.php#L157">line 157</a></div>
+        <code>                    bool
+    <strong>isExpression</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given value is a raw expression.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getValue">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_getValue"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Grammar.php#L168">line 168</a></div>
+        <code>                    string
+    <strong>getValue</strong>(<a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a> $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the value of a raw expression.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a></td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDateFormat">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_getDateFormat"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Grammar.php#L178">line 178</a></div>
+        <code>                    string
+    <strong>getDateFormat</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the format for database stored dates.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTablePrefix">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_getTablePrefix"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Grammar.php#L188">line 188</a></div>
+        <code>                    string
+    <strong>getTablePrefix</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the grammar's table prefix.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTablePrefix">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_setTablePrefix"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Grammar.php#L199">line 199</a></div>
+        <code>                    <abbr title="Illuminate\Database\$this">$this</abbr>
+    <strong>setTablePrefix</strong>(string $prefix)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the grammar's table prefix.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileSelect">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php#L36">line 36</a></div>
+        <code>                    string
+    <strong>compileSelect</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a select query into SQL.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileComponents">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileComponents"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L74">line 74</a></div>
+        <code>            protected        array
+    <strong>compileComponents</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the components necessary for a select clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileAggregate">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileAggregate"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L99">line 99</a></div>
+        <code>            protected        string
+    <strong>compileAggregate</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $aggregate)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile an aggregated select clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$aggregate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileColumns">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileColumns"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L120">line 120</a></div>
+        <code>            protected        string|null
+    <strong>compileColumns</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $columns)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the "select *" portion of the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileFrom">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileFrom"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L141">line 141</a></div>
+        <code>            protected        string
+    <strong>compileFrom</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, string $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the "from" portion of the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileJoins">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileJoins"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L153">line 153</a></div>
+        <code>            protected        string
+    <strong>compileJoins</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $joins)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the "join" portions of the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$joins</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileWheres">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileWheres"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L168">line 168</a></div>
+        <code>            protected        string
+    <strong>compileWheres</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the "where" portions of the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileWheresToArray">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileWheresToArray"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L193">line 193</a></div>
+        <code>            protected        array
+    <strong>compileWheresToArray</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an array of all the where clauses for the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_concatenateWhereClauses">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_concatenateWhereClauses"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L207">line 207</a></div>
+        <code>            protected        string
+    <strong>concatenateWhereClauses</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $sql)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Format the where clause statements into one string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$sql</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereRaw">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereRaw"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L221">line 221</a></div>
+        <code>            protected        string
+    <strong>whereRaw</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a raw where clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereBasic">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereBasic"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L233">line 233</a></div>
+        <code>            protected        string
+    <strong>whereBasic</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a basic where clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereIn">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereIn"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L247">line 247</a></div>
+        <code>            protected        string
+    <strong>whereIn</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a "where in" clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereNotIn">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereNotIn"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L263">line 263</a></div>
+        <code>            protected        string
+    <strong>whereNotIn</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a "where not in" clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereInSub">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereInSub"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L279">line 279</a></div>
+        <code>            protected        string
+    <strong>whereInSub</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a where in sub-select clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereNotInSub">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereNotInSub"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L291">line 291</a></div>
+        <code>            protected        string
+    <strong>whereNotInSub</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a where not in sub-select clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereNull">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereNull"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L303">line 303</a></div>
+        <code>            protected        string
+    <strong>whereNull</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a "where null" clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereNotNull">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereNotNull"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L315">line 315</a></div>
+        <code>            protected        string
+    <strong>whereNotNull</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a "where not null" clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereBetween">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereBetween"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L327">line 327</a></div>
+        <code>            protected        string
+    <strong>whereBetween</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a "between" where clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereDate">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereDate"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L341">line 341</a></div>
+        <code>            protected        string
+    <strong>whereDate</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a "where date" clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereTime">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereTime"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L353">line 353</a></div>
+        <code>            protected        string
+    <strong>whereTime</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a "where time" clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereDay">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereDay"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L365">line 365</a></div>
+        <code>            protected        string
+    <strong>whereDay</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a "where day" clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereMonth">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereMonth"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L377">line 377</a></div>
+        <code>            protected        string
+    <strong>whereMonth</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a "where month" clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereYear">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereYear"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L389">line 389</a></div>
+        <code>            protected        string
+    <strong>whereYear</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a "where year" clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dateBasedWhere">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_dateBasedWhere"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L402">line 402</a></div>
+        <code>            protected        string
+    <strong>dateBasedWhere</strong>(string $type, <a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a date based where clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereColumn">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereColumn"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L416">line 416</a></div>
+        <code>            protected        string
+    <strong>whereColumn</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a where clause comparing two columns.</p>                    <p>.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereNested">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereNested"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L428">line 428</a></div>
+        <code>            protected        string
+    <strong>whereNested</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a nested where clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereSub">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereSub"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L445">line 445</a></div>
+        <code>            protected        string
+    <strong>whereSub</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a where condition with a sub-select.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereExists">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereExists"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L459">line 459</a></div>
+        <code>            protected        string
+    <strong>whereExists</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a where exists clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereNotExists">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_whereNotExists"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L471">line 471</a></div>
+        <code>            protected        string
+    <strong>whereNotExists</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a where exists clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileGroups">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileGroups"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L483">line 483</a></div>
+        <code>            protected        string
+    <strong>compileGroups</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $groups)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the "group by" portions of the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$groups</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileHavings">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileHavings"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L495">line 495</a></div>
+        <code>            protected        string
+    <strong>compileHavings</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $havings)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the "having" portions of the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$havings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileHaving">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileHaving"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L508">line 508</a></div>
+        <code>            protected        string
+    <strong>compileHaving</strong>(array $having)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a single having clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$having</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileBasicHaving">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileBasicHaving"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L526">line 526</a></div>
+        <code>            protected        string
+    <strong>compileBasicHaving</strong>(array $having)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a basic having clause.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$having</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileOrders">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileOrders"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L542">line 542</a></div>
+        <code>            protected        string
+    <strong>compileOrders</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $orders)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the "order by" portions of the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$orders</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileOrdersToArray">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileOrdersToArray"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L558">line 558</a></div>
+        <code>            protected        array
+    <strong>compileOrdersToArray</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $orders)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the query orders to an array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$orders</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileRandom">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php#L66">line 66</a></div>
+        <code>                    string
+    <strong>compileRandom</strong>(string $seed)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the random statement into SQL.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$seed</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileLimit">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileLimit"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L585">line 585</a></div>
+        <code>            protected        string
+    <strong>compileLimit</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, int $limit)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the "limit" portions of the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileOffset">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileOffset"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L597">line 597</a></div>
+        <code>            protected        string
+    <strong>compileOffset</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, int $offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the "offset" portions of the query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileUnions">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileUnions"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L608">line 608</a></div>
+        <code>            protected        string
+    <strong>compileUnions</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the "union" queries attached to the main query.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileUnion">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php#L53">line 53</a></div>
+        <code>            protected        string
+    <strong>compileUnion</strong>(array $union)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a single union statement.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$union</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileExists">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileExists"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L650">line 650</a></div>
+        <code>                    string
+    <strong>compileExists</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile an exists statement into SQL.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileInsert">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileInsert"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L664">line 664</a></div>
+        <code>                    string
+    <strong>compileInsert</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile an insert statement into SQL.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileInsertGetId">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileInsertGetId"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L695">line 695</a></div>
+        <code>                    string
+    <strong>compileInsertGetId</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $values, string $sequence)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile an insert and get ID statement into SQL.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sequence</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileUpdate">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php#L94">line 94</a></div>
+        <code>                    string
+    <strong>compileUpdate</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile an update statement into SQL.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareBindingsForUpdate">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php#L180">line 180</a></div>
+        <code>                    array
+    <strong>prepareBindingsForUpdate</strong>(array $bindings, array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prepare the bindings for an update statement.</p>                    <p>Booleans, integers, and doubles are inserted into JSON updates as raw values.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileDelete">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php#L196">line 196</a></div>
+        <code>                    string
+    <strong>compileDelete</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a delete statement into SQL.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileTruncate">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileTruncate"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L770">line 770</a></div>
+        <code>                    array
+    <strong>compileTruncate</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a truncate table statement into SQL.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileLock">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php#L78">line 78</a></div>
+        <code>            protected        string
+    <strong>compileLock</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, bool|string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the lock into SQL.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool|string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsSavepoints">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_supportsSavepoints"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L792">line 792</a></div>
+        <code>                    bool
+    <strong>supportsSavepoints</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the grammar supports savepoints.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileSavepoint">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileSavepoint"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L803">line 803</a></div>
+        <code>                    string
+    <strong>compileSavepoint</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the SQL statement to define a savepoint.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileSavepointRollBack">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_compileSavepointRollBack"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L814">line 814</a></div>
+        <code>                    string
+    <strong>compileSavepointRollBack</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the SQL statement to execute a savepoint rollback.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_concatenate">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_concatenate"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L825">line 825</a></div>
+        <code>            protected        string
+    <strong>concatenate</strong>(array $segments)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Concatenate an array of segments, removing empties.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$segments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeLeadingBoolean">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_removeLeadingBoolean"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L838">line 838</a></div>
+        <code>            protected        string
+    <strong>removeLeadingBoolean</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove the leading boolean from a statement.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOperators">
+        <div class="location">in <a href="../../../../Illuminate/Database/Query/Grammars/Grammar.html#method_getOperators"><abbr title="Illuminate\Database\Query\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/Grammar.php#L848">line 848</a></div>
+        <code>                    array
+    <strong>getOperators</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the grammar specific operators.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileUpdateColumns">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php#L142">line 142</a></div>
+        <code>            protected        string
+    <strong>compileUpdateColumns</strong>(array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile all of the columns for an update statement.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileJsonUpdateColumn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php#L160">line 160</a></div>
+        <code>            protected        string
+    <strong>compileJsonUpdateColumn</strong>(string $key, <a href="../../../../Illuminate/Database/Query/JsonExpression.html"><abbr title="Illuminate\Database\Query\JsonExpression">JsonExpression</abbr></a> $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prepares a JSON column being updated using the JSON_SET function.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/JsonExpression.html"><abbr title="Illuminate\Database\Query\JsonExpression">JsonExpression</abbr></a></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileDeleteWithoutJoins">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php#L215">line 215</a></div>
+        <code>            protected        string
+    <strong>compileDeleteWithoutJoins</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, string $table, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a delete query that does not use joins.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileDeleteWithJoins">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php#L241">line 241</a></div>
+        <code>            protected        string
+    <strong>compileDeleteWithJoins</strong>(<a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a> $query, string $table, array $where)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a delete query that uses joins.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$where</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrapJsonSelector">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php#L279">line 279</a></div>
+        <code>            protected        string
+    <strong>wrapJsonSelector</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrap the given JSON selector.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isJsonSelector">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php#L296">line 296</a></div>
+        <code>            protected        bool
+    <strong>isJsonSelector</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given string is a JSON selector.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

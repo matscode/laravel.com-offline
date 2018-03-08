@@ -1,0 +1,2554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Session\EncryptedStore | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Session_EncryptedStore" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Illuminate/Session.html">Session</a></li><li class="backslash">\</li><li>EncryptedStore</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            EncryptedStore
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>EncryptedStore</strong>        extends <a href="../../Illuminate/Session/Store.html"><abbr title="Illuminate\Session\Store">Store</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/EncryptedStore.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_id">
+                                        protected                                        string
+                </td>
+                <td>$id</td>
+                <td class="last">The session ID.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#property_id"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_name">
+                                        protected                                        string
+                </td>
+                <td>$name</td>
+                <td class="last">The session name.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#property_name"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_attributes">
+                                        protected                                        array
+                </td>
+                <td>$attributes</td>
+                <td class="last">The session attributes.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#property_attributes"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_handler">
+                                        protected                                        <a target="_blank" href="http://php.net/SessionHandlerInterface">SessionHandlerInterface</a>
+                </td>
+                <td>$handler</td>
+                <td class="last">The session handler implementation.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#property_handler"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_started">
+                                        protected                                        bool
+                </td>
+                <td>$started</td>
+                <td class="last">Session store started status.</td>
+                <td><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#property_started"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_encrypter">
+                                        protected                                        <a href="../../Illuminate/Contracts/Encryption/Encrypter.html"><abbr title="Illuminate\Contracts\Encryption\Encrypter">Encrypter</abbr></a>
+                </td>
+                <td>$encrypter</td>
+                <td class="last">The encrypter instance.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $name, <a target="_blank" href="http://php.net/SessionHandlerInterface">SessionHandlerInterface</a> $handler, <a href="../../Illuminate/Contracts/Encryption/Encrypter.html"><abbr title="Illuminate\Contracts\Encryption\Encrypter">Encrypter</abbr></a> $encrypter, string|null $id = null)
+        
+                                            <p>Create a new session instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_start">start</a>()
+        
+                                            <p>Start the session, reading the data from a handler.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_start"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadSession">loadSession</a>()
+        
+                                            <p>Load the session data from the handler.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_loadSession"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_readFromHandler">readFromHandler</a>()
+        
+                                            <p>Read the session data from the handler.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_readFromHandler"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepareForUnserialize">prepareForUnserialize</a>(string $data)
+        
+                                            <p>Prepare the raw string data from the session for unserialization.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_save">save</a>()
+        
+                                            <p>Save the session data to storage.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_save"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepareForStorage">prepareForStorage</a>(string $data)
+        
+                                            <p>Prepare the serialized session data for storage.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ageFlashData">ageFlashData</a>()
+        
+                                            <p>Age the flash data for the session.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_ageFlashData"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_all">all</a>()
+        
+                                            <p>Get all of the session data.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_all"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_exists">exists</a>(string|array $key)
+        
+                                            <p>Checks if a key exists.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_exists"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_has">has</a>(string|array $key)
+        
+                                            <p>Checks if a key is present and not null.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_has"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(string $key, mixed $default = null)
+        
+                                            <p>Get an item from the session.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_get"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pull">pull</a>(string $key, string $default = null)
+        
+                                            <p>Get the value of a given key and then forget it.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_pull"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasOldInput">hasOldInput</a>(string $key = null)
+        
+                                            <p>Determine if the session contains old input.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_hasOldInput"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOldInput">getOldInput</a>(string $key = null, mixed $default = null)
+        
+                                            <p>Get the requested item from the flashed input array.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_getOldInput"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_replace">replace</a>(array $attributes)
+        
+                                            <p>Replace the given session attributes entirely.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_replace"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_put">put</a>(string|array $key, mixed $value = null)
+        
+                                            <p>Put a key / value pair or array of key / value pairs in the session.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_put"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_remember">remember</a>(string $key, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        
+                                            <p>Get an item from the session, or store the default value.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_remember"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_push">push</a>(string $key, mixed $value)
+        
+                                            <p>Push a value onto a session array.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_push"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_increment">increment</a>(string $key, int $amount = 1)
+        
+                                            <p>Increment the value of an item in the session.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_increment"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_decrement">decrement</a>(string $key, int $amount = 1)
+        
+                                            <p>Decrement the value of an item in the session.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_decrement"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_flash">flash</a>(string $key, mixed $value)
+        
+                                            <p>Flash a key / value pair to the session.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_flash"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_now">now</a>(string $key, mixed $value)
+        
+                                            <p>Flash a key / value pair to the session for immediate use.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_now"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reflash">reflash</a>()
+        
+                                            <p>Reflash all of the session flash data.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_reflash"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_keep">keep</a>(array|mixed $keys = null)
+        
+                                            <p>Reflash a subset of the current flash data.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_keep"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mergeNewFlashes">mergeNewFlashes</a>(array $keys)
+        
+                                            <p>Merge new flash keys into the new flash array.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_mergeNewFlashes"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeFromOldFlashData">removeFromOldFlashData</a>(array $keys)
+        
+                                            <p>Remove the given keys from the old flash data.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_removeFromOldFlashData"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_flashInput">flashInput</a>(array $value)
+        
+                                            <p>Flash an input array to the session.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_flashInput"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_remove">remove</a>(string $key)
+        
+                                            <p>Remove an item from the session, returning its value.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_remove"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_forget">forget</a>(string|array $keys)
+        
+                                            <p>Remove one or many items from the session.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_forget"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_flush">flush</a>()
+        
+                                            <p>Remove all of the items from the session.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_flush"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_invalidate">invalidate</a>()
+        
+                                            <p>Flush the session data and regenerate the ID.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_invalidate"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_regenerate">regenerate</a>(bool $destroy = false)
+        
+                                            <p>Generate a new session identifier.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_regenerate"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_migrate">migrate</a>(bool $destroy = false)
+        
+                                            <p>Generate a new session ID for the session.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_migrate"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isStarted">isStarted</a>()
+        
+                                            <p>Determine if the session has been started.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_isStarted"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getName">getName</a>()
+        
+                                            <p>Get the name of the session.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_getName"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setName">setName</a>(string $name)
+        
+                                            <p>Set the name of the session.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_setName"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getId">getId</a>()
+        
+                                            <p>Get the current session ID.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_getId"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setId">setId</a>(string $id)
+        
+                                            <p>Set the session ID.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_setId"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isValidId">isValidId</a>(string $id)
+        
+                                            <p>Determine if this is a valid session ID.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_isValidId"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_generateSessionId">generateSessionId</a>()
+        
+                                            <p>Get a new, random session ID.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_generateSessionId"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setExists">setExists</a>(bool $value)
+        
+                                            <p>Set the existence of the session on the handler if applicable.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_setExists"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_token">token</a>()
+        
+                                            <p>Get the CSRF token value.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_token"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_regenerateToken">regenerateToken</a>()
+        
+                                            <p>Regenerate the CSRF token value.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_regenerateToken"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_previousUrl">previousUrl</a>()
+        
+                                            <p>Get the previous URL from the session.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_previousUrl"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPreviousUrl">setPreviousUrl</a>(string $url)
+        
+                                            <p>Set the "previous" URL in the session.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_setPreviousUrl"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SessionHandlerInterface">SessionHandlerInterface</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHandler">getHandler</a>()
+        
+                                            <p>Get the underlying session handler implementation.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_getHandler"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_handlerNeedsRequest">handlerNeedsRequest</a>()
+        
+                                            <p>Determine if the session handler needs a request.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_handlerNeedsRequest"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRequestOnHandler">setRequestOnHandler</a>(<a href="../../Illuminate/Http/Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a> $request)
+        
+                                            <p>Set the request on the handler instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Illuminate/Session/Store.html#method_setRequestOnHandler"><abbr title="Illuminate\Session\Store">Store</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Illuminate/Contracts/Encryption/Encrypter.html"><abbr title="Illuminate\Contracts\Encryption\Encrypter">Encrypter</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEncrypter">getEncrypter</a>()
+        
+                                            <p>Get the encrypter instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/EncryptedStore.php#L27">line 27</a></div>
+        <code>                    void
+    <strong>__construct</strong>(string $name, <a target="_blank" href="http://php.net/SessionHandlerInterface">SessionHandlerInterface</a> $handler, <a href="../../Illuminate/Contracts/Encryption/Encrypter.html"><abbr title="Illuminate\Contracts\Encryption\Encrypter">Encrypter</abbr></a> $encrypter, string|null $id = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new session instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/SessionHandlerInterface">SessionHandlerInterface</a></td>
+                <td>$handler</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Illuminate/Contracts/Encryption/Encrypter.html"><abbr title="Illuminate\Contracts\Encryption\Encrypter">Encrypter</abbr></a></td>
+                <td>$encrypter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_start">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_start"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L68">line 68</a></div>
+        <code>                    bool
+    <strong>start</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Start the session, reading the data from a handler.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadSession">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_loadSession"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L84">line 84</a></div>
+        <code>            protected        void
+    <strong>loadSession</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load the session data from the handler.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_readFromHandler">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_readFromHandler"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L94">line 94</a></div>
+        <code>            protected        array
+    <strong>readFromHandler</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Read the session data from the handler.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareForUnserialize">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/EncryptedStore.php#L40">line 40</a></div>
+        <code>            protected        string
+    <strong>prepareForUnserialize</strong>(string $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prepare the raw string data from the session for unserialization.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_save">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_save"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L123">line 123</a></div>
+        <code>                    bool
+    <strong>save</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Save the session data to storage.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareForStorage">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/EncryptedStore.php#L55">line 55</a></div>
+        <code>            protected        string
+    <strong>prepareForStorage</strong>(string $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prepare the serialized session data for storage.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ageFlashData">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_ageFlashData"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L150">line 150</a></div>
+        <code>                    void
+    <strong>ageFlashData</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Age the flash data for the session.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_all">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_all"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L164">line 164</a></div>
+        <code>                    array
+    <strong>all</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all of the session data.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_exists">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_exists"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L175">line 175</a></div>
+        <code>                    bool
+    <strong>exists</strong>(string|array $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if a key exists.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_has">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_has"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L188">line 188</a></div>
+        <code>                    bool
+    <strong>has</strong>(string|array $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if a key is present and not null.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_get"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L202">line 202</a></div>
+        <code>                    mixed
+    <strong>get</strong>(string $key, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an item from the session.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pull">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_pull"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L214">line 214</a></div>
+        <code>                    mixed
+    <strong>pull</strong>(string $key, string $default = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the value of a given key and then forget it.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasOldInput">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_hasOldInput"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L225">line 225</a></div>
+        <code>                    bool
+    <strong>hasOldInput</strong>(string $key = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the session contains old input.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOldInput">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_getOldInput"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L239">line 239</a></div>
+        <code>                    mixed
+    <strong>getOldInput</strong>(string $key = null, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the requested item from the flashed input array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replace">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_replace"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L250">line 250</a></div>
+        <code>                    void
+    <strong>replace</strong>(array $attributes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Replace the given session attributes entirely.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_put">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_put"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L262">line 262</a></div>
+        <code>                    void
+    <strong>put</strong>(string|array $key, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Put a key / value pair or array of key / value pairs in the session.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_remember">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_remember"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L280">line 280</a></div>
+        <code>                    mixed
+    <strong>remember</strong>(string $key, <a target="_blank" href="http://php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an item from the session, or store the default value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_push">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_push"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L298">line 298</a></div>
+        <code>                    void
+    <strong>push</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Push a value onto a session array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_increment">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_increment"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L314">line 314</a></div>
+        <code>                    mixed
+    <strong>increment</strong>(string $key, int $amount = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Increment the value of an item in the session.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$amount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decrement">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_decrement"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L328">line 328</a></div>
+        <code>                    int
+    <strong>decrement</strong>(string $key, int $amount = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decrement the value of an item in the session.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$amount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flash">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_flash"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L340">line 340</a></div>
+        <code>                    void
+    <strong>flash</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Flash a key / value pair to the session.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_now">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_now"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L356">line 356</a></div>
+        <code>                    void
+    <strong>now</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Flash a key / value pair to the session for immediate use.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reflash">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_reflash"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L368">line 368</a></div>
+        <code>                    void
+    <strong>reflash</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reflash all of the session flash data.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_keep">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_keep"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L381">line 381</a></div>
+        <code>                    void
+    <strong>keep</strong>(array|mixed $keys = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reflash a subset of the current flash data.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|mixed</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mergeNewFlashes">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_mergeNewFlashes"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L394">line 394</a></div>
+        <code>            protected        void
+    <strong>mergeNewFlashes</strong>(array $keys)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Merge new flash keys into the new flash array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeFromOldFlashData">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_removeFromOldFlashData"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L407">line 407</a></div>
+        <code>            protected        void
+    <strong>removeFromOldFlashData</strong>(array $keys)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove the given keys from the old flash data.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flashInput">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_flashInput"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L418">line 418</a></div>
+        <code>                    void
+    <strong>flashInput</strong>(array $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Flash an input array to the session.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_remove">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_remove"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L429">line 429</a></div>
+        <code>                    mixed
+    <strong>remove</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove an item from the session, returning its value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forget">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_forget"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L440">line 440</a></div>
+        <code>                    void
+    <strong>forget</strong>(string|array $keys)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove one or many items from the session.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flush">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_flush"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L450">line 450</a></div>
+        <code>                    void
+    <strong>flush</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove all of the items from the session.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_invalidate">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_invalidate"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L460">line 460</a></div>
+        <code>                    bool
+    <strong>invalidate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Flush the session data and regenerate the ID.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_regenerate">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_regenerate"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L473">line 473</a></div>
+        <code>                    bool
+    <strong>regenerate</strong>(bool $destroy = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate a new session identifier.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$destroy</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_migrate">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_migrate"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L484">line 484</a></div>
+        <code>                    bool
+    <strong>migrate</strong>(bool $destroy = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate a new session ID for the session.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$destroy</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isStarted">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_isStarted"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L502">line 502</a></div>
+        <code>                    bool
+    <strong>isStarted</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the session has been started.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_getName"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L512">line 512</a></div>
+        <code>                    string
+    <strong>getName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the name of the session.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setName">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_setName"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L523">line 523</a></div>
+        <code>                    void
+    <strong>setName</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the name of the session.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getId">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_getId"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L533">line 533</a></div>
+        <code>                    string
+    <strong>getId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the current session ID.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setId">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_setId"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L544">line 544</a></div>
+        <code>                    void
+    <strong>setId</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the session ID.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isValidId">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_isValidId"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L555">line 555</a></div>
+        <code>                    bool
+    <strong>isValidId</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if this is a valid session ID.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateSessionId">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_generateSessionId"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L565">line 565</a></div>
+        <code>            protected        string
+    <strong>generateSessionId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a new, random session ID.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setExists">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_setExists"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L576">line 576</a></div>
+        <code>                    void
+    <strong>setExists</strong>(bool $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the existence of the session on the handler if applicable.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_token">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_token"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L588">line 588</a></div>
+        <code>                    string
+    <strong>token</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the CSRF token value.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_regenerateToken">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_regenerateToken"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L598">line 598</a></div>
+        <code>                    void
+    <strong>regenerateToken</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Regenerate the CSRF token value.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_previousUrl">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_previousUrl"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L608">line 608</a></div>
+        <code>                    string|null
+    <strong>previousUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the previous URL from the session.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPreviousUrl">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_setPreviousUrl"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L619">line 619</a></div>
+        <code>                    void
+    <strong>setPreviousUrl</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the "previous" URL in the session.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHandler">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_getHandler"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L629">line 629</a></div>
+        <code>                    <a target="_blank" href="http://php.net/SessionHandlerInterface">SessionHandlerInterface</a>
+    <strong>getHandler</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the underlying session handler implementation.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SessionHandlerInterface">SessionHandlerInterface</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handlerNeedsRequest">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_handlerNeedsRequest"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L639">line 639</a></div>
+        <code>                    bool
+    <strong>handlerNeedsRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the session handler needs a request.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRequestOnHandler">
+        <div class="location">in <a href="../../Illuminate/Session/Store.html#method_setRequestOnHandler"><abbr title="Illuminate\Session\Store">Store</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/Store.php#L650">line 650</a></div>
+        <code>                    void
+    <strong>setRequestOnHandler</strong>(<a href="../../Illuminate/Http/Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the request on the handler instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Illuminate/Http/Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEncrypter">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.4/src/Illuminate/Session/EncryptedStore.php#L65">line 65</a></div>
+        <code>                    <a href="../../Illuminate/Contracts/Encryption/Encrypter.html"><abbr title="Illuminate\Contracts\Encryption\Encrypter">Encrypter</abbr></a>
+    <strong>getEncrypter</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the encrypter instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Illuminate/Contracts/Encryption/Encrypter.html"><abbr title="Illuminate\Contracts\Encryption\Encrypter">Encrypter</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,4339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Schema\Grammars\SQLiteGrammar | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Schema_Grammars_SQLiteGrammar" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../../4.2/index.html" data-version="4.2">Laravel 4.2</option>
+                                            <option value="../../../../../5.0/index.html" data-version="5.0">Laravel 5.0</option>
+                                            <option value="../../../../../5.1/index.html" data-version="5.1">Laravel 5.1</option>
+                                            <option value="../../../../../5.2/index.html" data-version="5.2">Laravel 5.2</option>
+                                            <option value="../../../../../5.3/index.html" data-version="5.3">Laravel 5.3</option>
+                                            <option value="../../../../../5.4/index.html" data-version="5.4">Laravel 5.4</option>
+                                            <option value="../../../../../5.5/index.html" data-version="5.5">Laravel 5.5</option>
+                                            <option value="../../../../../5.6/index.html" data-version="5.6">Laravel 5.6</option>
+                                            <option value="../../../../../master/index.html" data-version="master">Laravel Dev</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Database.html">Database</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Database/Schema.html">Schema</a></li><li class="backslash">\</li><li><a href="../../../../Illuminate/Database/Schema/Grammars.html">Grammars</a></li><li class="backslash">\</li><li>SQLiteGrammar</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            SQLiteGrammar
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>SQLiteGrammar</strong>        extends <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a>        (<a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_tablePrefix">
+                                        protected                                        string
+                </td>
+                <td>$tablePrefix</td>
+                <td class="last">The grammar table prefix.</td>
+                <td><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#property_tablePrefix"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modifiers">
+                                        protected                                        array
+                </td>
+                <td>$modifiers</td>
+                <td class="last">The possible column modifiers.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_serials">
+                                        protected                                        array
+                </td>
+                <td>$serials</td>
+                <td class="last">The columns available as serials.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wrapArray">wrapArray</a>(array $values)
+        
+                                            <p>Wrap an array of values.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_wrapArray"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wrapTable">wrapTable</a>(<a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>|string $table)
+        
+                                            <p>Wrap a table in keyword identifiers.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_wrapTable"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wrap">wrap</a>(<a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>|string $value, bool $prefixAlias = false)
+        
+                                            <p>Wrap a value in keyword identifiers.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_wrap"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wrapValue">wrapValue</a>(string $value)
+        
+                                            <p>Wrap a single string in keyword identifiers.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_wrapValue"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_columnize">columnize</a>(array $columns)
+        
+                                            <p>Convert an array of column names into a delimited string.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_columnize"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parameterize">parameterize</a>(array $values)
+        
+                                            <p>Create query parameter place-holders for an array.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_parameterize"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parameter">parameter</a>(mixed $value)
+        
+                                            <p>Get the appropriate query parameter place-holder for a value.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_parameter"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getValue">getValue</a>(<a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a> $expression)
+        
+                                            <p>Get the value of a raw expression.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_getValue"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isExpression">isExpression</a>(mixed $value)
+        
+                                            <p>Determine if the given value is a raw expression.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_isExpression"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDateFormat">getDateFormat</a>()
+        
+                                            <p>Get the format for database stored dates.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_getDateFormat"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTablePrefix">getTablePrefix</a>()
+        
+                                            <p>Get the grammar's table prefix.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_getTablePrefix"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTablePrefix">setTablePrefix</a>(string $prefix)
+        
+                                            <p>Set the grammar's table prefix.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Grammar.html#method_setTablePrefix"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileRenameColumn">compileRenameColumn</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command, <a href="../../../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection)
+        
+                                            <p>Compile a rename column command.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_compileRenameColumn"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRenamedDiff">getRenamedDiff</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command, <abbr title="Doctrine\DBAL\Schema\Column">Column</abbr> $column, <abbr title="Doctrine\DBAL\Schema\AbstractSchemaManager">AbstractSchemaManager</abbr> $schema)
+        
+                                            <p>Get a new column instance with the new column name.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getRenamedDiff"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRenamedColumns">setRenamedColumns</a>(<abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr> $tableDiff, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command, <abbr title="Doctrine\DBAL\Schema\Column">Column</abbr> $column)
+        
+                                            <p>Set the renamed columns on the table diff.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_setRenamedColumns"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileForeign">compileForeign</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        
+                                            <p>Compile a foreign key command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getColumns">getColumns</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint)
+        
+                                            <p>Compile the blueprint's column definitions.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getColumns"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addModifiers">addModifiers</a>(string $sql, <a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Add the column modifiers to the definition.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_addModifiers"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCommandByName">getCommandByName</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, string $name)
+        
+                                            <p>Get the primary key command if it exists on the blueprint.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getCommandByName"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCommandsByName">getCommandsByName</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, string $name)
+        
+                                            <p>Get all of the commands with a given name.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getCommandsByName"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getType">getType</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Get the SQL for the column data type.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getType"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prefixArray">prefixArray</a>(string $prefix, array $values)
+        
+                                            <p>Add a prefix to an array of values.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_prefixArray"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultValue">getDefaultValue</a>(mixed $value)
+        
+                                            <p>Format a value so that it can be used in "default" clauses.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getDefaultValue"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDoctrineTableDiff">getDoctrineTableDiff</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <abbr title="Doctrine\DBAL\Schema\AbstractSchemaManager">AbstractSchemaManager</abbr> $schema)
+        
+                                            <p>Create an empty Doctrine DBAL TableDiff from the Blueprint.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getDoctrineTableDiff"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileChange">compileChange</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command, <a href="../../../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection)
+        
+                                            <p>Compile a change column command into a series of SQL statements.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_compileChange"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr>|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getChangedDiff">getChangedDiff</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <abbr title="Doctrine\DBAL\Schema\AbstractSchemaManager">AbstractSchemaManager</abbr> $schema)
+        
+                                            <p>Get the Doctrine table difference for the given changes.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getChangedDiff"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTableWithColumnChanges">getTableWithColumnChanges</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <abbr title="Doctrine\DBAL\Schema\Table">Table</abbr> $table)
+        
+                                            <p>Get a copy of the given Doctrine table after making the column changes.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getTableWithColumnChanges"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\DBAL\Schema\Column">Column</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDoctrineColumnForChange">getDoctrineColumnForChange</a>(<abbr title="Doctrine\DBAL\Schema\Table">Table</abbr> $table, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $fluent)
+        
+                                            <p>Get the Doctrine column instance for a column change.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getDoctrineColumnForChange"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDoctrineColumnChangeOptions">getDoctrineColumnChangeOptions</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $fluent)
+        
+                                            <p>Get the Doctrine column change options.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getDoctrineColumnChangeOptions"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Doctrine\DBAL\Types\Type">Type</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDoctrineColumnType">getDoctrineColumnType</a>(string $type)
+        
+                                            <p>Get the doctrine column type.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getDoctrineColumnType"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_calculateDoctrineTextLength">calculateDoctrineTextLength</a>(string $type)
+        
+                                            <p>Calculate the proper column length to force the Doctrine text type.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_calculateDoctrineTextLength"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mapFluentOptionToDoctrine">mapFluentOptionToDoctrine</a>(string $attribute)
+        
+                                            <p>Get the matching Doctrine option for a given Fluent attribute name.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_mapFluentOptionToDoctrine"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mapFluentValueToDoctrine">mapFluentValueToDoctrine</a>(string $option, mixed $value)
+        
+                                            <p>Get the matching Doctrine value for a given Fluent attribute.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_mapFluentValueToDoctrine"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileTableExists">compileTableExists</a>()
+        
+                                            <p>Compile the query to determine if a table exists.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileColumnExists">compileColumnExists</a>(string $table)
+        
+                                            <p>Compile the query to determine the list of columns.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileCreate">compileCreate</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        
+                                            <p>Compile a create table command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addForeignKeys">addForeignKeys</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint)
+        
+                                            <p>Get the foreign key syntax for a table creation statement.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getForeignKey">getForeignKey</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $foreign)
+        
+                                            <p>Get the SQL for the foreign key.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addPrimaryKeys">addPrimaryKeys</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint)
+        
+                                            <p>Get the primary key syntax for a table creation statement.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileAdd">compileAdd</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        
+                                            <p>Compile alter table commands for adding columns.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileUnique">compileUnique</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        
+                                            <p>Compile a unique key command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileIndex">compileIndex</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        
+                                            <p>Compile a plain index key command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileDrop">compileDrop</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        
+                                            <p>Compile a drop table command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileDropIfExists">compileDropIfExists</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        
+                                            <p>Compile a drop table (if exists) command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileDropColumn">compileDropColumn</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command, <a href="../../../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection)
+        
+                                            <p>Compile a drop column command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileDropUnique">compileDropUnique</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        
+                                            <p>Compile a drop unique key command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileDropIndex">compileDropIndex</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        
+                                            <p>Compile a drop index command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileRename">compileRename</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        
+                                            <p>Compile a rename table command.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileEnableForeignKeyConstraints">compileEnableForeignKeyConstraints</a>()
+        
+                                            <p>Compile the command to enable foreign key constraints.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compileDisableForeignKeyConstraints">compileDisableForeignKeyConstraints</a>()
+        
+                                            <p>Compile the command to disable foreign key constraints.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeChar">typeChar</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a char type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeString">typeString</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a string type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeText">typeText</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a text type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeMediumText">typeMediumText</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a medium text type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeLongText">typeLongText</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a long text type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeInteger">typeInteger</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a integer type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeBigInteger">typeBigInteger</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a big integer type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeMediumInteger">typeMediumInteger</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a medium integer type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeTinyInteger">typeTinyInteger</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a tiny integer type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeSmallInteger">typeSmallInteger</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a small integer type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeFloat">typeFloat</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a float type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeDouble">typeDouble</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a double type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeDecimal">typeDecimal</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a decimal type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeBoolean">typeBoolean</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a boolean type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeEnum">typeEnum</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for an enum type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeJson">typeJson</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a json type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeJsonb">typeJsonb</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a jsonb type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeDate">typeDate</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a date type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeDateTime">typeDateTime</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a date-time type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeDateTimeTz">typeDateTimeTz</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a date-time type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeTime">typeTime</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a time type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeTimeTz">typeTimeTz</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a time type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeTimestamp">typeTimestamp</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a timestamp type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeTimestampTz">typeTimestampTz</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a timestamp type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeBinary">typeBinary</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a binary type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeUuid">typeUuid</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a uuid type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeIpAddress">typeIpAddress</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for an IP address type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typeMacAddress">typeMacAddress</a>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Create the column definition for a MAC address type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modifyNullable">modifyNullable</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Get the SQL for a nullable column modifier.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modifyDefault">modifyDefault</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Get the SQL for a default column modifier.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modifyIncrement">modifyIncrement</a>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        
+                                            <p>Get the SQL for an auto-increment column modifier.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_wrapArray">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_wrapArray"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Grammar.php#L22">line 22</a></div>
+        <code>                    array
+    <strong>wrapArray</strong>(array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrap an array of values.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrapTable">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_wrapTable"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L216">line 216</a></div>
+        <code>                    string
+    <strong>wrapTable</strong>(<a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>|string $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrap a table in keyword identifiers.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>|string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrap">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_wrap"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L228">line 228</a></div>
+        <code>                    string
+    <strong>wrap</strong>(<a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>|string $value, bool $prefixAlias = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrap a value in keyword identifiers.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>|string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prefixAlias</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrapValue">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_wrapValue"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Grammar.php#L92">line 92</a></div>
+        <code>            protected        string
+    <strong>wrapValue</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrap a single string in keyword identifiers.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_columnize">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_columnize"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Grammar.php#L107">line 107</a></div>
+        <code>                    string
+    <strong>columnize</strong>(array $columns)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert an array of column names into a delimited string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parameterize">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_parameterize"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Grammar.php#L118">line 118</a></div>
+        <code>                    string
+    <strong>parameterize</strong>(array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create query parameter place-holders for an array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parameter">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_parameter"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Grammar.php#L129">line 129</a></div>
+        <code>                    string
+    <strong>parameter</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the appropriate query parameter place-holder for a value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getValue">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_getValue"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Grammar.php#L140">line 140</a></div>
+        <code>                    string
+    <strong>getValue</strong>(<a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a> $expression)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the value of a raw expression.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a></td>
+                <td>$expression</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isExpression">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_isExpression"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Grammar.php#L151">line 151</a></div>
+        <code>                    bool
+    <strong>isExpression</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the given value is a raw expression.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDateFormat">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_getDateFormat"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Grammar.php#L161">line 161</a></div>
+        <code>                    string
+    <strong>getDateFormat</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the format for database stored dates.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTablePrefix">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_getTablePrefix"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Grammar.php#L171">line 171</a></div>
+        <code>                    string
+    <strong>getTablePrefix</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the grammar's table prefix.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTablePrefix">
+        <div class="location">in <a href="../../../../Illuminate/Database/Grammar.html#method_setTablePrefix"><abbr title="Illuminate\Database\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Grammar.php#L182">line 182</a></div>
+        <code>                    <abbr title="Illuminate\Database\$this">$this</abbr>
+    <strong>setTablePrefix</strong>(string $prefix)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the grammar's table prefix.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileRenameColumn">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_compileRenameColumn"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L28">line 28</a></div>
+        <code>                    array
+    <strong>compileRenameColumn</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command, <a href="../../../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a rename column command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRenamedDiff">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getRenamedDiff"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L50">line 50</a></div>
+        <code>            protected        <abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr>
+    <strong>getRenamedDiff</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command, <abbr title="Doctrine\DBAL\Schema\Column">Column</abbr> $column, <abbr title="Doctrine\DBAL\Schema\AbstractSchemaManager">AbstractSchemaManager</abbr> $schema)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a new column instance with the new column name.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Doctrine\DBAL\Schema\Column">Column</abbr></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Doctrine\DBAL\Schema\AbstractSchemaManager">AbstractSchemaManager</abbr></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRenamedColumns">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_setRenamedColumns"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L65">line 65</a></div>
+        <code>            protected        <abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr>
+    <strong>setRenamedColumns</strong>(<abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr> $tableDiff, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command, <abbr title="Doctrine\DBAL\Schema\Column">Column</abbr> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the renamed columns on the table diff.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr></td>
+                <td>$tableDiff</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Doctrine\DBAL\Schema\Column">Column</abbr></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileForeign">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L203">line 203</a></div>
+        <code>                    string
+    <strong>compileForeign</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a foreign key command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getColumns">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getColumns"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L120">line 120</a></div>
+        <code>            protected        array
+    <strong>getColumns</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the blueprint's column definitions.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addModifiers">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_addModifiers"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L144">line 144</a></div>
+        <code>            protected        string
+    <strong>addModifiers</strong>(string $sql, <a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the column modifiers to the definition.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCommandByName">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getCommandByName"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L162">line 162</a></div>
+        <code>            protected        <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>|null
+    <strong>getCommandByName</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the primary key command if it exists on the blueprint.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCommandsByName">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getCommandsByName"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L178">line 178</a></div>
+        <code>            protected        array
+    <strong>getCommandsByName</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all of the commands with a given name.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getType">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getType"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L191">line 191</a></div>
+        <code>            protected        string
+    <strong>getType</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the SQL for the column data type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prefixArray">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_prefixArray"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L203">line 203</a></div>
+        <code>                    array
+    <strong>prefixArray</strong>(string $prefix, array $values)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a prefix to an array of values.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultValue">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getDefaultValue"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L243">line 243</a></div>
+        <code>            protected        string
+    <strong>getDefaultValue</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Format a value so that it can be used in "default" clauses.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDoctrineTableDiff">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getDoctrineTableDiff"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L263">line 263</a></div>
+        <code>            protected        <abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr>
+    <strong>getDoctrineTableDiff</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <abbr title="Doctrine\DBAL\Schema\AbstractSchemaManager">AbstractSchemaManager</abbr> $schema)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create an empty Doctrine DBAL TableDiff from the Blueprint.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Doctrine\DBAL\Schema\AbstractSchemaManager">AbstractSchemaManager</abbr></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileChange">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_compileChange"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L284">line 284</a></div>
+        <code>                    array
+    <strong>compileChange</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command, <a href="../../../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a change column command into a series of SQL statements.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getChangedDiff">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getChangedDiff"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L311">line 311</a></div>
+        <code>            protected        <abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr>|bool
+    <strong>getChangedDiff</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <abbr title="Doctrine\DBAL\Schema\AbstractSchemaManager">AbstractSchemaManager</abbr> $schema)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the Doctrine table difference for the given changes.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Doctrine\DBAL\Schema\AbstractSchemaManager">AbstractSchemaManager</abbr></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr>|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTableWithColumnChanges">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getTableWithColumnChanges"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L325">line 325</a></div>
+        <code>            protected        <abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr>
+    <strong>getTableWithColumnChanges</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <abbr title="Doctrine\DBAL\Schema\Table">Table</abbr> $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a copy of the given Doctrine table after making the column changes.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Doctrine\DBAL\Schema\Table">Table</abbr></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\DBAL\Schema\TableDiff">TableDiff</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDoctrineColumnForChange">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getDoctrineColumnForChange"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L354">line 354</a></div>
+        <code>            protected        <abbr title="Doctrine\DBAL\Schema\Column">Column</abbr>
+    <strong>getDoctrineColumnForChange</strong>(<abbr title="Doctrine\DBAL\Schema\Table">Table</abbr> $table, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $fluent)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the Doctrine column instance for a column change.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Doctrine\DBAL\Schema\Table">Table</abbr></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$fluent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\DBAL\Schema\Column">Column</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDoctrineColumnChangeOptions">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getDoctrineColumnChangeOptions"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L367">line 367</a></div>
+        <code>            protected        array
+    <strong>getDoctrineColumnChangeOptions</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $fluent)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the Doctrine column change options.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$fluent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDoctrineColumnType">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_getDoctrineColumnType"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L384">line 384</a></div>
+        <code>            protected        <abbr title="Doctrine\DBAL\Types\Type">Type</abbr>
+    <strong>getDoctrineColumnType</strong>(string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the doctrine column type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Doctrine\DBAL\Types\Type">Type</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_calculateDoctrineTextLength">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_calculateDoctrineTextLength"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L413">line 413</a></div>
+        <code>            protected        int
+    <strong>calculateDoctrineTextLength</strong>(string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Calculate the proper column length to force the Doctrine text type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mapFluentOptionToDoctrine">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_mapFluentOptionToDoctrine"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L431">line 431</a></div>
+        <code>            protected        string|null
+    <strong>mapFluentOptionToDoctrine</strong>(string $attribute)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the matching Doctrine option for a given Fluent attribute name.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attribute</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mapFluentValueToDoctrine">
+        <div class="location">in <a href="../../../../Illuminate/Database/Schema/Grammars/Grammar.html#method_mapFluentValueToDoctrine"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a> at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/Grammar.php#L455">line 455</a></div>
+        <code>            protected        mixed
+    <strong>mapFluentValueToDoctrine</strong>(string $option, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the matching Doctrine value for a given Fluent attribute.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$option</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileTableExists">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L30">line 30</a></div>
+        <code>                    string
+    <strong>compileTableExists</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the query to determine if a table exists.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileColumnExists">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L41">line 41</a></div>
+        <code>                    string
+    <strong>compileColumnExists</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the query to determine the list of columns.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileCreate">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L53">line 53</a></div>
+        <code>                    string
+    <strong>compileCreate</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a create table command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addForeignKeys">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L77">line 77</a></div>
+        <code>            protected        string|null
+    <strong>addForeignKeys</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the foreign key syntax for a table creation statement.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getForeignKey">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L107">line 107</a></div>
+        <code>            protected        string
+    <strong>getForeignKey</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $foreign)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the SQL for the foreign key.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$foreign</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPrimaryKeys">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L127">line 127</a></div>
+        <code>            protected        string|null
+    <strong>addPrimaryKeys</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the primary key syntax for a table creation statement.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileAdd">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L145">line 145</a></div>
+        <code>                    array
+    <strong>compileAdd</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile alter table commands for adding columns.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileUnique">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L167">line 167</a></div>
+        <code>                    string
+    <strong>compileUnique</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a unique key command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileIndex">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L185">line 185</a></div>
+        <code>                    string
+    <strong>compileIndex</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a plain index key command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileDrop">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L215">line 215</a></div>
+        <code>                    string
+    <strong>compileDrop</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a drop table command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileDropIfExists">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L227">line 227</a></div>
+        <code>                    string
+    <strong>compileDropIfExists</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a drop table (if exists) command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileDropColumn">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L240">line 240</a></div>
+        <code>                    array
+    <strong>compileDropColumn</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command, <a href="../../../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a drop column command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileDropUnique">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L262">line 262</a></div>
+        <code>                    string
+    <strong>compileDropUnique</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a drop unique key command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileDropIndex">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L276">line 276</a></div>
+        <code>                    string
+    <strong>compileDropIndex</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a drop index command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileRename">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L290">line 290</a></div>
+        <code>                    string
+    <strong>compileRename</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $command)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile a rename table command.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$command</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileEnableForeignKeyConstraints">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L302">line 302</a></div>
+        <code>                    string
+    <strong>compileEnableForeignKeyConstraints</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the command to enable foreign key constraints.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileDisableForeignKeyConstraints">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L312">line 312</a></div>
+        <code>                    string
+    <strong>compileDisableForeignKeyConstraints</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compile the command to disable foreign key constraints.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeChar">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L323">line 323</a></div>
+        <code>            protected        string
+    <strong>typeChar</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a char type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeString">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L334">line 334</a></div>
+        <code>            protected        string
+    <strong>typeString</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a string type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeText">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L345">line 345</a></div>
+        <code>            protected        string
+    <strong>typeText</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a text type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeMediumText">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L356">line 356</a></div>
+        <code>            protected        string
+    <strong>typeMediumText</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a medium text type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeLongText">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L367">line 367</a></div>
+        <code>            protected        string
+    <strong>typeLongText</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a long text type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeInteger">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L378">line 378</a></div>
+        <code>            protected        string
+    <strong>typeInteger</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a integer type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeBigInteger">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L389">line 389</a></div>
+        <code>            protected        string
+    <strong>typeBigInteger</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a big integer type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeMediumInteger">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L400">line 400</a></div>
+        <code>            protected        string
+    <strong>typeMediumInteger</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a medium integer type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeTinyInteger">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L411">line 411</a></div>
+        <code>            protected        string
+    <strong>typeTinyInteger</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a tiny integer type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeSmallInteger">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L422">line 422</a></div>
+        <code>            protected        string
+    <strong>typeSmallInteger</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a small integer type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeFloat">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L433">line 433</a></div>
+        <code>            protected        string
+    <strong>typeFloat</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a float type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeDouble">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L444">line 444</a></div>
+        <code>            protected        string
+    <strong>typeDouble</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a double type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeDecimal">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L455">line 455</a></div>
+        <code>            protected        string
+    <strong>typeDecimal</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a decimal type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeBoolean">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L466">line 466</a></div>
+        <code>            protected        string
+    <strong>typeBoolean</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a boolean type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeEnum">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L477">line 477</a></div>
+        <code>            protected        string
+    <strong>typeEnum</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for an enum type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeJson">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L488">line 488</a></div>
+        <code>            protected        string
+    <strong>typeJson</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a json type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeJsonb">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L499">line 499</a></div>
+        <code>            protected        string
+    <strong>typeJsonb</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a jsonb type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeDate">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L510">line 510</a></div>
+        <code>            protected        string
+    <strong>typeDate</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a date type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeDateTime">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L521">line 521</a></div>
+        <code>            protected        string
+    <strong>typeDateTime</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a date-time type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeDateTimeTz">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L535">line 535</a></div>
+        <code>            protected        string
+    <strong>typeDateTimeTz</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a date-time type.</p>                    <p>Note: "SQLite does not have a storage class set aside for storing dates and/or times."</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeTime">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L546">line 546</a></div>
+        <code>            protected        string
+    <strong>typeTime</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a time type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeTimeTz">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L557">line 557</a></div>
+        <code>            protected        string
+    <strong>typeTimeTz</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a time type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeTimestamp">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L568">line 568</a></div>
+        <code>            protected        string
+    <strong>typeTimestamp</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a timestamp type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeTimestampTz">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L583">line 583</a></div>
+        <code>            protected        string
+    <strong>typeTimestampTz</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a timestamp type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeBinary">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L598">line 598</a></div>
+        <code>            protected        string
+    <strong>typeBinary</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a binary type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeUuid">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L609">line 609</a></div>
+        <code>            protected        string
+    <strong>typeUuid</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a uuid type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeIpAddress">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L620">line 620</a></div>
+        <code>            protected        string
+    <strong>typeIpAddress</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for an IP address type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typeMacAddress">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L631">line 631</a></div>
+        <code>            protected        string
+    <strong>typeMacAddress</strong>(<a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create the column definition for a MAC address type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modifyNullable">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L643">line 643</a></div>
+        <code>            protected        string|null
+    <strong>modifyNullable</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the SQL for a nullable column modifier.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modifyDefault">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L655">line 655</a></div>
+        <code>            protected        string|null
+    <strong>modifyDefault</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the SQL for a default column modifier.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modifyIncrement">
+        <div class="location">at         <a href="https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php#L669">line 669</a></div>
+        <code>            protected        string|null
+    <strong>modifyIncrement</strong>(<a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint, <a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a> $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the SQL for an auto-increment column modifier.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Illuminate/Database/Schema/Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Illuminate/Support/Fluent.html"><abbr title="Illuminate\Support\Fluent">Fluent</abbr></a></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
