@@ -7,7 +7,6 @@
     - [Driver Prerequisites](#driver-prerequisites)
 - [Obtaining Disk Instances](#obtaining-disk-instances)
 - [Retrieving Files](#retrieving-files)
-    - [Downloading Files](#downloading-files)
     - [File URLs](#file-urls)
     - [File Metadata](#file-metadata)
 - [Storing Files](#storing-files)
@@ -54,9 +53,8 @@ When using the `local` driver, all file operations are relative to the `root` di
 
 #### Composer Packages
 
-Before using the SFTP, S3, or Rackspace drivers, you will need to install the appropriate package via Composer:
+Before using the S3 or Rackspace drivers, you will need to install the appropriate package via Composer:
 
-- SFTP: `league/flysystem-sftp ~1.0`
 - Amazon S3: `league/flysystem-aws-s3-v3 ~1.0`
 - Rackspace: `league/flysystem-rackspace ~1.0`
 
@@ -80,26 +78,6 @@ Laravel's Flysystem integrations works great with FTP; however, a sample configu
         // 'passive'  => true,
         // 'ssl'      => true,
         // 'timeout'  => 30,
-    ],
-
-#### SFTP Driver Configuration
-
-Laravel's Flysystem integrations works great with SFTP; however, a sample configuration is not included with the framework's default `filesystems.php` configuration file. If you need to configure a SFTP filesystem, you may use the example configuration below:
-
-    'sftp' => [
-        'driver' => 'sftp',
-        'host' => 'example.com',
-        'username' => 'your-username',
-        'password' => 'your-password',
-
-        // Settings for SSH key based authentication...
-        // 'privateKey' => '/path/to/privateKey',
-        // 'password' => 'encryption-password',
-
-        // Optional SFTP Settings...
-        // 'port' => 22,
-        // 'root' => '',
-        // 'timeout' => 30,
     ],
 
 #### Rackspace Driver Configuration
@@ -140,15 +118,6 @@ The `exists` method may be used to determine if a file exists on the disk:
 
     $exists = Storage::disk('s3')->exists('file.jpg');
 
-<a name="downloading-files"></a>
-### Downloading Files
-
-The `download` method may be used to generate a response that forces the user's browser to download the file at the given path. The `download` method accepts a file name as the second argument to the method, which will determine the file name that is seen by the user downloading the file. Finally, you may pass an array of HTTP headers as the third argument to the method:
-
-    return Storage::download('file.jpg');
-
-    return Storage::download('file.jpg', $name, $headers);
-
 <a name="file-urls"></a>
 ### File URLs
 
@@ -156,7 +125,7 @@ You may use the `url` method to get the URL for the given file. If you are using
 
     use Illuminate\Support\Facades\Storage;
 
-    $url = Storage::url('file.jpg');
+    $url = Storage::url('file1.jpg');
 
 > {note} Remember, if you are using the `local` driver, all files that should be publicly accessible should be placed in the `storage/app/public` directory. Furthermore, you should [create a symbolic link](#the-public-disk) at `public/storage` which points to the `storage/app/public` directory.
 
@@ -165,7 +134,7 @@ You may use the `url` method to get the URL for the given file. If you are using
 For files stored using the `s3` or `rackspace` driver, you may create a temporary URL to a given file using the `temporaryUrl` method. This methods accepts a path and a `DateTime` instance specifying when the URL should expire:
 
     $url = Storage::temporaryUrl(
-        'file.jpg', now()->addMinutes(5)
+        'file1.jpg', now()->addMinutes(5)
     );
 
 #### Local URL Host Customization
@@ -186,11 +155,11 @@ In addition to reading and writing files, Laravel can also provide information a
 
     use Illuminate\Support\Facades\Storage;
 
-    $size = Storage::size('file.jpg');
+    $size = Storage::size('file1.jpg');
 
 The `lastModified` method returns the UNIX timestamp of the last time the file was modified:
 
-    $time = Storage::lastModified('file.jpg');
+    $time = Storage::lastModified('file1.jpg');
 
 <a name="storing-files"></a>
 ## Storing Files
@@ -234,9 +203,9 @@ The `prepend` and `append` methods allow you to write to the beginning or end of
 
 The `copy` method may be used to copy an existing file to a new location on the disk, while the `move` method may be used to rename or move an existing file to a new location:
 
-    Storage::copy('old/file.jpg', 'new/file.jpg');
+    Storage::copy('old/file1.jpg', 'new/file1.jpg');
 
-    Storage::move('old/file.jpg', 'new/file.jpg');
+    Storage::move('old/file1.jpg', 'new/file1.jpg');
 
 <a name="file-uploads"></a>
 ### File Uploads
@@ -320,7 +289,7 @@ The `delete` method accepts a single filename or an array of files to remove fro
 
     Storage::delete('file.jpg');
 
-    Storage::delete(['file.jpg', 'file2.jpg']);
+    Storage::delete(['file1.jpg', 'file2.jpg']);
 
 If necessary, you may specify the disk that the file should be deleted from:
 

@@ -141,8 +141,6 @@ For the remainder of this documentation, we'll discuss each method available on 
 [sort](#method-sort)
 [sortBy](#method-sortby)
 [sortByDesc](#method-sortbydesc)
-[sortKeys](#method-sortkeys)
-[sortKeysDesc](#method-sortkeysdesc)
 [splice](#method-splice)
 [split](#method-split)
 [sum](#method-sum)
@@ -163,7 +161,6 @@ For the remainder of this documentation, we'll discuss each method available on 
 [whereStrict](#method-wherestrict)
 [whereIn](#method-wherein)
 [whereInStrict](#method-whereinstrict)
-[whereInstanceOf](#method-whereinstanceof)
 [whereNotIn](#method-wherenotin)
 [whereNotInStrict](#method-wherenotinstrict)
 [wrap](#method-wrap)
@@ -1264,21 +1261,6 @@ You may also specify how you wish the resulting collection to be keyed:
 
     // ['prod-100' => 'Desk', 'prod-200' => 'Chair']
 
-If duplicate keys exist, the last matching element will be inserted into the plucked collection:
-
-    $collection = collect([
-        ['brand' => 'Tesla',  'color' => 'red'],
-        ['brand' => 'Pagani', 'color' => 'white'],
-        ['brand' => 'Tesla',  'color' => 'black'],
-        ['brand' => 'Pagani', 'color' => 'orange'],
-    ]);
-
-    $plucked = $collection->pluck('color', 'brand');
-
-    $plucked->all();
-
-    // ['Tesla' => 'black', 'Pagani' => 'orange']
-
 <a name="method-pop"></a>
 #### `pop()` {#collection-method}
 
@@ -1578,34 +1560,6 @@ You can also pass your own callback to determine how to sort the collection valu
 #### `sortByDesc()` {#collection-method}
 
 This method has the same signature as the [`sortBy`](#method-sortby) method, but will sort the collection in the opposite order.
-
-<a name="method-sortkeys"></a>
-#### `sortKeys()` {#collection-method}
-
-The `sortKeys` method sorts the collection by the keys of the underlying associative array:
-
-    $collection = collect([
-        'id' => 22345,
-        'first' => 'John',
-        'last' => 'Doe',
-    ]);
-
-    $sorted = $collection->sortKeys();
-
-    $sorted->all();
-
-    /*
-        [
-            'first' => 'John',
-            'id' => 22345,
-            'last' => 'Doe',
-        ]
-    */
-
-<a name="method-sortkeysdesc"></a>
-#### `sortKeysDesc()` {#collection-method}
-
-This method has the same signature as the [`sortKeys`](#method-sortkeys) method, but will sort the the collection in the opposite order.
 
 <a name="method-splice"></a>
 #### `splice()` {#collection-method}
@@ -2020,19 +1974,6 @@ The `whereIn` method uses "loose" comparisons when checking item values, meaning
 #### `whereInStrict()` {#collection-method}
 
 This method has the same signature as the [`whereIn`](#method-wherein) method; however, all values are compared using "strict" comparisons.
-
-<a name="method-whereinstanceof"></a>
-#### `whereInstanceOf()` {#collection-method}
-
-The `whereInstanceOf` method filters the collection by a given class type:
-
-    $collection = collect([
-        new User,
-        new User,
-        new Post,
-    ]);
-
-    return $collection->whereInstanceOf(User::class);
 
 <a name="method-wherenotin"></a>
 #### `whereNotIn()` {#collection-method}

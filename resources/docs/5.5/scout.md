@@ -13,11 +13,9 @@
     - [Updating Records](#updating-records)
     - [Removing Records](#removing-records)
     - [Pausing Indexing](#pausing-indexing)
-    - [Conditionally Searchable Model Instances](#conditionally-searchable-model-instances)
 - [Searching](#searching)
     - [Where Clauses](#where-clauses)
     - [Pagination](#pagination)
-    - [Soft Deleting](#soft-deleting)
 - [Custom Engines](#custom-engines)
 
 <a name="introduction"></a>
@@ -218,16 +216,6 @@ Sometimes you may need to perform a batch of Eloquent operations on a model with
         // Perform model actions...
     });
 
-<a name="conditionally-searchable-model-instances"></a>
-### Conditionally Searchable Model Instances
-
-Sometimes you may need to only make a model searchable under certain conditions. For example, imagine you have `App\Post` model that may be in one of two states: "draft" and "published". You may only want to allow "published" posts to be searchable. To accomplish this, you may define a `shouldBeSearchable` method on your model:
-
-    public function shouldBeSearchable()
-    {
-        return $this->isPublished();
-    }
-
 <a name="searching"></a>
 ## Searching
 
@@ -280,23 +268,6 @@ Once you have retrieved the results, you may display the results and render the 
     </div>
 
     {{ $orders->links() }}
-
-<a name="soft-deleting"></a>
-### Soft Deleting
-
-If your indexed models are [soft deleting](/docs/{{version}}/eloquent#soft-deleting) and you need to search your soft deleted models, set the `soft_delete` option of the `config/scout.php` configuration file to `true`:
-
-    'soft_delete' => true,
-
-When this configuration option is `true`, Scout will not remove soft deleted models from the search index. Instead, it will set a hidden `__soft_deleted` attribute on the indexed record. Then, you may use the `withTrashed` or `onlyTrashed` methods to retrieve the soft deleted records when searching:
-
-    // Include trashed records when retrieving results...
-    $orders = App\Order::withTrashed()->search('Star Trek')->get();
-
-    // Only include trashed records when retrieving results...
-    $orders = App\Order::onlyTrashed()->search('Star Trek')->get();
-
-> {tip} When a soft deleted model is permanently deleted using `forceDelete`, Scout will remove it from the search index automatically.
 
 <a name="custom-engines"></a>
 ## Custom Engines

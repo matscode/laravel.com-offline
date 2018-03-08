@@ -13,7 +13,6 @@
 - [Authorizing Channels](#authorizing-channels)
     - [Defining Authorization Routes](#defining-authorization-routes)
     - [Defining Authorization Callbacks](#defining-authorization-callbacks)
-    - [Defining Channel Classes](#defining-channel-classes)
 - [Broadcasting Events](#broadcasting-events)
     - [Only To Others](#only-to-others)
 - [Receiving Broadcasts](#receiving-broadcasts)
@@ -353,55 +352,6 @@ Just like HTTP routes, channel routes may also take advantage of implicit and ex
         return $user->id === $order->user_id;
     });
 
-<a name="defining-channel-classes"></a>
-### Defining Channel Classes
-
-If your application is consuming many different channels, your `routes/channels.php` file could become bulky. So, instead of using Closures to authorize channels, you may use channel classes. To generate a channel class, use the `make:channel` Artisan command. This command will place a new channel class in the `App/Broadcasting` directory.
-
-    php artisan make:channel OrderChannel
-
-Next, register your channel in your `routes/channels.php` file:
-
-    use App\Broadcasting\OrderChannel;
-
-    Broadcast::channel('order.{order}', OrderChannel::class);
-
-Finally, you may place the authorization logic for your channel in the channel class' `join` method. This `join` method will house the same logic you would have typically placed in your channel authorization Closure. Of course, you may also take advantage of channel model binding:
-
-    <?php
-
-    namespace App\Broadcasting;
-
-    use App\User;
-    use App\Order;
-
-    class OrderChannel
-    {
-        /**
-         * Create a new channel instance.
-         *
-         * @return void
-         */
-        public function __construct()
-        {
-            //
-        }
-
-        /**
-         * Authenticate the user's access to the channel.
-         *
-         * @param  \App\User  $user
-         * @param  \App\Order  $order
-         * @return array|bool
-         */
-        public function join(User $user, Order $order)
-        {
-            return $user->id === $order->user_id;
-        }
-    }
-
-> {tip} Like many other classes in Laravel, channel classes will automatically be resolved by the [service container](/docs/{{version}}/container). So, you may type-hint any dependencies required by your channel in its constructor.
-
 <a name="broadcasting-events"></a>
 ## Broadcasting Events
 
@@ -427,9 +377,9 @@ To better understand when you may want to use the `toOthers` method, let's imagi
             this.tasks.push(response.data);
         });
 
-However, remember that we also broadcast the task's creation. If your JavaScript application is listening for this event in order to add tasks to the task list, you will have duplicate tasks in your list: one from the end-point and one from the broadcast. You may solve this by using the `toOthers` method to instruct the broadcaster to not broadcast the event to the current user.
+However, remember that we also broadcast the task's creation. If your JavaScript application is listening for this event in order to add tasks to the task list, you will have duplicate tasks in your list: one from the end-point and one from the broadcast.
 
-> {note} Your event must use the `Illuminate\Broadcasting\InteractsWithSockets` trait in order to call the `toOthers` method.
+You may solve this by using the `toOthers` method to instruct the broadcaster to not broadcast the event to the current user.
 
 #### Configuration
 

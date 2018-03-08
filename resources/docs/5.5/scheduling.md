@@ -6,9 +6,7 @@
     - [Scheduling Queued Jobs](#scheduling-queued-jobs)
     - [Scheduling Shell Commands](#scheduling-shell-commands)
     - [Schedule Frequency Options](#schedule-frequency-options)
-    - [Timezones](#timezones)
     - [Preventing Task Overlaps](#preventing-task-overlaps)
-    - [Running Tasks On One Server](#running-tasks-on-one-server)
     - [Maintenance Mode](#maintenance-mode)
 - [Task Output](#task-output)
 - [Task Hooks](#task-hooks)
@@ -96,7 +94,7 @@ Of course, there are a variety of schedules you may assign to your task:
 
 Method  | Description
 ------------- | -------------
-`->cron('* * * * *');`  |  Run the task on a custom Cron schedule
+`->cron('* * * * * *');`  |  Run the task on a custom Cron schedule
 `->everyMinute();`  |  Run the task every minute
 `->everyFiveMinutes();`  |  Run the task every five minutes
 `->everyTenMinutes();`  |  Run the task every ten minutes
@@ -173,17 +171,6 @@ The `skip` method may be seen as the inverse of `when`. If the `skip` method ret
 
 When using chained `when` methods, the scheduled command will only execute if all `when` conditions return `true`.
 
-<a name="timezones"></a>
-### Timezones
-
-Using the `timezone` method, you may specify that a scheduled task's time should be interpreted within a given timezone:
-
-    $schedule->command('report:generate')
-             ->timezone('America/New_York')
-             ->at('02:00')
-
-> {note} Remember that some timezones utilize daylight savings time. When daylight saving time changes occur, your scheduled task may run twice or even not run at all. For this reason, we recommend avoiding timezone scheduling when possible.
-
 <a name="preventing-task-overlaps"></a>
 ### Preventing Task Overlaps
 
@@ -196,20 +183,6 @@ In this example, the `emails:send` [Artisan command](/docs/{{version}}/artisan) 
 If needed, you may specify how many minutes must pass before the "without overlapping" lock expires. By default, the lock will expire after 24 hours:
 
     $schedule->command('emails:send')->withoutOverlapping(10);
-
-<a name="running-tasks-on-one-server"></a>
-### Running Tasks On One Server
-
-> {note} To utilize this feature, your application must be using the `memcached` or `redis` cache driver as your application's default cache driver. In addition, all servers must be communicating with the same central cache server.
-
-If your application is running on multiple servers, you may limit a scheduled job to only execute on a single server. For instance, assume you have a scheduled task that generates a new report every Friday night. If the task scheduler is running on three worker servers, the scheduled task will run on all three servers and generate the report three times. Not good!
-
-To indicate that the task should run on only one server, use the `onOneServer` method when defining the scheduled task. The first server to obtain the task will secure an atomic lock on the job to prevent other servers from running the same task at the same time:
-
-    $schedule->command('report:generate')
-                    ->fridays()
-                    ->at('17:00')
-                    ->onOneServer();
 
 <a name="maintenance-mode"></a>
 ### Maintenance Mode
@@ -240,7 +213,7 @@ Using the `emailOutputTo` method, you may e-mail the output to an e-mail address
              ->sendOutputTo($filePath)
              ->emailOutputTo('foo@example.com');
 
-> {note} The `emailOutputTo`, `sendOutputTo` and `appendOutputTo` methods are exclusive to the `command` and `exec` methods.
+> {note} The `emailOutputTo`, `sendOutputTo` and `appendOutputTo` methods are exclusive to the `command` method and are not supported for `call`.
 
 <a name="task-hooks"></a>
 ## Task Hooks

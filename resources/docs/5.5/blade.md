@@ -131,26 +131,6 @@ Sometimes you may need to pass additional data to a component. For this reason, 
         ...
     @endcomponent
 
-#### Aliasing Components
-
-If your Blade components are stored in a sub-directory, you may wish to alias them for easier access. For example, imagine a Blade component that is stored at `resources/views/components/alert.blade.php`. You may use the `component` method to alias the component from `components.alert` to `alert`. Typically, this should be done in the `boot` method of your `AppServiceProvider`:
-
-    use Illuminate\Support\Facades\Blade;
-
-    Blade::component('components.alert', 'alert');
-
-Once the component has been aliased, you may render it using a directive:
-
-    @alert(['type' => 'danger'])
-        You are not allowed to access this resource!
-    @endalert
-
-You may omit the component parameters if it has no additional slots:
-
-    @alert
-        You are not allowed to access this resource!
-    @endalert
-
 <a name="displaying-data"></a>
 ## Displaying Data
 
@@ -191,30 +171,6 @@ However, instead of manually calling `json_encode`, you may use the `@json` Blad
     <script>
         var app = @json($array);
     </script>
-
-#### HTML Entity Encoding
-
-By default, Blade (and the Laravel `e` helper) will double encode HTML entities. If you would like to disable double encoding, call the `Blade::withoutDoubleEncoding` method from the `boot` method of your `AppServiceProvider`:
-
-    <?php
-
-    namespace App\Providers;
-
-    use Illuminate\Support\Facades\Blade;
-    use Illuminate\Support\ServiceProvider;
-
-    class AppServiceProvider extends ServiceProvider
-    {
-        /**
-         * Bootstrap any application services.
-         *
-         * @return void
-         */
-        public function boot()
-        {
-            Blade::withoutDoubleEncoding();
-        }
-    }
 
 <a name="blade-and-javascript-frameworks"></a>
 ### Blade & JavaScript Frameworks

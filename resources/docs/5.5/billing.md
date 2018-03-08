@@ -468,13 +468,6 @@ Cashier automatically handles subscription cancellation on failed charges, but i
         }
     }
 
-Next, define a route to your Cashier controller within your `routes/web.php` file:
-
-    Route::post(
-        'stripe/webhook',
-        '\App\Http\Controllers\WebhookController@handleWebhook'
-    );
-
 <a name="handling-failed-subscriptions"></a>
 ### Failed Subscriptions
 
@@ -591,13 +584,6 @@ The invoice will be charged immediately against the user's credit card. The `inv
     $user->invoiceFor('One Time Fee', 500, [
         'custom-option' => $value,
     ]);
-
-If you are using Braintree as your billing provider, you must include a `description` option when calling the `invoiceFor` method:
-
-    $user->invoiceFor('One Time Fee', 500, [
-        'description' => 'your invoice description here',
-    ]);
-
 
 > {note} The `invoiceFor` method will create a Stripe invoice which will retry failed billing attempts. If you do not want invoices to retry failed charges, you will need to close them using the Stripe API after the first failed charge.
 

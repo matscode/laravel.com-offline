@@ -2,7 +2,7 @@
 
 - [Introduction](#introduction)
     - [Connections Vs. Queues](#connections-vs-queues)
-    - [Driver Notes & Prerequisites](#driver-prerequisites)
+    - [Driver Prerequisites](#driver-prerequisites)
 - [Creating Jobs](#creating-jobs)
     - [Generating Job Classes](#generating-job-classes)
     - [Class Structure](#class-structure)
@@ -51,7 +51,7 @@ Some applications may not need to ever push jobs onto multiple queues, instead p
     php artisan queue:work --queue=high,default
 
 <a name="driver-prerequisites"></a>
-### Driver Notes & Prerequisites
+### Driver Prerequisites
 
 #### Database
 
@@ -65,8 +65,6 @@ In order to use the `database` queue driver, you will need a database table to h
 
 In order to use the `redis` queue driver, you should configure a Redis database connection in your `config/database.php` configuration file.
 
-**Redis Cluster**
-
 If your Redis queue connection uses a Redis Cluster, your queue names must contain a [key hash tag](https://redis.io/topics/cluster-spec#keys-hash-tags). This is required in order to ensure all of the Redis keys for a given queue are placed into the same hash slot:
 
     'redis' => [
@@ -75,22 +73,6 @@ If your Redis queue connection uses a Redis Cluster, your queue names must conta
         'queue' => '{default}',
         'retry_after' => 90,
     ],
-
-**Blocking**
-
-When using the Redis queue, you may use the `block_for` configuration option to specify how long the driver should wait for a job to become available before iterating through the worker loop and re-polling the Redis database.
-
-Adjusting this value based on your queue load can be more efficient than continually polling the Redis database for new jobs. For instance, you may set the value to `5` to indicate that the driver should block for five seconds while waiting for a job to become available:
-
-    'redis' => [
-        'driver' => 'redis',
-        'connection' => 'default',
-        'queue' => 'default',
-        'retry_after' => 90,
-        'block_for' => 5,
-    ],
-
-> {note} Blocking pop is an experimental feature. There is a small chance that a queued job could be lost if the Redis server or worker crashes at the same time the job is retrieved.
 
 #### Other Driver Prerequisites
 
@@ -236,15 +218,6 @@ Job chaining allows you to specify a list of queued jobs that should be run in s
         new OptimizePodcast,
         new ReleasePodcast
     ])->dispatch();
-
-#### Chain Connection & Queue
-
-If you would like to specify the default connection and queue that should be used for the chained jobs, you may use the `allOnConnection` and `allOnQueue` methods. These methods specify the queue connection and queue name that should be used unless the queued job is explicitly assigned a different connection / queue:
-
-    ProcessPodcast::withChain([
-        new OptimizePodcast,
-        new ReleasePodcast
-    ])->dispatch()->allOnConnection('redis')->allOnQueue('podcasts');
 
 <a name="customizing-the-queue-and-connection"></a>
 ### Customizing The Queue & Connection
@@ -601,7 +574,7 @@ You may define a `failed` method directly on your job class, allowing you to per
 <a name="failed-job-events"></a>
 ### Failed Job Events
 
-If you would like to register an event that will be called when a job fails, you may use the `Queue::failing` method. This event is a great opportunity to notify your team via email or [Stride](https://www.stride.com). For example, we may attach a callback to this event from the `AppServiceProvider` that is included with Laravel:
+If you would like to register an event that will be called when a job fails, you may use the `Queue::failing` method. This event is a great opportunity to notify your team via email or [HipChat](https://www.hipchat.com). For example, we may attach a callback to this event from the `AppServiceProvider` that is included with Laravel:
 
     <?php
 
