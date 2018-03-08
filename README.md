@@ -24,9 +24,11 @@ Enjoy reading the documentation...
 
 
 ##### Documentation Versions Available
+- 5.6
 - 5.5 `LTS` (Default)
-- 5.2 
-- Coming Soon ...
+- 5.2 (Recommended starting point for Beginners, after, goto 5.5 above)
+- Coming Soon ... (open issue to request a version not included)
+
 
 ##### API Reference Available
 For Laravel API reference visit `/apis` path 
