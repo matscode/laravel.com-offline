@@ -4,15 +4,20 @@
  * Set the default documentation version...
  */
 if (! defined('DEFAULT_VERSION')) {
-    define('DEFAULT_VERSION', '5.6');
+    define('DEFAULT_VERSION', '5.5');
 }
 
-Route::get('/', function () {
-    return view('marketing');
+Route::get('/', function ($version = DEFAULT_VERSION) {
+    // return view('marketing');
+    return redirect("/docs/{$version}");
 });
 
 Route::get('docs', 'DocsController@showRootPage');
 Route::get('docs/{version}/{page?}', 'DocsController@show');
+
+Route::get('apis/{version?}', function ($version = DEFAULT_VERSION) {
+    return redirect("/api/{$version}/index.html");
+});
 
 Route::get('partners', function () {
     return view('partners');
