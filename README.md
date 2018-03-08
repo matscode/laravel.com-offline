@@ -24,7 +24,8 @@ Enjoy reading the documentation...
 
 
 ##### Documentation Versions Available
-- 5.5
+- 5.5 `LTS` (Default)
+- 5.2 
 - Coming Soon ...
 
 ##### API Reference Available
