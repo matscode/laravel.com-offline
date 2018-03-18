@@ -13,10 +13,10 @@
     @endif
     <link href='https://fonts.googleapis.com/css?family=Miriam+Libre:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ elixir('assets/css/laravel.css') }}">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
+    <link rel="stylesheet" href="{{asset('css/flexboxgrid.min.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7737514/7707592/css/fonts.css" />
     <link rel="apple-touch-icon" href="/favicon.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script src="{{asset('assets/js/vue.min.js')}}"></script>
 </head>
 <body class="@yield('body-class', 'docs') language-php">
 <!--     <div class="laracon-banner">
